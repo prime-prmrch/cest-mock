@@ -1,0 +1,1579 @@
+{
+  "id": 2,
+  "title": "Mock Test 2: Literary & Cultural Expressive Suite",
+  "subtitle": "Humanities, Historic Craftsmanship & Expressive Narratives",
+  "durationMinutes": 90,
+  "audioDir": "mock_test_2/audio/",
+  "reading": [
+    {
+      "task": 1,
+      "tag": "Task 1 • Notices & Messages",
+      "title": "Manuscript Reading Room",
+      "instruction": "Read the notice and answer the question.",
+      "passage": "<strong>SPECIAL COLLECTIONS &amp; ARCHIVES: MANUSCRIPT READING ROOM</strong><br/>\n<em>Consultation of pre-1800 vellum documents requires clean cotton gloves, provided at the reception desk. Strictly no ink pens, highlighters, or liquids of any description may be brought past the security turnstile; only wooden graphite pencils are permitted for notation. Digital camera photography is permitted solely for registered researchers holding an approved reproduction permit.</em>",
+      "questions": [
+        {
+          "id": "r_q1",
+          "num": 1,
+          "type": "mc",
+          "stem": "1. What are visitors to the Manuscript Reading Room instructed to do?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Bring their own cotton gloves to inspect antique documents."
+            },
+            {
+              "val": "B",
+              "label": "[B] Avoid bringing liquid writing instruments into the study space."
+            },
+            {
+              "val": "C",
+              "label": "[C] Obtain prior written permission before using wooden graphite pencils."
+            }
+          ],
+          "key": "B",
+          "skill": "Factual Detail / Prohibition (A2-B1)",
+          "trap": "[A] contradicts 'provided at reception'; [C] pencils are explicitly permitted."
+        }
+      ]
+    },
+    {
+      "task": 2,
+      "tag": "Task 2 • Sentence Gap-Fill",
+      "title": "Literary Travel Memoir",
+      "instruction": "Choose the correct word to complete the sentence.",
+      "questions": [
+        {
+          "id": "r_q2",
+          "num": 2,
+          "type": "mc",
+          "stem": "2. The author's latest travel memoir vivid [          ] memories of her solitary winter trek across the wind-swept Scandinavian tundra.",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] recalled"
+            },
+            {
+              "val": "B",
+              "label": "[B] evoked"
+            },
+            {
+              "val": "C",
+              "label": "[C] resembled"
+            }
+          ],
+          "key": "B",
+          "skill": "Literary Verb Collocation (A2-B1)",
+          "trap": "A book 'evokes' memories; individuals recall their own memories."
+        }
+      ]
+    },
+    {
+      "task": 3,
+      "tag": "Task 3 • Open Gap-Fill",
+      "title": "The Book Town of Hay-on-Wye",
+      "instruction": "Write ONE word only in each gap.",
+      "passage": "<p>Nestled along the winding border between England and Wales lies Hay-on-Wye, a historic market town <strong>(3)</strong> _________ has earned global renown as the world's first open-air literary haven. In the early 1960s, an eccentric bibliophile named Richard Booth began buying dilapidated buildings and filling them <strong>(4)</strong> _________ salvaged antiquarian volumes from closing libraries.</p>\n<p>Within two decades, dozens of specialty bookdealers followed suit, transforming sleepy residential lanes into a sprawling maze of open-air honesty bookshops. Visitors from across the world now wander through castle courtyards where shelves are left unattended overnight, <strong>(5)</strong> _________ relying on travelers to drop coins into wooden trust boxes.</p>\n<p>\"There is something magical <strong>(6)</strong> _________ discovering a forgotten 19th-century poetry volume in a ruined fortress,\" one regular traveler noted. Today, the town stands as living testament <strong>(7)</strong> _________ the enduring romance of the physical printed page.</p>",
+      "questions": [
+        {
+          "id": "r_q3",
+          "num": 3,
+          "type": "text",
+          "stem": "Gap 3",
+          "key": "which",
+          "skill": "Relative Pronoun (B1)",
+          "trap": "Non-personal defining relative pronoun referring to 'historic market town'.",
+          "variants": [
+            "which",
+            "that"
+          ]
+        },
+        {
+          "id": "r_q4",
+          "num": 4,
+          "type": "text",
+          "stem": "Gap 4",
+          "key": "with",
+          "skill": "Dependent Preposition (B1)",
+          "trap": "Fixed passive collocation: filling them [with] salvaged volumes."
+        },
+        {
+          "id": "r_q5",
+          "num": 5,
+          "type": "text",
+          "stem": "Gap 5",
+          "key": "simply",
+          "skill": "Adverbial Modification (B2)",
+          "trap": "Adverbial intensifier qualifying unmediated honor-system trust.",
+          "variants": [
+            "simply",
+            "merely"
+          ]
+        },
+        {
+          "id": "r_q6",
+          "num": 6,
+          "type": "text",
+          "stem": "Gap 6",
+          "key": "about",
+          "skill": "Prepositional Dependent (B1)",
+          "trap": "Fixed existential structure: something magical [about] discovering."
+        },
+        {
+          "id": "r_q7",
+          "num": 7,
+          "type": "text",
+          "stem": "Gap 7",
+          "key": "to",
+          "skill": "Fixed Idiom (B2)",
+          "trap": "Idiomatic collocation: stand as (a) testament to."
+        }
+      ]
+    },
+    {
+      "task": 4,
+      "tag": "Task 4 • Multiple-Choice Gap-Fill",
+      "title": "The Art of Woodblock Engraving",
+      "instruction": "Choose the correct word (A, B, C, or D) for each gap.",
+      "passage": "Woodblock engraving is one of the most demanding disciplines in traditional printmaking. Working across the dense end-grain of seasoned boxwood, the slightest slip of the blade can irrevocably <strong>(8)</strong> _________ weeks of painstaking labor. Before making the first incision, master engravers carefully <strong>(9)</strong> _________ the density of the block. The resulting prints exhibit tonal gradations that digital reproduction can rarely <strong>(10)</strong> _________. Recently, independent presses have <strong>(11)</strong> _________ this heritage craft to breathe tactile elegance into limited-edition poetry, ensuring it continues to <strong>(12)</strong> _________ a deep chord with modern readers.",
+      "questions": [
+        {
+          "id": "r_q8",
+          "num": 8,
+          "type": "select",
+          "stem": "8. [A] spoil    [B] corrupt    [C] dismiss    [D] dismantle",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - spoil"
+            },
+            {
+              "val": "B",
+              "label": "B - corrupt"
+            },
+            {
+              "val": "C",
+              "label": "C - dismiss"
+            },
+            {
+              "val": "D",
+              "label": "D - dismantle"
+            }
+          ],
+          "key": "A",
+          "skill": "Collocation (B1-B2)",
+          "trap": "Irrevocably 'spoil' weeks of painstaking labor."
+        },
+        {
+          "id": "r_q9",
+          "num": 9,
+          "type": "select",
+          "stem": "9. [A] evaluate    [B] wonder    [C] guess    [D] regard",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - evaluate"
+            },
+            {
+              "val": "B",
+              "label": "B - wonder"
+            },
+            {
+              "val": "C",
+              "label": "C - guess"
+            },
+            {
+              "val": "D",
+              "label": "D - regard"
+            }
+          ],
+          "key": "A",
+          "skill": "Cognitive Transitive Verb (B2)",
+          "trap": "Professionally 'evaluate' material grain density prior to cutting."
+        },
+        {
+          "id": "r_q10",
+          "num": 10,
+          "type": "select",
+          "stem": "10. [A] pretend    [B] match    [C] agree    [D] cooperate",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - pretend"
+            },
+            {
+              "val": "B",
+              "label": "B - match"
+            },
+            {
+              "val": "C",
+              "label": "C - agree"
+            },
+            {
+              "val": "D",
+              "label": "D - cooperate"
+            }
+          ],
+          "key": "B",
+          "skill": "Comparative Collocation (B1-B2)",
+          "trap": "Digital reproduction can rarely 'match' subtle tonal gradations."
+        },
+        {
+          "id": "r_q11",
+          "num": 11,
+          "type": "select",
+          "stem": "11. [A] relieved    [B] revived    [C] resisted    [D] released",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - relieved"
+            },
+            {
+              "val": "B",
+              "label": "B - revived"
+            },
+            {
+              "val": "C",
+              "label": "C - resisted"
+            },
+            {
+              "val": "D",
+              "label": "D - released"
+            }
+          ],
+          "key": "B",
+          "skill": "Heritage Register (B2)",
+          "trap": "Printers have 'revived' this heritage craft."
+        },
+        {
+          "id": "r_q12",
+          "num": 12,
+          "type": "select",
+          "stem": "12. [A] beat    [B] hit    [C] strike    [D] touch",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - beat"
+            },
+            {
+              "val": "B",
+              "label": "B - hit"
+            },
+            {
+              "val": "C",
+              "label": "C - strike"
+            },
+            {
+              "val": "D",
+              "label": "D - touch"
+            }
+          ],
+          "key": "C",
+          "skill": "Idiomatic Collocation (B2)",
+          "trap": "Fixed idiom: 'strike a deep chord with'."
+        }
+      ]
+    },
+    {
+      "task": 5,
+      "tag": "Task 5 • Extended Text",
+      "title": "The Granite Solitude of Dartmoor",
+      "instruction": "Read the memoir and answer questions 13–17.",
+      "passage": "<p>For centuries, the desolate granite uplands of Dartmoor in southwest England have cast a somber spell over poets and wanderers. Clothed in purple heather, treacherous peat bogs, and eerie stone monuments dating back to the Bronze Age, this landscape resists human domestication. Last November, seeking respite from the frictionless routine of urban consulting, I packed a canvas rucksack and set out on a four-day solo trek across the north moor without GPS assistance, relying strictly on an Ordnance Survey contour map and an antique brass compass.</p>\n<p>By mid-afternoon on my second day, an impenetrable blanket of Atlantic sea-fog rolled silently across the tors. Within minutes, visible landmarks vanished. In such disorienting isolation, every sensory stimulus contracts to the immediate radius of your boots: the squelch of saturated moss beneath wet leather, the sharp whistling of cold gale-force winds through granite crevices, and the brooding silence of the hills. You are no longer a detached observer consuming scenery, but a humble organism navigating raw geological antiquity.</p>\n<p>Navigating Dartmoor's infamous mire beds demands rigorous vigilance. What appears to be an inviting patch of bright emerald turf is frequently a deceitful \"quaking bog\"—a liquid slurry of subterranean silt and decomposed peat. Learning to read subtle botanical indicators became my lifeline: avoidance of fluorescent mosses, following the sturdy hoof-paths carved by wild semi-feral ponies, and probing suspicious ground with a seasoned hazel walking stick.</p>\n<p>As dusk settled on the final evening, I reached the ancient oak woodland of Wistman’s Wood. Here, dwarf pedunculate oaks have grown for millennia, their gnarled, moss-encrusted branches contorted like petrified sea serpents between colossal boulders. Standing amidst this primeval cathedral, I was struck by how contemporary society has banished darkness and silence from daily life. We congratulate ourselves on instantaneous digital connectivity, yet we have severed our ancestral relationship with the unhurried rhythms of the earth. Dartmoor does not flatter human self-importance; it humbles our hurried ambitions and reminds us of the profound restorative dignity found in quiet endurance.</p>",
+      "questions": [
+        {
+          "id": "r_q13",
+          "num": 13,
+          "type": "mc",
+          "stem": "13. What motivated the writer to undertake a four-day trek across Dartmoor?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] A desire to photograph ancient Bronze Age monuments for a publication."
+            },
+            {
+              "val": "B",
+              "label": "[B] A craving for a demanding physical break from the monotony of modern city living."
+            },
+            {
+              "val": "C",
+              "label": "[C] A challenge to prove that antique brass compasses are superior to digital GPS devices."
+            },
+            {
+              "val": "D",
+              "label": "[D] An academic expedition to document rare high-altitude peat bog vegetation."
+            }
+          ],
+          "key": "B",
+          "skill": "Motivation / Gist (B2)",
+          "trap": "Text: 'seeking respite from the frictionless routine of urban consulting'."
+        },
+        {
+          "id": "r_q14",
+          "num": 14,
+          "type": "mc",
+          "stem": "14. When the sea-fog engulfed the moor on the second afternoon, the writer:",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] became paralyzed by fear and abandoned the designated trail."
+            },
+            {
+              "val": "B",
+              "label": "[B] was forced to seek shelter inside a natural granite cavern."
+            },
+            {
+              "val": "C",
+              "label": "[C] experienced an acute sharpening of immediate auditory and tactile senses."
+            },
+            {
+              "val": "D",
+              "label": "[D] regretted leaving behind modern satellite emergency beacons."
+            }
+          ],
+          "key": "C",
+          "skill": "Sensory Transition (B2-C1)",
+          "trap": "Text: 'every sensory stimulus contracts to the immediate radius of your boots'."
+        },
+        {
+          "id": "r_q15",
+          "num": 15,
+          "type": "mc",
+          "stem": "15. What strategy did the writer adopt to cross treacherous mire country safely?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Moving exclusively along elevated granite ridgelines."
+            },
+            {
+              "val": "B",
+              "label": "[B] Observing subtle plant varieties and following trails left by wild ponies."
+            },
+            {
+              "val": "C",
+              "label": "[C] Waiting until morning frost solidified the bog surface."
+            },
+            {
+              "val": "D",
+              "label": "[D] Trusting the directional cues provided by passing local shepherds."
+            }
+          ],
+          "key": "B",
+          "skill": "Practical Detail (B2)",
+          "trap": "Tactics: 'avoidance of fluorescent mosses, following hoof-paths of wild ponies'."
+        },
+        {
+          "id": "r_q16",
+          "num": 16,
+          "type": "mc",
+          "stem": "16. In the final paragraph, what reflection does Wistman’s Wood evoke in the writer?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Ancient oak forests are in imminent danger of disappearing due to timber harvesting."
+            },
+            {
+              "val": "B",
+              "label": "[B] Modern technological culture has alienated humans from natural stillness and deep time."
+            },
+            {
+              "val": "C",
+              "label": "[C] Urban dwellers lack the botanical knowledge needed to survive in temperate woodlands."
+            },
+            {
+              "val": "D",
+              "label": "[D] Solitary wilderness expeditions should be made mandatory for urban professionals."
+            }
+          ],
+          "key": "B",
+          "skill": "Philosophical Synthesis (C1)",
+          "trap": "Wistman's Wood: modern society alienated humans from natural stillness."
+        },
+        {
+          "id": "r_q17",
+          "num": 17,
+          "type": "mc",
+          "stem": "17. What is the overarching tone of the writer's travel memoir?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Humorous and self-deprecating about amateur outdoor mishaps."
+            },
+            {
+              "val": "B",
+              "label": "[B] Detached and analytical regarding regional geomorphology."
+            },
+            {
+              "val": "C",
+              "label": "[C] Lyrical, contemplative, and reverent toward wild landscapes."
+            },
+            {
+              "val": "D",
+              "label": "[D] Urgent and polemical regarding climate change mitigation."
+            }
+          ],
+          "key": "C",
+          "skill": "Discourse Tone (B2-C1)",
+          "trap": "Reflective, poetic, and reverent toward wild nature."
+        }
+      ]
+    },
+    {
+      "task": 6,
+      "tag": "Task 6 • Short Article Multiple Choice",
+      "title": "The Architecture of Scent and Memory",
+      "instruction": "Read the short article and answer questions 18–19.",
+      "passage": "Few cognitive experiences are as sudden and emotionally vivid as the involuntary recollection triggered by an unexpected scent. Termed the \"Proustian phenomenon\"—after Marcel Proust's celebrated description of a tea-soaked madeleine unleashing childhood memories—this sensory superpower has distinct evolutionary roots. Unlike visual or auditory signals, which pass through the thalamus for cognitive filtering before reaching higher cortical regions, olfactory nerves connect directly to the amygdala and hippocampus, the neurobiological centers governing emotion and associative memory. Because this direct neurological pathway bypasses analytical deliberation, scents evoke memories with unparalleled emotional immediacy and sensory fidelity.",
+      "questions": [
+        {
+          "id": "r_q18",
+          "num": 18,
+          "type": "mc",
+          "stem": "18. According to the first paragraph, why do smells trigger memories more instantly than sounds or sights?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Human nostrils possess significantly more receptor cells than the eyes or ears."
+            },
+            {
+              "val": "B",
+              "label": "[B] Olfactory signals travel directly to emotional brain centers without prior analytical filtering."
+            },
+            {
+              "val": "C",
+              "label": "[C] Scents are processed during deep stages of sleep when memory consolidation occurs."
+            },
+            {
+              "val": "D",
+              "label": "[D] Auditory memories deteriorate at a much faster rate over the human lifespan."
+            }
+          ],
+          "key": "B",
+          "skill": "Neurobiology Detail (B1-B2)",
+          "trap": "Direct pathway to amygdala/hippocampus without thalamic filtering."
+        },
+        {
+          "id": "r_q19",
+          "num": 19,
+          "type": "mc",
+          "stem": "19. What characterizes the memories awakened by the \"Proustian phenomenon\"?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] They tend to focus exclusively on traumatic childhood warnings."
+            },
+            {
+              "val": "B",
+              "label": "[B] They possess an intense emotional atmosphere and remarkably clear sensory detail."
+            },
+            {
+              "val": "C",
+              "label": "[C] They require repeated exposure to the scent before they can be unlocked."
+            },
+            {
+              "val": "D",
+              "label": "[D] They are easily altered or distorted by modern adult preconceptions."
+            }
+          ],
+          "key": "B",
+          "skill": "Proustian Definition (B2)",
+          "trap": "Evokes memories with unparalleled emotional immediacy and sensory fidelity."
+        }
+      ]
+    },
+    {
+      "task": 7,
+      "tag": "Task 7 • Missing Sentences",
+      "title": "The Phantom Islands of Early Sea Charts",
+      "instruction": "Choose the correct sentence (A–H) for each gap (20–24).",
+      "passage": "<p>For hundreds of years, maritime navigators set sail across open oceans guided by maps depicting islands that did not exist. These elusive geographic ghosts occupied prominent positions on European charts from the fourteenth through the nineteenth centuries. <strong>(20)</strong> [ _________ ].</p>\n<p>One famous example was Hy-Brasil, an enigmatic island said to lie west of Ireland. Celtic folklore held that it was perpetually cloaked in dense mists, revealing its shores once every seven years. <strong>(21)</strong> [ _________ ]. Admiralty charts marked its coordinates well into the Victorian era, as captains mistook low-hanging cloud banks for land.</p>\n<p>Another enduring phantom was the island of Saint Brendan, named after a sixth-century Irish monk who sailed into the western ocean. Medieval cartographers placed Brendan's paradise across various Atlantic locations. <strong>(22)</strong> [ _________ ]. When Columbus set sail in 1492, his crew kept a vigilant watch for Brendan’s island as a provisioning post.</p>\n<p>The persistence of these landmasses was not purely imagination; navigation was plagued by dead reckoning errors. <strong>(23)</strong> [ _________ ]. Furthermore, mapmakers faced intense commercial pressure to produce comprehensive charts; omitting an island claimed by a celebrated captain could ruin an atlas maker's reputation.</p>\n<p>The ultimate demise of phantom islands arrived with the marine chronometer and systematic hydrographic surveying. <strong>(24)</strong> [ _________ ]. Yet, even today, these vanished archipelagos retain an enduring allure, reminding us of an era when the edges of maps were still inscribed with mystery.</p>",
+      "optionsReference": "<strong>Options:</strong><br/>\n<strong>[A]</strong> Over time, rigorous naval expeditions methodically combed the Atlantic, erasing these mythical coordinates from official charts.<br/>\n<strong>[B]</strong> Modern satellite imagery has uncovered hidden volcanic peaks beneath these precise ocean coordinates.<br/>\n<strong>[C]</strong> Far from being deliberate hoaxes, they were born of mirages, navigational miscalculations, and sailors' desperate hopes.<br/>\n<strong>[D]</strong> Deep-sea divers frequently discover sunken stone masonry beneath the shallow sandbanks of the Celtic Sea.<br/>\n<strong>[E]</strong> Despite repeated voyages failing to locate its anchorages, cartographers refused to strike it from their copperplate engravings.<br/>\n<strong>[F]</strong> Consequently, an isolated iceberg, a floating mat of pumice, or a distant bank of fog was easily logged as newly discovered territory.<br/>\n<strong>[G]</strong> European monarchs issued royal charters claiming sovereignty over these mythical territories.<br/>\n<strong>[H]</strong> Even when Spanish expeditions proved the Caribbean was land, Brendan's haven merely migrated further west on newer maps.",
+      "questions": [
+        {
+          "id": "r_q20",
+          "num": 20,
+          "type": "select",
+          "stem": "Gap 20",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "C",
+          "skill": "Sentence Cohesion (B2)",
+          "trap": "Sentence C explains origin: 'Far from being hoaxes, born of mirages...'"
+        },
+        {
+          "id": "r_q21",
+          "num": 21,
+          "type": "select",
+          "stem": "Gap 21",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "E",
+          "skill": "Historical Contrast (B2)",
+          "trap": "Sentence E notes cartographers refused to strike Hy-Brasil despite failures."
+        },
+        {
+          "id": "r_q22",
+          "num": 22,
+          "type": "select",
+          "stem": "Gap 22",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "H",
+          "skill": "Cartographic Movement (B2-C1)",
+          "trap": "Sentence H tracks Brendan's haven migrating west on newer maps."
+        },
+        {
+          "id": "r_q23",
+          "num": 23,
+          "type": "select",
+          "stem": "Gap 23",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "F",
+          "skill": "Cause-and-Effect (B2-C1)",
+          "trap": "Dead reckoning errors meant fog banks were logged as new territory."
+        },
+        {
+          "id": "r_q24",
+          "num": 24,
+          "type": "select",
+          "stem": "Gap 24",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "A",
+          "skill": "Closure / Historical Progress (C1)",
+          "trap": "Naval expeditions methodically erased mythical coordinates one by one."
+        }
+      ]
+    },
+    {
+      "task": 8,
+      "tag": "Task 8 • Missing Paragraphs",
+      "title": "The Return of the Hand-Penned Letter",
+      "instruction": "Choose the correct paragraph (A–F) for each gap (25–29).",
+      "passage": "<p>We inhabit a culture defined by ephemeral communication. Yet, amid this digital deluge, a quiet counter-revolution is taking root: the renaissance of the physical fountain-pen letter written on heavy cotton paper.</p>\n<p><strong>(25)</strong> [ _________ ]</p>\n<p>The deliberate slowness of hand-writing fundamentally alters the writer's cognitive state. Putting wet ink onto woven parchment demands meditative intentionality; each sentence must be weighed before the nib touches the page, because an ink stroke cannot be undone with a keystroke.</p>\n<p><strong>(26)</strong> [ _________ ]</p>\n<p>Furthermore, physical letters carry an intimate somatic presence. A person's handwriting is as unique as their thumbprint—revealing moods through the slant of ascenders, the hurried loop of a vowel, or the cautious pause of an ink blot.</p>\n<p><strong>(27)</strong> [ _________ ]</p>\n<p>This sensory richness extends to the ritual of dispatch. The act of sliding a folded sheet into an envelope and applying a beeswax seal introduces an element of temporal suspense that our on-demand society has largely eradicated.</p>\n<p><strong>(28)</strong> [ _________ ]</p>\n<p>Historians also voice alarm regarding the \"digital dark age.\" While 18th-century letters preserved in archives can still be opened and read three centuries later, digital messages sent across proprietary platforms risk disappearing when servers go dark.</p>\n<p><strong>(29)</strong> [ _________ ]</p>\n<p>In penning a letter, we gift a physical fragment of our fleeting time, preserving our authentic human voice in a world drowning in synthetic noise.</p>",
+      "optionsReference": "<strong>Options:</strong><br/>\n<strong>[A]</strong> A handwritten archive, by contrast, possesses miraculous physical longevity, surviving through centuries.<br/>\n<strong>[B]</strong> This sensory intimacy explains why people preserve old family letters in shoeboxes for decades.<br/>\n<strong>[C]</strong> In response, major tech conglomerates have introduced digital stylus pens to replicate screen friction.<br/>\n<strong>[D]</strong> Far from being the eccentric preserve of retro enthusiasts, stationery boutiques report soaring demand.<br/>\n<strong>[E]</strong> The recipient, too, experiences an emotional jolt upon finding a hand-addressed envelope among bills.<br/>\n<strong>[F]</strong> This neurological engagement has been confirmed by cognitive studies showing physical writing stimulates deeper memory.",
+      "questions": [
+        {
+          "id": "r_q25",
+          "num": 25,
+          "type": "select",
+          "stem": "Gap 25",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "D",
+          "skill": "Market Trend Cohesion (B2-C1)",
+          "trap": "Stationery boutiques report soaring demand among young adults."
+        },
+        {
+          "id": "r_q26",
+          "num": 26,
+          "type": "select",
+          "stem": "Gap 26",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "F",
+          "skill": "Neurological Evidence (C1)",
+          "trap": "Cognitive studies confirm physical writing stimulates deeper retention."
+        },
+        {
+          "id": "r_q27",
+          "num": 27,
+          "type": "select",
+          "stem": "Gap 27",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "B",
+          "skill": "Somatic Presence (C1)",
+          "trap": "Sensory intimacy explains why old letters are kept in shoeboxes."
+        },
+        {
+          "id": "r_q28",
+          "num": 28,
+          "type": "select",
+          "stem": "Gap 28",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "E",
+          "skill": "Recipient Perspective (C1)",
+          "trap": "Mirrors writer's suspense with recipient's joy upon receiving a letter."
+        },
+        {
+          "id": "r_q29",
+          "num": 29,
+          "type": "select",
+          "stem": "Gap 29",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "A",
+          "skill": "Archival Contrast (C1)",
+          "trap": "Counterpoint to digital dark age: handwritten archives possess physical longevity."
+        }
+      ]
+    },
+    {
+      "task": 9,
+      "tag": "Task 9 • Multiple Text Matching",
+      "title": "The Custodians of Time: Four Restorers",
+      "instruction": "Match questions 30–33 with Restorers A–D.",
+      "passage": "<p><strong>Restorer A (Horologist - Julian Vance):</strong> Restoring an 18th-century chiming pendulum clock is like unravelling a mechanical dialogue across centuries. If a brass tooth is worn down, I hand-file a replacement tooth from vintage brass alloy matching the era's metallurgy. The most humbling moment is hearing that steady heartbeat return after half a century of silence.</p>\n<p><strong>Restorer B (Bookbinder - Clara Thorne):</strong> People often imagine book restoration is about making a dilapidated volume look pristine. In reality, that scrubs away the history. When I mend torn rag-paper leaves, I use reversible wheat-starch paste. Every intervention must be completely reversible so future conservators can undo my work without harming the vellum.</p>\n<p><strong>Restorer C (Pipe Organ Voicer - Henrik Lindqvist):</strong> A pipe organ is an acoustic ecosystem breathing within an architectural cavern. You spend twelve hours a day perched atop wooden scaffolding inside a drafty cathedral shaving fractions of a millimeter from lead-tin lips. You aren't just tuning pitch; you are shaping timbre, breathiness, and attack.</p>\n<p><strong>Restorer D (Stained-Glass Glazier - Soraya Patel):</strong> Medieval stained glass is astonishingly fragile yet enduring. We clean panels with deionized water swabs and re-lead using historic alloy profiles. When afternoon sunlight streams through a conserved rose window, throwing sapphire refractions across stone floors, you understand why medieval worshippers believed light was divine.</p>",
+      "questions": [
+        {
+          "id": "r_q30",
+          "num": 30,
+          "type": "select",
+          "stem": "30. Which restorer emphasizes that repairs must be capable of being safely undone by future conservators?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Restorer A (Horologist)"
+            },
+            {
+              "val": "B",
+              "label": "Restorer B (Bookbinder)"
+            },
+            {
+              "val": "C",
+              "label": "Restorer C (Organ Voicer)"
+            },
+            {
+              "val": "D",
+              "label": "Restorer D (Stained Glass)"
+            }
+          ],
+          "key": "B",
+          "skill": "Reversibility Doctrine (B2-C1)",
+          "trap": "Bookbinder Clara: 'Every intervention must be completely reversible'."
+        },
+        {
+          "id": "r_q31",
+          "num": 31,
+          "type": "select",
+          "stem": "31. Which restorer sources period-accurate metals to ensure metallurgical authenticity?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Restorer A (Horologist)"
+            },
+            {
+              "val": "B",
+              "label": "Restorer B (Bookbinder)"
+            },
+            {
+              "val": "C",
+              "label": "Restorer C (Organ Voicer)"
+            },
+            {
+              "val": "D",
+              "label": "Restorer D (Stained Glass)"
+            }
+          ],
+          "key": "A",
+          "skill": "Metallurgical Authenticity (B2-C1)",
+          "trap": "Horologist Julian: 'replacement tooth from vintage brass alloy matching the era'."
+        },
+        {
+          "id": "r_q32",
+          "num": 32,
+          "type": "select",
+          "stem": "32. Which restorer describes the physical exertion of working in challenging architectural conditions?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Restorer A (Horologist)"
+            },
+            {
+              "val": "B",
+              "label": "Restorer B (Bookbinder)"
+            },
+            {
+              "val": "C",
+              "label": "Restorer C (Organ Voicer)"
+            },
+            {
+              "val": "D",
+              "label": "Restorer D (Stained Glass)"
+            }
+          ],
+          "key": "C",
+          "skill": "Physical Exertion (B2-C1)",
+          "trap": "Organ Voicer Henrik: 'perched atop wooden scaffolding in a drafty cathedral'."
+        },
+        {
+          "id": "r_q33",
+          "num": 33,
+          "type": "select",
+          "stem": "33. Which restorer reflects on how illumination creates an awe-inspiring visual experience?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Restorer A (Horologist)"
+            },
+            {
+              "val": "B",
+              "label": "Restorer B (Bookbinder)"
+            },
+            {
+              "val": "C",
+              "label": "Restorer C (Organ Voicer)"
+            },
+            {
+              "val": "D",
+              "label": "Restorer D (Stained Glass)"
+            }
+          ],
+          "key": "D",
+          "skill": "Spiritual Luminescence (B2-C1)",
+          "trap": "Glazier Soraya: 'afternoon sunlight streams through freshly conserved rose window'."
+        }
+      ]
+    }
+  ],
+  "listening": [
+    {
+      "task": 1,
+      "tag": "Task 1 • Short Dialogue Multiple Choice",
+      "title": "Edinburgh Express Lost Property",
+      "instruction": "Listen to the conversation. (2 plays maximum)",
+      "audioTrack": "q1_dialogue.mp3",
+      "questions": [
+        {
+          "id": "l_q1",
+          "num": 1,
+          "type": "mc",
+          "stem": "1. Which personal belonging had the woman left on the 8:15 Edinburgh express?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] An artist's woollen scarf"
+            },
+            {
+              "val": "B",
+              "label": "[B] A vintage leather sketchbook"
+            },
+            {
+              "val": "C",
+              "label": "[C] An electronic tablet"
+            }
+          ],
+          "key": "B",
+          "skill": "Acoustic Distractor Reversal (A1-A2)",
+          "trap": "Scarf and tablet present in backpack; leather sketchbook left on luggage rack."
+        }
+      ]
+    },
+    {
+      "task": 2,
+      "tag": "Task 2 • Dialogue Multiple Choice",
+      "title": "Kitchen Power Outage",
+      "instruction": "Listen to two apprentice chefs. (2 plays maximum)",
+      "audioTrack": "q2_dialogue.mp3",
+      "questions": [
+        {
+          "id": "l_q2",
+          "num": 2,
+          "type": "mc",
+          "stem": "2. How did both speakers feel about the sudden power outage in the kitchen?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Annoyed by having to apologize to disappointed diners"
+            },
+            {
+              "val": "B",
+              "label": "[B] Energized and empowered by their improvised adaptation under pressure"
+            },
+            {
+              "val": "C",
+              "label": "[C] Anxious that their culinary mentors would judge their cooking harshly"
+            }
+          ],
+          "key": "B",
+          "skill": "Shared Sentiment (A2-B1)",
+          "trap": "Both agree the forced pivot to open flame gave the brigade a surge of confidence."
+        }
+      ]
+    },
+    {
+      "task": 3,
+      "tag": "Task 3 • Extended Interview",
+      "title": "Dr. Julian Croft: Subterranean Speleology",
+      "instruction": "Listen to the interview and answer questions 3–7. (2 plays maximum)",
+      "audioTrack": "q3_q7_interview.mp3",
+      "questions": [
+        {
+          "id": "l_q3",
+          "num": 3,
+          "type": "mc",
+          "stem": "3. What originally drew Julian from mountaineering to submerged cave diving?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] The chance to test experimental diving suits in deep waters"
+            },
+            {
+              "val": "B",
+              "label": "[B] The total absence of pre-existing maps in unexplored submerged chambers"
+            },
+            {
+              "val": "C",
+              "label": "[C] The desire to break international cave depth records"
+            }
+          ],
+          "key": "B",
+          "skill": "Motivation / Labyrinth (B1-B2)",
+          "trap": "Irresistible pull: sheer absence of pre-existing maps in submerged labyrinths."
+        },
+        {
+          "id": "l_q4",
+          "num": 4,
+          "type": "mc",
+          "stem": "4. According to Julian, what was the most physically and mentally exhausting trial underground?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Calculating gas supply volumes on closed-circuit rebreathers"
+            },
+            {
+              "val": "B",
+              "label": "[B] Squeezing blind through ultra-narrow limestone silt restrictions"
+            },
+            {
+              "val": "C",
+              "label": "[C] Enduring prolonged sub-zero temperatures in subterranean water pools"
+            }
+          ],
+          "key": "B",
+          "skill": "Silt Restrictions (B2)",
+          "trap": "Navigating ultra-narrow silt restrictions blind without kicking up limestone."
+        },
+        {
+          "id": "l_q5",
+          "num": 5,
+          "type": "mc",
+          "stem": "5. What crucial scientific fact did finding giant ground sloth skeletons reveal?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] The flooded cave labyrinth had once been dry inland valleys during the ice age"
+            },
+            {
+              "val": "B",
+              "label": "[B] Prehistoric human settlements maintained domesticated megafauna inside caves"
+            },
+            {
+              "val": "C",
+              "label": "[C] Sea level rise occurred much more recently than previously documented"
+            }
+          ],
+          "key": "A",
+          "skill": "Ice Age Valleys (B2-C1)",
+          "trap": "Sloth fossils inland prove cave systems were bone-dry valleys during glacial maximum."
+        },
+        {
+          "id": "l_q6",
+          "num": 6,
+          "type": "mc",
+          "stem": "6. Why are pharmaceutical scientists keen to analyze the cave's bacterial colonies?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] They consume microplastics and industrial toxins in water supplies"
+            },
+            {
+              "val": "B",
+              "label": "[B] They produce unique antimicrobial compounds effective against drug-resistant superbugs"
+            },
+            {
+              "val": "C",
+              "label": "[C] They synthesize renewable biofuels through chemoautotrophic metabolism"
+            }
+          ],
+          "key": "B",
+          "skill": "Pharmaceutical Superbugs (B2)",
+          "trap": "Synthesize unique antimicrobial compounds potent against hospital superbugs."
+        },
+        {
+          "id": "l_q7",
+          "num": 7,
+          "type": "mc",
+          "stem": "7. What fundamental guidance does Julian impart to aspiring exploratory researchers?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Invest in the latest autonomous mapping drones before mounting an expedition"
+            },
+            {
+              "val": "B",
+              "label": "[B] Prioritize instinctive wilderness competence over technological instruments"
+            },
+            {
+              "val": "C",
+              "label": "[C] Never conduct field dives without constant satellite telemetry links"
+            }
+          ],
+          "key": "B",
+          "skill": "Wilderness Intuition (B2-C1)",
+          "trap": "Prioritize intuitive rock reading and staying calm over digital tools."
+        }
+      ]
+    },
+    {
+      "task": 4,
+      "tag": "Task 4 • Extended Discussion",
+      "title": "Emergent Storytelling in Game Design",
+      "instruction": "Listen to Marcus and Elena and answer questions 8–9. (2 plays maximum)",
+      "audioTrack": "q8_q9_discussion.mp3",
+      "questions": [
+        {
+          "id": "l_q8",
+          "num": 8,
+          "type": "mc",
+          "stem": "8. Why do Marcus and Elena prefer emergent storytelling to pre-scripted cinematic scenes?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] It allows studios to cut back on expensive voice-actor casting"
+            },
+            {
+              "val": "B",
+              "label": "[B] Players feel far deeper emotional resonance when stories arise from their own choices"
+            },
+            {
+              "val": "C",
+              "label": "[C] It enables game scripts to be translated into foreign languages more easily"
+            }
+          ],
+          "key": "B",
+          "skill": "Emotional Resonance (B1-B2)",
+          "trap": "Personal survival choices evoke grief and emotional resonance 10x deeper."
+        },
+        {
+          "id": "l_q9",
+          "num": 9,
+          "type": "mc",
+          "stem": "9. What major challenge do they identify with giving players unrestricted systemic freedom?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Narrative pacing, dramatic tension, and overall coherence can unravel"
+            },
+            {
+              "val": "B",
+              "label": "[B] Modern computer processors cannot handle procedural character simulations"
+            },
+            {
+              "val": "C",
+              "label": "[C] Casual players feel overwhelmed by complex keyboard control layouts"
+            }
+          ],
+          "key": "A",
+          "skill": "Narrative Coherence (B2)",
+          "trap": "Total freedom risks wandering aimlessly without dramatic pacing or climax."
+        }
+      ]
+    },
+    {
+      "task": 5,
+      "tag": "Task 5 • Multiple Matching",
+      "title": "Mid-Life Career Transitions",
+      "instruction": "Match speakers 1–5 with reasons A–H. (2 plays maximum)",
+      "audioTrack": "q10_q14_speakers.mp3",
+      "optionsReference": "<strong>Triggers &amp; Motivations:</strong><br/>\n<strong>[A]</strong> A severe medical wake-up call forced a lifestyle overhaul.<br/>\n<strong>[B]</strong> Inheriting a rural family property inspired an agricultural venture.<br/>\n<strong>[C]</strong> Paralyzing bureaucratic red tape suffocated creative fulfillment.<br/>\n<strong>[D]</strong> A deep longing to build tangible things and reconnect with natural elements.<br/>\n<strong>[E]</strong> Relocating internationally to support a partner's diplomatic assignment.<br/>\n<strong>[F]</strong> Profound moral discomfort with the societal impact of corporate technology.<br/>\n<strong>[G]</strong> Turning an obsessive archival leisure hobby into a professional vocation.<br/>\n<strong>[H]</strong> Unexpected commercial success from a viral craft tutorial.",
+      "questions": [
+        {
+          "id": "l_q10",
+          "num": 10,
+          "type": "select",
+          "stem": "Speaker 1 (Julian)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "D",
+          "skill": "Speaker 1 (B2)",
+          "trap": "Merger banker -> offshore sailing academy in Cornwall: reconnect with physical elements."
+        },
+        {
+          "id": "l_q11",
+          "num": 11,
+          "type": "select",
+          "stem": "Speaker 2 (Natasha)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "A",
+          "skill": "Speaker 2 (B2)",
+          "trap": "Pediatric surgeon -> sensory garden designer: stress-induced cardiac scare."
+        },
+        {
+          "id": "l_q12",
+          "num": 12,
+          "type": "select",
+          "stem": "Speaker 3 (Guy)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "F",
+          "skill": "Speaker 3 (B2)",
+          "trap": "Ad-tech engineer -> physics teacher: moral emptiness maximizing screen addiction."
+        },
+        {
+          "id": "l_q13",
+          "num": 13,
+          "type": "select",
+          "stem": "Speaker 4 (Sonia)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "C",
+          "skill": "Speaker 4 (B2-C1)",
+          "trap": "Civil servant -> sourdough baker: bureaucratic lethargy drowned in red tape."
+        },
+        {
+          "id": "l_q14",
+          "num": 14,
+          "type": "select",
+          "stem": "Speaker 5 (William)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "G",
+          "skill": "Speaker 5 (C1)",
+          "trap": "Commercial accountant -> maritime rare book conservator: turning archival hobby into vocation."
+        }
+      ]
+    },
+    {
+      "task": 6,
+      "tag": "Task 6 • Sentence Completion",
+      "title": "The Kronan-Nord Baltic Shipwreck",
+      "instruction": "Write NO MORE THAN THREE WORDS for each gap.",
+      "audioTrack": "q15_q19_monologue.mp3",
+      "questions": [
+        {
+          "id": "l_q15",
+          "num": 15,
+          "type": "text",
+          "stem": "15. Ship timbers survived intact due to low water salinity and completely _______________________________, preventing shipworm.",
+          "key": "anoxic sediments",
+          "skill": "Marine Chemistry Extraction (B2)",
+          "trap": "Low salinity and complete anoxic sediments prevent shipworm.",
+          "variants": [
+            "anoxic sediments",
+            "anoxic sediment",
+            "low salinity"
+          ]
+        },
+        {
+          "id": "l_q16",
+          "num": 16,
+          "type": "text",
+          "stem": "16. Fragile items in the captain's quarters were cleared using an innovative dredge operated by _______________________________.",
+          "key": "hydrostatic suction",
+          "skill": "Excavation Dredge Technique (B2-C1)",
+          "trap": "Specialized gentle water-dredge operated via controlled hydrostatic suction.",
+          "variants": [
+            "hydrostatic suction",
+            "gentle water-dredge",
+            "water dredge",
+            "controlled hydrostatic suction"
+          ]
+        },
+        {
+          "id": "l_q17",
+          "num": 17,
+          "type": "text",
+          "stem": "17. Chemical analysis revealed the pitch was infused with pine resin and _______________________________.",
+          "key": "juniper oils",
+          "skill": "Botanical Infusion Extraction (B2)",
+          "trap": "Resinous pitch infused with pine resin and juniper oils.",
+          "variants": [
+            "juniper oils",
+            "juniper oil"
+          ]
+        },
+        {
+          "id": "l_q18",
+          "num": 18,
+          "type": "text",
+          "stem": "18. Recovered waterlogged oak timbers were stabilized by immersion in an aqueous bath of _______________________________.",
+          "key": "polyethylene glycol",
+          "skill": "Conservation Chemistry (B2-C1)",
+          "trap": "Aqueous bath of polyethylene glycol synthetic wax displaces trapped water.",
+          "variants": [
+            "polyethylene glycol",
+            "peg"
+          ]
+        },
+        {
+          "id": "l_q19",
+          "num": 19,
+          "type": "text",
+          "stem": "19. The wreck provides rare material proof of undocumented _______________________________ between Scandinavia and the Levant.",
+          "key": "maritime trade networks",
+          "skill": "Historical Significance (C1)",
+          "trap": "Material evidence of undocumented maritime trade networks between Scandinavia and Levant.",
+          "variants": [
+            "maritime trade networks",
+            "mercantile exchange",
+            "trade networks",
+            "cross-cultural mercantile exchange"
+          ]
+        }
+      ]
+    }
+  ],
+  "writing": [
+    {
+      "part": 1,
+      "tag": "Writing Part 1 • Narrative Email",
+      "title": "Alpine Homestay Misadventure",
+      "instruction": "Write 150–180 words. (Target: 20 minutes)",
+      "prompt": "<strong>Context:</strong> You were traveling to a remote alpine village to begin a month-long craft residency hosted by David and Martha. However, unexpected sleet storms closed the high mountain pass, forcing you to seek emergency shelter in a shepherd's bothy.<br/><br/>\n<strong>In your email:</strong><br/>\n          1. Explain the unforeseen misadventure that caused you to miss your arrival.<br/>\n          2. Describe your night in the mountain refuge and reassure them of your safety.<br/>\n          3. Provide your updated arrival itinerary and inquire about your accommodation.",
+      "minWords": 150
+    },
+    {
+      "part": 2,
+      "tag": "Writing Part 2 • Cultural Feature Article",
+      "title": "The Objects We Inherit: Craftsmanship in an Automated Era",
+      "instruction": "Write 220–260 words. (Target: 25 minutes)",
+      "prompt": "<strong>Context:</strong> A cultural magazine is publishing an issue on <em>\"The Soul of the Artifact: Craftsmanship in an Automated Era\"</em>.<br/><br/>\n<strong>In your article:</strong><br/>\n          1. Contrast disposable digital technology with the enduring character of artisan artifacts.<br/>\n          2. Examine the role of physical imperfections, patina, and tactile materials in forging emotional connection.<br/>\n          3. Evaluate whether craft revival is passing retro nostalgia or an essential human need for authenticity.",
+      "minWords": 220
+    }
+  ]
+}

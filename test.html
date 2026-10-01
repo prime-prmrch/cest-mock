@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Cambridge English Skills Test (General) Simulator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="portal-bar" style="display:flex; justify-content:space-between; align-items:center; background:#f1f5f9; padding:6px 12px; border-radius:8px; margin-bottom:8px; font-size:12px; font-weight:600;">
+      <span style="color:#64748b;">Suites:</span>
+      <a href="index.html" style="color:var(--secondary); text-decoration:none; padding:3px 8px; border-radius:4px;">&#127968; Hub</a>
+      <a href="test.html?id=1" style="color:var(--secondary); text-decoration:none; padding:3px 8px; border-radius:4px;">Test 1</a>
+      <a href="test.html?id=2" style="color:var(--secondary); text-decoration:none; padding:3px 8px; border-radius:4px;">Test 2</a>
+      <a href="test.html?id=3" style="color:var(--secondary); text-decoration:none; padding:3px 8px; border-radius:4px;">Test 3</a>
+    </div>
+
+    <div class="header-top">
+      <div class="logo-badge">
+        <span class="badge-icon">TEST</span>
+        <span class="badge-title">Cambridge Skills Simulator</span>
+      </div>
+      <div class="timer-badge" id="examTimer">90:00</div>
+    </div>
+
+    <div class="tab-bar">
+      <button type="button" class="tab-btn active" onclick="switchSection('reading')">Reading (33)</button>
+      <button type="button" class="tab-btn" onclick="switchSection('listening')">Listening (19)</button>
+      <button type="button" class="tab-btn" onclick="switchSection('writing')">Writing (45m)</button>
+      <button type="button" class="tab-btn" onclick="switchSection('results')">Report</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Candidate Header Card -->
+    <div class="candidate-card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+      <div style="flex:1; min-width:200px;">
+        <label for="candidateName" style="font-size:12px; font-weight:700; color:var(--text-muted); display:block; margin-bottom:4px;">Candidate Name:</label>
+        <input type="text" id="candidateName" placeholder="Enter candidate name..." value="Student" style="width:100%; max-width:280px; padding:6px 10px; border:1px solid var(--border); border-radius:6px; font-size:14px;">
+      </div>
+      <div style="text-align:right;">
+        <span class="save-indicator" id="answeredProgress" style="background:#e8f1fa; color:var(--primary); padding:4px 10px; border-radius:12px; font-size:12px; font-weight:700;">0 / 52 answered</span>
+      </div>
+    </div>
+
+    <!-- ================= SECTION 1: READING ================= -->
+    <div id="section-reading" class="section-view active">
+      <div style="text-align:center; padding:30px; color:var(--text-muted);">Loading Reading Tasks...</div>
+    </div>
+
+    <!-- ================= SECTION 2: LISTENING ================= -->
+    <div id="section-listening" class="section-view">
+      <div style="text-align:center; padding:30px; color:var(--text-muted);">Loading Listening Tasks...</div>
+    </div>
+
+    <!-- ================= SECTION 3: WRITING ================= -->
+    <div id="section-writing" class="section-view">
+      <div style="text-align:center; padding:30px; color:var(--text-muted);">Loading Writing Tasks...</div>
+    </div>
+
+    <!-- ================= SECTION 4: RESULTS & REPORT ================= -->
+    <div id="section-results" class="section-view">
+      
+      <div class="score-card">
+        <div style="font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">Diagnostic Assessment</div>
+        <div class="cefr-badge" id="report_cefr">--</div>
+        <h2 id="report_cefr_title" style="font-size: 20px; color: var(--primary-dark); margin-bottom: 12px;">Complete Test to View CEFR Profile</h2>
+        
+        <div class="score-summary">
+          <div class="score-sub-box">
+            <div class="val" id="report_reading_score">0 / 33</div>
+            <div class="lbl">Reading</div>
+          </div>
+          <div class="score-sub-box">
+            <div class="val" id="report_listening_score">0 / 19</div>
+            <div class="lbl">Listening</div>
+          </div>
+          <div class="score-sub-box">
+            <div class="val" id="report_total_score">0 / 52</div>
+            <div class="lbl">Combined</div>
+          </div>
+        </div>
+
+        <div class="feedback-box" id="report_feedback">
+          Submit your answers from the Reading and Listening sections to calculate your empirical CEFR grade and view the coach rationale for every question.
+        </div>
+      </div>
+
+      <!-- Action Buttons to Share with Coach -->
+      <div class="action-bar" style="margin-bottom: 24px; display:flex; gap:10px; flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary" onclick="copyFullCoachReport()">Copy Full Coach Report to Clipboard</button>
+        <button type="button" class="btn btn-secondary" onclick="copyWritingOnly()">Copy Writing Only</button>
+        <button type="button" class="btn btn-secondary" onclick="downloadReportTxt()">Download Report as Text File</button>
+        <button type="button" class="btn" style="background:#fee2e2; color:#dc2626;" onclick="resetExam()">Retake Exam</button>
+      </div>
+
+      <!-- Item by Item Review List -->
+      <h3 style="margin-bottom: 14px; font-size: 18px; color: var(--primary-dark);">Item-by-Item Analysis & Coach Rationale</h3>
+      <div id="review_list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Floating Action Bar for Submission -->
+  <div style="position:fixed; bottom:0; left:0; right:0; background:rgba(255,255,255,0.95); backdrop-filter:blur(8px); border-top:1px solid var(--border); padding:10px 16px; display:flex; justify-content:center; gap:12px; z-index:90; box-shadow:0 -2px 10px rgba(0,0,0,0.05);">
+    <button type="button" class="btn btn-success" style="font-size:15px; padding:10px 24px;" onclick="submitExam()">Submit &amp; Grade Exam</button>
+  </div>
+
+  <!-- Mobile Toast -->
+  <div id="toast">Notice message here</div>
+
+  <!-- Scripts -->
+  <script src="js/scoring.js"></script>
+  <script src="js/engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,1569 @@
+{
+  "id": 1,
+  "title": "Mock Test 1: General Adaptive Baseline",
+  "subtitle": "Standard General Adaptive Benchmark",
+  "durationMinutes": 90,
+  "audioDir": "mock_test_1/audio/",
+  "reading": [
+    {
+      "task": 1,
+      "tag": "Task 1 \u2022 Notices & Messages",
+      "title": "Campus Study Lounge",
+      "instruction": "Read the notice and answer the question.",
+      "passage": "<strong>CAMPUS STUDY LOUNGE</strong><br><em>Due to acoustic refurbishment on Floor 2, individual silent booths will be temporarily closed until Thursday noon. Students requiring quiet study space may access Seminar Room 4B on Floor 3 without advance reservation. Group project discussions must relocate to the ground floor cafe.</em>",
+      "questions": [
+        {
+          "id": "r_q1",
+          "num": 1,
+          "type": "mc",
+          "stem": "1. What does this notice tell students?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] They need to book Seminar Room 4B before using it."
+            },
+            {
+              "val": "B",
+              "label": "[B] Alternative silent study space is accessible on Floor 3."
+            },
+            {
+              "val": "C",
+              "label": "[C] Ground floor cafe facilities are closed for renovation."
+            }
+          ],
+          "key": "B",
+          "skill": "Gist / Factual Detail (A2-B1)",
+          "trap": "[A] conflicts with 'without advance reservation'; [C] cafe is open for group work."
+        }
+      ]
+    },
+    {
+      "task": 2,
+      "tag": "Task 2 \u2022 Sentence Gap-Fill",
+      "title": "Commuter Ferries",
+      "instruction": "Choose the correct word to complete the sentence.",
+      "questions": [
+        {
+          "id": "r_q2",
+          "num": 2,
+          "type": "mc",
+          "stem": "2. Heavy fog on Tuesday morning [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] several commuter ferries from docking at the harbor on schedule.",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] avoided"
+            },
+            {
+              "val": "B",
+              "label": "[B] prevented"
+            },
+            {
+              "val": "C",
+              "label": "[C] refused"
+            }
+          ],
+          "key": "B",
+          "skill": "Dependent Preposition / Verb Syntax (A2-B1)",
+          "trap": "'avoided' requires direct gerund without 'from'; 'refused' implies human volition."
+        }
+      ]
+    },
+    {
+      "task": 3,
+      "tag": "Task 3 \u2022 Open Gap-Fill",
+      "title": "The Urban Forager",
+      "instruction": "Read the text below and think of the word which best fits each gap. Use only ONE word in each gap.",
+      "passage": "<p>For over a decade, botanical researcher Daniel Green has lived in central London, <strong>(3)</strong> _________ he leads guided foraging walks through city parks. Many people are astonished to discover how many edible plants thrive <strong>(4)</strong> _________ urban hedgerows and canal banks.</p><p>Daniel explains that prior to the Industrial Revolution, urban populations <strong>(5)</strong> _________ regularly gathered wild herbs and berries as a dietary supplement. Today, he aims to reconnect city dwellers with nature.</p><p>\"Looking closely <strong>(6)</strong> _________ common weeds reveals a hidden culinary world,\" Daniel notes. He encourages participants to learn <strong>(7)</strong> _________ to distinguish nutritious greens from toxic lookalikes before picking anything.</p>",
+      "questions": [
+        {
+          "id": "r_q3",
+          "num": 3,
+          "type": "text",
+          "stem": "Gap 3",
+          "key": "where",
+          "skill": "Relative Adverb (B1)",
+          "trap": "'which' requires preposition ('in which'). London is the spatial scene of leading walks."
+        },
+        {
+          "id": "r_q4",
+          "num": 4,
+          "type": "text",
+          "stem": "Gap 4",
+          "key": "in",
+          "skill": "Preposition of Location (B1)",
+          "trap": "Plants thrive 'in' hedgerows (medium / enclosure)."
+        },
+        {
+          "id": "r_q5",
+          "num": 5,
+          "type": "text",
+          "stem": "Gap 5",
+          "key": "had",
+          "skill": "Past Perfect Auxiliary (B2)",
+          "trap": "Past perfect auxiliary indicating customary historical practice prior to industrialization."
+        },
+        {
+          "id": "r_q6",
+          "num": 6,
+          "type": "text",
+          "stem": "Gap 6",
+          "key": "at",
+          "skill": "Dependent Preposition (B1)",
+          "trap": "Dependent preposition: look closely 'at'."
+        },
+        {
+          "id": "r_q7",
+          "num": 7,
+          "type": "text",
+          "stem": "Gap 7",
+          "key": "how",
+          "skill": "Interrogative Connective (B1)",
+          "trap": "Interrogative adverb of method: learn 'how' to distinguish."
+        }
+      ]
+    },
+    {
+      "task": 4,
+      "tag": "Task 4 \u2022 Multiple-Choice Gap-Fill",
+      "title": "Deep Sea Exploration",
+      "instruction": "Read the text below and choose the correct word (A, B, C, or D) for each gap.",
+      "passage": "Autonomous robotic submersibles are revolutionizing our understanding of the abyssal ocean floor. Until recently, marine biologists had to <strong>(8)</strong> _________ almost entirely on satellite mapping and deep-towed cameras. Modern robotic drones, however, can descend to depths exceeding six thousand meters, <strong>(9)</strong> _________ extreme hydrostatic pressure and total darkness. Equipped with high-definition optical sensors, these devices navigate <strong>(10)</strong> _________ through jagged underwater volcanic trenches. Scientists are now able to capture close-up footage of deep-sea hydrothermal vents in <strong>(11)</strong> _________ detail. The data collected has already led to the discovery of dozens of previously unknown invertebrate species, confirming that deep ocean trenches <strong>(12)</strong> _________ a vital role in global carbon cycling.",
+      "questions": [
+        {
+          "id": "r_q8",
+          "num": 8,
+          "type": "select",
+          "stem": "8.",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - depend"
+            },
+            {
+              "val": "B",
+              "label": "B - believe"
+            },
+            {
+              "val": "C",
+              "label": "C - insist"
+            },
+            {
+              "val": "D",
+              "label": "D - count"
+            }
+          ],
+          "key": "A",
+          "skill": "Dependent Collocation (B1)",
+          "trap": "Fixed academic collocation: depend on. Believe takes 'in'; insist takes 'on' volitionally."
+        },
+        {
+          "id": "r_q9",
+          "num": 9,
+          "type": "select",
+          "stem": "9.",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - standing"
+            },
+            {
+              "val": "B",
+              "label": "B - tolerating"
+            },
+            {
+              "val": "C",
+              "label": "C - resisting"
+            },
+            {
+              "val": "D",
+              "label": "D - enduring"
+            }
+          ],
+          "key": "D",
+          "skill": "High-level Collocation (B2)",
+          "trap": "Collocation with hostile abiotic conditions: enduring extreme pressure."
+        },
+        {
+          "id": "r_q10",
+          "num": 10,
+          "type": "select",
+          "stem": "10.",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - safely"
+            },
+            {
+              "val": "B",
+              "label": "B - surely"
+            },
+            {
+              "val": "C",
+              "label": "C - heavily"
+            },
+            {
+              "val": "D",
+              "label": "D - strictly"
+            }
+          ],
+          "key": "A",
+          "skill": "Adverbial Modification (B1-B2)",
+          "trap": "Evaluative adverb modifying vehicular navigation in hazardous environments."
+        },
+        {
+          "id": "r_q11",
+          "num": 11,
+          "type": "select",
+          "stem": "11.",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - broad"
+            },
+            {
+              "val": "B",
+              "label": "B - rich"
+            },
+            {
+              "val": "C",
+              "label": "C - vivid"
+            },
+            {
+              "val": "D",
+              "label": "D - intense"
+            }
+          ],
+          "key": "C",
+          "skill": "Lexical Collocation (B2)",
+          "trap": "Fixed sensory collocation: vivid detail."
+        },
+        {
+          "id": "r_q12",
+          "num": 12,
+          "type": "select",
+          "stem": "12.",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - take"
+            },
+            {
+              "val": "B",
+              "label": "B - play"
+            },
+            {
+              "val": "C",
+              "label": "C - act"
+            },
+            {
+              "val": "D",
+              "label": "D - make"
+            }
+          ],
+          "key": "B",
+          "skill": "Academic Fixed Phrase (B2)",
+          "trap": "Fixed collocation: play a vital role in."
+        }
+      ]
+    },
+    {
+      "task": 5,
+      "tag": "Task 5 \u2022 Extended Text Multiple Choice",
+      "title": "Filming on the Edge: Elena Vance",
+      "instruction": "Read the article about wildlife documentary filmmaker Elena Vance, and answer questions 13\u201317.",
+      "passage": "<p>Wildlife filmmaker Elena Vance has spent twenty years capturing endangered fauna in the world's most inaccessible habitats. Raised in rural Scotland by naturalist parents, Elena developed an early reverence for the natural world. \"My peers spent their teenage years glued to television screens,\" Elena recalls, \"whereas I was tracking badger setts across frostbitten moorlands with my father's 35mm camera.\" After graduating with a zoology degree, she resisted the temptation of secure laboratory research, opting instead for freelance camerawork.</p><p>Her breakthrough arrived in 2012 while filming snow leopards in the high Pamir Mountains. Temperatures routinely plunged below minus thirty degrees Celsius, and weeks passed without a solitary sighting. \"In wildlife cinematography, sheer technical brilliance counts for very little if you lack psychological endurance,\" Elena explains. \"The camera operator who packs up after five shivering hours is the one who misses the two-second hunt that defines the entire series.\" Her perseverance was rewarded when she filmed an unprecedented sequence of a female leopard guiding two cubs across a glacial ridge.</p><p>Despite international acclaim, Elena remains critical of certain contemporary industry trends. In particular, she voices reservations about the growing reliance on computer-generated imagery (CGI) and digital sound enhancement in nature documentaries. \"When producers artificially manipulate bird calls or amplify footsteps to heighten theatrical tension, they inadvertently sever the audience's genuine bond with reality,\" she asserts. \"Spectators start expecting wildlife to behave like Hollywood actors, which breeds impatience toward authentic conservation efforts.\"</p><p>Today, Elena devotes substantial time to mentoring young filmmakers from biodiversity-rich developing nations. Through her mobile academy, she provides camera gear and storytelling workshops to aspiring directors across East Africa and Southeast Asia. \"Indigenous observers possess intuitive ecological knowledge accumulated over generations,\" Elena concludes. \"True conservation storytelling cannot simply be parachuted in by foreign production crews; it must be cultivated from within the communities who coexist with these ecosystems daily.\"</p>",
+      "questions": [
+        {
+          "id": "r_q13",
+          "num": 13,
+          "type": "mc",
+          "stem": "13. What influenced Elena to pursue wildlife filmmaking instead of laboratory research?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Pressure from her parents to continue the family tradition."
+            },
+            {
+              "val": "B",
+              "label": "[B] Her childhood immersion in outdoor observation and photography."
+            },
+            {
+              "val": "C",
+              "label": "[C] A lack of available research positions following her university studies."
+            },
+            {
+              "val": "D",
+              "label": "[D] The desire to achieve rapid professional independence."
+            }
+          ],
+          "key": "B",
+          "skill": "Inference & Personal History (B2)",
+          "trap": "Text: 'whereas I was tracking badger setts... with my father\\'s 35mm camera'."
+        },
+        {
+          "id": "r_q14",
+          "num": 14,
+          "type": "mc",
+          "stem": "14. What does Elena identify as the paramount requirement during her snow leopard expedition?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Having top-tier cinematographic hardware in freezing conditions."
+            },
+            {
+              "val": "B",
+              "label": "[B] Relying on local trackers to anticipate animal movements."
+            },
+            {
+              "val": "C",
+              "label": "[C] The mental fortitude to withstand protracted periods of inaction."
+            },
+            {
+              "val": "D",
+              "label": "[D] Developing physical agility when scaling hazardous mountain terrain."
+            }
+          ],
+          "key": "C",
+          "skill": "Attitude & Values (B2-C1)",
+          "trap": "Text: 'sheer technical brilliance counts for very little if you lack psychological endurance'."
+        },
+        {
+          "id": "r_q15",
+          "num": 15,
+          "type": "mc",
+          "stem": "15. In the third paragraph, Elena expresses concern that digital enhancement in nature films:",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] distorts viewers' perceptions of real animal behavior."
+            },
+            {
+              "val": "B",
+              "label": "[B] renders authentic fieldwork financially unviable."
+            },
+            {
+              "val": "C",
+              "label": "[C] undermines the authority of scientific research teams."
+            },
+            {
+              "val": "D",
+              "label": "[D] distracts audiences from learning basic ecological facts."
+            }
+          ],
+          "key": "A",
+          "skill": "Complex Proposition & Implication (C1)",
+          "trap": "Text: 'sever the audience\\'s genuine bond... expect wildlife to behave like Hollywood actors'."
+        },
+        {
+          "id": "r_q16",
+          "num": 16,
+          "type": "mc",
+          "stem": "16. What is Elena's primary objective with her mobile academy?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] To reduce production expenses for international television networks."
+            },
+            {
+              "val": "B",
+              "label": "[B] To empower local residents to narrate their own ecological stories."
+            },
+            {
+              "val": "C",
+              "label": "[C] To catalog undiscovered species before habitats are lost."
+            },
+            {
+              "val": "D",
+              "label": "[D] To recruit assistants for her upcoming feature-length documentaries."
+            }
+          ],
+          "key": "B",
+          "skill": "Writer's Stance & Purpose (B2)",
+          "trap": "Text: 'must be cultivated from within the communities who coexist with these ecosystems daily'."
+        },
+        {
+          "id": "r_q17",
+          "num": 17,
+          "type": "mc",
+          "stem": "17. Which title best captures the central message of the article?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] High Technology: The Future of Conservation Media"
+            },
+            {
+              "val": "B",
+              "label": "[B] Why Wildlife Filmmaking Demands Extreme Sacrifices"
+            },
+            {
+              "val": "C",
+              "label": "[C] The Art of Patience: An Authentic Lens on Nature"
+            },
+            {
+              "val": "D",
+              "label": "[D] The End of Natural History in Modern Broadcasting"
+            }
+          ],
+          "key": "C",
+          "skill": "Macro-Discourse Synthesis (B2-C1)",
+          "trap": "Synthesizes both psychological endurance and authentic, unmanipulated observation."
+        }
+      ]
+    },
+    {
+      "task": 6,
+      "tag": "Task 6 \u2022 Short Article Multiple Choice",
+      "title": "The Psychology of Clutter",
+      "instruction": "Read the short article on environmental psychology, and answer questions 18\u201319.",
+      "passage": "Modern domestic environments are increasingly inundated with consumer possessions. While material abundance is widely equated with prosperity, cognitive psychologists have revealed that excessive domestic clutter exerts a measurable toll on emotional well-being. Neuroimaging studies demonstrate that cluttered physical environments overload the visual cortex, severely impeding the brain\u2019s capacity to process information and regulate stress hormones.<br><br>Intriguingly, the psychological impact of clutter is markedly asymmetrical across genders and personality types. Individuals who identify strongly with home management report elevated cortisol levels when surrounded by disorganization, perceiving unaddressed items not merely as physical objects, but as a persistent backlog of unfinished duties. Conversely, those who reframe domestic possessions as sources of historical continuity or creative stimuli remain relatively impervious to clutter-induced anxiety.",
+      "questions": [
+        {
+          "id": "r_q18",
+          "num": 18,
+          "type": "mc",
+          "stem": "18. According to the first paragraph, how does clutter affect mental performance?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] It causes individuals to spend excessive time searching for lost possessions."
+            },
+            {
+              "val": "B",
+              "label": "[B] It strains sensory processing systems, diminishing cognitive clarity."
+            },
+            {
+              "val": "C",
+              "label": "[C] It prompts households to purchase larger, unaffordable living spaces."
+            },
+            {
+              "val": "D",
+              "label": "[D] It disrupts sleep patterns through heightened chemical sensitivity."
+            }
+          ],
+          "key": "B",
+          "skill": "Detail & Cause-Effect (B1-B2)",
+          "trap": "Paragraph 1: 'cluttered physical environments overload the visual cortex, severely impeding...'."
+        },
+        {
+          "id": "r_q19",
+          "num": 19,
+          "type": "mc",
+          "stem": "19. What explains why some individuals remain unaffected by domestic clutter?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] They maintain organized storage solutions behind closed doors."
+            },
+            {
+              "val": "B",
+              "label": "[B] They possess different subjective perceptions of their possessions' value."
+            },
+            {
+              "val": "C",
+              "label": "[C] They delegate domestic responsibilities to other household members."
+            },
+            {
+              "val": "D",
+              "label": "[D] They spend significantly less time inside their residential homes."
+            }
+          ],
+          "key": "B",
+          "skill": "Contrastive Analysis (B2)",
+          "trap": "Paragraph 2: 'reframe domestic possessions as sources of historical continuity or creative stimuli'."
+        }
+      ]
+    },
+    {
+      "task": 7,
+      "tag": "Task 7 \u2022 Missing Sentences",
+      "title": "Living Lanterns of the Deep",
+      "instruction": "Read the text about bioluminescence. Choose the correct sentence from A\u2013H to fit each gap (20\u201324).",
+      "passage": "<p>In the pitch-black waters of the deep ocean, sunlight disappears entirely beyond two hundred meters. Yet this abyssal zone is far from completely dark; it sparkles with an astonishing array of living light. Bioluminescence\u2014the biochemical production of light by living organisms\u2014is not a rare curiosity, but the dominant mode of communication in the pelagic realm. <strong>(20)</strong> [ _________ ].</p><p>The chemical reaction powering this illumination typically involves two components: a light-emitting pigment called luciferin and an enzyme known as luciferase. When catalyzed in the presence of oxygen, this reaction releases almost ninety-eight percent of its energy as visible cold light, generating virtually no wasted heat. <strong>(21)</strong> [ _________ ]. In the open ocean, blue-green wavelengths travel farthest through seawater, which explains why the overwhelming majority of marine light displays conform to this color spectrum.</p><p>Marine creatures deploy bioluminescence for a wide spectrum of survival strategies. Many predatory anglerfish dangle glowing fleshy lures directly above their needle-sharp jaws to entice unsuspecting prey. <strong>(22)</strong> [ _________ ]. By emitting faint light from their bellies that precisely matches the intensity and wavelength of downwelling sunlight, midwater squid render their silhouettes invisible to predators lurking beneath them.</p><p>Other species utilize sudden, blinding flashes as an emergency defensive smokescreen. Deep-sea comb jellies and brittle stars discharge clouds of glowing mucus to disorient attackers while they make their escape. <strong>(23)</strong> [ _________ ]. This alarm summons even larger apex predators to attack the initial assailant, effectively saving the glowing prey in the chaos.</p><p>Today, biomedical researchers are adapting these natural light-generating systems for human healthcare. By inserting jellyfish bioluminescent genes into human cancer cells, oncologists can track tumor growth and evaluate drug effectiveness in real time under specialized microscopes. <strong>(24)</strong> [ _________ ]. What began as an evolutionary adaptation in deep-sea obscurity has transformed into an indispensable beacon illuminating modern medicine.</p>",
+      "optionsReference": "<strong>[A]</strong> In some cases, this luminous display functions as a \"burglar alarm\" that attracts secondary predators.<br><strong>[B]</strong> This thermal efficiency outstrips even the most advanced human-engineered LED technologies.<br><strong>[C]</strong> In contrast, terrestrial fireflies utilize green-yellow flashes primarily for nocturnal courtship displays.<br><strong>[D]</strong> Marine mammals, such as sperm whales, have never been observed producing bioluminescent chemicals.<br><strong>[E]</strong> Marine scientists estimate that more than three-quarters of all midwater animals possess light-generating organs.<br><strong>[F]</strong> Commercial fisheries frequently deploy synthetic chemical glow-sticks to attract schooling tuna.<br><strong>[G]</strong> Similar genetic techniques are now being piloted to monitor wastewater contamination and bacterial pathogens.<br><strong>[H]</strong> Equally widespread is the defensive tactic of counter-illumination camouflage.",
+      "questions": [
+        {
+          "id": "r_q20",
+          "num": 20,
+          "type": "select",
+          "stem": "Gap 20",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "E",
+          "skill": "Exemplification & Elaboration (B2)",
+          "trap": "Co-refers with 'dominant mode of communication' by providing scientific incidence data."
+        },
+        {
+          "id": "r_q21",
+          "num": 21,
+          "type": "select",
+          "stem": "Gap 21",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "B",
+          "skill": "Lexical & Conceptual Cohesion (B2)",
+          "trap": "Co-refers with 98% efficiency and 'generating virtually no wasted heat'."
+        },
+        {
+          "id": "r_q22",
+          "num": 22,
+          "type": "select",
+          "stem": "Gap 22",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "H",
+          "skill": "Rhetorical Contrast (B2-C1)",
+          "trap": "Contrasts offensive anglerfish lure with defensive belly-glow camouflage in squid."
+        },
+        {
+          "id": "r_q23",
+          "num": 23,
+          "type": "select",
+          "stem": "Gap 23",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "A",
+          "skill": "Anaphoric Reference (B2-C1)",
+          "trap": "Co-refers with subsequent sentence: 'This alarm summons even larger apex predators'."
+        },
+        {
+          "id": "r_q24",
+          "num": 24,
+          "type": "select",
+          "stem": "Gap 24",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "G",
+          "skill": "Domain Extension (C1)",
+          "trap": "Extends human healthcare application ('Similar genetic techniques are now being piloted...')."
+        }
+      ]
+    },
+    {
+      "task": 8,
+      "tag": "Task 8 \u2022 Missing Paragraphs",
+      "title": "The Architecture of Silence",
+      "instruction": "Read the text about acoustic ecology. Choose the correct paragraph from A\u2013F for each gap (25\u201329).",
+      "passage": "<p>We inhabit an increasingly deafening civilization. From the perpetual hum of highway traffic to the relentless background churn of ventilation units, anthropogenic noise has permeated virtually every terrestrial ecosystem. While industrial noise was historically treated as an inevitable byproduct of economic progress, acoustic ecologists now recognize chronic sonic saturation as an insidious pollutant that fragments natural habitats and compromises human health.</p><p><strong>(25)</strong> [ _________ ]</p><p>Field studies in national parks have documented this acoustic displacement in striking detail. In coniferous forests bordered by highways, songbirds are forced to alter their singing frequencies or elevate their vocal volume\u2014a phenomenon known as the Lombard effect\u2014merely to communicate territorial boundaries and attract mates. For species unable to shift their acoustic pitch, the consequences are dire: breeding success plummets, and entire populations abandon otherwise pristine nesting grounds.</p><p><strong>(26)</strong> [ _________ ]</p><p>In urban centers, the human consequences of this acoustic assault are equally profound. Epidemiological research links long-term exposure to urban noise with sleep disturbance, impaired cognitive development in children, and heightened risks of cardiovascular disease. The human auditory system never sleeps; even during unconsciousness, the brain processes ambient decibels, interpreting sudden spikes as evolutionary alarm signals that trigger elevated heart rates and stress hormone release.</p><p><strong>(27)</strong> [ _________ ]</p><p>Rather than viewing soundproofing solely as an engineering chore of building thicker walls, visionary planners are embracing \"positive soundscape design.\" This methodology involves strategically integrating natural acoustic elements into civic architecture. Flowing water in civic plazas, gravel walkways, and rustling native foliage do not eliminate decibels, but mask harsh mechanical frequencies with restorative auditory cues.</p><p><strong>(28)</strong> [ _________ ]</p><p>Furthermore, international legal frameworks are beginning to reflect this acoustic consciousness. Several European municipalities have established designated \"Quiet Areas\" where motor vehicle access is curtailed, and commercial developments must undergo rigorous acoustic impact audits before receiving construction permits.</p><p><strong>(29)</strong> [ _________ ]</p><p>Preserving the integrity of natural soundscapes is not a sentimental indulgence; it is a fundamental pillar of ecological stewardship and human dignity in an overstimulated century.</p>",
+      "optionsReference": "<strong>[A]</strong> Recognizing these physiological hazards, urban architects and landscape designers are fundamentally rethinking how cities are orchestrated acoustically.<br><strong>[B]</strong> These legislative initiatives demonstrate a vital paradigm shift: recognizing that tranquility is a shared public commons worthy of institutional protection.<br><strong>[C]</strong> Unlike chemical contaminants that leave visible residues in soil and waterways, acoustic pollution is ethereal, vanishing the instant its source ceases, yet its ecological disruption is lasting.<br><strong>[D]</strong> In response, some commercial airlines have begun outfitting luxury cabins with active noise-cancellation headsets to shield passengers from engine rumble.<br><strong>[E]</strong> Psychological testing confirms that listening to water features significantly lowers subjective stress ratings, even when the overall decibel reading remains unchanged.<br><strong>[F]</strong> Similar acoustic disruption imperils woodland predators like owls and foxes, whose hunting efficacy relies entirely on pinpointing the subterranean rustle of rodents.",
+      "questions": [
+        {
+          "id": "r_q25",
+          "num": 25,
+          "type": "select",
+          "stem": "Gap 25",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "C",
+          "skill": "Cross-Domain Contrast (B2-C1)",
+          "trap": "Contrasts pervasive acoustic saturation with visible chemical pollution."
+        },
+        {
+          "id": "r_q26",
+          "num": 26,
+          "type": "select",
+          "stem": "Gap 26",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "F",
+          "skill": "Co-referential Elaboration (C1)",
+          "trap": "Extends acoustic disruption from avian pitch shifting to terrestrial hunting efficacy."
+        },
+        {
+          "id": "r_q27",
+          "num": 27,
+          "type": "select",
+          "stem": "Gap 27",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "A",
+          "skill": "Problem-Solution Transition (C1)",
+          "trap": "Cohesion: Follows urban human health hazards; transitions to architectural solutions."
+        },
+        {
+          "id": "r_q28",
+          "num": 28,
+          "type": "select",
+          "stem": "Gap 28",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "E",
+          "skill": "Scientific Validation (C1)",
+          "trap": "Corroborates restorative masking of flowing water with experimental clinical evidence."
+        },
+        {
+          "id": "r_q29",
+          "num": 29,
+          "type": "select",
+          "stem": "Gap 29",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "B",
+          "skill": "Macro-Synthesis & Closure (C1)",
+          "trap": "Synthesizes European municipal 'Quiet Areas' with concluding moral argument."
+        }
+      ]
+    },
+    {
+      "task": 9,
+      "tag": "Task 9 \u2022 Multiple Text Matching",
+      "title": "The Blackwood Eco-Lodge: Four Guest Perspectives",
+      "instruction": "Read four reviews (A\u2013D) of the Blackwood Eco-Lodge, and answer questions 30\u201333.",
+      "passage": "<p><strong>Review A (Marcus):</strong> Having stayed at numerous wilderness retreats, I approached Blackwood with cautious optimism. What impressed me most was the transparency of their environmental commitments. Rather than indulging in superficial greenwashing, the management openly shares real-time solar generation metrics and gray-water recycling logs on monitors in the lobby. The guided dawn treks led by the resident botanist were a revelation, offering genuine insights into old-growth forest ecology. My sole reservation concerned the dining setup: the communal dinner tables, while evidently intended to cultivate social camaraderie, felt somewhat imposing after an exhausting day on the trails.</p><p><strong>Review B (Claire):</strong> Blackwood offers an undeniably serene sanctuary from urban burnout, but prospective visitors must be prepared for true austerity. There are no charging outlets in the guest cabins, forcing a total digital detox that left several guests visibly agitated. While I personally appreciated the respite from screens, the evening lighting was so subdued that reading inside the cabin was practically impossible. That said, the kitchen staff deserves immense credit: every meal was prepared using seasonal produce harvested within ten miles of the property, showcasing culinary creativity that surpassed many Michelin-starred city bistros.</p><p><strong>Review C (Julian):</strong> I booked Blackwood primarily for its remote location, hoping for complete solitude to finish writing a manuscript. In that respect, the lodge exceeded every expectation; the sound insulation between the timber cabins is remarkable, and waking up to panoramic mountain vistas without a combustion engine in earshot was revitalizing. However, I found the lodge\u2019s pricing structure difficult to justify. While eco-conscious amenities certainly incur overheads, paying luxury hotel rates for off-grid shared shower blocks feels disproportionate, irrespective of how pristine the surrounding wilderness is.</p><p><strong>Review D (Aisha):</strong> What sets Blackwood apart is its intimate relationship with the local village economy. Rather than operating as an isolated enclave for wealthy travelers, the lodge recruits exclusively from the surrounding rural community and purchases all timber furnishings from local craft cooperatives. You feel that your expenditure directly bolsters regional livelihoods. The activities program struck the perfect balance between strenuous adventure and mindful restorative downtime. I arrived thoroughly depleted and departed feeling physically invigorated and emotionally centered.</p>",
+      "questions": [
+        {
+          "id": "r_q30",
+          "num": 30,
+          "type": "select",
+          "stem": "30. Which reviewer expresses skepticism regarding whether the overall cost accurately reflects the facilities provided?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Review A (Marcus)"
+            },
+            {
+              "val": "B",
+              "label": "Review B (Claire)"
+            },
+            {
+              "val": "C",
+              "label": "Review C (Julian)"
+            },
+            {
+              "val": "D",
+              "label": "Review D (Aisha)"
+            }
+          ],
+          "key": "C",
+          "skill": "Specific Stance & Evaluative Language (B2-C1)",
+          "trap": "Julian: 'paying luxury hotel rates for off-grid shared shower blocks feels disproportionate'."
+        },
+        {
+          "id": "r_q31",
+          "num": 31,
+          "type": "select",
+          "stem": "31. Which reviewer commends the lodge for its tangible economic integration with neighboring residents?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Review A (Marcus)"
+            },
+            {
+              "val": "B",
+              "label": "Review B (Claire)"
+            },
+            {
+              "val": "C",
+              "label": "Review C (Julian)"
+            },
+            {
+              "val": "D",
+              "label": "Review D (Aisha)"
+            }
+          ],
+          "key": "D",
+          "skill": "Specific Socio-Economic Detail (B2-C1)",
+          "trap": "Aisha: 'recruits exclusively from the surrounding rural community and purchases all timber furnishings...'."
+        },
+        {
+          "id": "r_q32",
+          "num": 32,
+          "type": "select",
+          "stem": "32. Which reviewer was ambivalent about an enforced social arrangement during their stay?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Review A (Marcus)"
+            },
+            {
+              "val": "B",
+              "label": "Review B (Claire)"
+            },
+            {
+              "val": "C",
+              "label": "Review C (Julian)"
+            },
+            {
+              "val": "D",
+              "label": "Review D (Aisha)"
+            }
+          ],
+          "key": "A",
+          "skill": "Nuanced Emotional Ambivalence (B2-C1)",
+          "trap": "Marcus: 'the communal dinner tables... felt somewhat imposing after an exhausting day'."
+        },
+        {
+          "id": "r_q33",
+          "num": 33,
+          "type": "select",
+          "stem": "33. Which reviewer remarks on the exceptional standard of food despite strict sourcing limitations?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Review A (Marcus)"
+            },
+            {
+              "val": "B",
+              "label": "Review B (Claire)"
+            },
+            {
+              "val": "C",
+              "label": "Review C (Julian)"
+            },
+            {
+              "val": "D",
+              "label": "Review D (Aisha)"
+            }
+          ],
+          "key": "B",
+          "skill": "Praise under Constraints (B2-C1)",
+          "trap": "Claire: 'produce harvested within ten miles... culinary creativity that surpassed many Michelin-starred bistros'."
+        }
+      ]
+    }
+  ],
+  "listening": [
+    {
+      "task": 1,
+      "tag": "Task 1 \u2022 Picture Multiple Choice",
+      "title": "Cafe Lost Property",
+      "instruction": "Listen to the conversation between a customer and a cafe employee. (2 plays maximum)",
+      "audioTrack": "q1_dialogue.mp3",
+      "questions": [
+        {
+          "id": "l_q1",
+          "num": 1,
+          "type": "mc",
+          "stem": "1. Which item did the woman leave behind at the cafe?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] An umbrella"
+            },
+            {
+              "val": "B",
+              "label": "[B] A smartphone"
+            },
+            {
+              "val": "C",
+              "label": "[C] A set of car keys"
+            }
+          ],
+          "key": "C",
+          "skill": "Acoustic Distractor Reversal (A1-A2)",
+          "trap": "Umbrella & phone mentioned first as lost property, but speaker had them; car keys left by mug."
+        }
+      ]
+    },
+    {
+      "task": 2,
+      "tag": "Task 2 \u2022 Short Dialogue Multiple Choice",
+      "title": "Professional Training Workshop",
+      "instruction": "Listen to two colleagues discussing a training workshop. (2 plays maximum)",
+      "audioTrack": "q2_dialogue.mp3",
+      "questions": [
+        {
+          "id": "l_q2",
+          "num": 2,
+          "type": "mc",
+          "stem": "2. What did both speakers agree was the most valuable part of the morning?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] The energetic delivery style of the main presenter"
+            },
+            {
+              "val": "B",
+              "label": "[B] The collaborative group roleplay activities"
+            },
+            {
+              "val": "C",
+              "label": "[C] The practical demonstration of automated scheduling tools"
+            }
+          ],
+          "key": "C",
+          "skill": "Consensus & Agreement (A2-B1)",
+          "trap": "Presenter and roleplay mentioned favorably by one, but both explicitly agree software demo was the best."
+        }
+      ]
+    },
+    {
+      "task": 3,
+      "tag": "Task 3 \u2022 Extended Audio Multiple Choice",
+      "title": "Marcus Thorne: Acoustic Engineering",
+      "instruction": "Listen to an interview with acoustic engineer Marcus Thorne. (2 plays maximum)",
+      "audioTrack": "q3_q7_interview.mp3",
+      "questions": [
+        {
+          "id": "l_q3",
+          "num": 3,
+          "type": "mc",
+          "stem": "3. What motivated Marcus to specialize in environmental acoustics?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Family background in architectural heritage"
+            },
+            {
+              "val": "B",
+              "label": "[B] Worsening sonic environment in cities"
+            },
+            {
+              "val": "C",
+              "label": "[C] Early research on concert hall dynamics"
+            }
+          ],
+          "key": "B",
+          "skill": "Motivation & Trajectory (B1-B2)",
+          "trap": "Audio: 'When I realized how chaotic city soundscapes were becoming, I felt driven...'."
+        },
+        {
+          "id": "l_q4",
+          "num": 4,
+          "type": "mc",
+          "stem": "4. What limitation of traditional noise barriers does Marcus highlight?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] They deteriorate quickly in winter climates"
+            },
+            {
+              "val": "B",
+              "label": "[B] They reflect and redistribute acoustic energy elsewhere"
+            },
+            {
+              "val": "C",
+              "label": "[C] They require exorbitant installation budgets"
+            }
+          ],
+          "key": "B",
+          "skill": "Technical Rationale & Traps (B2)",
+          "trap": "Audio: 'solid barriers often bounce sound elsewhere, creating echo chambers'."
+        },
+        {
+          "id": "l_q5",
+          "num": 5,
+          "type": "mc",
+          "stem": "5. What is Marcus's primary criticism of current municipal planning?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Planners treat soundscapes as aesthetic luxuries rather than public health priorities"
+            },
+            {
+              "val": "B",
+              "label": "[B] Municipalities ignore citizen decibel complaints"
+            },
+            {
+              "val": "C",
+              "label": "[C] Building codes fail to enforce double glazing"
+            }
+          ],
+          "key": "A",
+          "skill": "Institutional Critique (B2-C1)",
+          "trap": "Audio: 'treat acoustic design as an afterthought, an aesthetic luxury rather than public health necessity'."
+        },
+        {
+          "id": "l_q6",
+          "num": 6,
+          "type": "mc",
+          "stem": "6. Why was Marcus's civic plaza water feature successful?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] It cooled the summer urban heat island effect"
+            },
+            {
+              "val": "B",
+              "label": "[B] Its gentle broadband acoustic spectrum masked traffic noise without preventing conversation"
+            },
+            {
+              "val": "C",
+              "label": "[C] It attracted diverse native bird species"
+            }
+          ],
+          "key": "B",
+          "skill": "Acoustic Mechanism (B2)",
+          "trap": "Audio: 'masks surrounding traffic hum without being overpowering... converse at a whisper'."
+        },
+        {
+          "id": "l_q7",
+          "num": 7,
+          "type": "mc",
+          "stem": "7. What advice does Marcus offer to aspiring soundscape engineers?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Master advanced acoustic modeling software algorithms"
+            },
+            {
+              "val": "B",
+              "label": "[B] Spend extensive time listening actively in physical environments"
+            },
+            {
+              "val": "C",
+              "label": "[C] Seek cross-disciplinary qualifications in structural engineering"
+            }
+          ],
+          "key": "B",
+          "skill": "Core Professional Advice (B2-C1)",
+          "trap": "Audio: 'Spend hours sitting in urban squares, listening actively. Your ears detect subtleties algorithms overlook'."
+        }
+      ]
+    },
+    {
+      "task": 4,
+      "tag": "Task 4 \u2022 Extended Audio Discussion",
+      "title": "Sustainable Fashion Rental",
+      "instruction": "Listen to two colleagues discussing sustainable fashion rental services. (2 plays maximum)",
+      "audioTrack": "q8_q9_discussion.mp3",
+      "questions": [
+        {
+          "id": "l_q8",
+          "num": 8,
+          "type": "mc",
+          "stem": "8. What led the woman to start utilizing subscription clothing rental services?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Desire to experiment with avant-garde streetwear fashion"
+            },
+            {
+              "val": "B",
+              "label": "[B] Reluctance to spend large sums on formal outfits worn only once"
+            },
+            {
+              "val": "C",
+              "label": "[C] Influence of social media fashion influencers"
+            }
+          ],
+          "key": "B",
+          "skill": "Personal Motivation (B1-B2)",
+          "trap": "Audio: 'spend a fortune buying designer outfits for weddings that I\\'d only ever wear once'."
+        },
+        {
+          "id": "l_q9",
+          "num": 9,
+          "type": "mc",
+          "stem": "9. What mutual reservation do both speakers express regarding rental services?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Transport and chemical cleaning logistics undermine environmental benefits"
+            },
+            {
+              "val": "B",
+              "label": "[B] Clothing items arrive in poor physical condition"
+            },
+            {
+              "val": "C",
+              "label": "[C] Subscription fees increase without prior notice"
+            }
+          ],
+          "key": "A",
+          "skill": "Shared Reservation / Synthesis (B2)",
+          "trap": "Audio: 'delivery and dry-cleaning logistics create their own carbon footprint, defeating the environmental purpose'."
+        }
+      ]
+    },
+    {
+      "task": 5,
+      "tag": "Task 5 \u2022 Multiple Matching",
+      "title": "Why People Run: Five Perspectives",
+      "instruction": "Match speakers 1\u20135 with reasons A\u2013H. (2 plays maximum)",
+      "audioTrack": "q10_q14_speakers.mp3",
+      "optionsReference": "<strong>[A]</strong> The social camaraderie of training with a supportive group<br><strong>[B]</strong> Lowering personal medical risk factors following clinical advice<br><strong>[C]</strong> The opportunity to explore unfamiliar cities from a unique vantage point<br><strong>[D]</strong> Releasing stress and achieving mental clarity away from work<br><strong>[E]</strong> Recovering physical mobility following an orthopedic injury<br><strong>[F]</strong> The satisfaction of measuring progress against clear objective benchmarks<br><strong>[G]</strong> Participating in fundraising events for charitable organizations<br><strong>[H]</strong> Enjoying peaceful nature trails in mountainous wilderness",
+      "questions": [
+        {
+          "id": "l_q10",
+          "num": 10,
+          "type": "select",
+          "stem": "10. Speaker 1",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Social camaraderie"
+            },
+            {
+              "val": "B",
+              "label": "[B] Lowering medical risk factors"
+            },
+            {
+              "val": "C",
+              "label": "[C] Explore unfamiliar cities"
+            },
+            {
+              "val": "D",
+              "label": "[D] Releasing stress / mental clarity"
+            },
+            {
+              "val": "E",
+              "label": "[E] Recovering mobility"
+            },
+            {
+              "val": "F",
+              "label": "[F] Measuring objective benchmarks"
+            },
+            {
+              "val": "G",
+              "label": "[G] Fundraising charity events"
+            },
+            {
+              "val": "H",
+              "label": "[H] Peaceful mountain trails"
+            }
+          ],
+          "key": "D",
+          "skill": "Multi-Speaker Gist & Idiom (B2)",
+          "trap": "Speaker 1: 'phone is off, and my mind completely decompresses. It\\'s my daily meditation'."
+        },
+        {
+          "id": "l_q11",
+          "num": 11,
+          "type": "select",
+          "stem": "11. Speaker 2",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Social camaraderie"
+            },
+            {
+              "val": "B",
+              "label": "[B] Lowering medical risk factors"
+            },
+            {
+              "val": "C",
+              "label": "[C] Explore unfamiliar cities"
+            },
+            {
+              "val": "D",
+              "label": "[D] Releasing stress / mental clarity"
+            },
+            {
+              "val": "E",
+              "label": "[E] Recovering mobility"
+            },
+            {
+              "val": "F",
+              "label": "[F] Measuring objective benchmarks"
+            },
+            {
+              "val": "G",
+              "label": "[G] Fundraising charity events"
+            },
+            {
+              "val": "H",
+              "label": "[H] Peaceful mountain trails"
+            }
+          ],
+          "key": "B",
+          "skill": "Clinical Register & Cause (B2)",
+          "trap": "Speaker 2: 'doctor gave me a wake-up call regarding my cholesterol and heart health'."
+        },
+        {
+          "id": "l_q12",
+          "num": 12,
+          "type": "select",
+          "stem": "12. Speaker 3",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Social camaraderie"
+            },
+            {
+              "val": "B",
+              "label": "[B] Lowering medical risk factors"
+            },
+            {
+              "val": "C",
+              "label": "[C] Explore unfamiliar cities"
+            },
+            {
+              "val": "D",
+              "label": "[D] Releasing stress / mental clarity"
+            },
+            {
+              "val": "E",
+              "label": "[E] Recovering mobility"
+            },
+            {
+              "val": "F",
+              "label": "[F] Measuring objective benchmarks"
+            },
+            {
+              "val": "G",
+              "label": "[G] Fundraising charity events"
+            },
+            {
+              "val": "H",
+              "label": "[H] Peaceful mountain trails"
+            }
+          ],
+          "key": "A",
+          "skill": "Interpersonal Motivation (B2)",
+          "trap": "Speaker 3: 'weekend running club introduced me to people... that camaraderie keeps me going'."
+        },
+        {
+          "id": "l_q13",
+          "num": 13,
+          "type": "select",
+          "stem": "13. Speaker 4",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Social camaraderie"
+            },
+            {
+              "val": "B",
+              "label": "[B] Lowering medical risk factors"
+            },
+            {
+              "val": "C",
+              "label": "[C] Explore unfamiliar cities"
+            },
+            {
+              "val": "D",
+              "label": "[D] Releasing stress / mental clarity"
+            },
+            {
+              "val": "E",
+              "label": "[E] Recovering mobility"
+            },
+            {
+              "val": "F",
+              "label": "[F] Measuring objective benchmarks"
+            },
+            {
+              "val": "G",
+              "label": "[G] Fundraising charity events"
+            },
+            {
+              "val": "H",
+              "label": "[H] Peaceful mountain trails"
+            }
+          ],
+          "key": "F",
+          "skill": "Performance Metric Register (B2-C1)",
+          "trap": "Speaker 4: 'Chasing my personal best on the clock provides a tangible sense of achievement'."
+        },
+        {
+          "id": "l_q14",
+          "num": 14,
+          "type": "select",
+          "stem": "14. Speaker 5",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Social camaraderie"
+            },
+            {
+              "val": "B",
+              "label": "[B] Lowering medical risk factors"
+            },
+            {
+              "val": "C",
+              "label": "[C] Explore unfamiliar cities"
+            },
+            {
+              "val": "D",
+              "label": "[D] Releasing stress / mental clarity"
+            },
+            {
+              "val": "E",
+              "label": "[E] Recovering mobility"
+            },
+            {
+              "val": "F",
+              "label": "[F] Measuring objective benchmarks"
+            },
+            {
+              "val": "G",
+              "label": "[G] Fundraising charity events"
+            },
+            {
+              "val": "H",
+              "label": "[H] Peaceful mountain trails"
+            }
+          ],
+          "key": "C",
+          "skill": "Experiential Perspective (C1)",
+          "trap": "Speaker 5: 'run ten kilometers through historic neighborhoods... intimate perspective... never from a tour bus'."
+        }
+      ]
+    },
+    {
+      "task": 6,
+      "tag": "Task 6 \u2022 Sentence Completion",
+      "title": "Coral Reef Restoration",
+      "instruction": "Write NO MORE THAN THREE WORDS for each gap.",
+      "audioTrack": "q15_q19_monologue.mp3",
+      "questions": [
+        {
+          "id": "l_q15",
+          "num": 15,
+          "type": "text",
+          "stem": "15. Before launching the project, the research team searched for coral colonies with natural _______________________________.",
+          "key": "thermal tolerance",
+          "variants": [
+            "thermal tolerance",
+            "heat tolerance",
+            "natural thermal tolerance"
+          ],
+          "skill": "Scientific Lexis / Extraction (B2)",
+          "trap": "Audio: 'resilient coral colonies that possessed natural thermal tolerance'."
+        },
+        {
+          "id": "l_q16",
+          "num": 16,
+          "type": "text",
+          "stem": "16. The cutting technique known as micro-fragmentation triggered the corals' _______________________________, accelerating growth rates.",
+          "key": "innate healing mechanism",
+          "variants": [
+            "innate healing mechanism",
+            "healing mechanism",
+            "innate healing"
+          ],
+          "skill": "Complex Nominal Phrase (B2-C1)",
+          "trap": "Audio: 'stimulated an innate healing mechanism that accelerated their growth rate'."
+        },
+        {
+          "id": "l_q17",
+          "num": 17,
+          "type": "text",
+          "stem": "17. Mature fragments were secured onto the ocean floor using a non-toxic _______________________________.",
+          "key": "marine adhesive",
+          "variants": [
+            "marine adhesive",
+            "adhesive",
+            "non-toxic marine adhesive"
+          ],
+          "skill": "Technical Substrate Lexis (B2)",
+          "trap": "Audio: 'affixed to degraded reef substrates using a non-toxic marine adhesive'."
+        },
+        {
+          "id": "l_q18",
+          "num": 18,
+          "type": "text",
+          "stem": "18. To control smothering algae, researchers introduced native _______________________________ to act as natural grazers.",
+          "key": "sea urchins",
+          "variants": [
+            "sea urchins",
+            "herbivorous sea urchins",
+            "urchins"
+          ],
+          "skill": "Biological Species / Noun Phrase (B2-C1)",
+          "trap": "Audio: 'we introduced native herbivorous sea urchins, which acted as natural cleaners'."
+        },
+        {
+          "id": "l_q19",
+          "num": 19,
+          "type": "text",
+          "stem": "19. Dr. Hughes emphasizes that the project's ultimate metric of long-term success is _______________________________ rather than acreage.",
+          "key": "genetic diversity",
+          "variants": [
+            "genetic diversity"
+          ],
+          "skill": "Key Theoretical Metric (C1)",
+          "trap": "Audio: 'true benchmark of our success won't merely be total reef acreage, but genetic diversity'."
+        }
+      ]
+    }
+  ],
+  "writing": [
+    {
+      "part": 1,
+      "tag": "Writing Part 1 \u2022 Informal Email",
+      "title": "Retirement Gathering for David",
+      "instruction": "Write 150\u2013180 words. (Target: 20 minutes)",
+      "prompt": "<strong>Context:</strong> Your senior department colleague, David, is retiring next month after twenty-five years at the organisation. You are helping to organise an informal celebration.<br><br><strong>In your email:</strong><br>1. Suggest a suitable venue and date for the gathering.<br>2. Propose ideas for a meaningful collective gift from colleagues.<br>3. Ask for their input on whether to invite former team members.",
+      "minWords": 150
+    },
+    {
+      "part": 2,
+      "tag": "Writing Part 2 \u2022 Civic Forum Post",
+      "title": "Pedestrianizing Historic Town Centers",
+      "instruction": "Write 220\u2013260 words. (Target: 25 minutes)",
+      "prompt": "<strong>Context:</strong> Your local municipal council is debating a proposal to permanently close the historic town center to private motor vehicles.<br><br><strong>In your post:</strong><br>1. Evaluate the environmental and commercial impact on local businesses.<br>2. Address concerns raised by elderly and mobility-impaired residents.<br>3. Suggest compromise measures (e.g. electric shuttle minibuses or designated morning delivery windows).",
+      "minWords": 220
+    }
+  ]
+}

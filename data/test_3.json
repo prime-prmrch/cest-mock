@@ -1,0 +1,1573 @@
+{
+  "id": 3,
+  "title": "Mock Test 3: Natural Sciences & Ecological Fieldwork",
+  "subtitle": "Ecological Fieldwork, Ethology & Natural World Narratives",
+  "durationMinutes": 90,
+  "audioDir": "mock_test_3/audio/",
+  "reading": [
+    {
+      "task": 1,
+      "tag": "Task 1 • Notices & Messages",
+      "title": "Heritage Letterpress Guild",
+      "instruction": "Read the notice and answer the question.",
+      "passage": "<strong>HERITAGE LETTERPRESS GUILD: STUDIO WORKSHOP RULES</strong><br/>\n<em>Due to the historic value of our movable lead and wooden display types, drawers must be re-shelved in their designated type cabinets immediately after typesetting. Solvents and linseed oil washes are restricted to the ventilation booth. Under no circumstances should type blocks be wiped with water, as moisture causes irreversible swelling of wooden sorts and corrosion of cast iron chases.</em>",
+      "questions": [
+        {
+          "id": "r_q1",
+          "num": 1,
+          "type": "mc",
+          "stem": "1. What does the workshop notice tell guild members?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Solvents are strictly banned from all areas of the studio."
+            },
+            {
+              "val": "B",
+              "label": "[B] Cleaning type blocks with water is forbidden to prevent damage."
+            },
+            {
+              "val": "C",
+              "label": "[C] Wooden display types must be cleaned before being returned to cabinets."
+            }
+          ],
+          "key": "B",
+          "skill": "Factual Prohibition (A2-B1)",
+          "trap": "Cleaning type blocks with water is forbidden to prevent swelling of wood sorts."
+        }
+      ]
+    },
+    {
+      "task": 2,
+      "tag": "Task 2 • Sentence Gap-Fill",
+      "title": "Highland Navigation",
+      "instruction": "Choose the correct word to complete the sentence.",
+      "questions": [
+        {
+          "id": "r_q2",
+          "num": 2,
+          "type": "mc",
+          "stem": "2. Through the dense mountain mist, the experienced hill-walker was barely able to [          ] the outline of the distant granite cairn.",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] discern"
+            },
+            {
+              "val": "B",
+              "label": "[B] glance"
+            },
+            {
+              "val": "C",
+              "label": "[C] inspect"
+            }
+          ],
+          "key": "A",
+          "skill": "Literary Perception Verb (A2-B1)",
+          "trap": "'discern' outline through mist. Glance takes 'at'; inspect implies close scrutiny."
+        }
+      ]
+    },
+    {
+      "task": 3,
+      "tag": "Task 3 • Open Gap-Fill",
+      "title": "The Whispering Gallery of Saint Paul's",
+      "instruction": "Write ONE word only in each gap.",
+      "passage": "<p>High beneath the colossal dome of London’s Saint Paul’s Cathedral runs a circular gallery celebrated for a curious acoustic marvel. If a visitor whispers quietly against the curved stone wall on one side, a listener stationed <strong>(3)</strong> _________ the opposite side—over thirty meters away—can hear every word as distinctly as if the speaker <strong>(4)</strong> _________ standing right beside them.</p>\n<p>For centuries, tourists attributed this phenomenon <strong>(5)</strong> _________ mysterious architectural sorcery. In the late 19th century, the physicist Lord Rayleigh unraveled the mystery: acoustic waves do not dissipate across the wide expanse of the dome, <strong>(6)</strong> _________ instead travel by creeping along the smooth, concave circumference in a series of continuous deflections.</p>\n<p>Rayleigh's pioneering acoustic formulas laid the mathematical groundwork <strong>(7)</strong> _________ modern wave propagation theories in quantum optics and satellite communications.</p>",
+      "questions": [
+        {
+          "id": "r_q3",
+          "num": 3,
+          "type": "text",
+          "stem": "Gap 3",
+          "key": "on",
+          "skill": "Preposition of Location (B1)",
+          "trap": "Stationed [on/at] the opposite side of the gallery.",
+          "variants": [
+            "on",
+            "at"
+          ]
+        },
+        {
+          "id": "r_q4",
+          "num": 4,
+          "type": "text",
+          "stem": "Gap 4",
+          "key": "were",
+          "skill": "Subjunctive / Hypothetical Past (B2)",
+          "trap": "Hypothetical unreal comparison after as if: as if the speaker [were] standing."
+        },
+        {
+          "id": "r_q5",
+          "num": 5,
+          "type": "text",
+          "stem": "Gap 5",
+          "key": "to",
+          "skill": "Dependent Preposition (B1)",
+          "trap": "Fixed passive collocation: attribute [something] to [something]."
+        },
+        {
+          "id": "r_q6",
+          "num": 6,
+          "type": "text",
+          "stem": "Gap 6",
+          "key": "but",
+          "skill": "Contrastive Conjunction (B1)",
+          "trap": "Paired contrastive structure: not X, [but] instead Y."
+        },
+        {
+          "id": "r_q7",
+          "num": 7,
+          "type": "text",
+          "stem": "Gap 7",
+          "key": "for",
+          "skill": "Idiomatic Collocation (B2)",
+          "trap": "Fixed idiom: lay the groundwork [for] modern wave theories."
+        }
+      ]
+    },
+    {
+      "task": 4,
+      "tag": "Task 4 • Multiple-Choice Gap-Fill",
+      "title": "The Alchemy of Renaissance Pigments",
+      "instruction": "Choose the correct word (A, B, C, or D) for each gap.",
+      "passage": "Before synthetic industrial chemistry, oil painters were bound by the geological and biological <strong>(8)</strong> _________ of nature. Master artists ground mineral ores by hand. Prized above all was ultramarine, a luminous deep-blue pigment <strong>(9)</strong> _________ from semi-precious Afghan lapis lazuli. Because lapis was costlier than gold, Renaissance contracts strictly <strong>(10)</strong> _________ the exact quantity an artist had to apply. Cheaper alternatives suffered from chemical instability, often <strong>(11)</strong> _________ into dull greenish-brown over centuries. Surviving masterpieces are testament not only to genius, but to the empirical <strong>(12)</strong> _________ of master color makers.",
+      "questions": [
+        {
+          "id": "r_q8",
+          "num": 8,
+          "type": "select",
+          "stem": "8. [A] limitations    [B] objections    [C] boundaries    [D] hurdles",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - limitations"
+            },
+            {
+              "val": "B",
+              "label": "B - objections"
+            },
+            {
+              "val": "C",
+              "label": "C - boundaries"
+            },
+            {
+              "val": "D",
+              "label": "D - hurdles"
+            }
+          ],
+          "key": "A",
+          "skill": "Lexical Collocation (B1-B2)",
+          "trap": "Bound by the geological and biological 'limitations' of nature."
+        },
+        {
+          "id": "r_q9",
+          "num": 9,
+          "type": "select",
+          "stem": "9. [A] pulled    [B] derived    [C] dragged    [D] collected",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - pulled"
+            },
+            {
+              "val": "B",
+              "label": "B - derived"
+            },
+            {
+              "val": "C",
+              "label": "C - dragged"
+            },
+            {
+              "val": "D",
+              "label": "D - collected"
+            }
+          ],
+          "key": "B",
+          "skill": "Participial Phrase (B2)",
+          "trap": "Luminous pigment 'derived' from semi-precious lapis lazuli."
+        },
+        {
+          "id": "r_q10",
+          "num": 10,
+          "type": "select",
+          "stem": "10. [A] appointed    [B] stipulated    [C] intended    [D] performed",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - appointed"
+            },
+            {
+              "val": "B",
+              "label": "B - stipulated"
+            },
+            {
+              "val": "C",
+              "label": "C - intended"
+            },
+            {
+              "val": "D",
+              "label": "D - performed"
+            }
+          ],
+          "key": "B",
+          "skill": "Contractual Lexis (B2)",
+          "trap": "Renaissance contracts strictly 'stipulated' the exact quantity."
+        },
+        {
+          "id": "r_q11",
+          "num": 11,
+          "type": "select",
+          "stem": "11. [A] transforming    [B] degrading    [C] converting    [D] declining",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - transforming"
+            },
+            {
+              "val": "B",
+              "label": "B - degrading"
+            },
+            {
+              "val": "C",
+              "label": "C - converting"
+            },
+            {
+              "val": "D",
+              "label": "D - declining"
+            }
+          ],
+          "key": "B",
+          "skill": "Chemical Breakdown Lexis (B2)",
+          "trap": "Chemical instability often 'degrading' into dull greenish-brown."
+        },
+        {
+          "id": "r_q12",
+          "num": 12,
+          "type": "select",
+          "stem": "12. [A] awareness    [B] insight    [C] expertise    [D] acquaintance",
+          "options": [
+            {
+              "val": "A",
+              "label": "A - awareness"
+            },
+            {
+              "val": "B",
+              "label": "B - insight"
+            },
+            {
+              "val": "C",
+              "label": "C - expertise"
+            },
+            {
+              "val": "D",
+              "label": "D - acquaintance"
+            }
+          ],
+          "key": "C",
+          "skill": "Noun Collocation (B2)",
+          "trap": "Remarkable empirical 'expertise' of master color makers."
+        }
+      ]
+    },
+    {
+      "task": 5,
+      "tag": "Task 5 • Extended Text",
+      "title": "Echoes from the Ice Margin",
+      "instruction": "Read the Arctic field memoir and answer questions 13–17.",
+      "passage": "<p>Svalbard in late September is a landscape rendered in charcoal, slate, and bone. As our three-person glaciological survey team pitched our geodesic tent upon the gravelly terminal moraine of the Nordenskiöld Glacier, the temperature was already descending toward minus fifteen. We had journeyed to this remote high-Arctic fjord not to measure surface melting with orbital radars, but to document something far more elusive: the internal acoustic and structural memory of ancient ice.</p>\n<p>Most people imagine glaciers as inert, frozen monuments. In reality, an active glacier is an animate, restless organism in perpetual motion. Throughout the polar night, the ice fabric groans under immense tectonic pressures. As we hammered seismic listening stakes into the glacier’s snout, the ground vibrated with concussive snaps and low-frequency resonant thrums. These acoustic pulses represent the release of strain energy accumulated over hundreds of years of compaction. To sit alone in total Arctic stillness and listen to a glacier exhale is an experience of terrifying majesty.</p>\n<p>On our fourth morning, a sudden katabatic storm ripped down the valley off the inland ice cap, howling at sixty knots and reducing visibility to arm's length in stinging spindrift. For forty-eight hours, our fragile nylon shelter was our entire universe. Confined to our sleeping bags, cooking over a sputtering kerosene stove, we were forced into a state of acute mental endurance. In such extreme isolation, one's perception of time expands; the frantic urgency that governs contemporary metropolitan life is shown to be a trivial illusion against the monumental timescales of the polar wilderness.</p>\n<p>When the storm finally spent itself, we emerged into a world bathed in eerie golden twilight. The newly cleared air revealed fresh calving scarps along the glacier’s marine terminus, towering cliffs of turquoise ice that had sheared off into the fjord during the blizzard. Extracting ice core samples from these exposed strata was like reading an illuminated manuscript of prehistoric atmospheres. As I held a translucent core cylinder toward the low Arctic sun, watching tiny ancient atmospheres effervesce in my palm, I felt an overpowering blend of scientific awe and acute grief for a frozen heritage disappearing before our eyes.</p>",
+      "questions": [
+        {
+          "id": "r_q13",
+          "num": 13,
+          "type": "mc",
+          "stem": "13. What was the primary purpose of Dr. Sinclair’s fieldwork on the Nordenskiöld Glacier?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] To calibrate orbital satellite sensors measuring surface ice velocity."
+            },
+            {
+              "val": "B",
+              "label": "[B] To investigate internal acoustic stresses and structural behaviors within the ice."
+            },
+            {
+              "val": "C",
+              "label": "[C] To evaluate whether high-Arctic moraines can support permanent scientific bases."
+            },
+            {
+              "val": "D",
+              "label": "[D] To collect specimens of cold-tolerant microbial life within subglacial channels."
+            }
+          ],
+          "key": "B",
+          "skill": "Expedition Objective (B2)",
+          "trap": "To document internal acoustic stresses and structural behaviors within the ice."
+        },
+        {
+          "id": "r_q14",
+          "num": 14,
+          "type": "mc",
+          "stem": "14. In the second paragraph, how does Dr. Sinclair depict the character of an active glacier?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] As an unmoving, silent relic of previous geological epochs."
+            },
+            {
+              "val": "B",
+              "label": "[B] As an unpredictable hazard that endangers coastal settlements."
+            },
+            {
+              "val": "C",
+              "label": "[C] As a dynamic, vibrating entity that constantly shifts under internal strain."
+            },
+            {
+              "val": "D",
+              "label": "[D] As an impenetrable acoustic barrier that absorbs all natural sounds."
+            }
+          ],
+          "key": "C",
+          "skill": "Dynamic Depiction (B2-C1)",
+          "trap": "Animate, restless organism in perpetual motion vibrating under strain."
+        },
+        {
+          "id": "r_q15",
+          "num": 15,
+          "type": "mc",
+          "stem": "15. During the forty-eight-hour katabatic storm, the research team:",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] lost critical seismic monitoring instruments in the gale."
+            },
+            {
+              "val": "B",
+              "label": "[B] had to abandon their geodesic tent to seek shelter in a sea cave."
+            },
+            {
+              "val": "C",
+              "label": "[C] experienced a profound shift in their psychological awareness of time."
+            },
+            {
+              "val": "D",
+              "label": "[D] ran out of fuel for their emergency kerosene cooking stove."
+            }
+          ],
+          "key": "C",
+          "skill": "Psychological Shift (B2)",
+          "trap": "Perception of time expands; metropolitan urgency exposed as trivial illusion."
+        },
+        {
+          "id": "r_q16",
+          "num": 16,
+          "type": "mc",
+          "stem": "16. What emotion did the newly exposed calving scarps evoke in Dr. Sinclair?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Scientific triumph mixed with poignant sorrow over the vanishing ice."
+            },
+            {
+              "val": "B",
+              "label": "[B] Alarm regarding the danger of sudden tidal waves in the fjord."
+            },
+            {
+              "val": "C",
+              "label": "[C] Disappointment that the blizzard had contaminated their core samples."
+            },
+            {
+              "val": "D",
+              "label": "[D] Relief that their grueling Arctic field deployment had concluded."
+            }
+          ],
+          "key": "A",
+          "skill": "Emotional Ambivalence (C1)",
+          "trap": "Blend of scientific awe and acute grief for disappearing frozen heritage."
+        },
+        {
+          "id": "r_q17",
+          "num": 17,
+          "type": "mc",
+          "stem": "17. Which statement best summarizes the author's philosophical reflection?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] High technology will ultimately allow humans to halt polar melting."
+            },
+            {
+              "val": "B",
+              "label": "[B] The immense geological timescale of ice exposes the superficiality of modern hurry."
+            },
+            {
+              "val": "C",
+              "label": "[C] Field glaciology is too hazardous to justify the scientific data acquired."
+            },
+            {
+              "val": "D",
+              "label": "[D] Polar environments should be completely quarantined from human visitation."
+            }
+          ],
+          "key": "B",
+          "skill": "Philosophical Synthesis (B2-C1)",
+          "trap": "Monumental timescale of polar wilderness vs superficial hurry of modernity."
+        }
+      ]
+    },
+    {
+      "task": 6,
+      "tag": "Task 6 • Short Article Multiple Choice",
+      "title": "The Cognitive Value of Solitude",
+      "instruction": "Read the short article and answer questions 18–19.",
+      "passage": "In a hyper-connected culture where being alone is pathologized as loneliness, developmental psychologists are rediscovering the value of deliberate solitude. While involuntary isolation can provoke distress, intentional solitude functions as a crucial cognitive crucible for personal growth, self-regulation, and creative breakthrough. Cognitive neuroscientists note that constant social interaction activates the \"executive control network.\" When an individual steps away into quiet seclusion, the brain smoothly transitions to the \"default mode network.\" This neural state facilitates autobiographical memory integration, divergent problem-solving, and existential self-reflection. Far from an empty void, solitude is the mental space where intellectual autonomy takes root.",
+      "questions": [
+        {
+          "id": "r_q18",
+          "num": 18,
+          "type": "mc",
+          "stem": "18. According to the first paragraph, how does intentional solitude differ from loneliness?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] It can only be practiced in remote outdoor natural environments."
+            },
+            {
+              "val": "B",
+              "label": "[B] It is an active, chosen condition that fosters creative renewal and cognitive resilience."
+            },
+            {
+              "val": "C",
+              "label": "[C] It requires complete sensory deprivation to achieve therapeutic effects."
+            },
+            {
+              "val": "D",
+              "label": "[D] It is exclusively beneficial for individuals with introverted personalities."
+            }
+          ],
+          "key": "B",
+          "skill": "Conceptual Contrast (B1-B2)",
+          "trap": "Active chosen condition that fosters personal growth and creative breakthrough."
+        },
+        {
+          "id": "r_q19",
+          "num": 19,
+          "type": "mc",
+          "stem": "19. What neurological shift happens when a person enters solitary quietude?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] The brain shuts down memory recall to preserve metabolic energy."
+            },
+            {
+              "val": "B",
+              "label": "[B] The executive control network increases in speed to solve logical dilemmas."
+            },
+            {
+              "val": "C",
+              "label": "[C] Brain activity shifts toward the default mode network, enabling deeper reflection."
+            },
+            {
+              "val": "D",
+              "label": "[D] Sensory nerve receptors become hyper-sensitive to external acoustic stimuli."
+            }
+          ],
+          "key": "C",
+          "skill": "Neurobiology Detail (B2)",
+          "trap": "Brain transitions to default mode network, facilitating autobiographical reflection."
+        }
+      ]
+    },
+    {
+      "task": 7,
+      "tag": "Task 7 • Missing Sentences",
+      "title": "The Silent Labor of the Scriptoria",
+      "instruction": "Choose the correct sentence (A–H) for each gap (20–24).",
+      "passage": "<p>Long before Gutenberg introduced movable type, every book had to be written letter by letter by hand. In the drafty stone cloisters of medieval monasteries, devoted scribes spent decades hunched over tilted oak desks in designated workshops known as scriptoria. <strong>(20)</strong> [ _________ ].</p>\n<p>The production of a manuscript commenced long before a pen was dipped in ink. Scribes wrote on parchment or vellum, made from the stretched skins of cows, sheep, or goats. <strong>(21)</strong> [ _________ ]. Once smooth, the animal pelt was meticulously scored with lead stylus lines to ensure that rows of calligraphy remained straight.</p>\n<p>Working conditions in monastic scriptoria were Spartan. Rules strictly prohibited heating fires or tallow candles anywhere near desks, for fear that a spark could incinerate irreplaceable volumes. <strong>(22)</strong> [ _________ ]. Scribes frequently had to blow on frozen fingers to keep their quill grip steady, and ink pots were warmed against the chest to prevent freezing.</p>\n<p>Scribes recorded their suffering in humorous margin notes known as \"colophons.\" One scribe jotted: <em>\"Writing is excessive drudgery; it crooks the back, dims the eyes, and shatters the ribs.\"</em> <strong>(23)</strong> [ _________ ]. Yet despite this punishing labor, master illuminators decorated margins with breathtaking gold leaf and lapis lazuli miniatures.</p>\n<p>Today, preserved medieval manuscripts represent some of humanity's most breathtaking physical treasures. <strong>(24)</strong> [ _________ ]. They stand as living monuments to the astonishing patience of craftsmen who dedicated lifetimes to safeguarding the fragile flame of knowledge.</p>",
+      "optionsReference": "<strong>Options:</strong><br/>\n<strong>[A]</strong> Preparing a single large bible could easily require the hides of several hundred calves.<br/>\n<strong>[B]</strong> These surviving folios retain their vibrant colors and crisp calligraphy across eight centuries.<br/>\n<strong>[C]</strong> Consequently, scribes were forced to rely solely on whatever pale natural daylight filtered through arched windows.<br/>\n<strong>[D]</strong> Monasteries frequently sold these books to commercial merchants to finance military fortifications.<br/>\n<strong>[E]</strong> Modern printing presses have successfully replicated the chemical consistency of medieval iron-gall ink.<br/>\n<strong>[F]</strong> Within these solemn sanctuaries, the written heritage of classical antiquity was miraculously preserved.<br/>\n<strong>[G]</strong> Another anonymous copyist simply wrote: <em>\"As the sailor longs for the port, so the scribe longs for the last line.\"</em><br/>\n<strong>[H]</strong> Scribes who made spelling errors were routinely sentenced to periods of fasting and solitary confinement.",
+      "questions": [
+        {
+          "id": "r_q20",
+          "num": 20,
+          "type": "select",
+          "stem": "Gap 20",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "F",
+          "skill": "Monastic Role (B2)",
+          "trap": "Sentence F: 'written heritage of classical antiquity was miraculously preserved'."
+        },
+        {
+          "id": "r_q21",
+          "num": 21,
+          "type": "select",
+          "stem": "Gap 21",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "A",
+          "skill": "Parchment Production (B2)",
+          "trap": "Sentence A: 'single large bible could easily require hides of several hundred calves'."
+        },
+        {
+          "id": "r_q22",
+          "num": 22,
+          "type": "select",
+          "stem": "Gap 22",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "C",
+          "skill": "No Candles Rule (B2-C1)",
+          "trap": "Sentence C: 'forced to rely solely on whatever pale natural daylight filtered'."
+        },
+        {
+          "id": "r_q23",
+          "num": 23,
+          "type": "select",
+          "stem": "Gap 23",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "G",
+          "skill": "Colophon Parallel (B2-C1)",
+          "trap": "Sentence G: 'As the sailor longs for port, so the scribe longs for the last line'."
+        },
+        {
+          "id": "r_q24",
+          "num": 24,
+          "type": "select",
+          "stem": "Gap 24",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "B",
+          "skill": "Physical Endurance (C1)",
+          "trap": "Sentence B: 'folios retain vibrant colors and crisp calligraphy across eight centuries'."
+        }
+      ]
+    },
+    {
+      "task": 8,
+      "tag": "Task 8 • Missing Paragraphs",
+      "title": "Unchaining the Rivers: European Re-Wilding",
+      "instruction": "Choose the correct paragraph (A–F) for each gap (25–29).",
+      "passage": "<p>For over two centuries, European engineers treated natural rivers as hydrological threats. Meandering waterways were straightened into concrete channels, floodplains diked off, and thousands of weirs erected. While this spurred industrial growth, the ecological toll was catastrophic: riverine biodiversity collapsed by over eighty percent.</p>\n<p><strong>(25)</strong> [ _________ ]</p>\n<p>This movement, broadly termed \"river re-wilding,\" is founded upon a radical philosophical pivot: recognizing that a healthy river is a dynamic, self-healing entity. By dismantling derelict dams and allowing rivers to reclaim their historic paths, ecologists restore natural hydraulic dynamism.</p>\n<p><strong>(26)</strong> [ _________ ]</p>\n<p>The speed of ecological recovery following barrier removal has astonished biologists. Within months of demolishing obsolete weirs, long-absent migratory species like Atlantic salmon and sea trout return to spawn in freshly exposed gravel beds.</p>\n<p><strong>(27)</strong> [ _________ ]</p>\n<p>A quintessential catalyst in this restoration process is the reintroduction of Eurasian beavers. As natural ecological engineers, beavers construct permeable wood dams that create intricate wetland mosaics. Far from causing disastrous floods, these beaver ponds act as giant landscape sponges, capturing sediment and buffering surrounding farmland against severe droughts and flash flooding.</p>\n<p><strong>(28)</strong> [ _________ ]</p>\n<p>Crucially, river re-wilding offers immense benefits for human settlements downstream. Traditional concrete flood channels actually exacerbate urban disaster by shooting storm surges downriver at unnatural velocities. Re-connected floodplains absorb massive flood peaks harmlessly upstream.</p>\n<p><strong>(29)</strong> [ _________ ]</p>\n<p>In letting our rivers run wild once more, we are discovering that nature's ancient hydrological architecture remains infinitely wiser than our most sophisticated concrete fortifications.</p>",
+      "optionsReference": "<strong>Options:</strong><br/>\n<strong>[A]</strong> In response to this compounding crisis, a transformative environmental campaign is gaining momentum: the systematic dismantling of obsolete river barriers.<br/>\n<strong>[B]</strong> These natural sponge ecosystems prove that letting nature manage water delivers far superior climate resilience at a fraction of engineering costs.<br/>\n<strong>[C]</strong> Furthermore, these restored wetlands become thriving carbon sinks, locking away atmospheric carbon dioxide within waterlogged peat soils.<br/>\n<strong>[D]</strong> However, agricultural associations initially resisted these efforts, fearing that meandering channels would flood valuable crops.<br/>\n<strong>[E]</strong> Rather than fighting the natural pulse of water with concrete walls, engineers are learning that surrendering territory to natural floodplains creates a safer, self-regulating landscape.<br/>\n<strong>[F]</strong> Commercial inland barge traffic, which depends on standardized canal depths, has expanded significantly alongside these initiatives.",
+      "questions": [
+        {
+          "id": "r_q25",
+          "num": 25,
+          "type": "select",
+          "stem": "Gap 25",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "A",
+          "skill": "Movement Counterpoint (B2-C1)",
+          "trap": "Paragraph A introduces barrier dismantling campaign in response to crisis."
+        },
+        {
+          "id": "r_q26",
+          "num": 26,
+          "type": "select",
+          "stem": "Gap 26",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "E",
+          "skill": "Surrendering Territory (C1)",
+          "trap": "Paragraph E explains learning to surrender territory to self-regulating floodplains."
+        },
+        {
+          "id": "r_q27",
+          "num": 27,
+          "type": "select",
+          "stem": "Gap 27",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "C",
+          "skill": "Carbon Sink Synergy (C1)",
+          "trap": "Paragraph C adds that restored wetlands become thriving peat carbon sinks."
+        },
+        {
+          "id": "r_q28",
+          "num": 28,
+          "type": "select",
+          "stem": "Gap 28",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "B",
+          "skill": "Beaver Sponge Economics (C1)",
+          "trap": "Paragraph B synthesizes beaver sponges delivering superior climate resilience."
+        },
+        {
+          "id": "r_q29",
+          "num": 29,
+          "type": "select",
+          "stem": "Gap 29",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            }
+          ],
+          "key": "E",
+          "skill": "Hydrological Wisdom (C1)",
+          "trap": "Synthesizes downstream flood buffering with final concluding thought."
+        }
+      ]
+    },
+    {
+      "task": 9,
+      "tag": "Task 9 • Multiple Text Matching",
+      "title": "The Bridge Builders: Four Literary Translators",
+      "instruction": "Match questions 30–33 with Translators A–D.",
+      "passage": "<p><strong>Translator A (Matteo - Italian Poetry):</strong> Translating verse is a daring act of poetic reincarnation. When tackling the hendecasyllables of Giacomo Leopardi, literal fidelity is the quickest route to aesthetic death. If you translate each word literally, you lose the rhythmic cadence, internal assonances, and musicality. My obligation is to re-create an equivalent aesthetic spell in English verse, even if that demands departing from surface syntax.</p>\n<p><strong>Translator B (Sunita - Postcolonial Fiction):</strong> My greatest ethical challenge is resisting the temptation to 'domesticate' foreign cultural idioms for Western readers. Replacing an indigenous culinary metaphor with a familiar British idiom sanitizes the text and imposes an imperial filter. Translation should intentionally leave subtle syntactic frictions intact; readers should be invited into a foreign rhythm of thought.</p>\n<p><strong>Translator C (Lukas - Historical Slavic Travelogues):</strong> Historical non-fiction requires an obsessive commitment to archival sleuthing. When translating an 18th-century explorer's diary across the Siberian taiga, you encounter obsolete navigational terms and fur trapper dialects. I spend weeks corresponding with forestry historians, maritime curators, and indigenous linguists just to identify a single referenced tree bark or knot.</p>\n<p><strong>Translator D (Elise - Avant-Garde Prose):</strong> Working with polyphonic, experimental novelists who deliberately fracture grammar is exhilarating. In an Argentine stream-of-consciousness novel, the author dispensed with punctuation. The challenge is capturing idiosyncratic cognitive momentum without smoothing out intentional roughness. A translated text should crackle with dangerous, rebellious energy.</p>",
+      "questions": [
+        {
+          "id": "r_q30",
+          "num": 30,
+          "type": "select",
+          "stem": "30. Which translator conducts extensive detective work with external academic specialists to verify historical terminology?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Translator A (Italian Poetry)"
+            },
+            {
+              "val": "B",
+              "label": "Translator B (Postcolonial Fiction)"
+            },
+            {
+              "val": "C",
+              "label": "Translator C (Historical Travelogues)"
+            },
+            {
+              "val": "D",
+              "label": "Translator D (Avant-Garde Prose)"
+            }
+          ],
+          "key": "C",
+          "skill": "Archival Sleuthing (B2-C1)",
+          "trap": "Translator C (Lukas): corresponds with forestry historians and museum curators."
+        },
+        {
+          "id": "r_q31",
+          "num": 31,
+          "type": "select",
+          "stem": "31. Which translator argues that capturing acoustic musicality takes precedence over literal word-for-word rendering?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Translator A (Italian Poetry)"
+            },
+            {
+              "val": "B",
+              "label": "Translator B (Postcolonial Fiction)"
+            },
+            {
+              "val": "C",
+              "label": "Translator C (Historical Travelogues)"
+            },
+            {
+              "val": "D",
+              "label": "Translator D (Avant-Garde Prose)"
+            }
+          ],
+          "key": "A",
+          "skill": "Acoustic Musicality (B2-C1)",
+          "trap": "Translator A (Matteo): literal fidelity loses rhythmic cadence and assonance."
+        },
+        {
+          "id": "r_q32",
+          "num": 32,
+          "type": "select",
+          "stem": "32. Which translator rejects the practice of sanitizing cultural idioms to make texts artificially familiar for Western readers?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Translator A (Italian Poetry)"
+            },
+            {
+              "val": "B",
+              "label": "Translator B (Postcolonial Fiction)"
+            },
+            {
+              "val": "C",
+              "label": "Translator C (Historical Travelogues)"
+            },
+            {
+              "val": "D",
+              "label": "Translator D (Avant-Garde Prose)"
+            }
+          ],
+          "key": "B",
+          "skill": "Refusing Domestication (B2-C1)",
+          "trap": "Translator B (Sunita): refuses replacing indigenous metaphors with British idioms."
+        },
+        {
+          "id": "r_q33",
+          "num": 33,
+          "type": "select",
+          "stem": "33. Which translator relishes the challenge of preserving a writer's unconventional, grammatically fractured narrative voice?",
+          "options": [
+            {
+              "val": "A",
+              "label": "Translator A (Italian Poetry)"
+            },
+            {
+              "val": "B",
+              "label": "Translator B (Postcolonial Fiction)"
+            },
+            {
+              "val": "C",
+              "label": "Translator C (Historical Travelogues)"
+            },
+            {
+              "val": "D",
+              "label": "Translator D (Avant-Garde Prose)"
+            }
+          ],
+          "key": "D",
+          "skill": "Fractured Grammar (B2-C1)",
+          "trap": "Translator D (Elise): relishes capturing unconventional stream-of-consciousness momentum."
+        }
+      ]
+    }
+  ],
+  "listening": [
+    {
+      "task": 1,
+      "tag": "Task 1 • Short Dialogue Multiple Choice",
+      "title": "Botanical Conservatory Lost Property",
+      "instruction": "Listen to the conversation. (2 plays maximum)",
+      "audioTrack": "q1_dialogue.mp3",
+      "questions": [
+        {
+          "id": "l_q1",
+          "num": 1,
+          "type": "mc",
+          "stem": "1. Which lost item was recovered in the Victorian Fernery?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] A silk umbrella"
+            },
+            {
+              "val": "B",
+              "label": "[B] A pair of reading glasses"
+            },
+            {
+              "val": "C",
+              "label": "[C] An ornate brass pocket compass"
+            }
+          ],
+          "key": "C",
+          "skill": "Acoustic Distractor Reversal (A1-A2)",
+          "trap": "Umbrella and glasses mentioned; brass maritime pocket compass confirmed."
+        }
+      ]
+    },
+    {
+      "task": 2,
+      "tag": "Task 2 • Dialogue Multiple Choice",
+      "title": "Architectural Studio Schedule Pilot",
+      "instruction": "Listen to two architects. (2 plays maximum)",
+      "audioTrack": "q2_dialogue.mp3",
+      "questions": [
+        {
+          "id": "l_q2",
+          "num": 2,
+          "type": "mc",
+          "stem": "2. What do both architects agree was the greatest advantage of the four-day schedule?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Having longer uninterrupted weekend leisure trips"
+            },
+            {
+              "val": "B",
+              "label": "[B] Enhanced mental recovery leading to fewer design revision cycles"
+            },
+            {
+              "val": "C",
+              "label": "[C] Immediate reductions in company office utility overheads"
+            }
+          ],
+          "key": "B",
+          "skill": "Mutual Consensus (A2-B1)",
+          "trap": "Both agree Friday off refreshed cognitive recovery and halved revision cycles."
+        }
+      ]
+    },
+    {
+      "task": 3,
+      "tag": "Task 3 • Extended Interview",
+      "title": "Naomi Chen: Glacial Acoustic Ecology",
+      "instruction": "Listen to the interview and answer questions 3–7. (2 plays maximum)",
+      "audioTrack": "q3_q7_interview.mp3",
+      "questions": [
+        {
+          "id": "l_q3",
+          "num": 3,
+          "type": "mc",
+          "stem": "3. What inspired Naomi to transition from classical percussion to soundscape ecology?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] A childhood fascination with deep-sea whale acoustics"
+            },
+            {
+              "val": "B",
+              "label": "[B] Recognizing that measuring natural acoustic balance is a sensitive diagnostic of ecosystem health"
+            },
+            {
+              "val": "C",
+              "label": "[C] Growing frustrated with commercial orchestra competition"
+            }
+          ],
+          "key": "B",
+          "skill": "Acoustic Density Diagnostic (B1-B2)",
+          "trap": "Acoustic balance proved the most sensitive diagnostic tool for ecosystem vitality."
+        },
+        {
+          "id": "l_q4",
+          "num": 4,
+          "type": "mc",
+          "stem": "4. What was the most difficult acoustic challenge Naomi’s team encountered in Patagonia?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Sub-zero temperatures cracking microphone diaphragms"
+            },
+            {
+              "val": "B",
+              "label": "[B] Low-frequency infrasound turbulence generated by katabatic winds"
+            },
+            {
+              "val": "C",
+              "label": "[C] Intense background animal vocalizations overloading recorders"
+            }
+          ],
+          "key": "B",
+          "skill": "Katabatic Infrasound (B2)",
+          "trap": "Katabatic winds roaring off ice sheet generate extreme infrasound turbulence."
+        },
+        {
+          "id": "l_q5",
+          "num": 5,
+          "type": "mc",
+          "stem": "5. How does sub-surface acoustic monitoring evaluate glacier stability better than satellites?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] It measures the exact mineral salinity of subglacial meltwater"
+            },
+            {
+              "val": "B",
+              "label": "[B] It detects micro-fracture acoustic bursts days before surface fissures appear from orbit"
+            },
+            {
+              "val": "C",
+              "label": "[C] It accurately maps the thickness of accumulated seasonal snowfall"
+            }
+          ],
+          "key": "B",
+          "skill": "Micro-Fracture Pulses (B2-C1)",
+          "trap": "Acoustic micro-fracture bursts forecast structural collapse days before surface rifts."
+        },
+        {
+          "id": "l_q6",
+          "num": 6,
+          "type": "mc",
+          "stem": "6. What alarmed Naomi regarding the acoustic monitoring of high-altitude bird species?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Birds migrating northward earlier than historical averages"
+            },
+            {
+              "val": "B",
+              "label": "[B] The rapid acoustic homogenization and collapse of vocal frequency diversity"
+            },
+            {
+              "val": "C",
+              "label": "[C] Invasive species mimicking the calls of native songbirds"
+            }
+          ],
+          "key": "B",
+          "skill": "Acoustic Homogenization (B2)",
+          "trap": "Rapid acoustic homogenization: intricate counterpoint collapses into monoculture."
+        },
+        {
+          "id": "l_q7",
+          "num": 7,
+          "type": "mc",
+          "stem": "7. How does Naomi recommend engaging the public on environmental degradation?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Releasing raw numerical decibel spreadsheets to schools"
+            },
+            {
+              "val": "B",
+              "label": "[B] Immersing listeners directly in the visceral sounds of dying habitats"
+            },
+            {
+              "val": "C",
+              "label": "[C] Commissioning pop musicians to sample wildlife calls"
+            }
+          ],
+          "key": "B",
+          "skill": "Visceral Sound Immersion (B2-C1)",
+          "trap": "Immerse ears directly in soundscape; groan of dying glacier cuts through apathy."
+        }
+      ]
+    },
+    {
+      "task": 4,
+      "tag": "Task 4 • Extended Discussion",
+      "title": "Privatized Public Plazas",
+      "instruction": "Listen to Hannah and her colleague and answer questions 8–9. (2 plays maximum)",
+      "audioTrack": "q8_q9_discussion.mp3",
+      "questions": [
+        {
+          "id": "l_q8",
+          "num": 8,
+          "type": "mc",
+          "stem": "8. Why do the speakers criticize privately managed public plazas?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] The architectural construction materials are cheap and flimsy"
+            },
+            {
+              "val": "B",
+              "label": "[B] Private security removes citizens who are not actively spending money"
+            },
+            {
+              "val": "C",
+              "label": "[C] They lack adequate illumination during evening hours"
+            }
+          ],
+          "key": "B",
+          "skill": "Commercial Exclusion (B1-B2)",
+          "trap": "Security removes citizens not spending money or distributing leaflets."
+        },
+        {
+          "id": "l_q9",
+          "num": 9,
+          "type": "mc",
+          "stem": "9. What fundamental characteristic do authentic public spaces require according to the speakers?",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A] Complete absence of commercial food kiosks"
+            },
+            {
+              "val": "B",
+              "label": "[B] Tolerance of social friction, diverse demographics, and spontaneous assembly"
+            },
+            {
+              "val": "C",
+              "label": "[C] Strict curfews to prevent late-night disturbances"
+            }
+          ],
+          "key": "B",
+          "skill": "Civic Friction (B2)",
+          "trap": "Civic spaces must tolerate friction, spontaneous assembly, and diversity."
+        }
+      ]
+    },
+    {
+      "task": 5,
+      "tag": "Task 5 • Multiple Matching",
+      "title": "Serendipitous Life Pivots",
+      "instruction": "Match speakers 1–5 with catalysts A–H. (2 plays maximum)",
+      "audioTrack": "q10_q14_speakers.mp3",
+      "optionsReference": "<strong>Catalysts &amp; Encounters:</strong><br/>\n<strong>[A]</strong> A stray injured animal followed the speaker during a remote mountain hike.<br/>\n<strong>[B]</strong> Overhearing elderly locals speaking an archaic oral dialect at a harbor dock.<br/>\n<strong>[C]</strong> Inheriting a collection of rare Japanese woodblock prints from an uncle.<br/>\n<strong>[D]</strong> An accidentally misdelivered historic letter inspired an interest in alpine seed banks.<br/>\n<strong>[E]</strong> Being stranded in a Tuscan village led to visiting an open master cello workshop.<br/>\n<strong>[F]</strong> Discovering an uncataloged medieval charter during a renovation project.<br/>\n<strong>[G]</strong> Sheltering from a ferocious hailstorm inside a traditional letterpress print shop.<br/>\n<strong>[H]</strong> A flight delay caused a chance meeting with an international diplomat.",
+      "questions": [
+        {
+          "id": "l_q10",
+          "num": 10,
+          "type": "select",
+          "stem": "Speaker 1 (Pyrenees Dog)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "A",
+          "skill": "Speaker 1 (B2)",
+          "trap": "Injured border collie on Pyrenees ridge -> wildlife rescue sanctuary in Yorkshire."
+        },
+        {
+          "id": "l_q11",
+          "num": 11,
+          "type": "select",
+          "stem": "Speaker 2 (Tuscan Cello)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "E",
+          "skill": "Speaker 2 (B2)",
+          "trap": "Stranded in Tuscan village, wandered into master luthier workshop -> cello maker."
+        },
+        {
+          "id": "l_q12",
+          "num": 12,
+          "type": "select",
+          "stem": "Speaker 3 (Botanist Letter)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "D",
+          "skill": "Speaker 3 (B2)",
+          "trap": "Misdelivered envelope for historic alpine botanist -> alpine seed banking."
+        },
+        {
+          "id": "l_q13",
+          "num": 13,
+          "type": "select",
+          "stem": "Speaker 4 (Newcastle Printmaker)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "G",
+          "skill": "Speaker 4 (B2-C1)",
+          "trap": "Sheltered from hailstorm in Newcastle letterpress shop -> literary poetry press."
+        },
+        {
+          "id": "l_q14",
+          "num": 14,
+          "type": "select",
+          "stem": "Speaker 5 (Hebrides Dialect)",
+          "options": [
+            {
+              "val": "A",
+              "label": "[A]"
+            },
+            {
+              "val": "B",
+              "label": "[B]"
+            },
+            {
+              "val": "C",
+              "label": "[C]"
+            },
+            {
+              "val": "D",
+              "label": "[D]"
+            },
+            {
+              "val": "E",
+              "label": "[E]"
+            },
+            {
+              "val": "F",
+              "label": "[F]"
+            },
+            {
+              "val": "G",
+              "label": "[G]"
+            },
+            {
+              "val": "H",
+              "label": "[H]"
+            }
+          ],
+          "key": "B",
+          "skill": "Speaker 5 (C1)",
+          "trap": "Overheard archaic dialect at Hebrides dock -> descriptive field linguist."
+        }
+      ]
+    },
+    {
+      "task": 6,
+      "tag": "Task 6 • Sentence Completion",
+      "title": "Temperate Celtic Rainforests",
+      "instruction": "Write NO MORE THAN THREE WORDS for each gap.",
+      "audioTrack": "q15_q19_monologue.mp3",
+      "questions": [
+        {
+          "id": "l_q15",
+          "num": 15,
+          "type": "text",
+          "stem": "15. Temperate rainforests depend on hyper-humid conditions fostered by the _______________________________.",
+          "key": "Gulf Stream",
+          "skill": "Oceanic Climate Extraction (B2)",
+          "trap": "Hyper-humid microclimates shaped by the Gulf Stream.",
+          "variants": [
+            "gulf stream",
+            "the gulf stream"
+          ]
+        },
+        {
+          "id": "l_q16",
+          "num": 16,
+          "type": "text",
+          "stem": "16. Epiphytic lichens are vulnerable because they absorb nutrients straight from _______________________________.",
+          "key": "atmospheric moisture",
+          "skill": "Lichen Physiology (B2-C1)",
+          "trap": "Lack roots and absorb nutrients straight from atmospheric moisture.",
+          "variants": [
+            "atmospheric moisture",
+            "moisture"
+          ]
+        },
+        {
+          "id": "l_q17",
+          "num": 17,
+          "type": "text",
+          "stem": "17. Ancient woodland lichens like Sticta are decimated by _______________________________ from traffic and agriculture.",
+          "key": "nitrogen pollution",
+          "skill": "Atmospheric Threat (B2)",
+          "trap": "Chronic nitrogen pollution from agricultural runoff and vehicular exhaust.",
+          "variants": [
+            "nitrogen pollution",
+            "chronic nitrogen pollution",
+            "nitrogen"
+          ]
+        },
+        {
+          "id": "l_q18",
+          "num": 18,
+          "type": "text",
+          "stem": "18. Natural recolonization across fragmented forests is impeded because many lichens have very _______________________________.",
+          "key": "limited dispersal radii",
+          "skill": "Ecological Barrier (B2-C1)",
+          "trap": "Heavy spores with very limited dispersal radii travelling under 100 meters.",
+          "variants": [
+            "limited dispersal radii",
+            "heavy spores",
+            "limited dispersal"
+          ]
+        },
+        {
+          "id": "l_q19",
+          "num": 19,
+          "type": "text",
+          "stem": "19. Researchers are trialling _______________________________ to attach small lichen thalli to trees in regenerating corridors.",
+          "key": "micro-translocation",
+          "skill": "Active Restoration Term (C1)",
+          "trap": "Trialling micro-translocation strategies: affixing minute lichen thalli to trees.",
+          "variants": [
+            "micro-translocation",
+            "micro-translocation strategies",
+            "microtranslocation"
+          ]
+        }
+      ]
+    }
+  ],
+  "writing": [
+    {
+      "part": 1,
+      "tag": "Writing Part 1 • Narrative Incident Report",
+      "title": "Highland River Survey Flash Flood",
+      "instruction": "Write 150–180 words. (Target: 20 minutes)",
+      "prompt": "<strong>Context:</strong> You are the field survey leader for an ecological biodiversity expedition in the Scottish Highlands. During yesterday's survey, an abrupt flash flood swept through base camp, cutting off vehicular access. You safely evacuated to a high ridge bothy, safeguarding all botanical specimens and data logs.<br/><br/>\n<strong>In your report:</strong><br/>\n          1. Recount the flash flood and explain how the team evacuated safely.<br/>\n          2. Confirm the preservation of vital scientific data and botanical specimens.<br/>\n          3. Outline your revised survey timetable and request replacement testing kits.",
+      "minWords": 150
+    },
+    {
+      "part": 2,
+      "tag": "Writing Part 2 • Reflective Cultural Essay",
+      "title": "The Algorithmic Self: Serendipity in the Era of Predictive Feeds",
+      "instruction": "Write 220–260 words. (Target: 25 minutes)",
+      "prompt": "<strong>Context:</strong> An intellectual journal is hosting a symposium titled <em>\"The Algorithmic Self: Serendipity and Autonomy in an Era of Predictive Feeds\"</em>.<br/><br/>\n<strong>In your essay:</strong><br/>\n          1. Examine how predictive algorithms narrow curiosity by reinforcing existing preferences.<br/>\n          2. Discuss the cultural and psychological value of true serendipity—unplanned encounters with unexpected art.<br/>\n          3. Propose how individuals can cultivate intellectual unpredictability and independent discovery.",
+      "minWords": 220
+    }
+  ]
+}

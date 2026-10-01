@@ -159,29 +159,44 @@ This companion guide equips the coach/tutor with complete scoring keys, the **3-
 
 ## 5. Writing Section Coaching Rubrics & Benchmark Models
 
-### Part 1: Narrative Email (Alpine Homestay Host)
+### Part 1: Narrative Letter (The Watermill Printmaker: A Storm Encounter)
+* **Prompt Requirements Checklist**:
+  1. Narrate the dramatic events leading to seeking refuge at the watermill in the storm $\checkmark$
+  2. Describe the sensory workshop atmosphere and detail a traditional craft technique by the stove $\checkmark$
+  3. Explain how the encounter inspired creative work and suggest a collaborative return visit $\checkmark$
+* **Target Word Count**: 150–180 words | **Timing**: ~20 minutes
 
-#### Benchmark C1/C2 Model Answer (168 Words)
-> Dear David and Martha,
+#### Benchmark C1/C2 Model Answer (174 Words)
+> Dearest Elena,
 > 
-> I hope this note finds you both well and warm. I am writing to send my sincere apologies for failing to arrive in Vals at four o’clock as we had originally arranged.
+> I hope this letter finds you well in London. My journey into the Black Mountains yesterday took an astonishing and enchanting turn.
 > 
-> Just as my postal coach approached the upper Saint Gotthard pass yesterday afternoon, a ferocious unseasonal sleet storm swept down the gorge, triggering small rockfalls that made the roads impassable. Stranded miles from the nearest village, I had no choice but to take shelter inside a rustic shepherd's bothy alongside a stranded Swiss postman. While drafty and without electricity, the stone cabin had a dry wood-stove, and we managed to stay perfectly comfortable throughout the freeze.
+> Just as dusk fell over the valley, an unrelenting autumn gale brought down a stand of ancient larches across the mountain pass, completely marooning my van. Guided only by a flickering amber lantern through the driving rain, I scrambled down an unpaved bridleway and stumbled upon Felin Ganol—a seventeenth-century stone watermill whose iron waterwheel was still churning through the dark.
 > 
-> The road clearance crews cleared the pass early this morning. I have now boarded the midday valley train and expect to arrive at Vals station at approximately 17:30 this evening. Could you let me know whether the side gate will still be unlocked, or if you would prefer me to collect the front door key from the village bakery?
+> Inside, the warmth was intoxicating: the scent of linseed oil, beeswax, and peat smoke filled the timber rafters. I was welcomed by Arthur, an octogenarian master marbler who was working by the wood-stove. He demonstrated the mesmerizing alchemy of Turkish *ebru* marbling, floating ox-gall pigments across a bath of carrageenan moss and combing delicate peacock plumes across laid rag paper.
 > 
-> With warmest regards,  
+> Watching his unhurried mastery completely reinvigorated my ideas for our upcoming letterpress bindings. Would you join me for a weekend residency here next month?
+> 
+> With fondest love,  
 > Julian
 
 ---
 
-### Part 2: Cultural Feature Article
+### Part 2: Critical Literary Essay (The Voice and the Page)
+* **Prompt Requirements Checklist**:
+  1. Contrast cognitive intimacy of silent reading with interpretive audio performance $\checkmark$
+  2. Analyse whether voice performance enhances accessibility or restricts imaginative freedom $\checkmark$
+  3. Evaluate whether audiobooks represent ancient oral traditions or modern multitasking convenience $\checkmark$
+* **Target Word Count**: 220–260 words | **Timing**: ~25 minutes
 
-#### Benchmark C1/C2 Model Answer (248 Words)
-> **The Objects We Inherit: Craftsmanship, Imperfection, and Soul**  
+#### Benchmark C1/C2 Model Answer (252 Words)
+> **The Voice and the Page: Audiobooks and the Architecture of Reading**  
 > 
-> In our hyper-accelerated digital century, objects arrive and vanish with frictionless indifference. We discard smartphones when their batteries degrade, stream songs from invisible clouds, and read literature on glare-resistant screens that offer no scent or tactile resistance. Yet, against this disposable backdrop, an insistent counter-movement is flourishing: the passionate reclamation of mechanical watches, hand-bound books, and fountain pens.
+> The meteoric resurgence of the spoken word has fundamentally unsettled our definition of reading. While literary purists lament the retreat from print, audiobooks have democratized access to complex prose, transforming mundane commutes into immersive literary encounters. Yet, as literature shifts from the page to the ear, we must consider what is gained—and what is subtly forfeited—in this acoustic translation.
 > 
-> What explains the magnetic pull of these analog relics? The answer lies in their vulnerability. A mass-produced plastic appliance wears down into unsightly rubbish; an artisan artifact, by contrast, wears in. Over decades of human touch, vegetable-tanned leather softens to fit the palm, an unvarnished oak desk gathers the tea stains and pen indentations of generations, and a gold nib shapes itself to the unique angle of a writer's hand. These subtle imperfections and warm patinas do not signify damage; they are the somatic signatures of living memory. They bear witness to a shared human history that disposable silicon can never possess.
+> Silent reading is an act of sovereign cognitive co-creation. Confronted with static typography on a page, the reader’s mind acts as director, actor, and composer, modulating cadence, timbre, and emotional pauses in response to subjective imagination. This private friction forces active mental participation. An audiobook, conversely, arrives pre-interpreted. The narrator’s vocal inflections, ironic sneers, and regional dialects necessarily superimpose a definitive psychological reading onto the text, preempting the listener's own interpretive discoveries. Where print leaves room for imaginative ambiguity, audio performance inevitably fills the silences.
 > 
-> Sceptics may dismiss this craft revival as bourgeois retro-fetishism, a nostalgic costume drama staged by burnt-out urbanites. Yet that cynicism misdiagnoses a profound spiritual exhaustion. In an era increasingly dominated by algorithmic uniformity and synthetic automation, engaging with an artifact crafted by patient human hands is not an indulgence—it is an act of psychological resistance. We treasure these objects because they tether us to physical reality, preserving an irreplaceable dialogue between human imagination and the enduring textures of the earth.
+> Nevertheless, dismissing audiobooks as mere passive consumerism disregards the primal power of the human voice. Literature began not in the solitary study, but around the communal hearth as an oral tradition—from Homeric bards to Anglo-Saxon scops chanting alliterative verse. In this sense, audiobooks do not erode literary culture; they restore its somatic, acoustic heritage.
+> 
+> Ultimately, listening to literature is not an inferior substitute for the page, but an autonomous artistic medium. While silent reading preserves solitary contemplation, the spoken narrative reanimates the ancestral magic of being told a story.
+```

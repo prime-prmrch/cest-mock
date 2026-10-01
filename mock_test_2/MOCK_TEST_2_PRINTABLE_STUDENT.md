@@ -332,26 +332,27 @@
 
 ---
 
-### Part 1: Narrative Email (150–180 Words)
+### Part 1: Narrative Letter (~20 Minutes | 150–180 Words)
 
-**Context**: You were traveling to a remote alpine village to begin a month-long residency at a traditional craft retreat hosted by David and Martha. However, unexpected sleet storms closed the high mountain pass, forcing you to miss your connecting transport, seek emergency shelter overnight in a rustic shepherd's bothy, and alter your arrival schedule.
+**Context**: While journeying through the Welsh border country to deliver bookbinding materials for an exhibition, a severe evening gale blocked the roads with fallen timber, forcing you to seek shelter at an isolated stone watermill that houses an eccentric traditional paper-marbler and hand-press printer.
 
-**Task**: Write an email to your hosts, David and Martha. In your email, you must:
-1. Explain the unforeseen misadventure that caused you to miss your scheduled arrival.
-2. Describe your night in the mountain refuge and reassure them regarding your safety.
-3. Provide your updated arrival itinerary and make an inquiry regarding your accommodation.
+**Task**: Write a letter to your creative partner, Elena. In your letter, you must:
+1. **Narrate** the dramatic events that led to you seeking refuge at the illuminated watermill during the storm.
+2. **Describe** the sensory atmosphere inside the workshop and detail a mesmerizing craft technique you witnessed by the stove.
+3. **Explain** how this chance encounter inspired your own creative work and suggest a collaborative return visit.
 
-*Write your email in an appropriate informal yet courteous tone.*
+*(Write 150–180 words on your response sheet.)*
 
 ---
 
-### Part 2: Cultural Feature Article (220–260 Words)
+### Part 2: Critical Literary Essay (~25 Minutes | 220–260 Words)
 
-**Context**: A cultural magazine is publishing a special issue titled *"The Soul of the Artifact: Craftsmanship in an Automated Era"*.
+**Context**: A literary review journal has invited contributions for a symposium titled:
+> *"The Spoken Word Renaissance: Does Listening to Literature Enrich or Constrain the Reader's Imagination?"*
 
-**Task**: Write an article exploring why hand-crafted, repairable objects (such as fountain pens, mechanical watches, hand-bound books, or acoustic instruments) continue to inspire deep emotional attachment today. In your article, you should:
-1. Contrast the disposable nature of mass-produced digital technology with the enduring character of artisan artifacts.
-2. Examine the role of physical imperfections, patina, and tactile materials in forging emotional connections.
-3. Evaluate whether the revival of traditional crafts represents a passing retro nostalgia or an essential human need for authenticity.
+**Task**: Write an essay for the journal. In your essay, you should:
+1. **Contrast** the cognitive intimacy of silent reading—where the reader crafts internal cadence and voice—with the interpretive performance of a professional narrator.
+2. **Analyse** whether audio performance enhances dramatic accessibility or imposes a singular interpretation that restricts the listener's interpretive freedom.
+3. **Evaluate** whether the popularity of audiobooks represents a return to ancient communal oral storytelling traditions or a compromise born of modern multi-tasking habits.
 
-*Give your article an engaging title and write in an articulate, thought-provoking style.*
+*(Write 220–260 words on your response sheet.)*

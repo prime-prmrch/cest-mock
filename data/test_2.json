@@ -1561,18 +1561,18 @@
   "writing": [
     {
       "part": 1,
-      "tag": "Writing Part 1 • Narrative Email",
-      "title": "Alpine Homestay Misadventure",
+      "tag": "Writing Part 1 • Narrative Letter",
+      "title": "The Watermill Printmaker: A Storm Encounter",
       "instruction": "Write 150–180 words. (Target: 20 minutes)",
-      "prompt": "<strong>Context:</strong> You were traveling to a remote alpine village to begin a month-long craft residency hosted by David and Martha. However, unexpected sleet storms closed the high mountain pass, forcing you to seek emergency shelter in a shepherd's bothy.<br/><br/>\n<strong>In your email:</strong><br/>\n          1. Explain the unforeseen misadventure that caused you to miss your arrival.<br/>\n          2. Describe your night in the mountain refuge and reassure them of your safety.<br/>\n          3. Provide your updated arrival itinerary and inquire about your accommodation.",
+      "prompt": "<strong>Context:</strong> While journeying through the Welsh border country to deliver bookbinding materials for an exhibition, a severe evening gale blocked the roads with fallen timber, forcing you to seek shelter at an isolated stone watermill that houses an eccentric traditional paper-marbler and hand-press printer.<br><br><strong>In your letter to your creative partner, Elena:</strong><br>1. Narrate the dramatic events that led to you seeking refuge at the illuminated watermill during the storm.<br>2. Describe the sensory atmosphere inside the workshop and detail a mesmerizing craft technique you witnessed by the stove.<br>3. Explain how this chance encounter inspired your own creative work and suggest a collaborative return visit.",
       "minWords": 150
     },
     {
       "part": 2,
-      "tag": "Writing Part 2 • Cultural Feature Article",
-      "title": "The Objects We Inherit: Craftsmanship in an Automated Era",
+      "tag": "Writing Part 2 • Critical Literary Essay",
+      "title": "The Voice and the Page: Audiobooks and the Architecture of Reading",
       "instruction": "Write 220–260 words. (Target: 25 minutes)",
-      "prompt": "<strong>Context:</strong> A cultural magazine is publishing an issue on <em>\"The Soul of the Artifact: Craftsmanship in an Automated Era\"</em>.<br/><br/>\n<strong>In your article:</strong><br/>\n          1. Contrast disposable digital technology with the enduring character of artisan artifacts.<br/>\n          2. Examine the role of physical imperfections, patina, and tactile materials in forging emotional connection.<br/>\n          3. Evaluate whether craft revival is passing retro nostalgia or an essential human need for authenticity.",
+      "prompt": "<strong>Context:</strong> A literary review journal has invited contributions for a symposium titled: <em>\"The Spoken Word Renaissance: Does Listening to Literature Enrich or Constrain the Reader's Imagination?\"</em><br><br><strong>In your essay:</strong><br>1. Contrast the cognitive intimacy of silent reading—where the reader crafts internal cadence and voice—with the interpretive performance of a professional narrator.<br>2. Analyse whether audio performance enhances dramatic accessibility or imposes a singular interpretation that restricts the listener's interpretive freedom.<br>3. Evaluate whether the popularity of audiobooks represents a return to ancient communal oral storytelling traditions or a compromise born of modern multi-tasking habits.",
       "minWords": 220
     }
   ]

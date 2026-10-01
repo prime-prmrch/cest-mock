@@ -1555,18 +1555,18 @@
   "writing": [
     {
       "part": 1,
-      "tag": "Writing Part 1 • Narrative Incident Report",
-      "title": "Highland River Survey Flash Flood",
+      "tag": "Writing Part 1 • Narrative Field Dispatch",
+      "title": "Night Watch at the Coastal Bird Observatory",
       "instruction": "Write 150–180 words. (Target: 20 minutes)",
-      "prompt": "<strong>Context:</strong> You are the field survey leader for an ecological biodiversity expedition in the Scottish Highlands. During yesterday's survey, an abrupt flash flood swept through base camp, cutting off vehicular access. You safely evacuated to a high ridge bothy, safeguarding all botanical specimens and data logs.<br/><br/>\n<strong>In your report:</strong><br/>\n          1. Recount the flash flood and explain how the team evacuated safely.<br/>\n          2. Confirm the preservation of vital scientific data and botanical specimens.<br/>\n          3. Outline your revised survey timetable and request replacement testing kits.",
+      "prompt": "<strong>Context:</strong> You are volunteering at an isolated headland bird observatory. During yesterday's nocturnal vigil, dense sea fog and sudden coastal gales brought an unexpected influx of hundreds of exhausted migratory songbirds onto the promontory at 2 AM.<br><br><strong>In your field dispatch to your research supervisor, Dr. Clara Thorne:</strong><br>1. Recount the vivid scene when the nocturnal migrant flock first descended out of the fog onto the lanterns and mist nets.<br>2. Describe how the station team mobilized overnight to shelter, ring, and safely release the vulnerable birds.<br>3. Highlight an exceptional ringing record or anomalous species observed, and request emergency ringing supplies.",
       "minWords": 150
     },
     {
       "part": 2,
-      "tag": "Writing Part 2 • Reflective Cultural Essay",
-      "title": "The Algorithmic Self: Serendipity in the Era of Predictive Feeds",
+      "tag": "Writing Part 2 • Discursive Essay",
+      "title": "The Reclamation of Darkness: Artificial Light, Ecology, and the Lost Night Sky",
       "instruction": "Write 220–260 words. (Target: 25 minutes)",
-      "prompt": "<strong>Context:</strong> An intellectual journal is hosting a symposium titled <em>\"The Algorithmic Self: Serendipity and Autonomy in an Era of Predictive Feeds\"</em>.<br/><br/>\n<strong>In your essay:</strong><br/>\n          1. Examine how predictive algorithms narrow curiosity by reinforcing existing preferences.<br/>\n          2. Discuss the cultural and psychological value of true serendipity—unplanned encounters with unexpected art.<br/>\n          3. Propose how individuals can cultivate intellectual unpredictability and independent discovery.",
+      "prompt": "<strong>Context:</strong> An environmental and philosophical journal has invited essays on <em>\"The End of True Night: How Light Pollution Disconnects Humanity from the Cosmos and Imperils the Living World\"</em>.<br><br><strong>In your essay:</strong><br>1. Examine how pervasive artificial light disrupts wildlife navigation, circadian cycles, and nocturnal predator-prey dynamics.<br>2. Reflect on the psychological and philosophical impact on humans of losing our ancient connection to unpolluted starlight.<br>3. Propose practical civic design measures (such as shielded lighting and dark sky sanctuaries), weighing public safety against ecological restoration.",
       "minWords": 220
     }
   ]

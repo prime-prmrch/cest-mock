@@ -27,7 +27,7 @@ The test suite is powered by a high-performance **decoupled frontend engine** (`
 ### 📘 [Mock Test 1: General Adaptive Baseline](test.html?id=1)
 - **Reading Themes**: Deep-sea autonomous robotics, Elena Vance's wildlife cinematography, marine bioluminescence, acoustic ecology in city squares.
 - **Listening Tracks**: Lost property at a cafe, professional scheduling workshop, Marcus Thorne acoustic architecture interview, sustainable fashion rental debate, 5 runner monologues, coral reef micro-fragmentation restoration.
-- **Writing**: Informal email for David's retirement gathering; civic forum contribution on pedestrianizing historic town centers.
+- **Writing**: Part 1 Narrative letter on an unexpected 1880s botanical field journal discovered in a coastal library archive; Part 2 Critical feature article on *"The Lost Art of Browsing: Why Physical Bookshops and Uncurated Shelves Matter in a Digital Age"*.
 
 ### 🎨 [Mock Test 2: Narrative & Literary Horizons](test.html?id=2)
 - **Reading Themes**: Antiquarian Manuscript Reading Room rules, Hay-on-Wye book town history, traditional boxwood engraving, Dartmoor granite solitude travel memoir, olfactory neuroscience (Proustian phenomenon), Renaissance phantom islands (Hy-Brasil), revival of hand-penned fountain pen letters, four master antique restorers (horologist, bookbinder, pipe organ voicer, stained-glass glazier).
@@ -37,7 +37,7 @@ The test suite is powered by a high-performance **decoupled frontend engine** (`
 ### 🌿 [Mock Test 3: Atmospheric Ecology & Deep Time](test.html?id=3)
 - **Reading Themes**: Movable letterpress studio regulations, Saint Paul's Cathedral whispering gallery wave physics, alchemy of Renaissance lapis lazuli pigments, Arctic glaciology field memoir on Nordenskiöld Glacier, cognitive value of solitude (default mode network), medieval monastic scriptoria labor and colophons, European river re-wilding and beaver hydrology, four literary translators on preserving cultural texture and voice.
 - **Listening Tracks**: Antique brass navigational compass in botanical conservatory, architects evaluating a 4-day working week pilot, Naomi Chen Patagonian glacial acoustic ecology interview, privatized commercial plazas debate, 5 serendipitous career pivot accounts, Dr. Alistair MacIntyre on temperate Celtic rainforest lichens and bio-indicators.
-- **Writing**: Part 1 Narrative field incident report recounting an unexpected river flash flood, bothy evacuation, and specimen preservation; Part 2 Reflective cultural essay on *"The Algorithmic Self: Serendipity and Autonomy in an Era of Predictive Feeds"*.
+- **Writing**: Part 1 Narrative field dispatch reporting an extraordinary nocturnal fall of exhausted migrant songbirds in fog at a coastal bird observatory; Part 2 Discursive essay on *"The Reclamation of Darkness: Artificial Light, Ecology, and the Lost Night Sky"*.
 
 ---
 

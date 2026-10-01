@@ -159,36 +159,48 @@ This companion guide equips the coach/tutor with complete scoring keys, the **3-
 
 ## 5. Writing Section Coaching Rubrics & Benchmark Models
 
-### Part 1: Narrative Field Incident Report (Expedition Director)
+### Part 1: Narrative Field Dispatch (Night Watch at the Coastal Bird Observatory)
+* **Prompt Requirements Checklist**:
+  1. Recount the vivid scene when the nocturnal migrant flock descended in fog $\checkmark$
+  2. Describe how the station team mobilized overnight to shelter, ring, and safely release the birds $\checkmark$
+  3. Highlight an exceptional ringing record or anomalous species and request emergency ringing supplies $\checkmark$
+* **Target Word Count**: 150–180 words | **Timing**: ~20 minutes
 
-#### Benchmark C1/C2 Model Answer (174 Words)
-> **TO**: Dr. Eleanor Vance, Director of Ecological Field Operations  
-> **FROM**: Alistair Ross, Highland River Survey Team Leader  
-> **DATE**: 2 October 2026  
-> **SUBJECT**: Incident Report: Glen Feshie Flash Flood and Evacuation  
+#### Benchmark C1/C2 Model Answer (172 Words)
+> **TO**: Dr. Clara Thorne, Principal Ornithological Investigator  
+> **FROM**: Rowan Bradley, Observatory Field Assistant  
+> **DATE**: 3 October 2026  
+> **SUBJECT**: Field Dispatch: Exceptional Nocturnal Fall Event at Skokholm Headland  
 > 
-> Dear Dr. Vance,
+> Dear Dr. Thorne,
 > 
-> I am writing to provide an urgent operational briefing regarding yesterday’s extreme hydrological event along the River Feshie.
+> I am transmitting an urgent operational dispatch following an extraordinary nocturnal migration event across the southern headland last night.
 > 
-> At approximately 15:30, an intense cloudburst over the upper plateau triggered an unexpected flash flood. Within twenty minutes, the river burst its banks, sweeping through our lowland encampment and rendering the access track impassable. Acting immediately in accordance with emergency protocols, the team executed an orderly evacuation to the high-elevation bothy at Creag Dhubh. I am relieved to report that all four researchers are safe and unharmed.
+> Around 02:00, as an impenetrable sea fog enveloped the cliffs, the wind suddenly veered northeast. Within minutes, the night sky was filled with soft flight calls, and hundreds of exhausted passerines plummeted out of the mist towards the lighthouse beams and our sheltered mist nets.
 > 
-> Crucially, all core botanical specimens, bryophyte pressings, and encrypted digital data loggers were secured in waterproof rucksacks and transported without loss. However, our benchtop water-filtration manifolds and electronic spectrophotometers were submerged at base camp.
+> The field team mobilized immediately, working by red headlamps through the chill damp to extract, warm, and process the grounded migrants. By dawn, we had safely ringed, weighed, and released over four hundred goldcrests and firecrests without a single mortality.
 > 
-> We have revised our survey schedule to focus on high-ridge transects while awaiting waters to recede. Could the university dispatch two replacement portable colorimeter kits via the Glenmore forestry station by Thursday?
+> Most remarkably, we trapped an anomalous first-winter Dusky Warbler—only the third confirmed record for the archipelago. Given this unprecedented migratory influx, our supply of alloy size-AA rings and cotton holding bags is almost depleted. Could you arrange an emergency courier drop with the morning supply boat from the mainland?
 > 
 > Respectfully submitted,  
-> Alistair Ross
+> Rowan
 
 ---
 
-### Part 2: Reflective Cultural Essay
+### Part 2: Discursive Essay (The Reclamation of Darkness)
+* **Prompt Requirements Checklist**:
+  1. Examine ecological disruptions caused by pervasive artificial lighting on wildlife $\checkmark$
+  2. Reflect on the psychological and philosophical loss of our connection to unpolluted starlight $\checkmark$
+  3. Propose practical civic design measures balancing public safety with nocturnal restoration $\checkmark$
+* **Target Word Count**: 220–260 words | **Timing**: ~25 minutes
 
-#### Benchmark C1/C2 Model Answer (252 Words)
-> **The Algorithmic Self: The Threat to Human Serendipity**  
+#### Benchmark C1/C2 Model Answer (254 Words)
+> **The Reclamation of Darkness: Preserving the Ecology of Night**  
 > 
-> We live under the discreet surveillance of the recommendation engine. From the music we stream at dawn to the essays that populate our evening feeds, mathematical optimization models anticipate our preferences before we have consciously formulated them. By measuring our click rates and dwell times, predictive algorithms construct an airtight digital mirror designed to eliminate friction. Yet in banishing friction, they threaten something vital to the human spirit: the transformative power of serendipity.
+> For billions of years, life on Earth evolved beneath a rhythmic alternation of brilliant day and pristine, starlit dark. Over the past century, however, a luminous fog of pervasive artificial lighting has bleached the darkness from our skies. In banishing the shadows of the night, human civilization has committed an unreckoned ecological crime and impoverished its own philosophical consciousness.
 > 
-> An algorithm functions on backward-looking extrapolation; it offers us more of what we have already consumed. In doing so, it shrinks the horizon of curiosity, trapping the intellect within an echo chamber of self-reinforcing tastes. The books that truly transfigure an individual’s consciousness, however, are seldom those they knew they were seeking. Intellectual epiphanies are born of genuine accident: pulling a stained volume of Renaissance philosophy from a dusty bottom shelf, stumbling into an avant-garde chamber concert during a downpour, or struggling through prose that initially provokes discomfort. These encounters widen our sympathies precisely because they defy our established profile.
+> The biological repercussions of perpetual twilight are catastrophic. Nocturnal ecosystems rely on absolute darkness as an essential habitat. Streetlights blind migrating birds, decimate nocturnal insect pollinators, disorient emergent sea turtles, and disrupt circadian hormone cycles across amphibians and mammals alike. By dissolving the boundary between day and night, we unmoor the delicate biological clocks that govern feeding, reproduction, and navigation throughout the biosphere.
 > 
-> Reclaiming our intellectual autonomy does not necessitate a total retreat from digital tools, but it demands conscious sabotage of algorithmic convenience. We must cultivate a deliberate appetite for the unoptimized: wandering into unfamiliar neighborhood bookshops without an agenda, reading authors whose ideological foundations unsettle our own, and embracing the slow, meandering detours where authentic discovery resides. True human curiosity cannot be curated by code; it flourishes only in the untamed wilderness of the unexpected.
+> Yet the devastation is equally cultural and existential. In losing the unpolluted night sky, modern humans have severed their ancient contemplative link to cosmic humility. For millennia, gazing into the unfathomable depth of the Milky Way inspired philosophical perspective, art, and the foundational mythologies that tempered human hubris. Beneath our glowing sodium haze, we have traded cosmic wonder for artificial convenience.
+> 
+> Restoring true night does not require abandoning municipal safety; it requires enlightened civic architecture. By implementing fully shielded downward luminaires, transitioning from harsh blue LEDs to warm amber spectrums, enacting curfew dimming in commercial districts, and legally protecting Dark Sky Reserves, communities can dramatically curtail light trespass while maintaining secure pedestrian pathways. Darkness is not an empty void to be conquered, but an indispensable ecological commons that we must urgently reclaim.

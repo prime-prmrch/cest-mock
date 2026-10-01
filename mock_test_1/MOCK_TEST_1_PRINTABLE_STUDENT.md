@@ -331,33 +331,27 @@
 
 ---
 
-### Part 1: Informal Email (~15 Minutes | At least 50 words)
-*You have received an email from your former colleague Maya:*
+### Part 1: Narrative Letter (~20 Minutes | 150–180 Words)
 
-> *Hi,*  
-> *Can you believe it's already been three years since David retired from our team? A few of us want to surprise him with a special get-together next month. Do you have any suggestions for where we should hold the gathering and what gift we could present to him? Also, would you be able to help us coordinate everything?*  
-> *Write back soon!*  
-> *Maya*
+**Context**: While cataloguing unexamined estate boxes during a research residency at a historic maritime harbour library, you unexpectedly uncovered an unpublished 1880s field journal kept by an amateur coastal botanist, complete with hand-pressed specimens and marginal observations.
 
-**Write an email to Maya**:  
-* **suggest** an appropriate venue or activity for the gathering  
-* **recommend** a thoughtful gift for David and explain your choice  
-* **offer** to assist with specific preparations  
+**Task**: Write a personal letter to your academic mentor, Professor Gallagher. In your letter, you must:
+* **narrate** the dramatic moment you stumbled upon the forgotten volume among the archives
+* **describe** the physical artifact, detailing one evocative entry or pressed specimen that captured your imagination
+* **propose** a collaborative conservation or research plan and request guidance on how to catalogue the find
 
-*(Write at least 50 words on your response sheet.)*
+*(Write 150–180 words on your response sheet.)*
 
 ---
 
-### Part 2: Public Civic Post (~30 Minutes | At least 180 words)
-*The town council where you live has invited community feedback on its official website regarding local public parks and recreational spaces:*
+### Part 2: Critical Feature Article (~25 Minutes | 220–260 Words)
 
-> **COMMUNITY FORUM: Preserving Our Local Green Spaces**  
-> *Over the past year, attendance at our town's public parks has surged dramatically. However, increased visitor numbers and frequent outdoor festivals have led to noticeable litter, turf damage, and conflicts between cyclists, dog walkers, and families.*  
-> *The council invites public comment before drafting new park management regulations.*
+**Context**: A literary and cultural magazine is dedicating a special issue to:
+> *"In Praise of the Uncurated Shelf: Why Physical Bookshops and Serendipitous Browsing Matter to the Creative Imagination"*
 
-**Write your contribution for the community website about**:  
-* **why** our public parks have experienced such a significant surge in usage  
-* **what specific challenges** this overcrowding is creating for local residents and wildlife  
-* **how** the council could sustainably balance community recreation with environmental conservation  
+**Task**: Write an article for the magazine. In your article, you should:
+* **contrast** the sensory, tactile journey of roaming independent bookshop aisles with the algorithmic efficiency of online book purchasing
+* **analyse** how unexpected shelf discoveries challenge intellectual complacency and stimulate creative synthesis
+* **evaluate** whether brick-and-mortar bookshops are an indispensable cultural ecosystem or an idealized nostalgia
 
-*(Include any other relevant observations. Write at least 180 words on your response sheet.)*
+*(Write 220–260 words on your response sheet.)*

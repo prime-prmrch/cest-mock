@@ -332,26 +332,27 @@
 
 ---
 
-### Part 1: Narrative Field Incident Report (150–180 Words)
+### Part 1: Narrative Field Dispatch (~20 Minutes | 150–180 Words)
 
-**Context**: You are the field survey leader for an ecological biodiversity expedition in the Scottish Highlands. During yesterday's river catchment survey, an abrupt flash flood swept through your lowland base camp, submerging field gear and cutting off vehicular access. You successfully executed an emergency evacuation to a high ridge bothy, safeguarding all botanical specimens and survey logs.
+**Context**: You are volunteering at an isolated headland bird observatory. During yesterday's nocturnal vigil, dense sea fog and sudden coastal gales brought an unexpected influx of hundreds of exhausted migratory songbirds onto the promontory at 2 AM.
 
-**Task**: Write an incident and status report to your Project Director, Dr. Eleanor Vance. In your report, you must:
-1. Recount the sequence of events during the flash flood and explain how the team evacuated safely.
-2. Confirm the preservation of vital scientific data and botanical specimens.
-3. Outline your revised survey timetable and request replacement water-quality testing kits.
+**Task**: Write a field dispatch to your supervising research coordinator, Dr. Clara Thorne. In your dispatch, you must:
+1. **Recount** the vivid scene when the nocturnal migrant flock first descended out of the fog onto the lanterns and mist nets.
+2. **Describe** how the station team mobilized overnight to shelter, ring, and safely release the vulnerable birds.
+3. **Highlight** an exceptional ringing record or anomalous species observed, and request emergency ringing supplies.
 
-*Write your report in an articulate, professional yet narrative style.*
+*(Write 150–180 words on your response sheet.)*
 
 ---
 
-### Part 2: Reflective Cultural Essay (220–260 Words)
+### Part 2: Discursive Essay (~25 Minutes | 220–260 Words)
 
-**Context**: An intellectual journal is hosting a symposium titled *"The Algorithmic Self: Serendipity and Autonomy in an Era of Predictive Feeds"*.
+**Context**: An environmental and philosophical quarterly has invited submissions exploring:
+> *"The End of True Night: How Light Pollution Disconnects Humanity from the Cosmos and Imperils the Living World"*
 
-**Task**: Write an essay reflecting on the consequences of relying on personalized digital recommendation feeds for literature, music, and ideas. In your essay, you should:
-1. Examine how predictive algorithms narrow intellectual curiosity by reinforcing existing preferences.
-2. Discuss the cultural and psychological value of true serendipity—unplanned encounters with challenging, unexpected art or literature.
-3. Propose how individuals can deliberately cultivate intellectual unpredictability and independent discovery in daily life.
+**Task**: Write an essay for the quarterly. In your essay, you should:
+1. **Examine** how pervasive artificial light disrupts wildlife navigation, circadian cycles, and nocturnal predator-prey dynamics.
+2. **Reflect** on the psychological and philosophical impact on humans of losing our ancient connection to unpolluted starlight.
+3. **Propose** practical civic design measures (such as shielded lighting and dark sky sanctuaries), weighing public safety against ecological restoration.
 
-*Give your essay a compelling title and write with philosophical depth and rhetorical sophistication.*
+*(Write 220–260 words on your response sheet.)*

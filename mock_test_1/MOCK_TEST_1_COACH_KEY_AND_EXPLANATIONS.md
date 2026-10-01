@@ -161,45 +161,47 @@ Use this empirical score banding to evaluate your student's baseline performance
 
 ## 5. Writing Section Coaching Rubrics & Benchmark Models
 
-### Part 1: Informal Email (David's Retirement Gathering)
+### Part 1: Narrative Letter (The Discovery in the Coastal Archive)
 * **Prompt Requirements Checklist**:
-  1. Suggest venue/activity $\checkmark$
-  2. Recommend a gift with rationale $\checkmark$
-  3. Offer specific help $\checkmark$
+  1. Narrate the dramatic moment of discovery in the archives $\checkmark$
+  2. Describe the physical artifact and an evocative entry or pressed specimen $\checkmark$
+  3. Propose a collaborative conservation or research plan and request cataloguing guidance $\checkmark$
+* **Target Word Count**: 150–180 words | **Timing**: ~20 minutes
 
-#### Band C1 Benchmark Model (~110 words)
+#### Band C1/C2 Benchmark Model (~168 words)
 ```markdown
-Hi Maya,
+Dear Professor Gallagher,
 
-It’s hard to believe three years have already slipped by since David retired! I’m thrilled you’re organizing this.
+I am writing to share an astonishing development from my archival residency at the St Ives Maritime Institute. 
 
-For the venue, why don't we book the garden terrace at the Botanical Cafe? David always loved outdoor settings, and it would offer a relaxed atmosphere where we can chat without loud background noise. 
+While sorting through an uncatalogued cedar chest of late Victorian estate papers in the basement vaults yesterday afternoon, I felt a heavy, dislodged false bottom give way. Beneath a parcel of nautical receipts lay a calfskin-bound field journal dating from the summer of 1883, kept by an amateur botanist and coastal voyager named Arthur Pendelton.
 
-As for a farewell present, how about a customized leather-bound journal engraved with messages from former colleagues? Since he’s taken up landscape painting, it would be both meaningful and practical. 
+The volume is in an exquisite state of preservation, its marbled endpapers enclosing handwritten field observations, intricate pen-and-wash coastal panoramas, and delicate hand-pressed littoral algae specimens—including a perfectly dried sprig of Sea Heath with Pendelton’s marginal note: *"Found clinging to the granite clefts beneath Porthmeor, bathed in sea spray."*
 
-I’d be delighted to design the digital invitations and collect contributions for the gift. 
+I believe this manuscript offers valuable historical insight into nineteenth-century regional micro-flora. Would you be willing to review my initial transcription notes and advise me on whether we might formally register and conserve the manuscript through the university archives?
 
-Speak soon,
-Alex
+With warmest regards,  
+Rowan
 ```
 
 ---
 
-### Part 2: Public Civic Post (Local Green Space Management)
+### Part 2: Critical Feature Article (The Lost Art of Browsing)
 * **Prompt Requirements Checklist**:
-  1. Explain surge in usage $\checkmark$
-  2. Outline challenges for residents & wildlife $\checkmark$
-  3. Propose sustainable solutions $\checkmark$
+  1. Contrast sensory browsing with algorithmic purchasing efficiency $\checkmark$
+  2. Analyse how tangible shelves stimulate intellectual curiosity and creative synthesis $\checkmark$
+  3. Evaluate whether physical bookshops represent an essential cultural ecosystem or nostalgic romanticism $\checkmark$
+* **Target Word Count**: 220–260 words | **Timing**: ~25 minutes
 
-#### Band C1 Benchmark Model (~230 words)
+#### Band C1/C2 Benchmark Model (~248 words)
 ```markdown
-Over the past twelve months, our municipal parks have witnessed unprecedented visitor numbers, underscoring how vital green spaces are to our community's well-being. However, this surge has also exposed acute vulnerabilities in our park management policies that require urgent attention.
+# In Praise of the Uncurated Shelf: Why the Bookshop Still Matters
 
-The exponential rise in park attendance stems primarily from rapid residential development downtown, where high-density apartments lack private gardens. Consequently, families, fitness enthusiasts, and dog owners all converge on our limited communal recreation grounds. 
+In our hyper-optimised digital ecosystem, the act of acquiring literature has been stripped of friction. Algorithms dissect our past purchases, serving frictionless recommendations engineered to mirror existing tastes. Yet, in eradicating inefficiency, we risk banishing serendipity—the very catalyst of intellectual growth.
 
-Unfortunately, this overcrowding is precipitating severe environmental degradation. Fragile meadow flora is being trampled, nesting waterfowl along the lake perimeter are constantly disturbed by off-leash pets, and weekend event waste frequently overwhelms sanitation bins. Furthermore, high-speed cyclists on shared pedestrian walkways create genuine hazards for elderly residents and toddlers.
+To enter an independent brick-and-mortar bookshop is to submit to productive disorientation. Unlike the algorithmic feed, which narrows the reader's horizons into predictable genre silos, physical shelves present an uncurated democracy of ideas. Here, a wandering eye tracing worn cloth spines might drift from seventeenth-century maritime cartography to contemporary post-colonial poetry, guided only by the tactile appeal of embossed type or the evocative scent of printer’s ink. These unplanned adjacencies spark unexpected cognitive cross-pollination that no predictive model could anticipate.
 
-To reconcile recreational demands with conservation, the council should adopt a zoned spatial strategy. First, sensitive ecological corridors, particularly wetland habitats, should be designated as tranquil conservation zones where cycling and off-leash dogs are strictly prohibited. Second, commercial festival licenses must be restricted to designated paved plazas equipped with mandatory waste-sorting stations. Finally, introducing voluntary community ranger patrols would foster public stewardship while ensuring regulations are gently enforced.
+Crucially, browsing is not mere consumerism; it is an active, spatial dialogue. In physical bookshops, one encounters books that challenge, confound, and refuse to flatter our curated preferences. Rather than an outdated indulgence in analogue nostalgia, the independent bookshop represents an irreplaceable civic sanctuary for the human imagination. In physical spaces, readers are invited to stumble across thoughts they did not know they were searching for.
 
-What specific measures would fellow residents like to see prioritized in the upcoming draft policy?
+As algorithmic curation increasingly flattens cultural variety, protecting the physical bookshop is an act of intellectual preservation. We need spaces that welcome chance, celebrate texture, and remind us that literature’s greatest revelations frequently occur off the beaten track.
 ```

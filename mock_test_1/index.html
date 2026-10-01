@@ -1,0 +1,2266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Cambridge English Skills Test — Mock Test 1</title>
+  <style>
+    :root {
+      --primary: #003b70;
+      --primary-dark: #002548;
+      --primary-light: #e8f1fa;
+      --secondary: #0077b6;
+      --accent: #e63946;
+      --success: #1b8a5a;
+      --success-light: #e6f7ef;
+      --warning: #f59e0b;
+      --danger: #dc2626;
+      --danger-light: #fee2e2;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-focus: #0077b6;
+      --radius: 12px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding-bottom: 90px;
+    }
+
+    /* Sticky Navigation Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: max(10px, env(safe-area-inset-top)) 16px 10px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .logo-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-icon {
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .timer-badge {
+      font-family: monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 119, 182, 0.2);
+    }
+
+    /* Section Tabs */
+    .tab-bar {
+      display: flex;
+      background: #e2e8f0;
+      padding: 3px;
+      border-radius: 10px;
+      gap: 3px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 8px 4px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn.active {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    /* Candidate Info Bar */
+    .candidate-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .candidate-card label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .candidate-card input {
+      flex: 1;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 16px; /* Prevents iOS auto-zoom */
+      font-family: inherit;
+    }
+
+    /* Section Containers */
+    .section-view {
+      display: none;
+    }
+
+    .section-view.active {
+      display: block;
+      animation: fadeIn 0.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Task Card */
+    .task-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .task-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+
+    .task-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--secondary);
+      background: var(--primary-light);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+
+    .task-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .task-instructions {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Reading Passage Box */
+    .passage-box {
+      background: #f1f5f9;
+      border-left: 4px solid var(--secondary);
+      border-radius: 6px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .passage-box p {
+      margin-bottom: 10px;
+    }
+    .passage-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .passage-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    /* Question Item */
+    .question-block {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+    .question-block:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .question-stem {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.45;
+    }
+
+    /* Radio / Selection Options (Touch-Friendly Cards) */
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .option-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      min-height: 48px; /* Touch target size */
+    }
+
+    .option-card:hover, .option-card:active {
+      border-color: var(--secondary);
+      background: #f8fafc;
+    }
+
+    .option-card input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #94a3b8;
+      border-radius: 50%;
+      outline: none;
+      margin-top: 2px;
+      flex-shrink: 0;
+      display: grid;
+      place-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .option-card input[type="radio"]::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 0.15s transform ease-in-out;
+      background: var(--primary);
+    }
+
+    .option-card input[type="radio"]:checked {
+      border-color: var(--primary);
+    }
+
+    .option-card input[type="radio"]:checked::before {
+      transform: scale(1);
+    }
+
+    .option-card.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .option-label {
+      font-size: 14.5px;
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    /* Text Inputs (Gap Fill) */
+    .gap-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .gap-input-wrap span {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--secondary);
+      min-width: 28px;
+    }
+
+    .gap-text-input {
+      width: 100%;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 16px; /* Prevents iOS auto-zoom */
+      font-family: inherit;
+      transition: border-color 0.2s ease;
+    }
+
+    .gap-text-input:focus {
+      outline: none;
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+    }
+
+    /* Select Dropdowns */
+    .select-input {
+      width: 100%;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-size: 16px;
+      background: white;
+      font-family: inherit;
+      min-height: 48px;
+      outline: none;
+      color: var(--text);
+    }
+
+    .select-input:focus {
+      border-color: var(--border-focus);
+    }
+
+    /* Audio Player Component */
+    .audio-player-card {
+      background: linear-gradient(135deg, #002548, #003b70);
+      color: white;
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 12px rgba(0, 37, 72, 0.25);
+    }
+
+    .audio-player-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .audio-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .audio-counter {
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 3px 8px;
+      border-radius: 20px;
+    }
+
+    .audio-counter.depleted {
+      background: var(--accent);
+      color: white;
+    }
+
+    .audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .play-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: #00d2d3;
+      color: #002548;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.1s ease;
+      flex-shrink: 0;
+    }
+
+    .play-btn:active {
+      transform: scale(0.95);
+    }
+
+    .play-btn:disabled {
+      background: #64748b;
+      color: #94a3b8;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .audio-progress-bar {
+      flex: 1;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .audio-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #00d2d3;
+      transition: width 0.1s linear;
+    }
+
+    .audio-time-label {
+      font-size: 12px;
+      font-family: monospace;
+      color: #cbd5e1;
+      min-width: 40px;
+      text-align: right;
+    }
+
+    /* Writing Section */
+    .writing-checklist {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 12px 0 16px;
+    }
+
+    .writing-checklist h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--success);
+      margin-bottom: 6px;
+    }
+
+    .writing-checklist ul {
+      list-style: none;
+      font-size: 13px;
+      color: #166534;
+    }
+
+    .writing-checklist li::before {
+      content: "✓ ";
+      font-weight: bold;
+    }
+
+    .essay-textarea {
+      width: 100%;
+      min-height: 220px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 16px; /* Crucial for iOS Safari */
+      font-family: inherit;
+      line-height: 1.6;
+      resize: vertical;
+    }
+
+    .essay-textarea:focus {
+      outline: none;
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+    }
+
+    .writing-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .word-count-badge {
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: #e2e8f0;
+      color: var(--text-muted);
+    }
+
+    .word-count-badge.valid {
+      background: var(--success-light);
+      color: var(--success);
+    }
+
+    .save-indicator {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Action Buttons Bar */
+    .action-bar {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 59, 112, 0.3);
+    }
+
+    .btn-primary:active {
+      background: var(--primary-dark);
+      transform: translateY(1px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+    }
+
+    .btn-secondary:active {
+      background: var(--primary-light);
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: white;
+      box-shadow: 0 4px 10px rgba(27, 138, 90, 0.25);
+    }
+
+    /* Results Screen */
+    .score-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .cefr-badge {
+      display: inline-block;
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 8px 24px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .score-summary {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 16px 0;
+    }
+
+    .score-sub-box {
+      background: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .score-sub-box .val {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .score-sub-box .lbl {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .feedback-box {
+      text-align: left;
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 14px;
+      line-height: 1.55;
+      margin-top: 14px;
+    }
+
+    /* Explanation Card */
+    .review-item {
+      background: white;
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .review-item.correct {
+      border-left: 5px solid var(--success);
+    }
+
+    .review-item.incorrect {
+      border-left: 5px solid var(--danger);
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .q-number {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .status-badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .status-badge.correct {
+      background: var(--success-light);
+      color: var(--success);
+    }
+
+    .status-badge.incorrect {
+      background: var(--danger-light);
+      color: var(--danger);
+    }
+
+    .ans-comparison {
+      font-size: 13.5px;
+      margin-bottom: 8px;
+    }
+
+    .rationale-toggle {
+      background: none;
+      border: none;
+      color: var(--secondary);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 0;
+    }
+
+    .rationale-content {
+      display: none;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 13px;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .rationale-content.open {
+      display: block;
+    }
+
+    /* Toast Notification for Mobile */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #1e293b;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      z-index: 1000;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      transition: transform 0.25s ease-out;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    #toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <div style="display:flex; justify-content:space-between; align-items:center; background:#f1f5f9; padding:4px 10px; border-radius:8px; margin-bottom:8px; font-size:12px; font-weight:600;">
+      <span style="color:#64748b;">Portal:</span>
+      <a href="../index.html" style="color:#0077b6; text-decoration:none; padding:2px 6px;">🏠 Hub</a>
+      <a href="../mock_test_1/index.html" style="background:#003b70; color:white; text-decoration:none; padding:2px 6px; border-radius:4px;">Test 1</a>
+      <a href="../mock_test_2/index.html" style="color:#0077b6; text-decoration:none; padding:2px 6px;">Test 2</a>
+      <a href="../mock_test_3/index.html" style="color:#0077b6; text-decoration:none; padding:2px 6px;">Test 3</a>
+    </div>
+    <div class="header-top">
+      <div class="logo-badge">
+        <span class="badge-icon">TEST 1</span>
+        <span class="badge-title">Skills Test Mock 1</span>
+      </div>
+      <div class="timer-badge" id="examTimer">60:00</div>
+    </div>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchSection('reading')">Reading (33)</button>
+      <button class="tab-btn" onclick="switchSection('listening')">Listening (19)</button>
+      <button class="tab-btn" onclick="switchSection('writing')">Writing (45m)</button>
+      <button class="tab-btn" onclick="switchSection('results')">Report</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Candidate Header -->
+    <div class="candidate-card">
+      <label for="candidateName">Student Name:</label>
+      <input type="text" id="candidateName" placeholder="Enter student name..." value="Student">
+    </div>
+
+    <!-- ================= SECTION 1: READING ================= -->
+    <div id="section-reading" class="section-view active">
+      
+      <!-- Task 1: Notice (Q1) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 1 &bull; Notice</span>
+          <h3 class="task-title">Campus Study Lounge</h3>
+          <div class="task-instructions">Read the notice and answer Question 1.</div>
+        </div>
+        <div class="passage-box">
+          <div class="passage-title">NOTICE: CAMPUS STUDY LOUNGE</div>
+          <p><em>Due to acoustic refurbishment on Floor 2, individual silent booths will be temporarily closed until Thursday noon. Students requiring quiet study space may access Seminar Room 4B on Floor 3 without advance reservation. Group project discussions must relocate to the ground floor cafe.</em></p>
+        </div>
+        <div class="question-block">
+          <div class="question-stem">1. What does this notice tell students?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)">
+              <input type="radio" name="r_q1" value="A">
+              <span class="option-label"><strong>[A]</strong> They need to book Seminar Room 4B before using it.</span>
+            </label>
+            <label class="option-card" onclick="selectOption(this)">
+              <input type="radio" name="r_q1" value="B">
+              <span class="option-label"><strong>[B]</strong> Alternative silent study space is accessible on Floor 3.</span>
+            </label>
+            <label class="option-card" onclick="selectOption(this)">
+              <input type="radio" name="r_q1" value="C">
+              <span class="option-label"><strong>[C]</strong> Ground floor cafe facilities are closed for renovation.</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 2: Sentence Cloze (Q2) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 2 &bull; Sentence Gap-Fill</span>
+          <h3 class="task-title">Harbor Schedule</h3>
+          <div class="task-instructions">Choose the correct word to complete the sentence.</div>
+        </div>
+        <div class="question-block">
+          <div class="question-stem">2. Heavy fog on Tuesday morning [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] several commuter ferries from docking at the harbor on schedule.</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)">
+              <input type="radio" name="r_q2" value="A">
+              <span class="option-label"><strong>[A]</strong> avoided</span>
+            </label>
+            <label class="option-card" onclick="selectOption(this)">
+              <input type="radio" name="r_q2" value="B">
+              <span class="option-label"><strong>[B]</strong> prevented</span>
+            </label>
+            <label class="option-card" onclick="selectOption(this)">
+              <input type="radio" name="r_q2" value="C">
+              <span class="option-label"><strong>[C]</strong> refused</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 3: Open Gap-Fill (Q3-Q7) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 3 &bull; Open Cloze</span>
+          <h3 class="task-title">The Urban Forager</h3>
+          <div class="task-instructions">Write ONE word in each gap.</div>
+        </div>
+        <div class="passage-box">
+          <p>For over a decade, botanical researcher Daniel Green has lived in central London, <strong>(3)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] he leads guided foraging walks through city parks. Many people are astonished to discover how many edible plants thrive <strong>(4)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] urban hedgerows and canal banks. Daniel explains that prior to the Industrial Revolution, urban populations <strong>(5)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] regularly gathered wild herbs and berries as a dietary supplement. Today, he aims to reconnect city dwellers with nature. "Looking closely <strong>(6)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] common weeds reveals a hidden culinary world," Daniel notes. He encourages participants to learn <strong>(7)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ] to distinguish nutritious greens from toxic lookalikes before picking anything.</p>
+        </div>
+        <div class="question-block">
+          <div class="gap-input-wrap">
+            <span>(3)</span>
+            <input type="text" class="gap-text-input" id="r_q3" placeholder="Gap 3 word..." autocomplete="off" autocapitalize="off">
+          </div>
+          <div class="gap-input-wrap">
+            <span>(4)</span>
+            <input type="text" class="gap-text-input" id="r_q4" placeholder="Gap 4 word..." autocomplete="off" autocapitalize="off">
+          </div>
+          <div class="gap-input-wrap">
+            <span>(5)</span>
+            <input type="text" class="gap-text-input" id="r_q5" placeholder="Gap 5 word..." autocomplete="off" autocapitalize="off">
+          </div>
+          <div class="gap-input-wrap">
+            <span>(6)</span>
+            <input type="text" class="gap-text-input" id="r_q6" placeholder="Gap 6 word..." autocomplete="off" autocapitalize="off">
+          </div>
+          <div class="gap-input-wrap">
+            <span>(7)</span>
+            <input type="text" class="gap-text-input" id="r_q7" placeholder="Gap 7 word..." autocomplete="off" autocapitalize="off">
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 4: Vocab Cloze (Q8-Q12) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 4 &bull; Vocab Cloze</span>
+          <h3 class="task-title">Deep Sea Exploration</h3>
+          <div class="task-instructions">Choose the correct word (A, B, C, or D) for each gap.</div>
+        </div>
+        <div class="passage-box">
+          <p>Autonomous robotic submersibles are revolutionizing our understanding of the abyssal ocean floor. Until recently, marine biologists had to <strong>(8)</strong> _________ almost entirely on satellite mapping and deep-towed cameras. Modern robotic drones, however, can descend to depths exceeding six thousand meters, <strong>(9)</strong> _________ extreme hydrostatic pressure and total darkness. Equipped with high-definition optical sensors, these devices navigate <strong>(10)</strong> _________ through jagged underwater volcanic trenches. Scientists are now able to capture close-up footage of deep-sea hydrothermal vents in <strong>(11)</strong> _________ detail. The data collected has already led to the discovery of dozens of previously unknown invertebrate species, confirming that deep ocean trenches <strong>(12)</strong> _________ a vital role in global carbon cycling.</p>
+        </div>
+        
+        <!-- Q8 -->
+        <div class="question-block">
+          <div class="question-stem"><strong>8. Gap (8)</strong></div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q8" value="A"><span class="option-label">[A] depend</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q8" value="B"><span class="option-label">[B] believe</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q8" value="C"><span class="option-label">[C] insist</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q8" value="D"><span class="option-label">[D] count</span></label>
+          </div>
+        </div>
+        <!-- Q9 -->
+        <div class="question-block">
+          <div class="question-stem"><strong>9. Gap (9)</strong></div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q9" value="A"><span class="option-label">[A] standing</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q9" value="B"><span class="option-label">[B] tolerating</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q9" value="C"><span class="option-label">[C] resisting</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q9" value="D"><span class="option-label">[D] enduring</span></label>
+          </div>
+        </div>
+        <!-- Q10 -->
+        <div class="question-block">
+          <div class="question-stem"><strong>10. Gap (10)</strong></div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q10" value="A"><span class="option-label">[A] safely</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q10" value="B"><span class="option-label">[B] surely</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q10" value="C"><span class="option-label">[C] heavily</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q10" value="D"><span class="option-label">[D] strictly</span></label>
+          </div>
+        </div>
+        <!-- Q11 -->
+        <div class="question-block">
+          <div class="question-stem"><strong>11. Gap (11)</strong></div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q11" value="A"><span class="option-label">[A] broad</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q11" value="B"><span class="option-label">[B] rich</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q11" value="C"><span class="option-label">[C] vivid</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q11" value="D"><span class="option-label">[D] intense</span></label>
+          </div>
+        </div>
+        <!-- Q12 -->
+        <div class="question-block">
+          <div class="question-stem"><strong>12. Gap (12)</strong></div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q12" value="A"><span class="option-label">[A] take</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q12" value="B"><span class="option-label">[B] play</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q12" value="C"><span class="option-label">[C] act</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q12" value="D"><span class="option-label">[D] make</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 5: Extended Text Multiple Choice (Q13-Q17) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 5 &bull; Extended Text</span>
+          <h3 class="task-title">Filming on the Edge</h3>
+          <div class="task-instructions">Read the article about Elena Vance and answer Questions 13–17.</div>
+        </div>
+        <div class="passage-box">
+          <div class="passage-title">Filming on the Edge: Elena Vance</div>
+          <p>Wildlife filmmaker Elena Vance has spent twenty years capturing endangered fauna in the world's most inaccessible habitats. Raised in rural Scotland by naturalist parents, Elena developed an early reverence for the natural world. "My peers spent their teenage years glued to television screens," Elena recalls, "whereas I was tracking badger setts across frostbitten moorlands with my father's 35mm camera." After graduating with a zoology degree, she resisted the temptation of secure laboratory research, opting instead for freelance camerawork.</p>
+          <p>Her breakthrough arrived in 2012 while filming snow leopards in the high Pamir Mountains. Temperatures routinely plunged below minus thirty degrees Celsius, and weeks passed without a solitary sighting. "In wildlife cinematography, sheer technical brilliance counts for very little if you lack psychological endurance," Elena explains. "The camera operator who packs up after five shivering hours is the one who misses the two-second hunt that defines the entire series." Her perseverance was rewarded when she filmed an unprecedented sequence of a female leopard guiding two cubs across a glacial ridge.</p>
+          <p>Despite international acclaim, Elena remains critical of certain contemporary industry trends. In particular, she voices reservations about the growing reliance on computer-generated imagery (CGI) and digital sound enhancement in nature documentaries. "When producers artificially manipulate bird calls or amplify footsteps to heighten theatrical tension, they inadvertently sever the audience's genuine bond with reality," she asserts. "Spectators start expecting wildlife to behave like Hollywood actors, which breeds impatience toward authentic conservation efforts."</p>
+          <p>Today, Elena devotes substantial time to mentoring young filmmakers from biodiversity-rich developing nations. Through her mobile academy, she provides camera gear and storytelling workshops to aspiring directors across East Africa and Southeast Asia. "Indigenous observers possess intuitive ecological knowledge accumulated over generations," Elena concludes. "True conservation storytelling cannot simply be parachuted in by foreign production crews; it must be cultivated from within the communities who coexist with these ecosystems daily."</p>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">13. What influenced Elena to pursue wildlife filmmaking instead of laboratory research?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q13" value="A"><span class="option-label">[A] Pressure from her parents to continue the family tradition.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q13" value="B"><span class="option-label">[B] Her childhood immersion in outdoor observation and photography.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q13" value="C"><span class="option-label">[C] A lack of available research positions following her studies.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q13" value="D"><span class="option-label">[D] The desire to achieve rapid professional independence.</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">14. What does Elena identify as the paramount requirement during her snow leopard expedition?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q14" value="A"><span class="option-label">[A] Having top-tier cinematographic hardware in freezing conditions.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q14" value="B"><span class="option-label">[B] Relying on local trackers to anticipate animal movements.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q14" value="C"><span class="option-label">[C] The mental fortitude to withstand protracted periods of inaction.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q14" value="D"><span class="option-label">[D] Developing physical agility when scaling hazardous terrain.</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">15. In the third paragraph, Elena expresses concern that digital enhancement in nature films:</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q15" value="A"><span class="option-label">[A] distorts viewers' perceptions of real animal behavior.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q15" value="B"><span class="option-label">[B] renders authentic fieldwork financially unviable.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q15" value="C"><span class="option-label">[C] undermines the authority of scientific research teams.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q15" value="D"><span class="option-label">[D] distracts audiences from learning basic ecological facts.</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">16. What is Elena's primary objective with her mobile academy?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q16" value="A"><span class="option-label">[A] To reduce production expenses for international television networks.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q16" value="B"><span class="option-label">[B] To empower local residents to narrate their own ecological stories.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q16" value="C"><span class="option-label">[C] To catalog undiscovered species before habitats are lost.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q16" value="D"><span class="option-label">[D] To recruit assistants for her upcoming feature documentaries.</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">17. Which title best captures the central message of the article?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q17" value="A"><span class="option-label">[A] High Technology: The Future of Conservation Media</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q17" value="B"><span class="option-label">[B] Why Wildlife Filmmaking Demands Extreme Sacrifices</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q17" value="C"><span class="option-label">[C] The Art of Patience: An Authentic Lens on Nature</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q17" value="D"><span class="option-label">[D] The End of Natural History in Modern Broadcasting</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 6: Short Article (Q18-Q19) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 6 &bull; Short Article</span>
+          <h3 class="task-title">The Psychology of Clutter</h3>
+          <div class="task-instructions">Read the article and answer Questions 18–19.</div>
+        </div>
+        <div class="passage-box">
+          <div class="passage-title">The Psychology of Clutter</div>
+          <p>Modern domestic environments are increasingly inundated with consumer possessions. While material abundance is widely equated with prosperity, cognitive psychologists have revealed that excessive domestic clutter exerts a measurable toll on emotional well-being. Neuroimaging studies demonstrate that cluttered physical environments overload the visual cortex, severely impeding the brain’s capacity to process information and regulate stress hormones.</p>
+          <p>Intriguingly, the psychological impact of clutter is markedly asymmetrical across genders and personality types. Individuals who identify strongly with home management report elevated cortisol levels when surrounded by disorganization, perceiving unaddressed items not merely as physical objects, but as a persistent backlog of unfinished duties. Conversely, those who reframe domestic possessions as sources of historical continuity or creative stimuli remain relatively impervious to clutter-induced anxiety.</p>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">18. According to the first paragraph, how does clutter affect mental performance?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q18" value="A"><span class="option-label">[A] It causes individuals to spend excessive time searching for lost possessions.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q18" value="B"><span class="option-label">[B] It strains sensory processing systems, diminishing cognitive clarity.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q18" value="C"><span class="option-label">[C] It prompts households to purchase larger, unaffordable living spaces.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q18" value="D"><span class="option-label">[D] It disrupts sleep patterns through heightened chemical sensitivity.</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">19. What explains why some individuals remain unaffected by domestic clutter?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q19" value="A"><span class="option-label">[A] They maintain organized storage solutions behind closed doors.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q19" value="B"><span class="option-label">[B] They possess different subjective perceptions of their possessions' value.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q19" value="C"><span class="option-label">[C] They delegate domestic responsibilities to other household members.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="r_q19" value="D"><span class="option-label">[D] They spend significantly less time inside their residential homes.</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 7: Missing Sentences (Q20-Q24) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 7 &bull; Missing Sentences</span>
+          <h3 class="task-title">Living Lanterns of the Deep</h3>
+          <div class="task-instructions">Select the sentence (A–H) that fits each gap (20–24).</div>
+        </div>
+        <div class="passage-box">
+          <p>In the pitch-black waters of the deep ocean, sunlight disappears entirely beyond two hundred meters. Yet this abyssal zone is far from completely dark; it sparkles with an astonishing array of living light. Bioluminescence—the biochemical production of light by living organisms—is not a rare curiosity, but the dominant mode of communication in the pelagic realm. <strong>(20)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ].</p>
+          <p>The chemical reaction powering this illumination typically involves two components: a light-emitting pigment called luciferin and an enzyme known as luciferase. When catalyzed in the presence of oxygen, this reaction releases almost ninety-eight percent of its energy as visible cold light, generating virtually no wasted heat. <strong>(21)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]. In the open ocean, blue-green wavelengths travel farthest through seawater, which explains why the overwhelming majority of marine light displays conform to this color spectrum.</p>
+          <p>Marine creatures deploy bioluminescence for a wide spectrum of survival strategies. Many predatory anglerfish dangle glowing fleshy lures directly above their needle-sharp jaws to entice unsuspecting prey. <strong>(22)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]. By emitting faint light from their bellies that precisely matches the intensity and wavelength of downwelling sunlight, midwater squid render their silhouettes invisible to predators lurking beneath them.</p>
+          <p>Other species utilize sudden, blinding flashes as an emergency defensive smokescreen. Deep-sea comb jellies and brittle stars discharge clouds of glowing mucus to disorient attackers while they make their escape. <strong>(23)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]. This alarm summons even larger apex predators to attack the initial assailant, effectively saving the glowing prey in the chaos.</p>
+          <p>Today, biomedical researchers are adapting these natural light-generating systems for human healthcare. By inserting jellyfish bioluminescent genes into human cancer cells, oncologists can track tumor growth and evaluate drug effectiveness in real time under specialized microscopes. <strong>(24)</strong> [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]. What began as an evolutionary adaptation in deep-sea obscurity has transformed into an indispensable beacon illuminating modern medicine.</p>
+        </div>
+
+        <div style="background:#e8f1fa; padding:12px; border-radius:8px; margin-bottom:14px; font-size:13.5px; line-height:1.5;">
+          <strong>Available Sentence Options:</strong><br>
+          <strong>[A]</strong> In some cases, this luminous display functions as a "burglar alarm" that attracts secondary predators.<br>
+          <strong>[B]</strong> This thermal efficiency outstrips even the most advanced human-engineered LED technologies.<br>
+          <strong>[C]</strong> In contrast, terrestrial fireflies utilize green-yellow flashes primarily for nocturnal courtship displays.<br>
+          <strong>[D]</strong> Marine mammals, such as sperm whales, have never been observed producing bioluminescent chemicals.<br>
+          <strong>[E]</strong> Marine scientists estimate that more than three-quarters of all midwater animals possess light-generating organs.<br>
+          <strong>[F]</strong> Commercial fisheries frequently deploy synthetic chemical glow-sticks to attract schooling tuna.<br>
+          <strong>[G]</strong> Similar genetic techniques are now being piloted to monitor wastewater contamination and bacterial pathogens.<br>
+          <strong>[H]</strong> Equally widespread is the defensive tactic of counter-illumination camouflage.
+        </div>
+
+        <div class="question-block">
+          <div class="gap-input-wrap">
+            <span>20.</span>
+            <select class="select-input" id="r_q20">
+              <option value="">-- Select Sentence for Gap 20 --</option>
+              <option value="A">[A] Functions as a "burglar alarm"</option>
+              <option value="B">[B] Thermal efficiency outstrips LEDs</option>
+              <option value="C">[C] Terrestrial fireflies courtship</option>
+              <option value="D">[D] Marine mammals never observed</option>
+              <option value="E">[E] Three-quarters of midwater animals possess organs</option>
+              <option value="F">[F] Commercial fisheries glow-sticks</option>
+              <option value="G">[G] Piloted to monitor wastewater</option>
+              <option value="H">[H] Counter-illumination camouflage</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>21.</span>
+            <select class="select-input" id="r_q21">
+              <option value="">-- Select Sentence for Gap 21 --</option>
+              <option value="A">[A] Functions as a "burglar alarm"</option>
+              <option value="B">[B] Thermal efficiency outstrips LEDs</option>
+              <option value="C">[C] Terrestrial fireflies courtship</option>
+              <option value="D">[D] Marine mammals never observed</option>
+              <option value="E">[E] Three-quarters of midwater animals possess organs</option>
+              <option value="F">[F] Commercial fisheries glow-sticks</option>
+              <option value="G">[G] Piloted to monitor wastewater</option>
+              <option value="H">[H] Counter-illumination camouflage</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>22.</span>
+            <select class="select-input" id="r_q22">
+              <option value="">-- Select Sentence for Gap 22 --</option>
+              <option value="A">[A] Functions as a "burglar alarm"</option>
+              <option value="B">[B] Thermal efficiency outstrips LEDs</option>
+              <option value="C">[C] Terrestrial fireflies courtship</option>
+              <option value="D">[D] Marine mammals never observed</option>
+              <option value="E">[E] Three-quarters of midwater animals possess organs</option>
+              <option value="F">[F] Commercial fisheries glow-sticks</option>
+              <option value="G">[G] Piloted to monitor wastewater</option>
+              <option value="H">[H] Counter-illumination camouflage</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>23.</span>
+            <select class="select-input" id="r_q23">
+              <option value="">-- Select Sentence for Gap 23 --</option>
+              <option value="A">[A] Functions as a "burglar alarm"</option>
+              <option value="B">[B] Thermal efficiency outstrips LEDs</option>
+              <option value="C">[C] Terrestrial fireflies courtship</option>
+              <option value="D">[D] Marine mammals never observed</option>
+              <option value="E">[E] Three-quarters of midwater animals possess organs</option>
+              <option value="F">[F] Commercial fisheries glow-sticks</option>
+              <option value="G">[G] Piloted to monitor wastewater</option>
+              <option value="H">[H] Counter-illumination camouflage</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>24.</span>
+            <select class="select-input" id="r_q24">
+              <option value="">-- Select Sentence for Gap 24 --</option>
+              <option value="A">[A] Functions as a "burglar alarm"</option>
+              <option value="B">[B] Thermal efficiency outstrips LEDs</option>
+              <option value="C">[C] Terrestrial fireflies courtship</option>
+              <option value="D">[D] Marine mammals never observed</option>
+              <option value="E">[E] Three-quarters of midwater animals possess organs</option>
+              <option value="F">[F] Commercial fisheries glow-sticks</option>
+              <option value="G">[G] Piloted to monitor wastewater</option>
+              <option value="H">[H] Counter-illumination camouflage</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 8: Missing Paragraphs (Q25-Q29) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 8 &bull; Missing Paragraphs</span>
+          <h3 class="task-title">The Architecture of Silence</h3>
+          <div class="task-instructions">Select the paragraph (A–F) that fits each gap (25–29).</div>
+        </div>
+        <div class="passage-box">
+          <p>We inhabit an increasingly deafening civilization. From the perpetual hum of highway traffic to the relentless background churn of ventilation units, anthropogenic noise has permeated virtually every terrestrial ecosystem. While industrial noise was historically treated as an inevitable byproduct of economic progress, acoustic ecologists now recognize chronic sonic saturation as an insidious pollutant that fragments natural habitats and compromises human health.<br><strong>(25) [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</strong></p>
+          <p>Field studies in national parks have documented this acoustic displacement in striking detail. In coniferous forests bordered by highways, songbirds are forced to alter their singing frequencies or elevate their vocal volume—a phenomenon known as the Lombard effect—merely to communicate territorial boundaries and attract mates. For species unable to shift their acoustic pitch, the consequences are dire: breeding success plummets, and entire populations abandon otherwise pristine nesting grounds.<br><strong>(26) [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</strong></p>
+          <p>In urban centers, the human consequences of this acoustic assault are equally profound. Epidemiological research links long-term exposure to urban noise with sleep disturbance, impaired cognitive development in children, and heightened risks of cardiovascular disease. The human auditory system never sleeps; even during unconsciousness, the brain processes ambient decibels, interpreting sudden spikes as evolutionary alarm signals that trigger elevated heart rates and stress hormone release.<br><strong>(27) [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</strong></p>
+          <p>Rather than viewing soundproofing solely as an engineering chore of building thicker walls, visionary planners are embracing "positive soundscape design." This methodology involves strategically integrating natural acoustic elements into civic architecture. Flowing water in civic plazas, gravel walkways, and rustling native foliage do not eliminate decibels, but mask harsh mechanical frequencies with restorative auditory cues.<br><strong>(28) [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</strong></p>
+          <p>Furthermore, international legal frameworks are beginning to reflect this acoustic consciousness. Several European municipalities have established designated "Quiet Areas" where motor vehicle access is curtailed, and commercial developments must undergo rigorous acoustic impact audits before receiving construction permits.<br><strong>(29) [ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ]</strong><br>Preserving the integrity of natural soundscapes is not a sentimental indulgence; it is a fundamental pillar of ecological stewardship and human dignity in an overstimulated century.</p>
+        </div>
+
+        <div style="background:#e8f1fa; padding:12px; border-radius:8px; margin-bottom:14px; font-size:13.5px; line-height:1.5;">
+          <strong>Available Paragraph Options:</strong><br>
+          <strong>[A]</strong> Recognizing these physiological hazards, urban architects and landscape designers are fundamentally rethinking how cities are orchestrated acoustically.<br>
+          <strong>[B]</strong> These legislative initiatives demonstrate a vital paradigm shift: recognizing that tranquility is a shared public commons worthy of institutional protection.<br>
+          <strong>[C]</strong> Unlike chemical contaminants that leave visible residues in soil and waterways, acoustic pollution is ethereal, vanishing the instant its source ceases, yet its ecological disruption is lasting.<br>
+          <strong>[D]</strong> In response, some commercial airlines have begun outfitting luxury cabins with active noise-cancellation headsets to shield passengers from engine rumble.<br>
+          <strong>[E]</strong> Psychological testing confirms that listening to water features significantly lowers subjective stress ratings, even when the overall decibel reading remains unchanged.<br>
+          <strong>[F]</strong> Similar acoustic disruption imperils woodland predators like owls and foxes, whose hunting efficacy relies entirely on pinpointing the subterranean rustle of rodents.
+        </div>
+
+        <div class="question-block">
+          <div class="gap-input-wrap">
+            <span>25.</span>
+            <select class="select-input" id="r_q25">
+              <option value="">-- Select Paragraph for Gap 25 --</option>
+              <option value="A">[A] Recognizing physiological hazards</option>
+              <option value="B">[B] Legislative initiatives paradigm shift</option>
+              <option value="C">[C] Unlike chemical contaminants ethereal</option>
+              <option value="D">[D] Commercial airlines headsets</option>
+              <option value="E">[E] Psychological testing on water features</option>
+              <option value="F">[F] Imperils woodland predators like owls</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>26.</span>
+            <select class="select-input" id="r_q26">
+              <option value="">-- Select Paragraph for Gap 26 --</option>
+              <option value="A">[A] Recognizing physiological hazards</option>
+              <option value="B">[B] Legislative initiatives paradigm shift</option>
+              <option value="C">[C] Unlike chemical contaminants ethereal</option>
+              <option value="D">[D] Commercial airlines headsets</option>
+              <option value="E">[E] Psychological testing on water features</option>
+              <option value="F">[F] Imperils woodland predators like owls</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>27.</span>
+            <select class="select-input" id="r_q27">
+              <option value="">-- Select Paragraph for Gap 27 --</option>
+              <option value="A">[A] Recognizing physiological hazards</option>
+              <option value="B">[B] Legislative initiatives paradigm shift</option>
+              <option value="C">[C] Unlike chemical contaminants ethereal</option>
+              <option value="D">[D] Commercial airlines headsets</option>
+              <option value="E">[E] Psychological testing on water features</option>
+              <option value="F">[F] Imperils woodland predators like owls</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>28.</span>
+            <select class="select-input" id="r_q28">
+              <option value="">-- Select Paragraph for Gap 28 --</option>
+              <option value="A">[A] Recognizing physiological hazards</option>
+              <option value="B">[B] Legislative initiatives paradigm shift</option>
+              <option value="C">[C] Unlike chemical contaminants ethereal</option>
+              <option value="D">[D] Commercial airlines headsets</option>
+              <option value="E">[E] Psychological testing on water features</option>
+              <option value="F">[F] Imperils woodland predators like owls</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>29.</span>
+            <select class="select-input" id="r_q29">
+              <option value="">-- Select Paragraph for Gap 29 --</option>
+              <option value="A">[A] Recognizing physiological hazards</option>
+              <option value="B">[B] Legislative initiatives paradigm shift</option>
+              <option value="C">[C] Unlike chemical contaminants ethereal</option>
+              <option value="D">[D] Commercial airlines headsets</option>
+              <option value="E">[E] Psychological testing on water features</option>
+              <option value="F">[F] Imperils woodland predators like owls</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 9: Multiple Matching (Q30-Q33) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 9 &bull; Multiple Text Matching</span>
+          <h3 class="task-title">The Blackwood Eco-Lodge</h3>
+          <div class="task-instructions">Match questions 30–33 with reviewers A–D.</div>
+        </div>
+        <div class="passage-box">
+          <div class="passage-title">Four Guest Perspectives</div>
+          <p><strong>Review A (Marcus):</strong> Having stayed at numerous wilderness retreats, I approached Blackwood with cautious optimism. What impressed me most was the transparency of their environmental commitments. Rather than indulging in superficial greenwashing, the management openly shares real-time solar generation metrics and gray-water recycling logs on monitors in the lobby. The guided dawn treks led by the resident botanist were a revelation, offering genuine insights into old-growth forest ecology. My sole reservation concerned the dining setup: the communal dinner tables, while evidently intended to cultivate social camaraderie, felt somewhat imposing after an exhausting day on the trails.</p>
+          <p><strong>Review B (Claire):</strong> Blackwood offers an undeniably serene sanctuary from urban burnout, but prospective visitors must be prepared for true austerity. There are no charging outlets in the guest cabins, forcing a total digital detox that left several guests visibly agitated. While I personally appreciated the respite from screens, the evening lighting was so subdued that reading inside the cabin was practically impossible. That said, the kitchen staff deserves immense credit: every meal was prepared using seasonal produce harvested within ten miles of the property, showcasing culinary creativity that surpassed many Michelin-starred city bistros.</p>
+          <p><strong>Review C (Julian):</strong> I booked Blackwood primarily for its remote location, hoping for complete solitude to finish writing a manuscript. In that respect, the lodge exceeded every expectation; the sound insulation between the timber cabins is remarkable, and waking up to panoramic mountain vistas without a combustion engine in earshot was revitalizing. However, I found the lodge’s pricing structure difficult to justify. While eco-conscious amenities certainly incur overheads, paying luxury hotel rates for off-grid shared shower blocks feels disproportionate, irrespective of how pristine the surrounding wilderness is.</p>
+          <p><strong>Review D (Aisha):</strong> What sets Blackwood apart is its intimate relationship with the local village economy. Rather than operating as an isolated enclave for wealthy travelers, the lodge recruits exclusively from the surrounding rural community and purchases all timber furnishings from local craft cooperatives. You feel that your expenditure directly bolsters regional livelihoods. The activities program struck the perfect balance between strenuous adventure and mindful restorative downtime. I arrived thoroughly depleted and departed feeling physically invigorated and emotionally centered.</p>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">30. Which reviewer expresses skepticism regarding whether the overall cost accurately reflects the facilities provided?</div>
+          <div class="gap-input-wrap">
+            <select class="select-input" id="r_q30">
+              <option value="">-- Choose Reviewer --</option>
+              <option value="A">Review A (Marcus)</option>
+              <option value="B">Review B (Claire)</option>
+              <option value="C">Review C (Julian)</option>
+              <option value="D">Review D (Aisha)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">31. Which reviewer commends the lodge for its tangible economic integration with neighboring residents?</div>
+          <div class="gap-input-wrap">
+            <select class="select-input" id="r_q31">
+              <option value="">-- Choose Reviewer --</option>
+              <option value="A">Review A (Marcus)</option>
+              <option value="B">Review B (Claire)</option>
+              <option value="C">Review C (Julian)</option>
+              <option value="D">Review D (Aisha)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">32. Which reviewer was ambivalent about an enforced social arrangement during their stay?</div>
+          <div class="gap-input-wrap">
+            <select class="select-input" id="r_q32">
+              <option value="">-- Choose Reviewer --</option>
+              <option value="A">Review A (Marcus)</option>
+              <option value="B">Review B (Claire)</option>
+              <option value="C">Review C (Julian)</option>
+              <option value="D">Review D (Aisha)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">33. Which reviewer remarks on the exceptional standard of food despite strict sourcing limitations?</div>
+          <div class="gap-input-wrap">
+            <select class="select-input" id="r_q33">
+              <option value="">-- Choose Reviewer --</option>
+              <option value="A">Review A (Marcus)</option>
+              <option value="B">Review B (Claire)</option>
+              <option value="C">Review C (Julian)</option>
+              <option value="D">Review D (Aisha)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-bar">
+        <button class="btn btn-primary" onclick="switchSection('listening')">Proceed to Listening &rarr;</button>
+      </div>
+    </div>
+
+    <!-- ================= SECTION 2: LISTENING ================= -->
+    <div id="section-listening" class="section-view">
+      
+      <!-- Task 1: Cafe Dialogue (Q1) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 1 &bull; Picture Multiple Choice</span>
+          <h3 class="task-title">Lost Property at the Cafe</h3>
+          <div class="task-instructions">Listen to the conversation. Cambridge rule: Maximum 2 plays.</div>
+        </div>
+        
+        <div class="audio-player-card">
+          <div class="audio-player-top">
+            <span class="audio-title">Audio Track: Cafe Lost Item</span>
+            <span class="audio-counter" id="badge_q1">Plays left: 2</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" id="btn_q1" onclick="playAudio('audio_q1', 'btn_q1', 'badge_q1', 'prog_q1', 'time_q1')">&#9658;</button>
+            <div class="audio-progress-bar"><div class="audio-progress-fill" id="prog_q1"></div></div>
+            <span class="audio-time-label" id="time_q1">0:00</span>
+          </div>
+          <audio id="audio_q1" src="audio/q1_dialogue.mp3" preload="none"></audio>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">1. Which item did the woman leave behind at the cafe?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q1" value="A"><span class="option-label">[A] An umbrella</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q1" value="B"><span class="option-label">[B] A smartphone</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q1" value="C"><span class="option-label">[C] A set of car keys</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 2: Workshop Dialogue (Q2) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 2 &bull; Short Dialogue</span>
+          <h3 class="task-title">Training Workshop Reflection</h3>
+          <div class="task-instructions">Listen to two colleagues discussing a workshop.</div>
+        </div>
+
+        <div class="audio-player-card">
+          <div class="audio-player-top">
+            <span class="audio-title">Audio Track: Workshop Feedback</span>
+            <span class="audio-counter" id="badge_q2">Plays left: 2</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" id="btn_q2" onclick="playAudio('audio_q2', 'btn_q2', 'badge_q2', 'prog_q2', 'time_q2')">&#9658;</button>
+            <div class="audio-progress-bar"><div class="audio-progress-fill" id="prog_q2"></div></div>
+            <span class="audio-time-label" id="time_q2">0:00</span>
+          </div>
+          <audio id="audio_q2" src="audio/q2_dialogue.mp3" preload="none"></audio>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">2. What did both speakers agree was the most valuable part of the morning?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q2" value="A"><span class="option-label">[A] The energetic delivery style of the main presenter</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q2" value="B"><span class="option-label">[B] The collaborative group roleplay activities</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q2" value="C"><span class="option-label">[C] The practical demonstration of automated scheduling tools</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 3: Marcus Thorne Interview (Q3-Q7) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 3 &bull; Extended Interview</span>
+          <h3 class="task-title">Acoustic Engineering with Marcus Thorne</h3>
+          <div class="task-instructions">Listen to the interview and answer Questions 3–7.</div>
+        </div>
+
+        <div class="audio-player-card">
+          <div class="audio-player-top">
+            <span class="audio-title">Audio Track: Marcus Thorne Interview</span>
+            <span class="audio-counter" id="badge_q3_7">Plays left: 2</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" id="btn_q3_7" onclick="playAudio('audio_q3_7', 'btn_q3_7', 'badge_q3_7', 'prog_q3_7', 'time_q3_7')">&#9658;</button>
+            <div class="audio-progress-bar"><div class="audio-progress-fill" id="prog_q3_7"></div></div>
+            <span class="audio-time-label" id="time_q3_7">0:00</span>
+          </div>
+          <audio id="audio_q3_7" src="audio/q3_q7_interview.mp3" preload="none"></audio>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">3. What originally motivated Marcus to specialize in outdoor acoustic engineering?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q3" value="A"><span class="option-label">[A] Frustration with acoustic limitations of concert halls</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q3" value="B"><span class="option-label">[B] Observing the worsening sonic environment in modern cities</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q3" value="C"><span class="option-label">[C] Academic encouragement during his undergraduate zoology degree</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">4. Why does Marcus advise against constructing solid concrete noise barriers?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q4" value="A"><span class="option-label">[A] They deteriorate rapidly under changing weather conditions.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q4" value="B"><span class="option-label">[B] They reflect and redistribute acoustic energy rather than absorbing it.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q4" value="C"><span class="option-label">[C] They are prohibitively expensive for municipal councils to maintain.</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">5. What does Marcus cite as the principal obstacle when collaborating with urban planners?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q5" value="A"><span class="option-label">[A] A lack of awareness regarding noise as a genuine health hazard</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q5" value="B"><span class="option-label">[B] Disagreements concerning architectural aesthetics</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q5" value="C"><span class="option-label">[C] Strict municipal zoning bylaws restricting water features</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">6. The terraced fountain in Riverside Plaza succeeded primarily because it:</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q6" value="A"><span class="option-label">[A] completely eliminated mechanical engine frequencies.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q6" value="B"><span class="option-label">[B] produced a gentle background sound that masked louder traffic noise.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q6" value="C"><span class="option-label">[C] encouraged pedestrians to gather in the center of the square.</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">7. What advice does Marcus offer young engineers starting out in acoustics?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q7" value="A"><span class="option-label">[A] Invest in the latest computerized acoustic simulation software.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q7" value="B"><span class="option-label">[B] Spend time listening directly to real-world environments.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q7" value="C"><span class="option-label">[C] Partner with local architects during early project planning.</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 4: Sustainable Fashion (Q8-Q9) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 4 &bull; Discussion</span>
+          <h3 class="task-title">Clothing Rental Services</h3>
+          <div class="task-instructions">Listen to David and Sarah talking about fashion rentals.</div>
+        </div>
+
+        <div class="audio-player-card">
+          <div class="audio-player-top">
+            <span class="audio-title">Audio Track: Fashion Rental Discussion</span>
+            <span class="audio-counter" id="badge_q8_9">Plays left: 2</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" id="btn_q8_9" onclick="playAudio('audio_q8_9', 'btn_q8_9', 'badge_q8_9', 'prog_q8_9', 'time_q8_9')">&#9658;</button>
+            <div class="audio-progress-bar"><div class="audio-progress-fill" id="prog_q8_9"></div></div>
+            <span class="audio-time-label" id="time_q8_9">0:00</span>
+          </div>
+          <audio id="audio_q8_9" src="audio/q8_q9_discussion.mp3" preload="none"></audio>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">8. Why did Sarah decide to use a clothing rental service?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q8" value="A"><span class="option-label">[A] To keep up with rapidly changing seasonal trends</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q8" value="B"><span class="option-label">[B] To avoid buying expensive formal attire for one-off occasions</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q8" value="C"><span class="option-label">[C] To save closet space in her compact apartment</span></label>
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">9. What concern do both speakers share regarding renting everyday clothing?</div>
+          <div class="options-grid">
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q9" value="A"><span class="option-label">[A] The delivery and cleaning logistics undermine environmental benefits.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q9" value="B"><span class="option-label">[B] The rental fees exceed the price of purchasing cheap retail garments.</span></label>
+            <label class="option-card" onclick="selectOption(this)"><input type="radio" name="l_q9" value="C"><span class="option-label">[C] The quality of rented everyday garments deteriorates too quickly.</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 5: Running Monologues (Q10-Q14) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 5 &bull; Multiple Matching</span>
+          <h3 class="task-title">Why Run? Five Perspectives</h3>
+          <div class="task-instructions">Match what each speaker values most about running (A–H).</div>
+        </div>
+
+        <div class="audio-player-card">
+          <div class="audio-player-top">
+            <span class="audio-title">Audio Track: 5 Runners</span>
+            <span class="audio-counter" id="badge_q10_14">Plays left: 2</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" id="btn_q10_14" onclick="playAudio('audio_q10_14', 'btn_q10_14', 'badge_q10_14', 'prog_q10_14', 'time_q10_14')">&#9658;</button>
+            <div class="audio-progress-bar"><div class="audio-progress-fill" id="prog_q10_14"></div></div>
+            <span class="audio-time-label" id="time_q10_14">0:00</span>
+          </div>
+          <audio id="audio_q10_14" src="audio/q10_q14_speakers.mp3" preload="none"></audio>
+        </div>
+
+        <div style="background:#e8f1fa; padding:12px; border-radius:8px; margin-bottom:14px; font-size:13.5px; line-height:1.5;">
+          <strong>List of Reasons:</strong><br>
+          <strong>[A]</strong> The social camaraderie of training with a supportive group<br>
+          <strong>[B]</strong> Lowering personal medical risk factors following clinical advice<br>
+          <strong>[C]</strong> The opportunity to explore unfamiliar cities from a unique vantage point<br>
+          <strong>[D]</strong> Releasing stress and achieving mental clarity away from work<br>
+          <strong>[E]</strong> Recovering physical mobility following an orthopedic injury<br>
+          <strong>[F]</strong> The satisfaction of measuring progress against clear objective benchmarks<br>
+          <strong>[G]</strong> Participating in fundraising events for charitable organizations<br>
+          <strong>[H]</strong> Enjoying peaceful nature trails in mountainous wilderness
+        </div>
+
+        <div class="question-block">
+          <div class="gap-input-wrap">
+            <span>10.</span>
+            <select class="select-input" id="l_q10">
+              <option value="">-- Speaker 1 Reason --</option>
+              <option value="A">[A] Social camaraderie with group</option>
+              <option value="B">[B] Lowering medical risk factors</option>
+              <option value="C">[C] Explore unfamiliar cities</option>
+              <option value="D">[D] Releasing stress / mental clarity</option>
+              <option value="E">[E] Recovering mobility after injury</option>
+              <option value="F">[F] Measuring objective benchmarks</option>
+              <option value="G">[G] Fundraising charity events</option>
+              <option value="H">[H] Peaceful mountain trails</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>11.</span>
+            <select class="select-input" id="l_q11">
+              <option value="">-- Speaker 2 Reason --</option>
+              <option value="A">[A] Social camaraderie with group</option>
+              <option value="B">[B] Lowering medical risk factors</option>
+              <option value="C">[C] Explore unfamiliar cities</option>
+              <option value="D">[D] Releasing stress / mental clarity</option>
+              <option value="E">[E] Recovering mobility after injury</option>
+              <option value="F">[F] Measuring objective benchmarks</option>
+              <option value="G">[G] Fundraising charity events</option>
+              <option value="H">[H] Peaceful mountain trails</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>12.</span>
+            <select class="select-input" id="l_q12">
+              <option value="">-- Speaker 3 Reason --</option>
+              <option value="A">[A] Social camaraderie with group</option>
+              <option value="B">[B] Lowering medical risk factors</option>
+              <option value="C">[C] Explore unfamiliar cities</option>
+              <option value="D">[D] Releasing stress / mental clarity</option>
+              <option value="E">[E] Recovering mobility after injury</option>
+              <option value="F">[F] Measuring objective benchmarks</option>
+              <option value="G">[G] Fundraising charity events</option>
+              <option value="H">[H] Peaceful mountain trails</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>13.</span>
+            <select class="select-input" id="l_q13">
+              <option value="">-- Speaker 4 Reason --</option>
+              <option value="A">[A] Social camaraderie with group</option>
+              <option value="B">[B] Lowering medical risk factors</option>
+              <option value="C">[C] Explore unfamiliar cities</option>
+              <option value="D">[D] Releasing stress / mental clarity</option>
+              <option value="E">[E] Recovering mobility after injury</option>
+              <option value="F">[F] Measuring objective benchmarks</option>
+              <option value="G">[G] Fundraising charity events</option>
+              <option value="H">[H] Peaceful mountain trails</option>
+            </select>
+          </div>
+          <div class="gap-input-wrap">
+            <span>14.</span>
+            <select class="select-input" id="l_q14">
+              <option value="">-- Speaker 5 Reason --</option>
+              <option value="A">[A] Social camaraderie with group</option>
+              <option value="B">[B] Lowering medical risk factors</option>
+              <option value="C">[C] Explore unfamiliar cities</option>
+              <option value="D">[D] Releasing stress / mental clarity</option>
+              <option value="E">[E] Recovering mobility after injury</option>
+              <option value="F">[F] Measuring objective benchmarks</option>
+              <option value="G">[G] Fundraising charity events</option>
+              <option value="H">[H] Peaceful mountain trails</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task 6: Coral Restoration (Q15-Q19) -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Task 6 &bull; Sentence Completion</span>
+          <h3 class="task-title">Coral Reef Restoration</h3>
+          <div class="task-instructions">Write NO MORE THAN THREE WORDS for each gap.</div>
+        </div>
+
+        <div class="audio-player-card">
+          <div class="audio-player-top">
+            <span class="audio-title">Audio Track: Dr. Clara Hughes Talk</span>
+            <span class="audio-counter" id="badge_q15_19">Plays left: 2</span>
+          </div>
+          <div class="audio-controls">
+            <button class="play-btn" id="btn_q15_19" onclick="playAudio('audio_q15_19', 'btn_q15_19', 'badge_q15_19', 'prog_q15_19', 'time_q15_19')">&#9658;</button>
+            <div class="audio-progress-bar"><div class="audio-progress-fill" id="prog_q15_19"></div></div>
+            <span class="audio-time-label" id="time_q15_19">0:00</span>
+          </div>
+          <audio id="audio_q15_19" src="audio/q15_q19_monologue.mp3" preload="none"></audio>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">15. Before launching the project, the research team searched for coral colonies with natural _______________________________.</div>
+          <div class="gap-input-wrap">
+            <span>(15)</span>
+            <input type="text" class="gap-text-input" id="l_q15" placeholder="Your answer (max 3 words)..." autocomplete="off" autocapitalize="off">
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">16. The cutting technique known as micro-fragmentation triggered the corals' _______________________________, accelerating growth rates.</div>
+          <div class="gap-input-wrap">
+            <span>(16)</span>
+            <input type="text" class="gap-text-input" id="l_q16" placeholder="Your answer (max 3 words)..." autocomplete="off" autocapitalize="off">
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">17. Mature fragments were secured onto the ocean floor using a non-toxic _______________________________.</div>
+          <div class="gap-input-wrap">
+            <span>(17)</span>
+            <input type="text" class="gap-text-input" id="l_q17" placeholder="Your answer (max 3 words)..." autocomplete="off" autocapitalize="off">
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">18. To control smothering algae, researchers introduced native _______________________________ to act as natural grazers.</div>
+          <div class="gap-input-wrap">
+            <span>(18)</span>
+            <input type="text" class="gap-text-input" id="l_q18" placeholder="Your answer (max 3 words)..." autocomplete="off" autocapitalize="off">
+          </div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-stem">19. Dr. Hughes emphasizes that the project's ultimate metric of long-term success is _______________________________ rather than acreage.</div>
+          <div class="gap-input-wrap">
+            <span>(19)</span>
+            <input type="text" class="gap-text-input" id="l_q19" placeholder="Your answer (max 3 words)..." autocomplete="off" autocapitalize="off">
+          </div>
+        </div>
+      </div>
+
+      <div class="action-bar">
+        <button class="btn btn-primary" onclick="switchSection('writing')">Proceed to Writing (45m) &rarr;</button>
+        <button class="btn btn-secondary" onclick="switchSection('reading')">&larr; Back to Reading</button>
+      </div>
+    </div>
+
+    <!-- ================= SECTION 3: WRITING ================= -->
+    <div id="section-writing" class="section-view">
+      
+      <!-- Part 1: Informal Email -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Part 1 &bull; Informal Email</span>
+          <h3 class="task-title">David's Retirement Gathering</h3>
+          <div class="task-instructions">Recommended time: 15 minutes &bull; Minimum 50 words</div>
+        </div>
+
+        <div class="passage-box">
+          <div class="passage-title">Email from Maya:</div>
+          <p><em>Hi,<br>Can you believe it's already been three years since David retired from our team? A few of us want to surprise him with a special get-together next month. Do you have any suggestions for where we should hold the gathering and what gift we could present to him? Also, would you be able to help us coordinate everything?<br>Write back soon!<br>Maya</em></p>
+        </div>
+
+        <div class="writing-checklist">
+          <h4>Required Response Points:</h4>
+          <ul>
+            <li>Suggest an appropriate venue or activity for the gathering</li>
+            <li>Recommend a thoughtful gift for David and explain your rationale</li>
+            <li>Offer to assist with specific preparations</li>
+          </ul>
+        </div>
+
+        <textarea class="essay-textarea" id="writing_part1" placeholder="Write your email to Maya here..." oninput="handleWritingInput('writing_part1', 'wc_part1', 50, 'cambridge_mock1_w1')"></textarea>
+
+        <div class="writing-footer">
+          <span class="word-count-badge" id="wc_part1">0 words (min 50)</span>
+          <span class="save-indicator" id="save_part1">Auto-saved</span>
+        </div>
+      </div>
+
+      <!-- Part 2: Public Civic Post -->
+      <div class="task-card">
+        <div class="task-header">
+          <span class="task-tag">Part 2 &bull; Public Civic Post</span>
+          <h3 class="task-title">Preserving Our Local Green Spaces</h3>
+          <div class="task-instructions">Recommended time: 30 minutes &bull; Minimum 180 words</div>
+        </div>
+
+        <div class="passage-box">
+          <div class="passage-title">Community Forum Notice:</div>
+          <p><em>Over the past year, attendance at our town's public parks has surged dramatically. However, increased visitor numbers and frequent outdoor festivals have led to noticeable litter, turf damage, and conflicts between cyclists, dog walkers, and families.<br>The council invites public comment before drafting new park management regulations.</em></p>
+        </div>
+
+        <div class="writing-checklist">
+          <h4>Required Response Points:</h4>
+          <ul>
+            <li>Explain WHY public parks have experienced such a significant surge in usage</li>
+            <li>Outline WHAT specific challenges this overcrowding creates for residents & wildlife</li>
+            <li>Propose HOW the council could sustainably balance recreation with conservation</li>
+          </ul>
+        </div>
+
+        <textarea class="essay-textarea" id="writing_part2" placeholder="Write your community forum post here..." oninput="handleWritingInput('writing_part2', 'wc_part2', 180, 'cambridge_mock1_w2')"></textarea>
+
+        <div class="writing-footer">
+          <span class="word-count-badge" id="wc_part2">0 words (min 180)</span>
+          <span class="save-indicator" id="save_part2">Auto-saved</span>
+        </div>
+      </div>
+
+      <div class="action-bar">
+        <button class="btn btn-success" onclick="gradeAndShowReport()">Submit Test & View Diagnostic Report &rarr;</button>
+        <button class="btn btn-secondary" onclick="copyWritingOnly()">Copy Essays for Coach Review</button>
+      </div>
+    </div>
+
+    <!-- ================= SECTION 4: RESULTS & REPORT ================= -->
+    <div id="section-results" class="section-view">
+      
+      <div class="score-card">
+        <div style="font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">Diagnostic Assessment</div>
+        <div class="cefr-badge" id="report_cefr">--</div>
+        <h2 id="report_cefr_title" style="font-size: 20px; color: var(--primary-dark); margin-bottom: 12px;">Complete Test to View CEFR Profile</h2>
+        
+        <div class="score-summary">
+          <div class="score-sub-box">
+            <div class="val" id="report_reading_score">0 / 33</div>
+            <div class="lbl">Reading</div>
+          </div>
+          <div class="score-sub-box">
+            <div class="val" id="report_listening_score">0 / 19</div>
+            <div class="lbl">Listening</div>
+          </div>
+          <div class="score-sub-box">
+            <div class="val" id="report_total_score">0 / 52</div>
+            <div class="lbl">Combined</div>
+          </div>
+        </div>
+
+        <div class="feedback-box" id="report_feedback">
+          Submit your answers from the Reading and Listening sections to calculate your empirical CEFR grade and view the coach rationale for every question.
+        </div>
+      </div>
+
+      <!-- Action to Share with Coach -->
+      <div class="action-bar" style="margin-bottom: 24px;">
+        <button class="btn btn-primary" onclick="copyFullCoachReport()">Copy Full Coach Report to Clipboard</button>
+        <button class="btn btn-secondary" onclick="downloadReportTxt()">Download Report as Text File</button>
+      </div>
+
+      <!-- Item by Item Review List -->
+      <h3 style="margin-bottom: 14px; font-size: 18px; color: var(--primary-dark);">Item-by-Item Analysis & Coach Rationale</h3>
+      <div id="review_list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Mobile Toast -->
+  <div id="toast">Notice message here</div>
+
+  <script>
+    // --- MASTER ANSWER KEYS & 3-TIER RATIONALE DATA ---
+    const readingKeys = {
+      r_q1: { key: "B", type: "mc", text: "Silent study space on Floor 3", trap: "[A] conflicts with 'without advance reservation'; [C] cafe is open for group work.", skill: "Gist / Factual Detail (A2-B1)" },
+      r_q2: { key: "B", type: "mc", text: "prevented", trap: "'avoided' requires direct gerund without 'from'; 'refused' implies human volition.", skill: "Dependent Preposition / Verb Syntax (A2-B1)" },
+      r_q3: { key: "where", type: "text", text: "where", trap: "'which' requires preposition ('in which'). London is the spatial scene of leading walks.", skill: "Relative Adverb (B1)" },
+      r_q4: { key: "in", type: "text", text: "in", trap: "Plants thrive 'in' hedgerows (medium / enclosure).", skill: "Preposition of Location (B1)" },
+      r_q5: { key: "had", type: "text", text: "had", trap: "Past perfect auxiliary indicating customary historical practice prior to industrialization.", skill: "Past Perfect Auxiliary (B2)" },
+      r_q6: { key: "at", type: "text", text: "at", trap: "Dependent preposition: look closely 'at'.", skill: "Dependent Preposition (B1)" },
+      r_q7: { key: "how", type: "text", text: "how", trap: "Interrogative adverb of method: learn 'how' to distinguish.", skill: "Interrogative Connective (B1)" },
+      r_q8: { key: "A", type: "mc", text: "depend", trap: "Fixed academic collocation: depend on. Believe takes 'in'; insist takes 'on' volitionally.", skill: "Dependent Collocation (B1)" },
+      r_q9: { key: "D", type: "mc", text: "enduring", trap: "Collocation with hostile abiotic conditions: enduring extreme pressure.", skill: "High-level Collocation (B2)" },
+      r_q10: { key: "A", type: "mc", text: "safely", trap: "Evaluative adverb modifying vehicular navigation in hazardous environments.", skill: "Adverbial Modification (B1-B2)" },
+      r_q11: { key: "C", type: "mc", text: "vivid", trap: "Fixed sensory collocation: vivid detail.", skill: "Lexical Collocation (B2)" },
+      r_q12: { key: "B", type: "mc", text: "play", trap: "Fixed collocation: play a vital role in.", skill: "Academic Fixed Phrase (B2)" },
+      r_q13: { key: "B", type: "mc", text: "Childhood immersion", trap: "Text: 'whereas I was tracking badger setts... with my father's 35mm camera'.", skill: "Inference & Personal History (B2)" },
+      r_q14: { key: "C", type: "mc", text: "Mental fortitude", trap: "Text: 'sheer technical brilliance counts for very little if you lack psychological endurance'.", skill: "Attitude & Values (B2-C1)" },
+      r_q15: { key: "A", type: "mc", text: "Distorts viewers' perceptions", trap: "Text: 'sever the audience's genuine bond... expect wildlife to behave like Hollywood actors'.", skill: "Complex Proposition & Implication (C1)" },
+      r_q16: { key: "B", type: "mc", text: "Empower local residents", trap: "Text: 'must be cultivated from within the communities who coexist with these ecosystems daily'.", skill: "Writer's Stance & Purpose (B2)" },
+      r_q17: { key: "C", type: "mc", text: "The Art of Patience", trap: "Synthesizes both psychological endurance and authentic, unmanipulated observation.", skill: "Macro-Discourse Synthesis (B2-C1)" },
+      r_q18: { key: "B", type: "mc", text: "Strains sensory processing systems", trap: "Paragraph 1: 'cluttered physical environments overload the visual cortex, severely impeding...'.", skill: "Detail & Cause-Effect (B1-B2)" },
+      r_q19: { key: "B", type: "mc", text: "Subjective perception of value", trap: "Paragraph 2: 'reframe domestic possessions as sources of historical continuity or creative stimuli'.", skill: "Contrastive Analysis (B2)" },
+      r_q20: { key: "E", type: "select", text: "Three-quarters of midwater animals", trap: "Co-refers with 'dominant mode of communication' by providing scientific incidence data.", skill: "Exemplification & Elaboration (B2)" },
+      r_q21: { key: "B", type: "select", text: "Thermal efficiency outstrips LEDs", trap: "Co-refers with 98% efficiency and 'generating virtually no wasted heat'.", skill: "Lexical & Conceptual Cohesion (B2)" },
+      r_q22: { key: "H", type: "select", text: "Counter-illumination camouflage", trap: "Contrasts offensive anglerfish lure with defensive belly-glow camouflage in squid.", skill: "Rhetorical Contrast (B2-C1)" },
+      r_q23: { key: "A", type: "select", text: "Burglar alarm function", trap: "Co-refers with subsequent sentence: 'This alarm summons even larger apex predators'.", skill: "Anaphoric Reference (B2-C1)" },
+      r_q24: { key: "G", type: "select", text: "Piloted to monitor wastewater", trap: "Extends human healthcare application ('Similar genetic techniques are now being piloted...').", skill: "Domain Extension (C1)" },
+      r_q25: { key: "C", type: "select", text: "Unlike chemical contaminants ethereal", trap: "Contrasts pervasive acoustic saturation with visible chemical pollution.", skill: "Cross-Domain Contrast (B2-C1)" },
+      r_q26: { key: "F", type: "select", text: "Imperils woodland predators", trap: "Extends acoustic disruption from avian pitch shifting to terrestrial hunting efficacy.", skill: "Co-referential Elaboration (C1)" },
+      r_q27: { key: "A", type: "select", text: "Recognizing physiological hazards", trap: "Cohesion: Follows urban human health hazards; transitions to architectural solutions.", skill: "Problem-Solution Transition (C1)" },
+      r_q28: { key: "E", type: "select", text: "Psychological testing on water features", trap: "Corroborates restorative masking of flowing water with experimental clinical evidence.", skill: "Scientific Validation (C1)" },
+      r_q29: { key: "B", type: "select", text: "Legislative initiatives paradigm shift", trap: "Synthesizes European municipal 'Quiet Areas' with concluding moral argument.", skill: "Macro-Synthesis & Closure (C1)" },
+      r_q30: { key: "C", type: "select", text: "Review C (Julian)", trap: "Julian: 'paying luxury hotel rates for off-grid shared shower blocks feels disproportionate'.", skill: "Specific Stance & Evaluative Language (B2-C1)" },
+      r_q31: { key: "D", type: "select", text: "Review D (Aisha)", trap: "Aisha: 'recruits exclusively from the surrounding rural community and purchases all timber furnishings...'.", skill: "Specific Socio-Economic Detail (B2-C1)" },
+      r_q32: { key: "A", type: "select", text: "Review A (Marcus)", trap: "Marcus: 'the communal dinner tables... felt somewhat imposing after an exhausting day'.", skill: "Nuanced Emotional Ambivalence (B2-C1)" },
+      r_q33: { key: "B", type: "select", text: "Review B (Claire)", trap: "Claire: 'produce harvested within ten miles... culinary creativity that surpassed many Michelin-starred bistros'.", skill: "Praise under Constraints (B2-C1)" }
+    };
+
+    const listeningKeys = {
+      l_q1: { key: "C", type: "mc", text: "A set of car keys", trap: "Umbrella & phone mentioned first as lost property, but speaker had them; car keys left by mug.", skill: "Acoustic Distractor Reversal (A1-A2)" },
+      l_q2: { key: "C", type: "mc", text: "Practical demo of scheduling tools", trap: "Presenter and roleplay mentioned favorably by one, but both explicitly agree software demo was the best.", skill: "Consensus & Agreement (A2-B1)" },
+      l_q3: { key: "B", type: "mc", text: "Worsening sonic environment", trap: "Audio: 'When I realized how chaotic city soundscapes were becoming, I felt driven...'.", skill: "Motivation & Professional Trajectory (B1-B2)" },
+      l_q4: { key: "B", type: "mc", text: "Reflect and redistribute energy", trap: "Audio: 'solid barriers often bounce sound elsewhere, creating echo chambers'.", skill: "Technical Rationale & Traps (B2)" },
+      l_q5: { key: "A", type: "mc", text: "Lack of awareness as health hazard", trap: "Audio: 'treat acoustic design as an afterthought, an aesthetic luxury rather than public health necessity'.", skill: "Institutional Critique (B2-C1)" },
+      l_q6: { key: "B", type: "mc", text: "Gentle sound masked louder traffic", trap: "Audio: 'masks surrounding traffic hum without being overpowering... converse at a whisper'.", skill: "Acoustic Mechanism (B2)" },
+      l_q7: { key: "B", type: "mc", text: "Spend time listening directly", trap: "Audio: 'Spend hours sitting in urban squares, listening actively. Your ears detect subtleties algorithms overlook'.", skill: "Core Professional Advice (B2-C1)" },
+      l_q8: { key: "B", type: "mc", text: "Avoid buying expensive formal attire", trap: "Audio: 'spend a fortune buying designer outfits for weddings that I'd only ever wear once'.", skill: "Personal Motivation (B1-B2)" },
+      l_q9: { key: "A", type: "mc", text: "Logistics undermine environmental benefits", trap: "Audio: 'delivery and dry-cleaning logistics create their own carbon footprint, defeating the environmental purpose'.", skill: "Shared Reservation / Synthesis (B2)" },
+      l_q10: { key: "D", type: "select", text: "Speaker 1 -> [D] Releasing stress / mental clarity", trap: "Speaker 1: 'phone is off, and my mind completely decompresses. It's my daily meditation'.", skill: "Multi-Speaker Gist & Idiom (B2)" },
+      l_q11: { key: "B", type: "select", text: "Speaker 2 -> [B] Lowering medical risk factors", trap: "Speaker 2: 'doctor gave me a wake-up call regarding my cholesterol and heart health'.", skill: "Clinical Register & Cause (B2)" },
+      l_q12: { key: "A", type: "select", text: "Speaker 3 -> [A] Social camaraderie", trap: "Speaker 3: 'weekend running club introduced me to people... that camaraderie keeps me going'.", skill: "Interpersonal Motivation (B2)" },
+      l_q13: { key: "F", type: "select", text: "Speaker 4 -> [F] Objective benchmarks", trap: "Speaker 4: 'Chasing my personal best on the clock provides a tangible sense of achievement'.", skill: "Performance Metric Register (B2-C1)" },
+      l_q14: { key: "C", type: "select", text: "Speaker 5 -> [C] Explore unfamiliar cities", trap: "Speaker 5: 'run ten kilometers through historic neighborhoods... intimate perspective... never from a tour bus'.", skill: "Experiential Perspective (C1)" },
+      l_q15: { key: "thermal tolerance", type: "text", variants: ["thermal tolerance", "heat tolerance", "natural thermal tolerance"], text: "thermal tolerance", trap: "Audio: 'resilient coral colonies that possessed natural thermal tolerance'.", skill: "Scientific Lexis / Extraction (B2)" },
+      l_q16: { key: "innate healing mechanism", type: "text", variants: ["innate healing mechanism", "healing mechanism", "innate healing"], text: "innate healing mechanism", trap: "Audio: 'stimulated an innate healing mechanism that accelerated their growth rate'.", skill: "Complex Nominal Phrase (B2-C1)" },
+      l_q17: { key: "marine adhesive", type: "text", variants: ["marine adhesive", "adhesive", "non-toxic marine adhesive"], text: "marine adhesive", trap: "Audio: 'affixed to degraded reef substrates using a non-toxic marine adhesive'.", skill: "Technical Substrate Lexis (B2)" },
+      l_q18: { key: "sea urchins", type: "text", variants: ["sea urchins", "herbivorous sea urchins", "urchins"], text: "sea urchins", trap: "Audio: 'we introduced native herbivorous sea urchins, which acted as natural cleaners'.", skill: "Biological Species / Noun Phrase (B2-C1)" },
+      l_q19: { key: "genetic diversity", type: "text", variants: ["genetic diversity"], text: "genetic diversity", trap: "Audio: 'true benchmark of our success won't merely be total reef acreage, but genetic diversity'.", skill: "Key Theoretical Metric (C1)" }
+    };
+
+    // --- NAVIGATION & TABS ---
+    function switchSection(secId) {
+      document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+
+      const targetView = document.getElementById('section-' + secId);
+      if (targetView) targetView.classList.add('active');
+
+      const tabIdx = { reading: 0, listening: 1, writing: 2, results: 3 }[secId];
+      if (tabIdx !== undefined) {
+        document.querySelectorAll('.tab-btn')[tabIdx].classList.add('active');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // --- OPTION CARD INTERACTION ---
+    function selectOption(cardEl) {
+      const radio = cardEl.querySelector('input[type="radio"]');
+      if (radio) {
+        radio.checked = true;
+        const parent = cardEl.closest('.options-grid');
+        parent.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+        cardEl.classList.add('selected');
+      }
+    }
+
+    // --- AUDIO PLAYER WITH 2-PLAY LIMIT ---
+    const audioPlays = {};
+
+    function playAudio(audioId, btnId, badgeId, progId, timeId) {
+      const audio = document.getElementById(audioId);
+      const btn = document.getElementById(btnId);
+      const badge = document.getElementById(badgeId);
+      const prog = document.getElementById(progId);
+      const timeLbl = document.getElementById(timeId);
+
+      if (!audioPlays[audioId]) {
+        audioPlays[audioId] = { count: 0, max: 2, isPlaying: false };
+      }
+
+      const state = audioPlays[audioId];
+
+      if (state.isPlaying) {
+        audio.pause();
+        state.isPlaying = false;
+        btn.innerHTML = "&#9658;";
+        return;
+      }
+
+      if (state.count >= state.max) {
+        showToast("Maximum 2 plays reached for this track!");
+        return;
+      }
+
+      // If starting fresh track
+      if (audio.currentTime === 0 || audio.ended) {
+        state.count++;
+        const remaining = state.max - state.count;
+        badge.innerText = "Plays left: " + remaining;
+        if (remaining === 0) badge.classList.add('depleted');
+      }
+
+      // Stop all other audios
+      document.querySelectorAll('audio').forEach(a => {
+        if (a !== audio) {
+          a.pause();
+          a.currentTime = 0;
+        }
+      });
+      document.querySelectorAll('.play-btn').forEach(b => {
+        if (b !== btn) b.innerHTML = "&#9658;";
+      });
+
+      audio.play().then(() => {
+        state.isPlaying = true;
+        btn.innerHTML = "&#10074;&#10074;";
+      }).catch(err => {
+        console.error("Audio playback error:", err);
+        showToast("Tap again to play audio.");
+      });
+
+      audio.ontimeupdate = () => {
+        if (audio.duration) {
+          const pct = (audio.currentTime / audio.duration) * 100;
+          prog.style.width = pct + "%";
+          const m = Math.floor(audio.currentTime / 60);
+          const s = Math.floor(audio.currentTime % 60);
+          timeLbl.innerText = m + ":" + (s < 10 ? "0" : "") + s;
+        }
+      };
+
+      audio.onended = () => {
+        state.isPlaying = false;
+        btn.innerHTML = "&#9658;";
+        prog.style.width = "0%";
+        audio.currentTime = 0;
+        if (state.count >= state.max) {
+          btn.disabled = true;
+          badge.innerText = "No plays left";
+          badge.classList.add('depleted');
+        }
+      };
+    }
+
+    // --- WRITING WORD COUNT & AUTO-SAVE ---
+    function handleWritingInput(textareaId, badgeId, minWords, storageKey) {
+      const textarea = document.getElementById(textareaId);
+      const badge = document.getElementById(badgeId);
+      const text = textarea.value.trim();
+      const words = text ? text.split(/\s+/).length : 0;
+
+      badge.innerText = words + " words (min " + minWords + ")";
+      if (words >= minWords) {
+        badge.classList.add('valid');
+      } else {
+        badge.classList.remove('valid');
+      }
+
+      // Save to localStorage
+      try {
+        localStorage.setItem(storageKey, textarea.value);
+      } catch (e) {}
+    }
+
+    // Load saved essays
+    window.addEventListener('DOMContentLoaded', () => {
+      const w1 = localStorage.getItem('cambridge_mock1_w1');
+      if (w1) {
+        document.getElementById('writing_part1').value = w1;
+        handleWritingInput('writing_part1', 'wc_part1', 50, 'cambridge_mock1_w1');
+      }
+      const w2 = localStorage.getItem('cambridge_mock1_w2');
+      if (w2) {
+        document.getElementById('writing_part2').value = w2;
+        handleWritingInput('writing_part2', 'wc_part2', 180, 'cambridge_mock1_w2');
+      }
+
+      // Start global timer
+      startTimer(60 * 60); // 60 minutes overall
+    });
+
+    // --- TIMER ---
+    function startTimer(durationSeconds) {
+      let timer = durationSeconds;
+      const el = document.getElementById('examTimer');
+      const interval = setInterval(() => {
+        const m = Math.floor(timer / 60);
+        const s = timer % 60;
+        el.innerText = (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+        if (--timer < 0) {
+          clearInterval(interval);
+          el.innerText = "00:00";
+          showToast("Exam time concluded!");
+        }
+      }, 1000);
+    }
+
+    // --- TOAST ---
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    // --- SCORING & DIAGNOSTIC REPORT ---
+    let latestReport = null;
+
+    function gradeAndShowReport() {
+      let rScore = 0;
+      let lScore = 0;
+      const breakdown = [];
+
+      // Grade Reading
+      for (let qId in readingKeys) {
+        const meta = readingKeys[qId];
+        let userAns = "";
+
+        if (meta.type === "mc") {
+          const checked = document.querySelector('input[name="' + qId + '"]:checked');
+          userAns = checked ? checked.value : "";
+        } else if (meta.type === "text") {
+          const input = document.getElementById(qId);
+          userAns = input ? input.value.trim().toLowerCase() : "";
+        } else if (meta.type === "select") {
+          const sel = document.getElementById(qId);
+          userAns = sel ? sel.value : "";
+        }
+
+        const isCorrect = (meta.type === "text") 
+          ? (userAns === meta.key.toLowerCase())
+          : (userAns === meta.key);
+
+        if (isCorrect) rScore++;
+
+        breakdown.push({
+          section: "Reading",
+          id: qId.replace("r_", "").toUpperCase(),
+          userAns: userAns || "(Blank)",
+          correctAns: meta.key,
+          isCorrect: isCorrect,
+          skill: meta.skill,
+          trap: meta.trap
+        });
+      }
+
+      // Grade Listening
+      for (let qId in listeningKeys) {
+        const meta = listeningKeys[qId];
+        let userAns = "";
+
+        if (meta.type === "mc") {
+          const checked = document.querySelector('input[name="' + qId + '"]:checked');
+          userAns = checked ? checked.value : "";
+        } else if (meta.type === "text") {
+          const input = document.getElementById(qId);
+          userAns = input ? input.value.trim().toLowerCase() : "";
+        } else if (meta.type === "select") {
+          const sel = document.getElementById(qId);
+          userAns = sel ? sel.value : "";
+        }
+
+        let isCorrect = false;
+        if (meta.type === "text") {
+          const normUser = userAns.replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ");
+          isCorrect = meta.variants.some(v => v.toLowerCase() === normUser);
+        } else {
+          isCorrect = (userAns === meta.key);
+        }
+
+        if (isCorrect) lScore++;
+
+        breakdown.push({
+          section: "Listening",
+          id: qId.replace("l_", "").toUpperCase(),
+          userAns: userAns || "(Blank)",
+          correctAns: meta.key,
+          isCorrect: isCorrect,
+          skill: meta.skill,
+          trap: meta.trap
+        });
+      }
+
+      const totalScore = rScore + lScore;
+      let cefr = "Below A2";
+      let cefrTitle = "Needs Foundational Reinforcement";
+      let feedback = "Significant reinforcement needed in core syntax, listening decoding, and vocabulary recognition before adaptive testing.";
+
+      if (totalScore >= 46) {
+        cefr = "C1";
+        cefrTitle = "Advanced Vantage (C1)";
+        feedback = "Outstanding performance across macro-cohesion, subtle discourse transitions, and fast monologue comprehension. High readiness for C1 certification.";
+      } else if (totalScore >= 38) {
+        cefr = "B2";
+        cefrTitle = "Independent User (B2 Vantage)";
+        feedback = "Solid core communicative competence. Successfully navigates standard workplace scenarios, dropping marks primarily on missing paragraph co-reference and dense monologues.";
+      } else if (totalScore >= 28) {
+        cefr = "B1";
+        cefrTitle = "Threshold Intermediate (B1)";
+        feedback = "Competent on straightforward notices and short dialogues. Requires training on open-cloze structural words and multi-speaker inference.";
+      } else if (totalScore >= 18) {
+        cefr = "A2";
+        cefrTitle = "Waystage (A2)";
+        feedback = "Basic routine interactions are understood. Needs targeted grammar scaffolding and connected speech decoding drills.";
+      }
+
+      // Update UI
+      document.getElementById('report_cefr').innerText = cefr;
+      document.getElementById('report_cefr_title').innerText = cefrTitle;
+      document.getElementById('report_reading_score').innerText = rScore + " / 33";
+      document.getElementById('report_listening_score').innerText = lScore + " / 19";
+      document.getElementById('report_total_score').innerText = totalScore + " / 52";
+      document.getElementById('report_feedback').innerText = feedback;
+
+      // Render Item-by-Item Breakdown
+      const reviewContainer = document.getElementById('review_list');
+      reviewContainer.innerHTML = "";
+
+      breakdown.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = "review-item " + (item.isCorrect ? "correct" : "incorrect");
+        div.innerHTML = `
+          <div class="review-header">
+            <span class="q-number">${item.section} &bull; Item ${item.id}</span>
+            <span class="status-badge ${item.isCorrect ? 'correct' : 'incorrect'}">
+              ${item.isCorrect ? 'CORRECT' : 'INCORRECT'}
+            </span>
+          </div>
+          <div class="ans-comparison">
+            <strong>Your Answer:</strong> ${item.userAns} &nbsp;|&nbsp; 
+            <strong>Correct:</strong> <span style="color:var(--success); font-weight:700;">${item.correctAns}</span>
+          </div>
+          <button class="rationale-toggle" onclick="toggleRationale(this)">
+            <span>&#9656; View Coach Rationale & Traps</span>
+          </button>
+          <div class="rationale-content">
+            <p><strong>Construct Skill:</strong> ${item.skill}</p>
+            <p style="margin-top:4px;"><strong>Analysis & Traps:</strong> ${item.trap}</p>
+          </div>
+        `;
+        reviewContainer.appendChild(div);
+      });
+
+      const candName = document.getElementById('candidateName').value.trim() || "Student";
+      const w1 = document.getElementById('writing_part1').value.trim();
+      const w2 = document.getElementById('writing_part2').value.trim();
+
+      latestReport = {
+        name: candName,
+        date: new Date().toLocaleDateString(),
+        rScore,
+        lScore,
+        totalScore,
+        cefr,
+        cefrTitle,
+        breakdown,
+        writingPart1: w1,
+        writingPart2: w2
+      };
+
+      switchSection('results');
+    }
+
+    function toggleRationale(btn) {
+      const content = btn.nextElementSibling;
+      if (content.classList.contains('open')) {
+        content.classList.remove('open');
+        btn.querySelector('span').innerHTML = "&#9656; View Coach Rationale & Traps";
+      } else {
+        content.classList.add('open');
+        btn.querySelector('span').innerHTML = "&#9662; Hide Coach Rationale";
+      }
+    }
+
+    // --- EXPORT TO COACH ---
+    function generateReportText() {
+      if (!latestReport) gradeAndShowReport();
+      const rep = latestReport;
+      const incorrectList = rep.breakdown.filter(b => !b.isCorrect).map(b => `${b.section} ${b.id}: Selected "${b.userAns}", Expected "${b.correctAns}" [${b.skill}]`).join("\n");
+
+      return `========================================================
+CAMBRIDGE ENGLISH SKILLS TEST (GENERAL) — MOCK TEST 1
+DIAGNOSTIC REPORT FOR COACH
+========================================================
+Candidate Name: ${rep.name}
+Assessment Date: ${rep.date}
+
+--- OBJECTIVE SCORES ---
+Reading:   ${rep.rScore} / 33  (${(rep.rScore/33*100).toFixed(1)}%)
+Listening: ${rep.lScore} / 19  (${(rep.lScore/19*100).toFixed(1)}%)
+Combined:  ${rep.totalScore} / 52  (${(rep.totalScore/52*100).toFixed(1)}%)
+Projected CEFR Level: ${rep.cefr} (${rep.cefrTitle})
+
+--- INCORRECT RESPONSES & DIAGNOSTIC GAPS ---
+${incorrectList || "Full Marks! No errors recorded."}
+
+========================================================
+WRITING SUBMISSION FOR COACH EVALUATION
+========================================================
+
+--- PART 1: INFORMAL EMAIL (David's Retirement) ---
+Word Count: ${rep.writingPart1.split(/\s+/).filter(Boolean).length} words
+${rep.writingPart1 || "(No submission recorded)"}
+
+--------------------------------------------------------
+
+--- PART 2: CIVIC FORUM POST (Green Spaces Management) ---
+Word Count: ${rep.writingPart2.split(/\s+/).filter(Boolean).length} words
+${rep.writingPart2 || "(No submission recorded)"}
+
+========================================================
+`;
+    }
+
+    function copyFullCoachReport() {
+      const text = generateReportText();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast("Full coach report copied to clipboard!");
+        }).catch(() => fallbackCopy(text));
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function copyWritingOnly() {
+      const w1 = document.getElementById('writing_part1').value.trim();
+      const w2 = document.getElementById('writing_part2').value.trim();
+      const text = `STUDENT WRITING SUBMISSION\nCandidate: ${document.getElementById('candidateName').value}\n\n--- PART 1 EMAIL ---\n${w1}\n\n--- PART 2 FORUM POST ---\n${w2}`;
+      
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast("Essays copied to clipboard!");
+        }).catch(() => fallbackCopy(text));
+      } else {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast("Copied to clipboard!");
+      } catch (err) {
+        alert("Please copy manually from text box.");
+      }
+      document.body.removeChild(ta);
+    }
+
+    function downloadReportTxt() {
+      const text = generateReportText();
+      const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `Cambridge_Mock1_${latestReport.name.replace(/\s+/g, '_')}_Report.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast("Report text file downloaded!");
+    }
+  </script>
+</body>
+</html>

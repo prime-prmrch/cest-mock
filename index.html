@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#003b70">
-  <title>Cambridge English Skills Test (General) — Multi-Test Portal</title>
+  <title>Cambridge English Skills Test (General) — Procedural Simulator</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
   <style>
     :root {
@@ -255,22 +253,22 @@
 <body>
 
   <header>
-    <div class="header-badge">General Category Diagnostic Suite</div>
-    <h1>Cambridge English Skills Test Portal</h1>
-    <div class="subtitle">Complete 3-Test Preparation Suite &bull; Reading (33 Qs), Listening (19 Qs), Writing (2 Tasks) &bull; Speaking Excluded</div>
+    <div class="header-badge">CEFR Diagnostic Assessment Engine</div>
+    <h1>Cambridge English Skills Test Simulator</h1>
+    <div class="subtitle">Procedural Adaptive Examination Suite &bull; Reading (33 Qs), Listening (19 Qs), Writing (2 Tasks) &bull; Speaking Excluded</div>
   </header>
 
   <div class="container">
 
-    <!-- PROCEDURAL EXAM GENERATOR (HERO CARD) -->
+    <!-- PROCEDURAL EXAM GENERATOR (PRIMARY INTERFACE) -->
     <div class="test-card" style="border: 2px solid var(--secondary); background: linear-gradient(180deg, #ffffff 0%, #f8fbfe 100%);">
       <div class="card-top">
-        <span class="card-tag tag-blue" style="font-size:12px; font-weight:800; letter-spacing:0.5px;">⚡ Dynamic Adaptive Simulator</span>
-        <span class="test-num-badge" style="background:var(--secondary); color:white;">PROCEDURAL</span>
+        <span class="card-tag tag-blue" style="font-size:12px; font-weight:800; letter-spacing:0.5px;">⚡ Calibrated Procedural Simulator</span>
+        <span class="test-num-badge" style="background:var(--secondary); color:white;">ADAPTIVE ENGINE</span>
       </div>
-      <div class="card-title" style="font-size:22px; color:var(--primary-dark);">🎲 Procedural Exam Generator</div>
+      <div class="card-title" style="font-size:22px; color:var(--primary-dark);">🎲 Full-Length Examination Simulator</div>
       <div class="card-desc" style="font-size:14.5px; line-height:1.6;">
-        Procedurally samples and synthesizes a calibrated <strong>52-item Cambridge Skills examination</strong> (Reading 33 Qs, Listening 19 Qs) plus <strong>2 Writing tasks</strong> directly from the verified item bank. Every session constructs a unique combination of reading passages, multi-accent listening audio, and cognitive distractors.
+        Procedurally samples and synthesizes a calibrated <strong>52-item Cambridge Skills examination</strong> (Reading 33 Qs, Listening 19 Qs) plus <strong>2 Writing tasks</strong> directly from the verified item bank. Every session constructs an authentic combination of reading passages, multi-accent listening audio, and cognitive distractors with strict timer controls.
       </div>
       <div class="specs-grid" style="margin:16px 0;">
         <div>
@@ -293,63 +291,21 @@
 
       <!-- Quick Launch Button -->
       <div style="margin-bottom:18px;">
-        <a href="test.html" class="btn btn-launch" style="display:flex; justify-content:center; align-items:center; gap:8px; padding:14px 20px; font-size:16px; font-weight:700; border-radius:10px; text-decoration:none;">
+        <a href="test.html" class="btn btn-launch" style="display:flex; justify-content:center; align-items:center; gap:8px; padding:15px 22px; font-size:16px; font-weight:700; border-radius:10px; text-decoration:none;">
           <span>🚀 Launch Fresh Random Exam</span>
         </a>
       </div>
 
       <!-- Seed Input Bar -->
-      <div style="background:#ffffff; border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:14px;">
-        <div style="font-size:12.5px; font-weight:700; color:var(--primary-dark); margin-bottom:6px;">🎯 Synchronized Tutor &amp; Candidate Seed</div>
+      <div style="background:#ffffff; border:1px solid var(--border); border-radius:10px; padding:14px;">
+        <div style="font-size:12.5px; font-weight:700; color:var(--primary-dark); margin-bottom:6px;">🎯 Deterministic Seed Synchronization</div>
         <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">
-          Enter any alphanumeric or numeric seed code to generate the exact same test on multiple devices:
+          Enter any alphanumeric or numeric seed code to generate the exact same test permutation across multiple candidate devices:
         </p>
         <form onsubmit="event.preventDefault(); launchSeed();" style="display:flex; gap:8px; flex-wrap:wrap;">
           <input type="text" id="seedInput" placeholder="Enter seed code (e.g. UNAIR-B2, 849201)..." style="flex:1; min-width:200px; padding:8px 12px; border:1px solid var(--border); border-radius:6px; font-size:13.5px; font-family:monospace;">
           <button type="submit" class="btn btn-secondary" style="padding:8px 16px; font-size:13px; font-weight:700; cursor:pointer;">Load Seeded Exam</button>
         </form>
-      </div>
-
-      <!-- Seed Presets -->
-      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:12px;">
-        <span style="font-weight:700; color:var(--text-muted);">Standard Seed Presets:</span>
-        <a href="test.html?seed=101" style="color:var(--primary); background:#e8f1fa; padding:4px 10px; border-radius:12px; text-decoration:none; font-weight:600;">#101 Commercial</a>
-        <a href="test.html?seed=202" style="color:var(--primary); background:#e8f1fa; padding:4px 10px; border-radius:12px; text-decoration:none; font-weight:600;">#202 Literary</a>
-        <a href="test.html?seed=303" style="color:var(--primary); background:#e8f1fa; padding:4px 10px; border-radius:12px; text-decoration:none; font-weight:600;">#303 Ecology</a>
-      </div>
-    </div>
-
-    <!-- PRINTABLE PAPERS & ARCHIVAL MOCKS -->
-    <div class="info-card" style="margin-bottom:20px;">
-      <h3 style="display:flex; justify-content:space-between; align-items:center;">
-        <span>📄 Printable Exam Papers &amp; Diagnostic Keys</span>
-        <span style="font-size:11px; font-weight:600; color:var(--text-muted);">PDF / Markdown</span>
-      </h3>
-      <p style="font-size:13px; color:var(--text-muted); margin-bottom:12px;">
-        Archival static papers for classroom printouts and manual grading:
-      </p>
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:10px;">
-        <div style="padding:10px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px;">
-          <div style="font-weight:700; font-size:13px; color:var(--primary); margin-bottom:4px;">Mock Test 1 (Baseline)</div>
-          <div style="display:flex; gap:6px;">
-            <a href="mock_test_1/MOCK_TEST_1_PRINTABLE_STUDENT.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">📄 Student</a> &bull;
-            <a href="mock_test_1/MOCK_TEST_1_COACH_KEY_AND_EXPLANATIONS.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">🔑 Key</a>
-          </div>
-        </div>
-        <div style="padding:10px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px;">
-          <div style="font-weight:700; font-size:13px; color:var(--primary); margin-bottom:4px;">Mock Test 2 (Literary)</div>
-          <div style="display:flex; gap:6px;">
-            <a href="mock_test_2/MOCK_TEST_2_PRINTABLE_STUDENT.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">📄 Student</a> &bull;
-            <a href="mock_test_2/MOCK_TEST_2_COACH_KEY_AND_EXPLANATIONS.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">🔑 Key</a>
-          </div>
-        </div>
-        <div style="padding:10px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px;">
-          <div style="font-weight:700; font-size:13px; color:var(--primary); margin-bottom:4px;">Mock Test 3 (Ecology)</div>
-          <div style="display:flex; gap:6px;">
-            <a href="mock_test_3/MOCK_TEST_3_PRINTABLE_STUDENT.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">📄 Student</a> &bull;
-            <a href="mock_test_3/MOCK_TEST_3_COACH_KEY_AND_EXPLANATIONS.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">🔑 Key</a>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -422,6 +378,15 @@
           <div style="font-weight:700; color:var(--primary); font-size:14.5px; margin-bottom:4px;">📋 Test Spec &amp; Coaching Guide</div>
           <div style="font-size:12.5px; color:var(--text-muted); line-height:1.45;">Official Cambridge General specifications and tutor session frameworks.</div>
         </a>
+        <div style="display:block; padding:14px 16px; background:var(--bg); border:1px solid var(--border); border-radius:10px;">
+          <div style="font-weight:700; color:var(--primary); font-size:14.5px; margin-bottom:4px;">📄 Archival Printables &amp; Keys</div>
+          <div style="font-size:12.5px; color:var(--text-muted); line-height:1.45; margin-bottom:8px;">Printable classroom papers and scoring keys:</div>
+          <div style="font-size:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <span><strong>Mock 1:</strong> <a href="mock_test_1/MOCK_TEST_1_PRINTABLE_STUDENT.md" style="color:var(--secondary); text-decoration:none; font-weight:600;">Student</a> &bull; <a href="mock_test_1/MOCK_TEST_1_COACH_KEY_AND_EXPLANATIONS.md" style="color:var(--secondary); text-decoration:none; font-weight:600;">Key</a></span>
+            <span><strong>Mock 2:</strong> <a href="mock_test_2/MOCK_TEST_2_PRINTABLE_STUDENT.md" style="color:var(--secondary); text-decoration:none; font-weight:600;">Student</a> &bull; <a href="mock_test_2/MOCK_TEST_2_COACH_KEY_AND_EXPLANATIONS.md" style="color:var(--secondary); text-decoration:none; font-weight:600;">Key</a></span>
+            <span><strong>Mock 3:</strong> <a href="mock_test_3/MOCK_TEST_3_PRINTABLE_STUDENT.md" style="color:var(--secondary); text-decoration:none; font-weight:600;">Student</a> &bull; <a href="mock_test_3/MOCK_TEST_3_COACH_KEY_AND_EXPLANATIONS.md" style="color:var(--secondary); text-decoration:none; font-weight:600;">Key</a></span>
+          </div>
+        </div>
       </div>
     </div>
 

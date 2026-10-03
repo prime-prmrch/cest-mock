@@ -1,18 +1,19 @@
 # Cambridge English Skills Test (CEST) — Procedural Diagnostic Simulator
 
 [![Live Portal](https://img.shields.io/badge/Live%20Portal-GitHub%20Pages-0077b6?style=flat-square)](https://prime-prmrch.github.io/cest-mock/)
-[![Engine](https://img.shields.io/badge/Engine-Procedural%20PRNG-blueviolet?style=flat-square)](#-the-solution-institutional-grade-procedural-simulation)
-[![PWA](https://img.shields.io/badge/PWA-Offline%20Ready-success?style=flat-square)](#-offline-resilience--mobile-pwa)
-[![Audio](https://img.shields.io/badge/Audio-30%20Neural%20Tracks-purple?style=flat-square)](#-authentic-neural-listening-bank-30-tracks)
-[![CEFR Level](https://img.shields.io/badge/CEFR-A2%20to%20C1%20Calibrated-orange?style=flat-square)](#-cefr-diagnostic-banding-matrix)
+[![Engine](https://img.shields.io/badge/Engine-Procedural%20PRNG-blueviolet?style=flat-square)](#the-solution)
+[![PWA](https://img.shields.io/badge/PWA-Offline%20Ready-success?style=flat-square)](#offline-pwa)
+[![Audio](https://img.shields.io/badge/Audio-30%20Neural%20Tracks-purple?style=flat-square)](#neural-audio)
+[![CEFR Level](https://img.shields.io/badge/CEFR-A2%20to%20C1%20Calibrated-orange?style=flat-square)](#cefr-matrix)
 
-An institutional-grade, zero-marginal-cost diagnostic simulator designed to prepare candidates for the **Cambridge English Skills Test (General)** and high-stakes university admissions benchmarks (such as **IUP Universitas Airlangga**).
+An institutional-grade, zero-marginal-cost diagnostic simulator designed to prepare candidates for the **Cambridge English Skills Test (General)** and high-stakes university admissions benchmarks (such as **IUP Universitas Airlangga**). Engineered as a proprietary institutional asset and market differentiator, the platform creates a defensible competitive moat against rival centers, eliminates student practice fatigue, and functions as a high-conversion student onboarding assessment with zero recurring licensing cost ($0 marginal cost).
 
 **Interactive Web Application**: [https://prime-prmrch.github.io/cest-mock/](https://prime-prmrch.github.io/cest-mock/)  
-**Lead Curriculum Architect**: Febrian Dhani Hartawan (*Department of English Language and Literature, Universitas Airlangga; CEFR C2 Certified; DET 145/160*)
+**Lead Curriculum Architect & Assessment Strategist**: Febrian Dhani Hartawan (*Department of English Language and Literature, Universitas Airlangga; CEFR C2 Master in Listening; DET 145/160; IUP UNAIR Admissions Coach*)
 
 ---
 
+<a id="the-problem"></a>
 ## 💡 The Problem: The "Static Mock Test Fatigue" Dilemma
 
 Students preparing for high-stakes international examinations frequently encounter a structural learning plateau:
@@ -34,9 +35,14 @@ Students preparing for high-stakes international examinations frequently encount
 
 ---
 
+<a id="the-solution"></a>
 ## ⚡ The Solution: Institutional-Grade Procedural Simulation
 
 This platform replaces static practice sets with an **adaptive, client-side procedural engine** engineered to deliver infinite, psychometrically calibrated mock examinations with **zero recurring software fees**:
+
+- **Proprietary Institutional Moat**: Replaces generic textbook photocopies with an exclusive, branded assessment suite that rival centers cannot replicate.
+- **High-Conversion Student Onboarding**: Serves as a frictionless diagnostic placement test for prospective candidates, demonstrating institutional rigor and accelerating course enrollment.
+- **Zero Marginal Cost ($0 Recurring)**: Completely eliminates recurring commercial exam token fees ($15–$35/student), saving thousands of dollars per cohort while running on zero-cost static infrastructure.
 
 - **Procedural Combinatorics**: Samples from an extensive item bank featuring 5 distinct variants across 9 Reading task types, 6 Listening task structures (30 unique audio productions), and 8 curated Writing prompt pairs.
 - **Deterministic Seed Engine**: Employs a deterministic Mulberry32 Pseudo-Random Number Generator. Any 6-digit seed (e.g., `#849201` or `UNAIR-B2`) constructs the exact same exam permutation across multiple devices without requiring backend database coordination.
@@ -77,6 +83,7 @@ TOTAL TIME: 90 MINUTES  ──┬── Reading: 33 Items (9 Distinct Tasks)
 
 ---
 
+<a id="neural-audio"></a>
 ## 🎙️ Authentic Neural Listening Bank (30 Tracks)
 
 All listening tracks were synthesized using high-fidelity Edge-TTS neural models configured with authentic regional accents (`en-GB-SoniaNeural`, `en-GB-RyanNeural`, `en-AU-NatashaNeural`, `en-US-GuyNeural`), featuring real-world conversational dynamics:
@@ -91,6 +98,8 @@ All listening tracks were synthesized using high-fidelity Edge-TTS neural models
 *Constraint Enforcement*: Each track enforces a strict **2-play maximum** with live playback progress, replicating official Cambridge examination security protocols.
 
 ---
+
+<a id="cefr-matrix"></a>
 ## 📈 CEFR Diagnostic Banding Matrix
 
 Scoring is calibrated across the **52 objective items** (Reading 33 + Listening 19):
@@ -105,6 +114,7 @@ Scoring is calibrated across the **52 objective items** (Reading 33 + Listening 
 
 ---
 
+<a id="offline-pwa"></a>
 ## 📱 Offline Resilience & Mobile PWA
 
 The simulator is built as a standalone **Progressive Web App (PWA)** prioritizing mobile ergonomics and connection tolerance:
@@ -116,6 +126,7 @@ The simulator is built as a standalone **Progressive Web App (PWA)** prioritizin
 
 ---
 
+<a id="coaching-guides"></a>
 ## 📚 Master Coaching Guides
 
 The repository includes pedagogical and instructional guides in [`guides/`](guides/):
@@ -126,6 +137,7 @@ The repository includes pedagogical and instructional guides in [`guides/`](guid
 
 ---
 
+<a id="local-tooling"></a>
 ## 🛠️ Local Development & Bank Tooling
 
 ```bash
@@ -146,11 +158,14 @@ python synthesize_bank_audio.py
 
 ---
 
+<a id="institutional-attribution"></a>
 ## 🏛️ Institutional & Portfolio Attribution
 
 Developed and maintained by **Febrian Dhani Hartawan** as an applied educational technology and assessment architecture project.
 
-- **Institution**: Universitas Airlangga (UNAIR), Department of English Language and Literature
-- **Specialization**: IUP UNAIR Admissions Strategy, Critical Discourse Analysis, and CEFR Assessment Design
+- **Role**: Lead Curriculum Architect & Assessment Strategist
+- **Academic Home**: Department of English Language and Literature, Universitas Airlangga (UNAIR)
+- **Linguistic Benchmarks**: CEFR C2 Master in Listening (Certified 2021), Duolingo English Test 145/160 (Certified 2023)
+- **Specialization**: High-Stakes Admissions Strategy (IUP UNAIR), Critical Discourse Analysis, and CEFR Assessment Design
 - **Portfolio Repository**: [https://github.com/prime-prmrch/cest-mock](https://github.com/prime-prmrch/cest-mock)
 - **Live Simulator**: [https://prime-prmrch.github.io/cest-mock/](https://prime-prmrch.github.io/cest-mock/)

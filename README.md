@@ -1,10 +1,5 @@
 # Cambridge English Skills Test (General) — Procedural Diagnostic Suite
 
-[![Live Portal](https://img.shields.io/badge/Live%20Portal-GitHub%20Pages-0077b6?style=flat-square)](https://prime-prmrch.github.io/cest-mock/)
-[![Engine](https://img.shields.io/badge/Engine-Procedural%20PRNG-blueviolet?style=flat-square)](#-procedural-exam-generator--seed-synchronization)
-[![PWA](https://img.shields.io/badge/PWA-Full%20Offline%20Ready-success?style=flat-square)](#-progressive-web-app-pwa--offline-caching)
-[![TTS Engine](https://img.shields.io/badge/Audio-30%20Neural%20Tracks-purple?style=flat-square)](#-expanded-neural-listening-bank-30-tracks)
-
 An interactive, responsive procedural test preparation and diagnostic suite calibrated to the official **Cambridge English Skills Test (General Category)** specifications.
 
 **Live Application**: [https://prime-prmrch.github.io/cest-mock/](https://prime-prmrch.github.io/cest-mock/)
@@ -40,54 +35,6 @@ Instead of a static set of fixed papers, the simulator features a **client-side 
 - [Seed #101 (Baseline Commercial)](https://prime-prmrch.github.io/cest-mock/test.html?seed=101)
 - [Seed #202 (Narrative & Literary)](https://prime-prmrch.github.io/cest-mock/test.html?seed=202)
 - [Seed #303 (Ecology & Deep Time)](https://prime-prmrch.github.io/cest-mock/test.html?seed=303)
-
----
-
-## 🎙️ Expanded Neural Listening Bank (30 Tracks)
-
-All listening tasks feature authentic communicative friction, conversational self-repair, and conceptual paraphrasing—eliminating superficial "lost-and-found" tropes:
-
-1. **Task 1: Short Transactional Dialogues (Q1)**
-   - *V1 Transit*: Rail line maintenance, replacement coach congestion vs. scenic rail detour.
-   - *V2 Warranty*: Hardware phantom power failure; direct replacement vs. 10-day diagnostic inspection delay.
-   - *V3 Logistics*: Regional showroom freight delay; redirecting delivery to industrial depot for morning pickup.
-   - *V4 Furniture*: Bespoke office meeting pod; swapping rectangular tables to circular profiles to clear fire exits.
-   - *V5 Catering*: Corporate workshop booking; meeting lunch package threshold to waive room hire charges.
-
-2. **Task 2: Collaborative Workplace Discussions (Q2)**
-   - *V1 Systems*: Database connector delay; hiring temporary data clerks to manage manual records backlog.
-   - *V2 Retail*: Weekend inventory flu absences; swapping shifts with restocking crew to avoid overtime penalties.
-   - *V3 Marketing*: Digital display banner ROI failure; reallocating budget to industry technical newsletters.
-   - *V4 Eco-Scheme*: Reusable coffee mug deposit scheme; mitigating sanitization concerns with high-temp dishwashers.
-   - *V5 Licensing*: Enterprise software contracts; opting for rolling quarterly terms to accommodate restructuring.
-
-3. **Task 3: Extended Professional Interviews (Q3–Q7)**
-   - *V1*: Marcus Thorne on municipal acoustic architecture and civic soundscape design.
-   - *V2*: Dr. Julian Croft on exploratory Yucatan speleology and prehistoric cave archaeology.
-   - *V3*: Dr. Naomi Chen on Patagonian glacial acoustics and bio-acoustic ecosystem health.
-   - *V4*: Rachel Vance on nationwide cold-chain logistics, EV truck cooling draw, and warehouse robotics.
-   - *V5*: David Cho on modular appliance design, fighting planned obsolescence, and right-to-repair laws.
-
-4. **Task 4: Multi-Speaker Discussions (Q8–Q9)**
-   - *V1*: Designer garment rental subscriptions vs. dry-cleaning logistics.
-   - *V2*: Emergent player-driven storytelling vs. pre-scripted game narrative pacing.
-   - *V3*: Privatized commercial plazas vs. democratic civic public assembly.
-   - *V4*: Mandatory three-day corporate office attendance vs. quiet analytical remote work.
-   - *V5*: Supermarket self-checkout automation vs. cashier customer goodwill.
-
-5. **Task 5: 5-Speaker Multiple Matching (Q10–Q14)**
-   - *V1*: Personal motivations for marathon distance running (escapism, health scare, social club, race splits, travel).
-   - *V2*: Mid-life career transitions (offshore sailing, sensory gardening, physics teaching, artisan bakery, rare books).
-   - *V3*: Serendipitous career pivots (Pyrenees rescue dog, Tuscan cello luthier, antique botanist letter, Newcastle letterpress, Hebridean dialect).
-   - *V4*: Deciding to change commute methods (e-bike mental buffer, park-and-ride costs, carpooling camaraderie, walking for claustrophobia, off-peak rail table space).
-   - *V5*: Relocating from metropolises to small towns (affordable family garden, caregiving elderly parents, mountain hiking access, independent coffee roastery, escaping 3-hour transit).
-
-6. **Task 6: Monologue Sentence Completion (Q15–Q19)**
-   - *V1*: Coral reef micro-fragmentation and marine ecosystem restoration.
-   - *V2*: The 17th-century Kronan-Nord Baltic shipwreck and anoxic wood preservation.
-   - *V3*: Celtic rainforest temperate Atlantic woodland lichens as pollution bio-indicators.
-   - *V4*: Automated airport baggage handling networks, RFID tags, CT scanners, and aircraft turnaround metrics.
-   - *V5*: Municipal wastewater recycling facilities, membrane bioreactors, reverse osmosis, and industrial cooling towers.
 
 ---
 

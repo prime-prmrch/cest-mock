@@ -1,9 +1,15 @@
+# Ephemeral assets & scraping dumps
 official_docs/
 listening_screenshots/
 reading_screenshots/
 listening_audio/
 scraped_*.json
 *.png
-WRITING_MASTERY_GUIDE.md
-READING_AND_LISTENING_EXPLANATIONS.md
-TEST_SPEC_AND_COACHING_GUIDE.md
+!icons/*.png
+
+# Python & OS caches
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+Thumbs.db

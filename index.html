@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#003b70">
   <title>Cambridge English Skills Test (General) — Multi-Test Portal</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
   <style>
     :root {
       --primary: #003b70;
@@ -399,11 +405,34 @@
       </table>
     </div>
 
+    <!-- MASTER COACHING & PEDAGOGICAL GUIDES -->
+    <div class="info-card" style="border-left: 4px solid var(--secondary);">
+      <h3>📚 Master Coaching & Pedagogical Guides</h3>
+      <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:14px;">
+        Curriculum documentation, diagnostic rationales, and evaluation rubrics for tutors and candidates:
+      </p>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:12px;">
+        <a href="guides/WRITING_MASTERY_GUIDE.md" style="display:block; padding:14px 16px; background:var(--bg); border:1px solid var(--border); border-radius:10px; text-decoration:none; color:var(--text); transition:border-color 0.2s;">
+          <div style="font-weight:700; color:var(--primary); font-size:14.5px; margin-bottom:4px;">✍️ Writing Mastery Guide</div>
+          <div style="font-size:12.5px; color:var(--text-muted); line-height:1.45;">CEFR A2–C1 criteria, Task 1 &amp; 2 templates, high-band lexical scaffolds.</div>
+        </a>
+        <a href="guides/READING_AND_LISTENING_EXPLANATIONS.md" style="display:block; padding:14px 16px; background:var(--bg); border:1px solid var(--border); border-radius:10px; text-decoration:none; color:var(--text); transition:border-color 0.2s;">
+          <div style="font-weight:700; color:var(--primary); font-size:14.5px; margin-bottom:4px;">🔍 Reading &amp; Listening Explanations</div>
+          <div style="font-size:12.5px; color:var(--text-muted); line-height:1.45;">Item-by-item distractor analysis, lexical traps, and discourse markers.</div>
+        </a>
+        <a href="guides/TEST_SPEC_AND_COACHING_GUIDE.md" style="display:block; padding:14px 16px; background:var(--bg); border:1px solid var(--border); border-radius:10px; text-decoration:none; color:var(--text); transition:border-color 0.2s;">
+          <div style="font-weight:700; color:var(--primary); font-size:14.5px; margin-bottom:4px;">📋 Test Spec &amp; Coaching Guide</div>
+          <div style="font-size:12.5px; color:var(--text-muted); line-height:1.45;">Official Cambridge General specifications and tutor session frameworks.</div>
+        </a>
+      </div>
+    </div>
+
     <!-- DEVICE & OFFLINE GUIDELINES -->
     <div class="info-card">
-      <h3>📱 Device & Coaching Guidelines</h3>
+      <h3>📱 Device & Offline Guidelines (PWA Enabled)</h3>
       <ul style="font-size:13.5px; color:var(--text); padding-left:20px; line-height:1.7;">
-        <li><strong>iPhone (iOS Safari)</strong>: All touch targets are $\ge 48\text{px}$ and font sizes on inputs are $\ge 16\text{px}$ to prevent unwanted viewport zooming. Tap <em>Share &rarr; Add to Home Screen</em> for a distraction-free, app-like experience.</li>
+        <li><strong>iPhone (iOS Safari PWA)</strong>: All touch targets are $\ge 48\text{px}$ and font sizes on inputs are $\ge 16\text{px}$ to prevent unwanted viewport zooming. Tap <em>Share &rarr; Add to Home Screen</em> for a distraction-free standalone app.</li>
+        <li><strong>Offline Resilient</strong>: Core HTML, styling, scoring engines, and test items are automatically cached offline by the progressive service worker.</li>
         <li><strong>Windows Laptop</strong>: Full-screen browser layout with sticky audio progress and countdown timer.</li>
         <li><strong>Authentic Constraints</strong>: Audio tracks enforce a strict 2-play limit, simulating genuine Cambridge examination conditions.</li>
         <li><strong>One-Tap Coach Export</strong>: Upon test completion, students can copy their full diagnostic log, error analysis, and written responses to clipboard to share with their tutor.</li>
@@ -415,6 +444,18 @@
     </footer>
 
   </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').then((reg) => {
+          console.log('[SW] ServiceWorker active on scope:', reg.scope);
+        }).catch((err) => {
+          console.warn('[SW] ServiceWorker registration failed:', err);
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>

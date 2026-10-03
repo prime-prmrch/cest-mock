@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002548" />
+      <stop offset="50%" stop-color="#003b70" />
+      <stop offset="100%" stop-color="#0077b6" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd166" />
+      <stop offset="100%" stop-color="#f39c12" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background with smooth rounded edges -->
+  <rect width="512" height="512" rx="104" fill="url(#bgGrad)" />
+  
+  <!-- Subtle inner border -->
+  <rect x="16" y="16" width="480" height="480" rx="90" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4" />
+
+  <!-- Academic Crest Shield / Open Book Motif -->
+  <g transform="translate(106, 100)">
+    <!-- Book Left Page -->
+    <path d="M 150 70 C 100 45, 30 50, 10 65 L 10 240 C 30 225, 100 220, 150 245 Z" fill="#ffffff" opacity="0.95" />
+    <!-- Book Right Page -->
+    <path d="M 150 70 C 200 45, 270 50, 290 65 L 290 240 C 270 225, 200 220, 150 245 Z" fill="#ffffff" opacity="0.95" />
+    <!-- Center Spine Spine -->
+    <path d="M 150 68 L 150 247" stroke="#003b70" stroke-width="6" stroke-linecap="round" />
+    
+    <!-- Audio Waveforms / Signal Rings -->
+    <circle cx="150" cy="120" r="14" fill="url(#goldGrad)" />
+    <path d="M 115 105 C 100 115, 100 135, 115 145" fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round" />
+    <path d="M 185 105 C 200 115, 200 135, 185 145" fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round" />
+    <path d="M 90 90 C 70 110, 70 145, 90 165" fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round" />
+    <path d="M 210 90 C 230 110, 230 145, 210 165" fill="none" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography: CEST -->
+  <text x="256" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="52" fill="#ffffff" text-anchor="middle" letter-spacing="4">CEST MOCK</text>
+  <text x="256" y="420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="20" fill="#ffd166" text-anchor="middle" letter-spacing="2">CAMBRIDGE DIAGNOSTIC</text>
+</svg>

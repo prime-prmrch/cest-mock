@@ -262,96 +262,94 @@
 
   <div class="container">
 
-    <!-- TEST 1 CARD -->
-    <div class="test-card">
+    <!-- PROCEDURAL EXAM GENERATOR (HERO CARD) -->
+    <div class="test-card" style="border: 2px solid var(--secondary); background: linear-gradient(180deg, #ffffff 0%, #f8fbfe 100%);">
       <div class="card-top">
-        <span class="card-tag tag-blue">Standard Adaptive Benchmark</span>
-        <span class="test-num-badge">TEST 1</span>
+        <span class="card-tag tag-blue" style="font-size:12px; font-weight:800; letter-spacing:0.5px;">⚡ Dynamic Adaptive Simulator</span>
+        <span class="test-num-badge" style="background:var(--secondary); color:white;">PROCEDURAL</span>
       </div>
-      <div class="card-title">Mock Test 1: General Adaptive Baseline</div>
-      <div class="card-desc">
-        Balanced workplace and general communication registers. Features deep-sea robotics, Elena Vance's wildlife cinematography, marine bioluminescence, acoustic ecology in city squares, and coral reef restoration.
+      <div class="card-title" style="font-size:22px; color:var(--primary-dark);">🎲 Procedural Exam Generator</div>
+      <div class="card-desc" style="font-size:14.5px; line-height:1.6;">
+        Procedurally samples and synthesizes a calibrated <strong>52-item Cambridge Skills examination</strong> (Reading 33 Qs, Listening 19 Qs) plus <strong>2 Writing tasks</strong> directly from the verified item bank. Every session constructs a unique combination of reading passages, multi-accent listening audio, and cognitive distractors.
       </div>
-      <div class="specs-grid">
+      <div class="specs-grid" style="margin:16px 0;">
         <div>
-          <div class="spec-item-val">33 Qs</div>
-          <div class="spec-item-lbl">Reading</div>
+          <div class="spec-item-val" style="color:var(--primary);">33 Qs</div>
+          <div class="spec-item-lbl">Reading (9 Tasks)</div>
         </div>
         <div>
-          <div class="spec-item-val">19 Qs</div>
-          <div class="spec-item-lbl">Listening (2-Play)</div>
+          <div class="spec-item-val" style="color:var(--secondary);">19 Qs</div>
+          <div class="spec-item-lbl">Listening (6 Audio Tasks)</div>
         </div>
         <div>
-          <div class="spec-item-val">45 Min</div>
+          <div class="spec-item-val" style="color:var(--success);">45 Min</div>
           <div class="spec-item-lbl">Writing (2 Tasks)</div>
         </div>
+        <div>
+          <div class="spec-item-val" style="color:var(--primary-dark);">90 Min</div>
+          <div class="spec-item-lbl">Total Time Limit</div>
+        </div>
       </div>
-      <div class="button-group">
-        <a href="test.html?id=1" class="btn btn-launch">🚀 Launch Interactive Simulator</a>
-        <a href="mock_test_1/MOCK_TEST_1_PRINTABLE_STUDENT.md" class="btn btn-outline">📄 Student Paper</a>
-        <a href="mock_test_1/MOCK_TEST_1_COACH_KEY_AND_EXPLANATIONS.md" class="btn btn-outline">🔑 Coach Key</a>
+
+      <!-- Quick Launch Button -->
+      <div style="margin-bottom:18px;">
+        <a href="test.html" class="btn btn-launch" style="display:flex; justify-content:center; align-items:center; gap:8px; padding:14px 20px; font-size:16px; font-weight:700; border-radius:10px; text-decoration:none;">
+          <span>🚀 Launch Fresh Random Exam</span>
+        </a>
+      </div>
+
+      <!-- Seed Input Bar -->
+      <div style="background:#ffffff; border:1px solid var(--border); border-radius:10px; padding:14px; margin-bottom:14px;">
+        <div style="font-size:12.5px; font-weight:700; color:var(--primary-dark); margin-bottom:6px;">🎯 Synchronized Tutor &amp; Candidate Seed</div>
+        <p style="font-size:12px; color:var(--text-muted); margin-bottom:10px;">
+          Enter any alphanumeric or numeric seed code to generate the exact same test on multiple devices:
+        </p>
+        <form onsubmit="event.preventDefault(); launchSeed();" style="display:flex; gap:8px; flex-wrap:wrap;">
+          <input type="text" id="seedInput" placeholder="Enter seed code (e.g. UNAIR-B2, 849201)..." style="flex:1; min-width:200px; padding:8px 12px; border:1px solid var(--border); border-radius:6px; font-size:13.5px; font-family:monospace;">
+          <button type="submit" class="btn btn-secondary" style="padding:8px 16px; font-size:13px; font-weight:700; cursor:pointer;">Load Seeded Exam</button>
+        </form>
+      </div>
+
+      <!-- Seed Presets -->
+      <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:12px;">
+        <span style="font-weight:700; color:var(--text-muted);">Standard Seed Presets:</span>
+        <a href="test.html?seed=101" style="color:var(--primary); background:#e8f1fa; padding:4px 10px; border-radius:12px; text-decoration:none; font-weight:600;">#101 Commercial</a>
+        <a href="test.html?seed=202" style="color:var(--primary); background:#e8f1fa; padding:4px 10px; border-radius:12px; text-decoration:none; font-weight:600;">#202 Literary</a>
+        <a href="test.html?seed=303" style="color:var(--primary); background:#e8f1fa; padding:4px 10px; border-radius:12px; text-decoration:none; font-weight:600;">#303 Ecology</a>
       </div>
     </div>
 
-    <!-- TEST 2 CARD -->
-    <div class="test-card">
-      <div class="card-top">
-        <span class="card-tag tag-purple">Narrative & Literary Horizons</span>
-        <span class="test-num-badge">TEST 2</span>
-      </div>
-      <div class="card-title">Mock Test 2: Narrative & Literary Horizons</div>
-      <div class="card-desc">
-        Richly varied narrative and personal storytelling. Features a stormy sanctuary in a historic Welsh watermill printshop, Dr. Julian Croft's underwater cenote speleology, the 17th-century Kronan-Nord Baltic shipwreck, Dartmoor solitudes, and master craft restoration.
-      </div>
-      <div class="specs-grid">
-        <div>
-          <div class="spec-item-val">33 Qs</div>
-          <div class="spec-item-lbl">Reading</div>
+    <!-- PRINTABLE PAPERS & ARCHIVAL MOCKS -->
+    <div class="info-card" style="margin-bottom:20px;">
+      <h3 style="display:flex; justify-content:space-between; align-items:center;">
+        <span>📄 Printable Exam Papers &amp; Diagnostic Keys</span>
+        <span style="font-size:11px; font-weight:600; color:var(--text-muted);">PDF / Markdown</span>
+      </h3>
+      <p style="font-size:13px; color:var(--text-muted); margin-bottom:12px;">
+        Archival static papers for classroom printouts and manual grading:
+      </p>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:10px;">
+        <div style="padding:10px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px;">
+          <div style="font-weight:700; font-size:13px; color:var(--primary); margin-bottom:4px;">Mock Test 1 (Baseline)</div>
+          <div style="display:flex; gap:6px;">
+            <a href="mock_test_1/MOCK_TEST_1_PRINTABLE_STUDENT.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">📄 Student</a> &bull;
+            <a href="mock_test_1/MOCK_TEST_1_COACH_KEY_AND_EXPLANATIONS.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">🔑 Key</a>
+          </div>
         </div>
-        <div>
-          <div class="spec-item-val">19 Qs</div>
-          <div class="spec-item-lbl">Listening (2-Play)</div>
+        <div style="padding:10px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px;">
+          <div style="font-weight:700; font-size:13px; color:var(--primary); margin-bottom:4px;">Mock Test 2 (Literary)</div>
+          <div style="display:flex; gap:6px;">
+            <a href="mock_test_2/MOCK_TEST_2_PRINTABLE_STUDENT.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">📄 Student</a> &bull;
+            <a href="mock_test_2/MOCK_TEST_2_COACH_KEY_AND_EXPLANATIONS.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">🔑 Key</a>
+          </div>
         </div>
-        <div>
-          <div class="spec-item-val">45 Min</div>
-          <div class="spec-item-lbl">Writing (2 Tasks)</div>
+        <div style="padding:10px 12px; background:var(--bg); border:1px solid var(--border); border-radius:8px;">
+          <div style="font-weight:700; font-size:13px; color:var(--primary); margin-bottom:4px;">Mock Test 3 (Ecology)</div>
+          <div style="display:flex; gap:6px;">
+            <a href="mock_test_3/MOCK_TEST_3_PRINTABLE_STUDENT.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">📄 Student</a> &bull;
+            <a href="mock_test_3/MOCK_TEST_3_COACH_KEY_AND_EXPLANATIONS.md" style="font-size:11.5px; color:var(--secondary); text-decoration:none; font-weight:600;">🔑 Key</a>
+          </div>
         </div>
-      </div>
-      <div class="button-group">
-        <a href="test.html?id=2" class="btn btn-launch">🚀 Launch Interactive Simulator</a>
-        <a href="mock_test_2/MOCK_TEST_2_PRINTABLE_STUDENT.md" class="btn btn-outline">📄 Student Paper</a>
-        <a href="mock_test_2/MOCK_TEST_2_COACH_KEY_AND_EXPLANATIONS.md" class="btn btn-outline">🔑 Coach Key</a>
-      </div>
-    </div>
-
-    <!-- TEST 3 CARD -->
-    <div class="test-card">
-      <div class="card-top">
-        <span class="card-tag tag-emerald">Atmospheric Ecology & Deep Time</span>
-        <span class="test-num-badge">TEST 3</span>
-      </div>
-      <div class="card-title">Mock Test 3: Atmospheric Ecology & Deep Time</div>
-      <div class="card-desc">
-        Expeditionary science and historical crafts. Features Naomi Chen's Patagonian glacial acoustics, Dr. Alistair MacIntyre on temperate Celtic rainforest lichens, medieval monastic scriptoria, and Scottish river re-wilding.
-      </div>
-      <div class="specs-grid">
-        <div>
-          <div class="spec-item-val">33 Qs</div>
-          <div class="spec-item-lbl">Reading</div>
-        </div>
-        <div>
-          <div class="spec-item-val">19 Qs</div>
-          <div class="spec-item-lbl">Listening (2-Play)</div>
-        </div>
-        <div>
-          <div class="spec-item-val">45 Min</div>
-          <div class="spec-item-lbl">Writing (2 Tasks)</div>
-        </div>
-      </div>
-      <div class="button-group">
-        <a href="test.html?id=3" class="btn btn-launch">🚀 Launch Interactive Simulator</a>
-        <a href="mock_test_3/MOCK_TEST_3_PRINTABLE_STUDENT.md" class="btn btn-outline">📄 Student Paper</a>
-        <a href="mock_test_3/MOCK_TEST_3_COACH_KEY_AND_EXPLANATIONS.md" class="btn btn-outline">🔑 Coach Key</a>
       </div>
     </div>
 
@@ -446,6 +444,16 @@
   </div>
 
   <script>
+    function launchSeed() {
+      const input = document.getElementById('seedInput');
+      const val = (input && input.value) ? input.value.trim() : '';
+      if (val) {
+        window.location.href = `test.html?seed=${encodeURIComponent(val)}`;
+      } else {
+        window.location.href = 'test.html';
+      }
+    }
+
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js').then((reg) => {

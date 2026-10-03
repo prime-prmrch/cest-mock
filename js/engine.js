@@ -14,15 +14,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function initEngine() {
   const urlParams = new URLSearchParams(window.location.search);
-  currentTestId = parseInt(urlParams.get('id')) || 1;
-  if (![1, 2, 3].includes(currentTestId)) currentTestId = 1;
+  const seedParam = urlParams.get('seed');
+  const idParam = urlParams.get('id');
 
-  updatePortalNav(currentTestId);
+  // Procedural is the primary mode if seed is present or if no id is specified
+  const isProcedural = Boolean(seedParam || !idParam);
+  let activeSeed = seedParam ? seedParam.trim() : (idParam ? null : String(Math.floor(100000 + Math.random() * 900000)));
 
   try {
-    const res = await fetch(`data/test_${currentTestId}.json`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load test data.`);
-    currentTestData = await res.json();
+    if (isProcedural && window.CESTProcedural) {
+      const res = await fetch('data/bank.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load bank.json.`);
+      const bank = await res.json();
+      currentTestData = window.CESTProcedural.assembleTest(bank, activeSeed);
+      currentTestId = activeSeed;
+      updatePortalNavProcedural(activeSeed);
+    } else {
+      currentTestId = parseInt(idParam) || 1;
+      if (![1, 2, 3].includes(currentTestId)) currentTestId = 1;
+      updatePortalNav(currentTestId);
+      const res = await fetch(`data/test_${currentTestId}.json`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load test data.`);
+      currentTestData = await res.json();
+    }
+
     renderExam(currentTestData);
     loadSavedState();
     startTimer((currentTestData.durationMinutes || 90) * 60);
@@ -31,10 +46,36 @@ async function initEngine() {
     document.querySelector('.container').innerHTML = `
       <div class="task-card" style="text-align:center; padding:40px 20px;">
         <h2 style="color:var(--danger); margin-bottom:12px;">Failed to Load Test Data</h2>
-        <p style="color:var(--text-muted); margin-bottom:20px;">Could not retrieve <code>data/test_${currentTestId}.json</code>. Please verify that the file exists and reload.</p>
+        <p style="color:var(--text-muted); margin-bottom:20px;">Could not retrieve test content. Please verify data files and reload.</p>
         <a href="index.html" class="btn btn-primary" style="display:inline-block;">Return to Portal Hub</a>
       </div>
     `;
+  }
+}
+
+function updatePortalNavProcedural(seed) {
+  const portalBar = document.querySelector('.portal-bar');
+  if (!portalBar) return;
+  portalBar.innerHTML = `
+    <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+      <a href="index.html" style="color:var(--secondary); text-decoration:none; padding:3px 8px; border-radius:4px; font-weight:700;">&#127968; Hub</a>
+      <span style="background:#e8f1fa; color:var(--primary); padding:2px 8px; border-radius:12px; font-size:11px; font-weight:700;">🎲 Seed #${escapeHtml(seed)}</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:8px;">
+      <button type="button" onclick="copySeedLink('${escapeHtml(seed)}')" style="background:var(--secondary); color:white; border:none; border-radius:4px; padding:4px 10px; font-size:11px; font-weight:700; cursor:pointer;">🔗 Share Seed</button>
+      <a href="test.html" style="background:#f1f5f9; color:var(--text); text-decoration:none; border-radius:4px; padding:4px 10px; font-size:11px; font-weight:700;">🔄 New Random</a>
+    </div>
+  `;
+}
+
+function copySeedLink(seed) {
+  const shareUrl = `${window.location.origin}${window.location.pathname}?seed=${encodeURIComponent(seed)}`;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      showToast(`Copied Exam Link (Seed #${seed}) to clipboard!`);
+    }).catch(() => fallbackCopy(shareUrl));
+  } else {
+    fallbackCopy(shareUrl);
   }
 }
 
@@ -135,7 +176,7 @@ function renderListeningTask(task, audioDir) {
         </div>
         <span class="audio-time-label" id="${timeId}">0:00</span>
       </div>
-      <audio id="${audioId}" preload="none" src="${audioDir}${task.audioTrack}"></audio>
+      <audio id="${audioId}" preload="none" src="${(task.audioTrack.startsWith('audio/') || task.audioTrack.startsWith('mock_test_')) ? task.audioTrack : (audioDir || '') + task.audioTrack}"></audio>
     </div>
   `;
 

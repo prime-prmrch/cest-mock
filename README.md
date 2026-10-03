@@ -1,49 +1,93 @@
-# Cambridge English Skills Test (General) — Diagnostic Practice Suite
+# Cambridge English Skills Test (General) — Procedural Diagnostic Suite
 
 [![Live Portal](https://img.shields.io/badge/Live%20Portal-GitHub%20Pages-0077b6?style=flat-square)](https://prime-prmrch.github.io/cest-mock/)
-[![PWA](https://img.shields.io/badge/PWA-Offline%20Ready-success?style=flat-square)](#-progressive-web-app-pwa--offline-caching)
-[![TTS Engine](https://img.shields.io/badge/Audio-Edge--TTS%20Neural-purple?style=flat-square)](#-audio-synthesis-tooling)
+[![Engine](https://img.shields.io/badge/Engine-Procedural%20PRNG-blueviolet?style=flat-square)](#-procedural-exam-generator--seed-synchronization)
+[![PWA](https://img.shields.io/badge/PWA-Full%20Offline%20Ready-success?style=flat-square)](#-progressive-web-app-pwa--offline-caching)
+[![TTS Engine](https://img.shields.io/badge/Audio-30%20Neural%20Tracks-purple?style=flat-square)](#-expanded-neural-listening-bank-30-tracks)
 
-An interactive, responsive multi-test preparation and diagnostic suite calibrated to the official **Cambridge English Skills Test (General Category)** specifications.
+An interactive, responsive procedural test preparation and diagnostic suite calibrated to the official **Cambridge English Skills Test (General Category)** specifications.
 
 **Live Application**: [https://prime-prmrch.github.io/cest-mock/](https://prime-prmrch.github.io/cest-mock/)
 
-Designed specifically for coaching and student assessment across **mobile devices (iOS Safari)** and **Windows desktop/laptop** browsers.
+Designed for high-stakes coaching and candidate diagnostic assessment across **mobile devices (iOS Safari PWA)** and **Windows desktop/laptop** browsers.
 
 ---
 
 ## 🎯 Test Suite Overview
 
-This repository provides three complete, distinct mock examinations assessing communicative competence across **CEFR Levels A2 to C1** across three non-speaking components:
+Every session procedurally constructs a complete, psychometrically calibrated mock examination assessing communicative competence across **CEFR Levels A2 to C1**:
 
 | Component | Tasks & Structure | Items / Timing | Format & Design |
 | :--- | :--- | :---: | :--- |
-| **Reading** | Notices, Sentence Cloze, Open Cloze, Vocab Cloze, Extended Text, Short Article, Gapped Sentences, Gapped Paragraphs, Multiple Matching | **33 Questions** | Authentic communicative, literary, and scientific registers. |
-| **Listening** | Short Dialogues, Extended Interviews, Multi-Speaker Discussions, Multiple Matching, Sentence Completion | **19 Questions** | Diverse native accents (British, Australian, American) synthesized via Edge-TTS neural voices, enforcing an authentic **2-play maximum audio limit**. |
+| **Reading** | Notices (T1), Sentence Cloze (T2), Open Cloze (T3), Vocab Cloze (T4), Extended Text (T5), Short Article (T6), Gapped Sentences (T7), Gapped Paragraphs (T8), Multiple Matching (T9) | **33 Questions** | Authentic communicative, commercial, literary, and scientific registers sampled from the item bank. |
+| **Listening** | Short Transactional Dialogue (T1), Workplace Exchange (T2), Extended Interview (T3), Multi-Speaker Discussion (T4), Multiple Matching (T5), Sentence Completion (T6) | **19 Questions** | Diverse native accents (British, Australian, American) synthesized via Edge-TTS neural voices, enforcing an authentic **2-play maximum audio limit**. |
 | **Writing** | Part 1: Communicative/Narrative Task (150–180 words)<br>Part 2: Feature Essay/Article (220–260 words) | **2 Tasks** | Dedicated **45-minute countdown**, live word count monitoring, and local storage auto-save. |
 
-*Speaking is strictly excluded in accordance with targeted coaching specifications.*
+*Speaking is excluded in accordance with targeted coaching specifications.*
 
 ---
 
-## 📚 Mock Test Modules
+## 🎲 Procedural Exam Generator & Seed Synchronization
 
-The test suite is powered by a decoupled frontend engine (`test.html`, `js/engine.js`, `js/scoring.js`, `css/style.css`) driven by JSON data configurations (`data/index.json`, `mock_test_1/test_data.json`, `mock_test_2/test_data.json`, `mock_test_3/test_data.json`), with automatic local state persistence.
+Instead of a static set of fixed papers, the simulator features a **client-side procedural assembler** driven by a deterministic Mulberry32 Pseudo-Random Number Generator:
 
-### 📘 [Mock Test 1: General Adaptive Baseline](https://prime-prmrch.github.io/cest-mock/test.html?id=1)
-- **Reading Themes**: Deep-sea autonomous robotics, Elena Vance's wildlife cinematography, marine bioluminescence, acoustic ecology in city squares.
-- **Listening Tracks**: Lost property at a cafe, professional scheduling workshop, Marcus Thorne acoustic architecture interview, sustainable fashion rental debate, 5 runner monologues, coral reef micro-fragmentation restoration.
-- **Writing**: Part 1 Narrative letter on an unexpected 1880s botanical field journal discovered in a coastal library archive; Part 2 Critical feature article on *"The Lost Art of Browsing: Why Physical Bookshops and Uncurated Shelves Matter in a Digital Age"*.
+- **Instant Random Exam**: Clicking **"Launch Fresh Random Exam"** generates a fresh 6-digit seed (e.g., `#849201`), assembling a unique test configuration in milliseconds with zero server latency.
+- **Tutor & Candidate Synchronization**: Enter any custom alphanumeric seed (e.g., `UNAIR-B2-01` or `748291`) to generate the identical test across different devices for homework or synchronized mock exam sessions.
+- **One-Tap Share Link**: Tutors can tap **"Share Seed"** directly in the test header to copy the exact URL (`test.html?seed=XYZ`) to the clipboard.
+- **Combinatorics**: With 5 variants across all 6 listening task slots and modular reading pools, candidates can take thousands of distinct exams without repetitive item fatigue.
 
-### 🎨 [Mock Test 2: Narrative & Literary Horizons](https://prime-prmrch.github.io/cest-mock/test.html?id=2)
-- **Reading Themes**: Antiquarian Manuscript Reading Room rules, Hay-on-Wye book town origins, traditional boxwood engraving, Dartmoor granite solitude travel memoir, olfactory neuroscience (Proustian phenomenon), Renaissance phantom islands (Hy-Brasil), revival of hand-penned fountain pen letters, four master antique restorers (horologist, bookbinder, pipe organ voicer, stained-glass glazier).
-- **Listening Tracks**: Lost leather sketchbook on Edinburgh express, kitchen power outage and wood-fired cooking adaptation, Dr. Julian Croft subterranean cenote speleology interview, Marcus and Elena on emergent video game storytelling, 5 mid-life career transition accounts, Dr. Maya Lin on the 17th-century Kronan-Nord Baltic shipwreck.
-- **Writing**: Part 1 Narrative letter recounting an unexpected storm sanctuary in a historic Welsh watermill bookbindery; Part 2 Critical literary essay on *"The Voice and the Page: Audiobooks and the Architecture of Reading"*.
+### Standard Seed Presets
+- [Seed #101 (Baseline Commercial)](https://prime-prmrch.github.io/cest-mock/test.html?seed=101)
+- [Seed #202 (Narrative & Literary)](https://prime-prmrch.github.io/cest-mock/test.html?seed=202)
+- [Seed #303 (Ecology & Deep Time)](https://prime-prmrch.github.io/cest-mock/test.html?seed=303)
 
-### 🌿 [Mock Test 3: Atmospheric Ecology & Deep Time](https://prime-prmrch.github.io/cest-mock/test.html?id=3)
-- **Reading Themes**: Movable letterpress studio regulations, Saint Paul's Cathedral whispering gallery wave physics, alchemy of Renaissance lapis lazuli pigments, Arctic glaciology field memoir on Nordenskiöld Glacier, cognitive value of solitude (default mode network), medieval monastic scriptoria labor and colophons, European river re-wilding and beaver hydrology, four literary translators on preserving cultural texture and voice.
-- **Listening Tracks**: Antique brass navigational compass in botanical conservatory, architects evaluating a 4-day working week pilot, Naomi Chen Patagonian glacial acoustic ecology interview, privatized commercial plazas debate, 5 serendipitous career pivot accounts, Dr. Alistair MacIntyre on temperate Celtic rainforest lichens and bio-indicators.
-- **Writing**: Part 1 Narrative field dispatch reporting an extraordinary nocturnal fall of exhausted migrant songbirds in fog at a coastal bird observatory; Part 2 Discursive essay on *"The Reclamation of Darkness: Artificial Light, Ecology, and the Lost Night Sky"*.
+---
+
+## 🎙️ Expanded Neural Listening Bank (30 Tracks)
+
+All listening tasks feature authentic communicative friction, conversational self-repair, and conceptual paraphrasing—eliminating superficial "lost-and-found" tropes:
+
+1. **Task 1: Short Transactional Dialogues (Q1)**
+   - *V1 Transit*: Rail line maintenance, replacement coach congestion vs. scenic rail detour.
+   - *V2 Warranty*: Hardware phantom power failure; direct replacement vs. 10-day diagnostic inspection delay.
+   - *V3 Logistics*: Regional showroom freight delay; redirecting delivery to industrial depot for morning pickup.
+   - *V4 Furniture*: Bespoke office meeting pod; swapping rectangular tables to circular profiles to clear fire exits.
+   - *V5 Catering*: Corporate workshop booking; meeting lunch package threshold to waive room hire charges.
+
+2. **Task 2: Collaborative Workplace Discussions (Q2)**
+   - *V1 Systems*: Database connector delay; hiring temporary data clerks to manage manual records backlog.
+   - *V2 Retail*: Weekend inventory flu absences; swapping shifts with restocking crew to avoid overtime penalties.
+   - *V3 Marketing*: Digital display banner ROI failure; reallocating budget to industry technical newsletters.
+   - *V4 Eco-Scheme*: Reusable coffee mug deposit scheme; mitigating sanitization concerns with high-temp dishwashers.
+   - *V5 Licensing*: Enterprise software contracts; opting for rolling quarterly terms to accommodate restructuring.
+
+3. **Task 3: Extended Professional Interviews (Q3–Q7)**
+   - *V1*: Marcus Thorne on municipal acoustic architecture and civic soundscape design.
+   - *V2*: Dr. Julian Croft on exploratory Yucatan speleology and prehistoric cave archaeology.
+   - *V3*: Dr. Naomi Chen on Patagonian glacial acoustics and bio-acoustic ecosystem health.
+   - *V4*: Rachel Vance on nationwide cold-chain logistics, EV truck cooling draw, and warehouse robotics.
+   - *V5*: David Cho on modular appliance design, fighting planned obsolescence, and right-to-repair laws.
+
+4. **Task 4: Multi-Speaker Discussions (Q8–Q9)**
+   - *V1*: Designer garment rental subscriptions vs. dry-cleaning logistics.
+   - *V2*: Emergent player-driven storytelling vs. pre-scripted game narrative pacing.
+   - *V3*: Privatized commercial plazas vs. democratic civic public assembly.
+   - *V4*: Mandatory three-day corporate office attendance vs. quiet analytical remote work.
+   - *V5*: Supermarket self-checkout automation vs. cashier customer goodwill.
+
+5. **Task 5: 5-Speaker Multiple Matching (Q10–Q14)**
+   - *V1*: Personal motivations for marathon distance running (escapism, health scare, social club, race splits, travel).
+   - *V2*: Mid-life career transitions (offshore sailing, sensory gardening, physics teaching, artisan bakery, rare books).
+   - *V3*: Serendipitous career pivots (Pyrenees rescue dog, Tuscan cello luthier, antique botanist letter, Newcastle letterpress, Hebridean dialect).
+   - *V4*: Deciding to change commute methods (e-bike mental buffer, park-and-ride costs, carpooling camaraderie, walking for claustrophobia, off-peak rail table space).
+   - *V5*: Relocating from metropolises to small towns (affordable family garden, caregiving elderly parents, mountain hiking access, independent coffee roastery, escaping 3-hour transit).
+
+6. **Task 6: Monologue Sentence Completion (Q15–Q19)**
+   - *V1*: Coral reef micro-fragmentation and marine ecosystem restoration.
+   - *V2*: The 17th-century Kronan-Nord Baltic shipwreck and anoxic wood preservation.
+   - *V3*: Celtic rainforest temperate Atlantic woodland lichens as pollution bio-indicators.
+   - *V4*: Automated airport baggage handling networks, RFID tags, CT scanners, and aircraft turnaround metrics.
+   - *V5*: Municipal wastewater recycling facilities, membrane bioreactors, reverse osmosis, and industrial cooling towers.
 
 ---
 
@@ -66,49 +110,37 @@ Scoring is calibrated across the **52 objective items** (Reading 33 + Listening 
 Comprehensive documentation for tutors, examiners, and candidates located in [`guides/`](guides/):
 
 - [Writing Mastery Guide](guides/WRITING_MASTERY_GUIDE.md): Structural templates, CEFR A2–C1 assessment rubrics, cohesion mechanics, and lexical banks for Task 1 (Narrative) and Task 2 (Discursive/Feature Essay).
-- [Reading & Listening Explanations](guides/READING_AND_LISTENING_EXPLANATIONS.md): Item-by-item diagnostic rationales, distractor anatomy, and discourse markers for all 52 objective items across Mock Tests 1–3.
+- [Reading & Listening Explanations](guides/READING_AND_LISTENING_EXPLANATIONS.md): Item-by-item diagnostic rationales, distractor anatomy, and discourse markers for all objective items across the test bank.
 - [Test Specification & Coaching Guide](guides/TEST_SPEC_AND_COACHING_GUIDE.md): Institutional specifications, syllabus mapping, time management protocols, and diagnostic session frameworks.
 
 ---
 
 ## 📱 Progressive Web App (PWA) & Offline Caching
 
-The application is a fully configured Progressive Web App:
-- **Service Worker (`sw.js`)**: Automatically pre-caches the application shell (`index.html`, `test.html`, `css/style.css`, `js/engine.js`, `js/scoring.js`) and all test JSON data.
-- **On-Demand Audio Caching**: Audio tracks are dynamically cached upon initial playback, enabling offline practice during commutes or low-connectivity environments.
+The application is a standalone Progressive Web App:
+- **Service Worker (`sw.js`)**: Automatically pre-caches the application shell (`index.html`, `test.html`, `css/style.css`, `js/engine.js`, `js/scoring.js`, `js/procedural.js`) and `data/bank.json`.
+- **Background Audio Pre-Caching**: The Service Worker pre-caches all 30 audio tracks in the background, allowing candidates to practice procedurally generated tests offline during commutes without an internet connection.
 - **Home Screen Installation**:
-  - **iOS Safari**: Tap the **Share** button $\rightarrow$ **Add to Home Screen**. Launches in standalone fullscreen mode without browser URL chrome.
+  - **iOS Safari**: Tap **Share** $\rightarrow$ **Add to Home Screen**. Launches in standalone fullscreen mode without browser URL chrome.
   - **Android / Chrome / Desktop**: Tap the install badge in the address bar or select **Install App** from the browser menu.
-- **Mobile Touch Optimization**: Inputs maintain $\ge 16\text{px}$ font size to avoid iOS zoom jumps; buttons and controls maintain $\ge 48\text{px}$ touch targets.
+- **Touch Ergonomics**: All input targets maintain $\ge 16\text{px}$ font sizes to eliminate iOS viewport zoom jumps; buttons and controls maintain $\ge 48\text{px}$ hit areas.
 
 ---
 
-## 🎙️ Audio Synthesis Tooling
-
-The audio generation scripts are housed in [`tools/`](tools/), utilizing Microsoft `edge-tts` neural voices (`en-GB-SoniaNeural`, `en-GB-RyanNeural`, `en-GB-LibbyNeural`, `en-AU-NatashaNeural`, `en-US-JennyNeural`, etc.):
+## 🛠️ Local Development & Audio Generation
 
 ```bash
-# Setup
+# Clone and enter repo
+git clone https://github.com/prime-prmrch/cest-mock.git
+cd cest-mock
+
+# Run local web server
+python -m http.server 8080
+# Open http://localhost:8080 in your browser
+
+# Audio Tooling (Edge-TTS)
 cd tools
 pip install -r requirements.txt
-
-# Verify or regenerate all mock test listening audio
-python generate_mock_audio.py
-
-# Force re-synthesis
-python generate_mock_audio.py --force
-
-# Custom voice synthesis
-python voice_gen.py speak --text "Cambridge English Skills Test." --voice en-GB-RyanNeural --output test.mp3
+python build_bank.py
+python synthesize_bank_audio.py
 ```
-
----
-
-## 🛠️ Local Development
-
-To run the simulator locally:
-```bash
-# Double-click run_mock_test.bat (Windows) or execute via shell:
-python -m http.server 8080
-```
-Open `http://localhost:8080` in your web browser.

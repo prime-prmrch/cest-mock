@@ -1,34 +1,60 @@
 /**
  * Service Worker for Cambridge English Skills Simulator (CEST Mock)
- * Provides progressive offline caching for core application assets and on-demand audio caching.
+ * Provides progressive offline caching for core application assets and background audio pre-caching.
  */
 
-const STATIC_CACHE = 'cest-mock-static-v1';
-const AUDIO_CACHE = 'cest-mock-audio-v1';
+const STATIC_CACHE = 'cest-mock-static-v2';
+const AUDIO_CACHE = 'cest-mock-audio-v2';
 
 const STATIC_ASSETS = [
   './',
   './index.html',
   './test.html',
   './css/style.css',
-  './js/engine.js',
   './js/scoring.js',
+  './js/procedural.js',
+  './js/engine.js',
   './manifest.json',
   './icons/icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './data/index.json',
-  './mock_test_1/test_data.json',
-  './mock_test_2/test_data.json',
-  './mock_test_3/test_data.json'
+  './data/bank.json',
+  './data/test_1.json',
+  './data/test_2.json',
+  './data/test_3.json'
 ];
 
-// Install: pre-cache application shell and core data
+const ALL_AUDIO_TRACKS = [
+  './audio/task1_v1.mp3', './audio/task1_v2.mp3', './audio/task1_v3.mp3', './audio/task1_v4.mp3', './audio/task1_v5.mp3',
+  './audio/task2_v1.mp3', './audio/task2_v2.mp3', './audio/task2_v3.mp3', './audio/task2_v4.mp3', './audio/task2_v5.mp3',
+  './audio/task3_v1.mp3', './audio/task3_v2.mp3', './audio/task3_v3.mp3', './audio/task3_v4.mp3', './audio/task3_v5.mp3',
+  './audio/task4_v1.mp3', './audio/task4_v2.mp3', './audio/task4_v3.mp3', './audio/task4_v4.mp3', './audio/task4_v5.mp3',
+  './audio/task5_v1.mp3', './audio/task5_v2.mp3', './audio/task5_v3.mp3', './audio/task5_v4.mp3', './audio/task5_v5.mp3',
+  './audio/task6_v1.mp3', './audio/task6_v2.mp3', './audio/task6_v3.mp3', './audio/task6_v4.mp3', './audio/task6_v5.mp3'
+];
+
+// Install: pre-cache application shell and core data, then queue background audio cache
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE).then((cache) => {
       return cache.addAll(STATIC_ASSETS);
-    }).then(() => self.skipWaiting())
+    }).then(() => {
+      // Background non-blocking audio pre-cache
+      caches.open(AUDIO_CACHE).then(async (audioCache) => {
+        for (const track of ALL_AUDIO_TRACKS) {
+          try {
+            const match = await audioCache.match(track);
+            if (!match) {
+              const resp = await fetch(track);
+              if (resp.ok) await audioCache.put(track, resp);
+            }
+          } catch (e) {
+            console.warn('[SW] Could not pre-cache audio track:', track, e);
+          }
+        }
+      });
+      return self.skipWaiting();
+    })
   );
 });
 
@@ -58,7 +84,10 @@ self.addEventListener('fetch', (event) => {
   if (url.pathname.endsWith('.mp3')) {
     event.respondWith(
       caches.open(AUDIO_CACHE).then(async (cache) => {
-        const cached = await cache.match(url.pathname, { ignoreSearch: true });
+        // Try multiple URL path match strategies (absolute and relative)
+        const cached = (await cache.match(url.pathname, { ignoreSearch: true })) ||
+                       (await cache.match(request.url, { ignoreSearch: true })) ||
+                       (await cache.match(`.${url.pathname.substring(url.pathname.lastIndexOf('/audio/'))}`, { ignoreSearch: true }));
         if (cached) {
           return cached;
         }
@@ -96,29 +125,4 @@ self.addEventListener('fetch', (event) => {
       return cachedResponse || fetchPromise;
     })
   );
-});
-
-// Message listener for batch pre-caching audio on demand
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.action === 'CACHE_AUDIO_URLS') {
-    const urls = event.data.urls || [];
-    event.waitUntil(
-      caches.open(AUDIO_CACHE).then(async (cache) => {
-        for (const audioUrl of urls) {
-          try {
-            const pathKey = new URL(audioUrl, self.location.href).pathname;
-            const existing = await cache.match(pathKey);
-            if (!existing) {
-              const res = await fetch(audioUrl);
-              if (res.ok) {
-                await cache.put(pathKey, res);
-              }
-            }
-          } catch (e) {
-            console.warn('[SW] Could not precache audio:', audioUrl, e);
-          }
-        }
-      })
-    );
-  }
 });

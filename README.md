@@ -30,14 +30,7 @@ Instead of a static set of fixed papers, the simulator features a **client-side 
 - **Tutor & Candidate Synchronization**: Enter any custom alphanumeric seed (e.g., `UNAIR-B2-01` or `748291`) to generate the identical test across different devices for homework or synchronized mock exam sessions.
 - **One-Tap Share Link**: Tutors can tap **"Share Seed"** directly in the test header to copy the exact URL (`test.html?seed=XYZ`) to the clipboard.
 - **Combinatorics**: With 5 variants across all 6 listening task slots and modular reading pools, candidates can take thousands of distinct exams without repetitive item fatigue.
-
-### Standard Seed Presets
-- [Seed #101 (Baseline Commercial)](https://prime-prmrch.github.io/cest-mock/test.html?seed=101)
-- [Seed #202 (Narrative & Literary)](https://prime-prmrch.github.io/cest-mock/test.html?seed=202)
-- [Seed #303 (Ecology & Deep Time)](https://prime-prmrch.github.io/cest-mock/test.html?seed=303)
-
 ---
-
 ## 📈 CEFR Diagnostic Banding Matrix
 
 Scoring is calibrated across the **52 objective items** (Reading 33 + Listening 19):

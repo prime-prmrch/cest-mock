@@ -13,3 +13,8 @@ __pycache__/
 *$py.class
 .DS_Store
 Thumbs.db
+
+# Internal Institutional Proposals (Local Only)
+EXECUTIVE_PROPOSAL.md
+PROPOSAL_EKSEKUTIF_ID.md
+*PROPOSAL*.md

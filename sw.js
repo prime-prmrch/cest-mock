@@ -3,7 +3,7 @@
  * Provides progressive offline caching for core application assets and background audio pre-caching.
  */
 
-const STATIC_CACHE = 'cest-mock-static-v3';
+const STATIC_CACHE = 'cest-mock-static-v4';
 const AUDIO_CACHE = 'cest-mock-audio-v2';
 
 const STATIC_ASSETS = [
@@ -18,10 +18,7 @@ const STATIC_ASSETS = [
   './icons/icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './data/bank.json',
-  './data/test_1.json',
-  './data/test_2.json',
-  './data/test_3.json'
+  './data/bank.json'
 ];
 
 const ALL_AUDIO_TRACKS = [
@@ -107,22 +104,18 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // App shell & Data: Cache-first with background network update (Stale-While-Revalidate)
+  // App shell, documents, scripts, styles, data: Network-First with offline cache fallback
   event.respondWith(
-    caches.match(request, { ignoreSearch: false }).then((cachedResponse) => {
-      const fetchPromise = fetch(request).then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200) {
-          const responseToCache = networkResponse.clone();
-          caches.open(STATIC_CACHE).then((cache) => {
-            cache.put(request, responseToCache);
-          });
-        }
-        return networkResponse;
-      }).catch((err) => {
-        return cachedResponse;
-      });
-
-      return cachedResponse || fetchPromise;
+    fetch(request).then((networkResponse) => {
+      if (networkResponse && networkResponse.status === 200) {
+        const responseToCache = networkResponse.clone();
+        caches.open(STATIC_CACHE).then((cache) => {
+          cache.put(request, responseToCache);
+        });
+      }
+      return networkResponse;
+    }).catch(() => {
+      return caches.match(request, { ignoreSearch: false });
     })
   );
 });

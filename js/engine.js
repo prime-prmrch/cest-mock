@@ -17,23 +17,33 @@ async function initEngine() {
   const seedParam = urlParams.get('seed');
   const idParam = urlParams.get('id');
 
-  // Procedural is the primary mode if seed is present or if no id is specified
-  const isProcedural = Boolean(seedParam || !idParam);
-  let activeSeed = seedParam ? seedParam.trim() : (idParam ? null : String(Math.floor(100000 + Math.random() * 900000)));
+  // Procedural is the primary mode
+  const isArchival = Boolean(idParam && [1, 2, 3].includes(parseInt(idParam)));
+  let activeSeed = seedParam ? seedParam.trim() : String(Math.floor(100000 + Math.random() * 900000));
 
   try {
-    if (isProcedural && window.CESTProcedural) {
-      const res = await fetch('data/bank.json');
+    if (!isArchival) {
+      // Ensure procedural script is dynamically loaded if not already present
+      if (!window.CESTProcedural) {
+        await new Promise((resolve, reject) => {
+          const s = document.createElement('script');
+          s.src = `js/procedural.js?v=4`;
+          s.onload = resolve;
+          s.onerror = () => reject(new Error('Failed to load procedural library'));
+          document.head.appendChild(s);
+        });
+      }
+
+      const res = await fetch('data/bank.json?v=4');
       if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load bank.json.`);
       const bank = await res.json();
       currentTestData = window.CESTProcedural.assembleTest(bank, activeSeed);
       currentTestId = activeSeed;
       updatePortalNavProcedural(activeSeed);
     } else {
-      currentTestId = parseInt(idParam) || 1;
-      if (![1, 2, 3].includes(currentTestId)) currentTestId = 1;
+      currentTestId = parseInt(idParam);
       updatePortalNav(currentTestId);
-      const res = await fetch(`data/test_${currentTestId}.json`);
+      const res = await fetch(`data/test_${currentTestId}.json?v=4`);
       if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load test data.`);
       currentTestData = await res.json();
     }

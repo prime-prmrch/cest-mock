@@ -422,10 +422,13 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js').then((reg) => {
-          console.log('[SW] ServiceWorker active on scope:', reg.scope);
+          reg.update();
         }).catch((err) => {
           console.warn('[SW] ServiceWorker registration failed:', err);
         });
+      });
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
       });
     }
   </script>

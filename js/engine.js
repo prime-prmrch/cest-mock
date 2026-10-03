@@ -7,6 +7,8 @@ let currentTestData = null;
 let currentTestId = 1;
 const audioPlays = {};
 let timerInterval = null;
+window._examTargetEndTime = null;
+window._examIsSubmitted = false;
 
 document.addEventListener('DOMContentLoaded', () => {
   initEngine();
@@ -19,7 +21,39 @@ async function initEngine() {
 
   // Procedural is the primary mode
   const isArchival = Boolean(idParam && [1, 2, 3].includes(parseInt(idParam)));
-  let activeSeed = seedParam ? seedParam.trim() : String(Math.floor(100000 + Math.random() * 900000));
+  let activeSeed;
+
+  if (isArchival) {
+    currentTestId = parseInt(idParam);
+    updatePortalNav(currentTestId);
+  } else {
+    // Check if explicit seed passed in URL, or resume active session from localStorage
+    if (seedParam && seedParam.trim()) {
+      activeSeed = seedParam.trim();
+    } else {
+      const savedActiveSeed = localStorage.getItem('cest_active_seed');
+      if (savedActiveSeed && savedActiveSeed.trim()) {
+        activeSeed = savedActiveSeed.trim();
+      } else {
+        activeSeed = String(Math.floor(100000 + Math.random() * 900000));
+      }
+    }
+
+    currentTestId = activeSeed;
+    try {
+      localStorage.setItem('cest_active_seed', activeSeed);
+    } catch (e) {
+      console.warn("Storage write error:", e);
+    }
+
+    // Synchronize address bar so page reloads permanently stay on this seed
+    if (!window.location.search.includes(`seed=${encodeURIComponent(activeSeed)}`)) {
+      const newUrl = `${window.location.pathname}?seed=${encodeURIComponent(activeSeed)}`;
+      window.history.replaceState({ seed: activeSeed }, '', newUrl);
+    }
+
+    updatePortalNavProcedural(activeSeed);
+  }
 
   try {
     if (!isArchival) {
@@ -27,30 +61,26 @@ async function initEngine() {
       if (!window.CESTProcedural) {
         await new Promise((resolve, reject) => {
           const s = document.createElement('script');
-          s.src = `js/procedural.js?v=5`;
+          s.src = `js/procedural.js?v=6`;
           s.onload = resolve;
           s.onerror = () => reject(new Error('Failed to load procedural library'));
           document.head.appendChild(s);
         });
       }
 
-      const res = await fetch('data/bank.json?v=5');
+      const res = await fetch('data/bank.json?v=6');
       if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load bank.json.`);
       const bank = await res.json();
       currentTestData = window.CESTProcedural.assembleTest(bank, activeSeed);
-      currentTestId = activeSeed;
-      updatePortalNavProcedural(activeSeed);
     } else {
-      currentTestId = parseInt(idParam);
-      updatePortalNav(currentTestId);
-      const res = await fetch(`data/test_${currentTestId}.json?v=4`);
+      const res = await fetch(`data/test_${currentTestId}.json?v=6`);
       if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load test data.`);
       currentTestData = await res.json();
     }
 
     renderExam(currentTestData);
     loadSavedState();
-    startTimer((currentTestData.durationMinutes || 90) * 60);
+    startTimer(currentTestData.durationMinutes || 90);
   } catch (err) {
     console.error("Test initialization error:", err);
     document.querySelector('.container').innerHTML = `
@@ -73,9 +103,19 @@ function updatePortalNavProcedural(seed) {
     </div>
     <div style="display:flex; align-items:center; gap:8px;">
       <button type="button" onclick="copySeedLink('${escapeHtml(seed)}')" style="background:var(--secondary); color:white; border:none; border-radius:4px; padding:4px 10px; font-size:11px; font-weight:700; cursor:pointer;">🔗 Share Seed</button>
-      <a href="test.html" style="background:#f1f5f9; color:var(--text); text-decoration:none; border-radius:4px; padding:4px 10px; font-size:11px; font-weight:700;">🔄 New Random</a>
+      <button type="button" onclick="startNewExam()" style="background:#f1f5f9; color:var(--text); border:none; border-radius:4px; padding:4px 10px; font-size:11px; font-weight:700; cursor:pointer;">🔄 New Random</button>
     </div>
   `;
+}
+
+function startNewExam(force = false) {
+  if (!force) {
+    const proceed = confirm("Generate a brand new random exam? This will close your current session.");
+    if (!proceed) return;
+  }
+  const freshSeed = String(Math.floor(100000 + Math.random() * 900000));
+  localStorage.removeItem('cest_active_seed');
+  window.location.href = `test.html?seed=${freshSeed}`;
 }
 
 function copySeedLink(seed) {
@@ -347,6 +387,7 @@ function playAudio(audioId, btnId, badgeId, progId, timeId) {
 
   if (audio.currentTime === 0 || audio.ended) {
     state.count++;
+    saveState();
     const remaining = state.max - state.count;
     badge.innerText = "Plays left: " + remaining;
     if (remaining === 0) badge.classList.add('depleted');
@@ -392,6 +433,7 @@ function playAudio(audioId, btnId, badgeId, progId, timeId) {
       badge.innerText = "No plays left";
       badge.classList.add('depleted');
     }
+    saveState();
   };
 }
 
@@ -426,31 +468,61 @@ function copySingleWriting(textId, taskTitle) {
 }
 
 // --- TIMER ---
-function startTimer(durationSeconds) {
-  let seconds = durationSeconds;
+function startTimer(durationMinutes) {
   const timerBadge = document.getElementById('examTimer');
   if (!timerBadge) return;
 
   if (timerInterval) clearInterval(timerInterval);
 
-  timerInterval = setInterval(() => {
-    seconds--;
-    if (seconds < 0) {
+  if (window._examIsSubmitted) {
+    timerBadge.innerText = "Submitted";
+    timerBadge.style.color = "var(--success)";
+    timerBadge.style.borderColor = "var(--success)";
+    return;
+  }
+
+  // Anchor to wall-clock target end time
+  if (!window._examTargetEndTime) {
+    window._examTargetEndTime = Date.now() + (durationMinutes * 60 * 1000);
+    saveState();
+  }
+
+  const updateDisplay = () => {
+    if (window._examIsSubmitted) {
       clearInterval(timerInterval);
-      timerBadge.innerText = "00:00";
-      showToast("Time has expired! Submitting test automatically...");
-      submitExam();
+      timerBadge.innerText = "Submitted";
       return;
     }
-    const m = Math.floor(seconds / 60);
-    const s = Math.floor(seconds % 60);
-    timerBadge.innerText = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
 
-    if (seconds <= 600) {
+    const now = Date.now();
+    const remainingMs = Math.max(0, window._examTargetEndTime - now);
+    const totalSeconds = Math.floor(remainingMs / 1000);
+
+    if (totalSeconds <= 0) {
+      clearInterval(timerInterval);
+      timerBadge.innerText = "00:00";
       timerBadge.style.color = "var(--danger)";
       timerBadge.style.borderColor = "var(--danger)";
+      showToast("Time has expired! Submitting test automatically...");
+      submitExam(true);
+      return;
     }
-  }, 1000);
+
+    const m = Math.floor(totalSeconds / 60);
+    const s = Math.floor(totalSeconds % 60);
+    timerBadge.innerText = `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
+
+    if (totalSeconds <= 600) {
+      timerBadge.style.color = "var(--danger)";
+      timerBadge.style.borderColor = "var(--danger)";
+    } else {
+      timerBadge.style.color = "";
+      timerBadge.style.borderColor = "";
+    }
+  };
+
+  updateDisplay();
+  timerInterval = setInterval(updateDisplay, 1000);
 }
 
 // --- TOAST ---
@@ -468,14 +540,25 @@ function saveState() {
   const state = {
     testId: currentTestId,
     candidateName: document.getElementById('candidateName')?.value || "",
+    targetEndTime: window._examTargetEndTime || null,
+    isSubmitted: window._examIsSubmitted || false,
+    audioPlays: {},
     radios: {},
     texts: {},
     selects: {},
     writing: {
       part1: document.getElementById('w_part1')?.value || "",
       part2: document.getElementById('w_part2')?.value || ""
-    }
+    },
+    updatedAt: Date.now()
   };
+
+  for (let aid in audioPlays) {
+    state.audioPlays[aid] = {
+      count: audioPlays[aid].count,
+      max: audioPlays[aid].max || 2
+    };
+  }
 
   document.querySelectorAll('input[type="radio"]:checked').forEach(r => {
     state.radios[r.name] = r.value;
@@ -504,6 +587,33 @@ function loadSavedState() {
 
     if (state.candidateName && document.getElementById('candidateName')) {
       document.getElementById('candidateName').value = state.candidateName;
+    }
+
+    if (state.targetEndTime) {
+      window._examTargetEndTime = state.targetEndTime;
+    }
+
+    if (state.isSubmitted) {
+      window._examIsSubmitted = true;
+    }
+
+    // Restore audio plays
+    if (state.audioPlays) {
+      for (let aid in state.audioPlays) {
+        const item = state.audioPlays[aid];
+        audioPlays[aid] = { count: item.count || 0, max: item.max || 2, isPlaying: false };
+        const remaining = Math.max(0, (item.max || 2) - (item.count || 0));
+        const badge = document.getElementById(aid.replace('audio_', 'badge_'));
+        const btn = document.getElementById(aid.replace('audio_', 'btn_'));
+        if (badge) {
+          badge.innerText = remaining === 0 ? "No plays left" : `Plays left: ${remaining}`;
+          if (remaining === 0) badge.classList.add('depleted');
+        }
+        if (btn && remaining === 0) {
+          btn.disabled = true;
+          btn.style.opacity = "0.5";
+        }
+      }
     }
 
     if (state.radios) {
@@ -544,6 +654,12 @@ function loadSavedState() {
     }
 
     updateProgressBadge();
+
+    // If session was already completed, automatically restore diagnostic results
+    if (state.isSubmitted) {
+      gradeExam(currentTestData);
+      switchSection('results');
+    }
   } catch (err) {
     console.warn("Failed to load saved test state:", err);
   }
@@ -598,13 +714,23 @@ function updateProgressBadge() {
 }
 
 // --- SUBMIT EXAM ---
-function submitExam() {
+function submitExam(force = false) {
   if (!currentTestData) return;
 
   const answered = countAnswered();
-  if (answered < 52) {
+  if (!force && answered < 52) {
     const proceed = confirm(`You have completed ${answered} of 52 objective questions. Would you like to submit now and view your diagnostic evaluation?`);
     if (!proceed) return;
+  }
+
+  window._examIsSubmitted = true;
+  saveState();
+  if (timerInterval) clearInterval(timerInterval);
+  const timerBadge = document.getElementById('examTimer');
+  if (timerBadge) {
+    timerBadge.innerText = "Submitted";
+    timerBadge.style.color = "var(--success)";
+    timerBadge.style.borderColor = "var(--success)";
   }
 
   gradeExam(currentTestData);

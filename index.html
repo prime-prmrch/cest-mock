@@ -260,6 +260,25 @@
 
   <div class="container">
 
+    <!-- ACTIVE SESSION RECOVERY CALLOUT (DYNAMICALLY DISPLAYED) -->
+    <div id="activeSessionNotice" style="display:none; background:#e8f1fa; border:2px solid var(--secondary); border-radius:var(--radius); padding:16px 20px; margin-bottom:20px; box-shadow:var(--shadow);">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+        <div>
+          <div style="font-size:14px; font-weight:800; color:var(--primary-dark); display:flex; align-items:center; gap:6px;">
+            <span>⏱️ In-Progress Session Detected:</span>
+            <span id="activeSessionDetails" style="font-size:12px; font-weight:700; background:white; color:var(--secondary); padding:2px 8px; border-radius:10px; border:1px solid var(--border);"></span>
+          </div>
+          <p style="font-size:12.5px; color:var(--text-muted); margin-top:4px;">
+            Your responses, timer, and audio allowances are safely preserved in local storage.
+          </p>
+        </div>
+        <div style="display:flex; gap:8px;">
+          <a id="resumeExamLink" href="#" class="btn btn-launch" style="padding:8px 16px; font-size:13px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center;">▶️ Resume Exam</a>
+          <button type="button" onclick="discardActiveSession()" class="btn" style="background:#fee2e2; color:#dc2626; border:1px solid #fca5a5; padding:8px 12px; font-size:12px; font-weight:700; border-radius:8px; cursor:pointer;">Discard</button>
+        </div>
+      </div>
+    </div>
+
     <!-- PROCEDURAL EXAM GENERATOR (PRIMARY INTERFACE) -->
     <div class="test-card" style="border: 2px solid var(--secondary); background: linear-gradient(180deg, #ffffff 0%, #f8fbfe 100%);">
       <div class="card-top">
@@ -291,9 +310,9 @@
 
       <!-- Quick Launch Button -->
       <div style="margin-bottom:18px;">
-        <a href="test.html" class="btn btn-launch" style="display:flex; justify-content:center; align-items:center; gap:8px; padding:15px 22px; font-size:16px; font-weight:700; border-radius:10px; text-decoration:none;">
+        <button type="button" onclick="startFreshExam()" class="btn btn-launch" style="width:100%; border:none; display:flex; justify-content:center; align-items:center; gap:8px; padding:15px 22px; font-size:16px; font-weight:700; border-radius:10px; cursor:pointer;">
           <span>🚀 Launch Fresh Random Exam</span>
-        </a>
+        </button>
       </div>
 
       <!-- Seed Input Bar -->
@@ -409,15 +428,69 @@
   </div>
 
   <script>
+    function checkActiveSession() {
+      const activeSeed = localStorage.getItem('cest_active_seed');
+      const sessionBox = document.getElementById('activeSessionNotice');
+      if (activeSeed && sessionBox) {
+        const stateRaw = localStorage.getItem(`cest_mock_${activeSeed}_state`);
+        let details = `Seed #${activeSeed}`;
+        if (stateRaw) {
+          try {
+            const state = JSON.parse(stateRaw);
+            if (state.isSubmitted) {
+              details += ' (Completed Report)';
+            } else if (state.targetEndTime) {
+              const remainingSec = Math.max(0, Math.floor((state.targetEndTime - Date.now()) / 1000));
+              const m = Math.floor(remainingSec / 60);
+              details += ` (~${m}m remaining)`;
+            }
+          } catch (e) {}
+        }
+        document.getElementById('activeSessionDetails').innerText = details;
+        document.getElementById('resumeExamLink').href = `test.html?seed=${encodeURIComponent(activeSeed)}`;
+        sessionBox.style.display = 'block';
+      }
+    }
+
+    function discardActiveSession() {
+      const activeSeed = localStorage.getItem('cest_active_seed');
+      if (!activeSeed) return;
+      if (confirm(`Discard current examination session (Seed #${activeSeed})? This cannot be undone.`)) {
+        localStorage.removeItem('cest_active_seed');
+        localStorage.removeItem(`cest_mock_${activeSeed}_state`);
+        const sessionBox = document.getElementById('activeSessionNotice');
+        if (sessionBox) sessionBox.style.display = 'none';
+      }
+    }
+
+    function startFreshExam() {
+      const activeSeed = localStorage.getItem('cest_active_seed');
+      if (activeSeed) {
+        const discard = confirm(`You have an active exam in progress (Seed #${activeSeed}). Starting a new exam will close your current session. Do you wish to proceed?`);
+        if (!discard) return;
+      }
+      const freshSeed = String(Math.floor(100000 + Math.random() * 900000));
+      localStorage.removeItem('cest_active_seed');
+      window.location.href = `test.html?seed=${freshSeed}`;
+    }
+
     function launchSeed() {
       const input = document.getElementById('seedInput');
       const val = (input && input.value) ? input.value.trim() : '';
       if (val) {
+        const activeSeed = localStorage.getItem('cest_active_seed');
+        if (activeSeed && activeSeed !== val) {
+          const switchSeed = confirm(`You have an active session for Seed #${activeSeed}. Loading Seed #${val} will switch sessions. Proceed?`);
+          if (!switchSeed) return;
+        }
+        localStorage.setItem('cest_active_seed', val);
         window.location.href = `test.html?seed=${encodeURIComponent(val)}`;
       } else {
-        window.location.href = 'test.html';
+        startFreshExam();
       }
     }
+
+    document.addEventListener('DOMContentLoaded', checkActiveSession);
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {

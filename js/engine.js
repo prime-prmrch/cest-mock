@@ -27,14 +27,14 @@ async function initEngine() {
       if (!window.CESTProcedural) {
         await new Promise((resolve, reject) => {
           const s = document.createElement('script');
-          s.src = `js/procedural.js?v=4`;
+          s.src = `js/procedural.js?v=5`;
           s.onload = resolve;
           s.onerror = () => reject(new Error('Failed to load procedural library'));
           document.head.appendChild(s);
         });
       }
 
-      const res = await fetch('data/bank.json?v=4');
+      const res = await fetch('data/bank.json?v=5');
       if (!res.ok) throw new Error(`HTTP ${res.status}: Failed to load bank.json.`);
       const bank = await res.json();
       currentTestData = window.CESTProcedural.assembleTest(bank, activeSeed);

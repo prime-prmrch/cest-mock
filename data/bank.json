@@ -1767,6 +1767,294 @@
             "trap": "Monumental timescale of polar wilderness vs superficial hurry of modernity."
           }
         ]
+      },
+      {
+        "task": 5,
+        "tag": "Task 5 • Extended Text Multiple Choice",
+        "title": "Algorithmic Translation and Sociolinguistic Nuance",
+        "instruction": "Read the academic essay on artificial intelligence and sociolinguistics, and answer questions 13–17.",
+        "passage": "<p>In recent years, neural machine translation (NMT) architectures have achieved unprecedented fluency in standard written registers. Leveraging transformer-based large language models trained on billions of bilingual sentence pairs, contemporary translation engines navigate syntactic inversions and technical vocabularies with remarkable statistical precision. However, computational sociolinguists caution that this apparent technical triumph masks a profound vulnerability: the inability of algorithmic systems to interpret dialectal variation, localized idioms, and pragmatic implicature.</p>\n<p>Language is rarely a neutral vehicle for transmuting propositional logic; rather, it functions as an intricate index of social identity, regional heritage, and class allegiance. When machine translation engines process vernacular dialects—such as African American Vernacular English (AAVE), Scots, or Singlish—they routinely stumble over non-standard grammatical markers. For example, the habitual 'be' in AAVE conveys an aspectual nuance of recurring action that standard English accomplishes through auxiliary adverbials. Algorithms trained almost exclusively on sanitized parliamentary proceedings and corporate press releases frequently mistranslate habitual 'be' as a momentary present state, inadvertently flattening crucial temporal distinctions.</p>\n<p>This linguistic blind spot creates what sociolinguists term 'epistemic flattening'. By defaulting to hegemonic national standards whenever ambiguity arises, algorithmic translation platforms subtly discourage linguistic diversity. In global commercial and legal environments where machine translation is deployed as a cost-effective triage tool, communications framed in regional vernaculars risk being flagged as erroneous or unprofessional. Consequently, speakers of marginalized dialects face systematic communicative friction, pressured to abandon their heritage varieties in favor of algorithms-friendly standard dialects.</p>\n<p>Professional human translators observe that post-editing machine-generated output for non-standard prose is frequently more labor-intensive than translating from scratch. While statistical engines excel at syntactic parsing, they lack the embodied cultural knowledge required to decipher sarcasm, double entendres, and community-specific honorifics. Until computational models incorporate ethnographic context and sociolinguistic sensitivity, translation must remain fundamentally rooted in human interpretation.</p>",
+        "questions": [
+          {
+            "id": "r_q13",
+            "num": 13,
+            "type": "mc",
+            "stem": "13. In the first paragraph, what limitation of neural machine translation does the author highlight?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] Its reliance on outdated grammatical parsing models."
+              },
+              {
+                "val": "B",
+                "label": "[B] Its inability to process sociolinguistic and contextual subtleties."
+              },
+              {
+                "val": "C",
+                "label": "[C] Its sluggish operational speed when analyzing long texts."
+              },
+              {
+                "val": "D",
+                "label": "[D] Its frequent generation of severe syntactic errors in formal registers."
+              }
+            ],
+            "key": "B",
+            "skill": "Global Gist & Complex Claim (B2-C1)",
+            "trap": "[A] uses contemporary transformer models; [D] syntax in formal registers is fluent."
+          },
+          {
+            "id": "r_q14",
+            "num": 14,
+            "type": "mc",
+            "stem": "14. Why does the author mention the habitual 'be' in the second paragraph?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] To illustrate how dialectal aspectual grammar is misunderstood by algorithms."
+              },
+              {
+                "val": "B",
+                "label": "[B] To demonstrate that vernacular languages lack systematic grammatical rules."
+              },
+              {
+                "val": "C",
+                "label": "[C] To praise corporate press releases for their grammatical clarity."
+              },
+              {
+                "val": "D",
+                "label": "[D] To urge language teachers to focus on standard English auxiliaries."
+              }
+            ],
+            "key": "A",
+            "skill": "Exemplification & Syntactic Inference (C1)",
+            "trap": "[B] vernacular has precise aspectual rules; [C] corporate corpora are criticized as biased training sets."
+          },
+          {
+            "id": "r_q15",
+            "num": 15,
+            "type": "mc",
+            "stem": "15. The phrase 'epistemic flattening' in paragraph 3 refers to:",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] the gradual loss of linguistic diversity in favor of homogenized standards."
+              },
+              {
+                "val": "B",
+                "label": "[B] the rapid decline of literacy rates caused by digital translation tools."
+              },
+              {
+                "val": "C",
+                "label": "[C] the deliberate censorship of political opinions on international platforms."
+              },
+              {
+                "val": "D",
+                "label": "[D] the failure of commercial software to support minority alphabet scripts."
+              }
+            ],
+            "key": "A",
+            "skill": "Lexical Deduction in Context (C1)",
+            "trap": "[B] literacy rates not mentioned; [C] political censorship not the argument."
+          },
+          {
+            "id": "r_q16",
+            "num": 16,
+            "type": "mc",
+            "stem": "16. According to human translators, post-editing automated translations of vernacular texts is:",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] an efficient method for rapid corporate documentation."
+              },
+              {
+                "val": "B",
+                "label": "[B] often more demanding than producing a translation from the outset."
+              },
+              {
+                "val": "C",
+                "label": "[C] easily accomplished by junior linguistic trainees."
+              },
+              {
+                "val": "D",
+                "label": "[D] only necessary when translating technical legal statutes."
+              }
+            ],
+            "key": "B",
+            "skill": "Detail & Contrastive Stance (B2-C1)",
+            "trap": "[A] conflicts with 'more labor-intensive than translating from scratch'; [C] requires deep cultural knowledge."
+          },
+          {
+            "id": "r_q17",
+            "num": 17,
+            "type": "mc",
+            "stem": "17. Which title best captures the overall thesis of the passage?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] The Impending Obsolescence of Human Interpreters"
+              },
+              {
+                "val": "B",
+                "label": "[B] Beyond Syntax: Pragmatic Fragility in Machine Translation"
+              },
+              {
+                "val": "C",
+                "label": "[C] A Beginner's Guide to Transformer Language Models"
+              },
+              {
+                "val": "D",
+                "label": "[D] How Standard English Became the Global Internet Lingua Franca"
+              }
+            ],
+            "key": "B",
+            "skill": "Macro-Discourse Synthesis (C1)",
+            "trap": "[A] author defends human interpretation; [C] far too basic for this analytical critique."
+          }
+        ]
+      },
+      {
+        "task": 5,
+        "tag": "Task 5 • Extended Text Multiple Choice",
+        "title": "Urban Soundscape Ecology & Architectural Psychoacoustics",
+        "instruction": "Read the architectural analysis on urban sound design, and answer questions 13–17.",
+        "passage": "<p>For more than a century, municipal approaches to urban sound have been defined by an obsession with acoustic elimination. Noise abatement ordinances, heavy roadside sound barriers, and triple-glazed windows all operate under a singular premise: that the acoustic signature of the city is an inherent pollutant that must be extinguished. However, a growing cohort of architectural psychoacousticians argues that this decibel-reduction paradigm is fundamentally flawed. Complete silence in dense metropolitan spaces is not only physically unachievable, but psychologically disorienting for human occupants.</p>\n<p>Soundscape ecology posits that the quality and composition of sonic stimuli exert far greater influence on human neurophysiology than absolute volume alone. While intermittent, unpredictable mechanical impulses—such as sirens, pneumatic drills, and accelerating exhaust systems—trigger immediate cortisol surges and sympathetic nervous arousal, continuous natural sounds produce the opposite effect. Biophilic acoustic interventions, such as cascade fountains, rustling ornamental grasses, and engineered wind corridors, introduce stochastic 'pink noise' that effectively masks harsh mechanical transients without raising overall sound pressure.</p>\n<p>Recent residential trials in Amsterdam and Singapore have substantiated this thesis through biometric monitoring. In experimental housing blocks retrofitted with acoustic soundscape landscaping—including porous basalt facades and acoustic vegetated balconies—residents reported a thirty percent reduction in subjective stress and exhibited significantly lower nighttime heart rate variability spikes. Remarkably, ambient acoustic monitors confirmed that exterior decibel levels remained virtually identical to control blocks; the crucial difference lay in the acoustic spectral texture.</p>\n<p>Nevertheless, urban developers routinely resist integrating psychoacoustic landscaping into early project phases. Acoustic engineering is frequently treated as an afterthought, relegated to remedial insulation once structural framing is already locked in. Pioneering practitioners argue that cities must transition from reactionary noise mitigation to proactive acoustic curation, designing public squares and transit plazas where sound is sculpted as intentionally as light and shadow.</p>",
+        "questions": [
+          {
+            "id": "r_q13",
+            "num": 13,
+            "type": "mc",
+            "stem": "13. In the first paragraph, what criticism does the author level against traditional municipal noise policies?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] They spend municipal budgets on unproven digital audio technologies."
+              },
+              {
+                "val": "B",
+                "label": "[B] They wrongly assume that eliminating all sound is the ideal acoustic objective."
+              },
+              {
+                "val": "C",
+                "label": "[C] They fail to inspect older residential apartment buildings."
+              },
+              {
+                "val": "D",
+                "label": "[D] They exempt commercial delivery vehicles from quiet-hour regulations."
+              }
+            ],
+            "key": "B",
+            "skill": "Author Stance & Critical Evaluation (B2-C1)",
+            "trap": "[B] matches 'under a singular premise: that the acoustic signature of the city... must be extinguished'."
+          },
+          {
+            "id": "r_q14",
+            "num": 14,
+            "type": "mc",
+            "stem": "14. How do biophilic acoustic features reduce stress in urban spaces?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] By actively absorbing sound through electronic phase cancellation."
+              },
+              {
+                "val": "B",
+                "label": "[B] By generating natural background frequencies that mask abrasive mechanical noises."
+              },
+              {
+                "val": "C",
+                "label": "[C] By requiring pedestrians to wear specialized noise-cancelling headphones."
+              },
+              {
+                "val": "D",
+                "label": "[D] By completely isolating buildings from outdoor atmospheric currents."
+              }
+            ],
+            "key": "B",
+            "skill": "Mechanistic Inference (B2-C1)",
+            "trap": "[A] passive biophilic design, not electronic; [B] 'masks harsh mechanical transients without raising sound pressure'."
+          },
+          {
+            "id": "r_q15",
+            "num": 15,
+            "type": "mc",
+            "stem": "15. What was the most notable finding from the housing trials in Amsterdam and Singapore?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] Total exterior decibel volume dropped to near-zero levels."
+              },
+              {
+                "val": "B",
+                "label": "[B] Residents experienced physical stress reductions despite unchanged ambient decibels."
+              },
+              {
+                "val": "C",
+                "label": "[C] Porous basalt materials proved too expensive for commercial viability."
+              },
+              {
+                "val": "D",
+                "label": "[D] Tenants requested that water features be turned off during evening hours."
+              }
+            ],
+            "key": "B",
+            "skill": "Empirical Detail & Synthesis (C1)",
+            "trap": "[A] decibels remained identical; [B] captures the core paradox that stress decreased because texture changed."
+          },
+          {
+            "id": "r_q16",
+            "num": 16,
+            "type": "mc",
+            "stem": "16. Why is psychoacoustic design currently underutilized in commercial development?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] It is commonly treated as a late-stage fix rather than an integral architectural priority."
+              },
+              {
+                "val": "B",
+                "label": "[B] Municipal zoning laws forbid the installation of exterior water features."
+              },
+              {
+                "val": "C",
+                "label": "[C] Structural engineers lack access to basic decibel-measuring instruments."
+              },
+              {
+                "val": "D",
+                "label": "[D] Residents universally prefer synthetic acoustic insulation over natural plants."
+              }
+            ],
+            "key": "A",
+            "skill": "Causal Identification (B2)",
+            "trap": "[A] 'treated as an afterthought, relegated to remedial insulation once structural framing is already locked in'."
+          },
+          {
+            "id": "r_q17",
+            "num": 17,
+            "type": "mc",
+            "stem": "17. What phrase best summarizes the author's vision for future urban design?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] The complete mechanization of public transit acoustics"
+              },
+              {
+                "val": "B",
+                "label": "[B] Proactive acoustic curation alongside visual architecture"
+              },
+              {
+                "val": "C",
+                "label": "[C] Mandatory nationwide curfews on evening construction works"
+              },
+              {
+                "val": "D",
+                "label": "[D] The privatization of municipal acoustic monitoring agencies"
+              }
+            ],
+            "key": "B",
+            "skill": "Discourse Tone & Vision (C1)",
+            "trap": "[B] reflects 'transition from reactionary noise mitigation to proactive acoustic curation'."
+          }
+        ]
       }
     ],
     "task_6_short_article": [
@@ -1956,6 +2244,132 @@
             "key": "C",
             "skill": "Neurobiology Detail (B2)",
             "trap": "Brain transitions to default mode network, facilitating autobiographical reflection."
+          }
+        ]
+      },
+      {
+        "task": 6,
+        "tag": "Task 6 • Short Article Multiple Choice",
+        "title": "Cognitive Ergonomics & Asynchronous Work",
+        "instruction": "Read the short article on workplace psychology, and answer questions 18–19.",
+        "passage": "The transition to decentralized, remote employment has elevated asynchronous communication platforms—such as team messaging applications and collaborative project boards—to organizational staples. Proponents celebrate the freedom from rigid real-time meetings, arguing that asynchronous workflows empower personnel to operate during their individual peak cognitive hours. However, occupational psychologists have identified an insidious counter-phenomenon: the chronic fragmentation of attention.<br><br>When team members receive an unpredictable trickle of notifications throughout the working day, the brain remains in a perpetual state of hyper-vigilance. Rather than entering periods of sustained, uninterrupted deep work, knowledge workers switch cognitive tasks an average of once every four minutes. This rapid alternation depletes executive functioning, elevating perceived exhaustion even when objective workload volumes remain moderate. Workplace researchers recommend that enterprises establish clear 'notification-free batching windows' to restore mental stamina.",
+        "questions": [
+          {
+            "id": "r_q18",
+            "num": 18,
+            "type": "mc",
+            "stem": "18. According to the first paragraph, what is the main advantage claimed for asynchronous communication?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] It eliminates the financial cost of leasing corporate headquarters."
+              },
+              {
+                "val": "B",
+                "label": "[B] It allows individuals to schedule work around their optimal mental performance."
+              },
+              {
+                "val": "C",
+                "label": "[C] It prevents project deadlines from being extended by managers."
+              },
+              {
+                "val": "D",
+                "label": "[D] It guarantees that international workers receive immediate responses."
+              }
+            ],
+            "key": "B",
+            "skill": "Detail Comprehension (B1-B2)",
+            "trap": "[B] matches 'empower personnel to operate during their individual peak cognitive hours'."
+          },
+          {
+            "id": "r_q19",
+            "num": 19,
+            "type": "mc",
+            "stem": "19. What problem does the author associate with unpredictable daytime notifications?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] They cause employees to make severe computational errors in financial spreadsheets."
+              },
+              {
+                "val": "B",
+                "label": "[B] They keep the nervous system continuously on alert and shatter uninterrupted focus."
+              },
+              {
+                "val": "C",
+                "label": "[C] They cause home Wi-Fi networks to suffer severe bandwidth slowdowns."
+              },
+              {
+                "val": "D",
+                "label": "[D] They encourage employees to work unpaid overtime during night hours."
+              }
+            ],
+            "key": "B",
+            "skill": "Inference & Cause-Effect (B2)",
+            "trap": "[B] matches 'brain remains in a perpetual state of hyper-vigilance... switch cognitive tasks an average of once every four minutes'."
+          }
+        ]
+      },
+      {
+        "task": 6,
+        "tag": "Task 6 • Short Article Multiple Choice",
+        "title": "Extremophile Enzymes in Abyssal Hydrothermal Vents",
+        "instruction": "Read the short article on marine biotechnology, and answer questions 18–19.",
+        "passage": "Deep-sea hydrothermal vents, spewing mineral-laden fluids at temperatures exceeding 350 degrees Celsius under hydrostatic pressures of several hundred atmospheres, were long assumed to be sterile oceanic wastelands. In reality, these abyssal fissures host flourishing ecosystems driven by chemosynthetic extremophiles. Microorganisms known as hyperthermophiles not only survive in these hostile environments, but thrive by utilizing specialized enzymes termed 'extremozymes' whose rigid protein architectures resist thermal denaturation.<br><br>Biotechnologists and industrial biochemists are intensely interested in these molecular structures. Standard commercial enzymes utilized in pharmaceutical synthesis, textile bleaching, and biofuel production rapidly degrade when exposed to elevated temperatures or corrosive acidities, necessitating costly cooling systems and chemical stabilizers. Extremozymes derived from vent bacteria operate with peak catalytic efficiency precisely under these punishing conditions, offering a sustainable, energy-efficient path toward green industrial manufacturing.",
+        "questions": [
+          {
+            "id": "r_q18",
+            "num": 18,
+            "type": "mc",
+            "stem": "18. What molecular feature enables vent microorganisms to endure superheated water?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] Highly flexible cellular membranes that absorb excess ambient moisture."
+              },
+              {
+                "val": "B",
+                "label": "[B] Unusually rigid enzyme structures that prevent proteins from unravelling."
+              },
+              {
+                "val": "C",
+                "label": "[C] The ability to enter a dormant spore state until temperatures decline."
+              },
+              {
+                "val": "D",
+                "label": "[D] External mineral shells that completely block boiling fluids."
+              }
+            ],
+            "key": "B",
+            "skill": "Factual & Scientific Accuracy (B2)",
+            "trap": "[B] matches 'rigid protein architectures resist thermal denaturation'."
+          },
+          {
+            "id": "r_q19",
+            "num": 19,
+            "type": "mc",
+            "stem": "19. Why are commercial manufacturers seeking to utilize extremozymes?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A] They eliminate the need for expensive cooling and chemical stabilization in industrial processes."
+              },
+              {
+                "val": "B",
+                "label": "[B] They can be harvested cheaply in vast quantities from surface ocean water."
+              },
+              {
+                "val": "C",
+                "label": "[C] They are already certified as non-toxic by international food agencies."
+              },
+              {
+                "val": "D",
+                "label": "[D] They replace human machine operators in automated pharmaceutical factories."
+              }
+            ],
+            "key": "A",
+            "skill": "Application & Contrast (B2)",
+            "trap": "[A] matches 'necessitating costly cooling systems and chemical stabilizers... offering a sustainable path'."
           }
         ]
       }
@@ -2635,6 +3049,416 @@
             "trap": "Sentence B: 'folios retain vibrant colors and crisp calligraphy across eight centuries'."
           }
         ]
+      },
+      {
+        "task": 7,
+        "tag": "Task 7 • Missing Sentences",
+        "title": "The Chemistry of Illuminated Manuscript Preservation",
+        "instruction": "Read the text about historical manuscript conservation. Choose the correct sentence from A–G to fit each gap (20–24). There are two extra sentences.",
+        "passage": "<p>Medieval illuminated manuscripts represent some of humanity's most visually stunning and fragile cultural artifacts. Crafted from animal vellum and decorated with ground mineral pigments and gold leaf, these books have survived for centuries in monastic vaults. <strong>(20)</strong> [ _________ ]. As conservation science matures, specialists are turning to non-destructive chemical analysis to decelerate this deterioration.</p>\n<p>One of the primary agents of destruction is iron gall ink, which served as the standard writing medium across Europe from the Middle Ages through the nineteenth century. Created by combining iron sulfate with oak gall extracts, the ink produces a rich, durable dark line. <strong>(21)</strong> [ _________ ]. Over centuries, excess sulfuric acid eats entirely through the vellum substrate, causing text lines to crumble into brittle lacework.</p>\n<p>To combat this corrosive pathway, conservators previously bathed entire folios in chemical neutralizing washes. <strong>(22)</strong> [ _________ ]. Early aqueous immersions frequently caused organic binder adhesives to dissolve, leading to catastrophic flaking of delicate illuminated gilding.</p>\n<p>Modern preservation protocols therefore avoid invasive chemical baths whenever possible. Instead, technicians deploy non-invasive portable X-ray fluorescence (XRF) spectroscopy to map elemental distributions across the ink without physical contact. <strong>(23)</strong> [ _________ ]. Armed with this quantitative diagnostic map, conservators can pinpoint precisely which areas require micro-targeted antioxidant consolidation.</p>\n<p>Environmental climate control remains the final, and most critical, line of defense. By maintaining storage vaults at a strict forty-five percent relative humidity and fifteen degrees Celsius, institutions prevent both vellum cockling and fungal germination. <strong>(24)</strong> [ _________ ]. Through this convergence of chemistry and microclimate management, these ancient voices will endure for future generations.</p>",
+        "optionsReference": "<strong>[A]</strong> However, this aggressive intervention often caused more harm than good.<br>\n<strong>[B]</strong> This analytical scanning reveals exact concentrations of corrosive transition metal ions across the page.<br>\n<strong>[C]</strong> The monastic scribes frequently worked by candlelight during cold winter mornings.<br>\n<strong>[D]</strong> Even subtle fluctuations in atmospheric moisture can re-ignite latent chemical acid hydrolysis.<br>\n<strong>[E]</strong> Yet modern environmental pollutants and historical ink corrosion now pose severe threats to their physical integrity.<br>\n<strong>[F]</strong> Many collectors prefer rebinding ancient manuscripts with modern embossed leather covers.<br>\n<strong>[G]</strong> Unfortunately, the chemical reaction generates unreacted free iron ions and residual sulfuric acid.",
+        "questions": [
+          {
+            "id": "r_q20",
+            "num": 20,
+            "type": "select",
+            "stem": "Gap 20",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "E",
+            "skill": "Thematic Contrast (B2)",
+            "trap": "[E] introduces the threat of ink corrosion and modern pollutants contrasting with historical survival."
+          },
+          {
+            "id": "r_q21",
+            "num": 21,
+            "type": "select",
+            "stem": "Gap 21",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "G",
+            "skill": "Causal Sequence (B2-C1)",
+            "trap": "[G] explains the chemical byproduct: 'residual sulfuric acid' leading to subsequent text eating."
+          },
+          {
+            "id": "r_q22",
+            "num": 22,
+            "type": "select",
+            "stem": "Gap 22",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "A",
+            "skill": "Concession & Evaluation (B2)",
+            "trap": "[A] links the neutralizing wash to 'more harm than good', supported by subsequent sentence describing flaking."
+          },
+          {
+            "id": "r_q23",
+            "num": 23,
+            "type": "select",
+            "stem": "Gap 23",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "B",
+            "skill": "Elaboration & Instrumental Connection (C1)",
+            "trap": "[B] elaborates on XRF: 'This analytical scanning reveals exact concentrations... resulting in quantitative diagnostic map'."
+          },
+          {
+            "id": "r_q24",
+            "num": 24,
+            "type": "select",
+            "stem": "Gap 24",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "D",
+            "skill": "Environmental Justification (C1)",
+            "trap": "[D] justifies the strict relative humidity control: 'Even subtle fluctuations... re-ignite latent acid hydrolysis'."
+          }
+        ]
+      },
+      {
+        "task": 7,
+        "tag": "Task 7 • Missing Sentences",
+        "title": "Precision Agroforestry and Soil Mycorrhizal Networks",
+        "instruction": "Read the text about sustainable agriculture and forestry. Choose the correct sentence from A–G to fit each gap (20–24). There are two extra sentences.",
+        "passage": "<p>For decades, conventional industrial agriculture has relied on intensive monoculture cropping sustained by artificial nitrogen fertilizers and chemical fungicides. While this model initially delivered high crop yields, it has severely depleted topsoil biodiversity worldwide. <strong>(20)</strong> [ _________ ]. By integrating deep-rooted perennial trees directly into arable crop fields, farmers are restoring subterranean ecological synergy.</p>\n<p>The foundational engine of agroforestry is the subterranean mycorrhizal fungal network. Fungal hyphae colonize plant root systems, extending the root surface area by hundreds of times. <strong>(21)</strong> [ _________ ]. In exchange for carbon and carbohydrates produced via photosynthesis, these subterranean fungal conduits deliver dissolved phosphorus and micronutrients locked deep within mineral subsoils.</p>\n<p>Furthermore, research demonstrates that mature trees actively share resources with neighboring shallow-rooted annual crops during seasonal drought. Deep oak and walnut roots pull moisture from deep water tables and release excess moisture into upper soil horizons through hydraulic lift. <strong>(22)</strong> [ _________ ]. Consequently, companion crops such as wheat or legumes withstand prolonged dry spells with significantly lower mortality.</p>\n<p>Biological pest control also benefits from the multi-tiered canopy structure of agroforestry systems. Intercropped tree rows provide permanent overwintering nesting sites for insectivorous songbirds, bats, and predatory beetles. <strong>(23)</strong> [ _________ ]. As natural predator populations stabilize, chemical pesticide applications can be reduced by more than seventy percent without sacrificing crop yield.</p>\n<p>Transitioning from monoculture to agroforestry is undeniably an investment in generational patience. Nut and timber trees require five to ten years of vegetative growth before yielding significant harvest revenue. <strong>(24)</strong> [ _________ ]. For land stewards seeking long-term resilience against climatic volatility, agroforestry provides an ecologically sound blueprint.</p>",
+        "optionsReference": "<strong>[A]</strong> These beneficial organisms consume common crop pests before infestations reach destructive thresholds.<br>\n<strong>[B]</strong> Timber harvesting machinery has become considerably more expensive due to rising diesel fuel tariffs.<br>\n<strong>[C]</strong> This symbiotic trade provides vital nourishment that plants cannot access independently.<br>\n<strong>[D]</strong> In response, an expanding international movement is championing precision agroforestry.<br>\n<strong>[E]</strong> This nocturnal moisture redistribution hydrates the surrounding shallow root zones.<br>\n<strong>[F]</strong> Chemical fertilizer runoff frequently contaminates freshwater river systems.<br>\n<strong>[G]</strong> However, the compounding ecological and economic dividends easily surpass short-term commercial forestry returns.",
+        "questions": [
+          {
+            "id": "r_q20",
+            "num": 20,
+            "type": "select",
+            "stem": "Gap 20",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "D",
+            "skill": "Thematic Bridge & Contrast (B2)",
+            "trap": "[D] bridges the critique of monoculture with the introduction of precision agroforestry."
+          },
+          {
+            "id": "r_q21",
+            "num": 21,
+            "type": "select",
+            "stem": "Gap 21",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "C",
+            "skill": "Cohesive Elaboration (B2-C1)",
+            "trap": "[C] clarifies the mutual exchange: 'This symbiotic trade provides vital nourishment...'."
+          },
+          {
+            "id": "r_q22",
+            "num": 22,
+            "type": "select",
+            "stem": "Gap 22",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "E",
+            "skill": "Process & Anaphora (C1)",
+            "trap": "[E] refers back to hydraulic lift: 'This nocturnal moisture redistribution hydrates surrounding shallow root zones'."
+          },
+          {
+            "id": "r_q23",
+            "num": 23,
+            "type": "select",
+            "stem": "Gap 23",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "A",
+            "skill": "Anaphoric Reference (B2)",
+            "trap": "[A] co-refers with 'songbirds, bats, and predatory beetles': 'These beneficial organisms consume common crop pests...'."
+          },
+          {
+            "id": "r_q24",
+            "num": 24,
+            "type": "select",
+            "stem": "Gap 24",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              },
+              {
+                "val": "G",
+                "label": "[G]"
+              }
+            ],
+            "key": "G",
+            "skill": "Contrastive Concession (B2-C1)",
+            "trap": "[G] contrasts the 5-10 year delayed harvest with the compounding long-term economic dividends."
+          }
+        ]
       }
     ],
     "task_8_gapped_paragraphs": [
@@ -3192,6 +4016,376 @@
             "trap": "Synthesizes downstream flood buffering with final concluding thought."
           }
         ]
+      },
+      {
+        "task": 8,
+        "tag": "Task 8 • Missing Paragraphs",
+        "title": "The Philosophical Evolution of Cartography",
+        "instruction": "Read the essay on cartography and epistemology. Choose the correct paragraph from A–F to fit each gap (25–29). There is one extra paragraph.",
+        "passage": "<p>Maps are commonly regarded as objective, scientific mirrors of physical geography. When modern travellers glance at smartphone navigation screens, they operate under the intuitive assumption that satellite coordinates and digital cartography present an unmediated depiction of terrain. Yet historians of science have long demonstrated that cartography is never a purely passive reflection of reality; it is an active act of visual rhetoric and political assertion.</p>\n<p><strong>[ Paragraph Gap 25 ]</strong></p>\n<p>During the European Renaissance, maritime expansion demanded a transition from theological symbolism to functional navigational geometry. Navigators setting sail into open ocean could no longer rely on aesthetic coastline sketches. This operational necessity culminated in the landmark 1569 world map by Gerardus Mercator, which resolved a vexing mathematical challenge: how to project the surface of a spherical planet onto a flat sheet of parchment while preserving constant compass bearings as straight lines.</p>\n<p><strong>[ Paragraph Gap 26 ]</strong></p>\n<p>However, this mathematical convenience came with an enormous optical distortion that profoundly shaped geopolitics for centuries. Because the Mercator projection inflates landmasses progressively as they approach the poles, equatorial continents appear drastically diminished. Greenland appears equivalent in size to Africa, despite the African continent being fourteen times larger. For generations of schoolchildren and colonial administrators, this visual distortion reinforced Eurocentric imperial ideologies by exaggerating the territorial prominence of northern imperial powers.</p>\n<p><strong>[ Paragraph Gap 27 ]</strong></p>\n<p>This critique gained significant traction in the 1970s with the publication of the Peters projection, which prioritized proportional land area over navigational angles. While cartographers debated its aesthetic inelegance, the controversy successfully exposed mapmaking as an epistemological battleground. Maps were finally recognized by the general public not as immutable facts, but as selective arguments designed to serve specific societal priorities.</p>\n<p><strong>[ Paragraph Gap 28 ]</strong></p>\n<p>Digital geospatial algorithms now curate what information is rendered visible or omitted based on corporate profitability. A search query for an urban district highlights sponsored retail establishments and highway arteries, while obscuring historical landmarks, informal settlements, and low-income residential tracts. The digital map presents a seamless, authoritative veneer, yet it subtly conditions users to perceive urban space through a commercial lens.</p>\n<p><strong>[ Paragraph Gap 29 ]</strong></p>\n<p>Ultimately, cartography must be understood as an exercise in ethical discernment. To read a map critically is to interrogate what has been centered, what has been pushed to the periphery, and whose interests are legitimized by its boundaries.</p>",
+        "optionsReference": "<strong>[A]</strong> In medieval Europe, for instance, the dominant map format was the 'T-O map', which organized the known world not around geographic scale, but around biblical dogma. Jerusalem occupied the exact geometrical center, East was situated at the summit, and vast uncharted continents were populated with mythological monsters, reflecting religious cosmology rather than empirical measurement.<br>\n<strong>[B]</strong> The solution lay in cylindrical projection geometry, where lines of latitude were spaced progressively wider toward the poles. While this mathematical innovation allowed sailors to draw simple straight lines for navigation routes without recalculating curvature, it introduced profound area distortions.<br>\n<strong>[C]</strong> Today, in the era of algorithmic digital mapping, this ideological mediation has not vanished; it has merely migrated into software code.<br>\n<strong>[D]</strong> Several polar expeditions suffered catastrophic failures after attempting to navigate uncharted arctic ice shelves with outdated magnetic compasses.<br>\n<strong>[E]</strong> Post-colonial geographers seized upon these distortions to demonstrate that maps had served as instruments of territorial domination, naturalizing political inequality through deceptive spatial scaling.<br>\n<strong>[F]</strong> By shedding the illusion of mathematical neutrality, modern mapmakers began acknowledging the socio-political responsibilities inherent in visualizing territorial boundaries.",
+        "questions": [
+          {
+            "id": "r_q25",
+            "num": 25,
+            "type": "select",
+            "stem": "Paragraph Gap 25",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "A",
+            "skill": "Historical Contrast & Exemplification (C1)",
+            "trap": "[A] exemplifies early non-objective cartography (medieval T-O maps) leading directly into the subsequent paragraph's Renaissance transition."
+          },
+          {
+            "id": "r_q26",
+            "num": 26,
+            "type": "select",
+            "stem": "Paragraph Gap 26",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "B",
+            "skill": "Technical Mechanism & Problem-Solution (C1)",
+            "trap": "[B] explains Mercator's mathematical cylindrical projection solution and introduces the area distortion developed in the following paragraph."
+          },
+          {
+            "id": "r_q27",
+            "num": 27,
+            "type": "select",
+            "stem": "Paragraph Gap 27",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "E",
+            "skill": "Thematic Continuity & Ideology (C1)",
+            "trap": "[E] links the Eurocentric distortion with post-colonial geographic critique that led directly to Peters projection in next paragraph."
+          },
+          {
+            "id": "r_q28",
+            "num": 28,
+            "type": "select",
+            "stem": "Paragraph Gap 28",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "F",
+            "skill": "Epistemological Shift & Bridge (C1)",
+            "trap": "[F] summarizes the shedding of mathematical neutrality before shifting to modern digital algorithmic mapping."
+          },
+          {
+            "id": "r_q29",
+            "num": 29,
+            "type": "select",
+            "stem": "Paragraph Gap 29",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "C",
+            "skill": "Contemporary Transition (C1)",
+            "trap": "[C] acts as the bridge introducing algorithmic digital mapping discussed in detail in the preceding paragraph block."
+          }
+        ]
+      },
+      {
+        "task": 8,
+        "tag": "Task 8 • Missing Paragraphs",
+        "title": "Deep-Time Stratigraphy and the Anthropocene",
+        "instruction": "Read the geological critique on deep time and Earth history. Choose the correct paragraph from A–F to fit each gap (25–29). There is one extra paragraph.",
+        "passage": "<p>Geological time scales operate on an unimaginably vast horizon compared to human historical chronicles. The rock strata beneath our feet record four and a half billion years of volcanic cataclysms, continental collisions, and evolutionary transformations. Stratigraphers divide this unfathomable expanse into standardized units—eons, eras, periods, and epochs—demarcated by physical shifts in rock composition and fossilized bio-markers.</p>\n<p><strong>[ Paragraph Gap 25 ]</strong></p>\n<p>Traditionally, establishing a new geological epoch requires locating a Global Boundary Stratotype Section and Point (GSSP), informally known as a 'golden spike'. This physical rock outcrop must exhibit an unambiguous, globally synchronous geochemical or paleontological signal that can be recognized in sediment cores across continents for millions of years into deep time.</p>\n<p><strong>[ Paragraph Gap 26 ]</strong></p>\n<p>Yet in 2000, Nobel laureate Paul Crutzen proposed an unprecedented departure from standard stratigraphic conventions. He argued that human industrial activity has permanently altered the Earth's biogeochemical cycles to such an extent that the current Holocene epoch has come to an end, succeeded by a new epoch: the Anthropocene.</p>\n<p><strong>[ Paragraph Gap 27 ]</strong></p>\n<p>Advocates of formalizing the Anthropocene pointed to distinct mid-twentieth-century geochemical markers associated with the 'Great Acceleration'. Chief among these was radioactive fallout from atmospheric thermonuclear detonations in the early 1950s, which deposited synthetic plutonium isotopes globally in ocean sediments, glacial ice, and lakebeds.</p>\n<p><strong>[ Paragraph Gap 28 ]</strong></p>\n<p>However, the International Commission on Stratigraphy recently voted against officially adding the Anthropocene to the standard geological time scale. Stratigraphic traditionalists argued that human impact is an ongoing, non-synchronous diachronic process spanning millennia of deforestation and agriculture, rather than a single neat boundary stratum.</p>\n<p><strong>[ Paragraph Gap 29 ]</strong></p>\n<p>Whether classified as a formal geological epoch or an ongoing environmental crisis, the concept of the Anthropocene has fundamentally reshaped human self-understanding. It reminds civilization that human actions are no longer merely cultural, but are now operating as a planetary geologic force.</p>",
+        "optionsReference": "<strong>[A]</strong> For instance, the boundary separating the Cretaceous and Paleogene periods is inscribed worldwide by a millimeter-thin layer of iridium, deposited seventy-six million years ago by the catastrophic Chicxulub asteroid impact that extinguished the non-avian dinosaurs.<br>\n<strong>[B]</strong> To establish such markers, geologists conduct deep core drilling in secluded meromictic lakes where undisturbed varved sediments accumulate without biological disruption.<br>\n<strong>[C]</strong> This proposal sparked fierce contention within the scientific community, pitting conservative field stratigraphers against Earth systems scientists seeking to sound the alarm on global climatic disruption.<br>\n<strong>[D]</strong> Commercial mining conglomerates have heavily lobbied environmental ministries to halt the designated protection of pristine mineral reserves.<br>\n<strong>[E]</strong> Alongside these isotopic markers, synthetic plastics, fly ash particulates from coal combustion, and accelerated mass extinction rates created an unmistakable synthetic signature.<br>\n<strong>[F]</strong> They maintained that categorizing human transformation as an informal 'geological event'—akin to the Great Oxygenation Event—better captures its sprawling, uneven ecological reality.",
+        "questions": [
+          {
+            "id": "r_q25",
+            "num": 25,
+            "type": "select",
+            "stem": "Paragraph Gap 25",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "A",
+            "skill": "Exemplification of Stratigraphic Boundaries (C1)",
+            "trap": "[A] exemplifies how catastrophic boundary strata are identified (the Cretaceous iridium layer) before discussing formal GSSP golden spikes."
+          },
+          {
+            "id": "r_q26",
+            "num": 26,
+            "type": "select",
+            "stem": "Paragraph Gap 26",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "B",
+            "skill": "Methodological Elaboration (C1)",
+            "trap": "[B] explains how geologists locate and drill undisturbed sediments to locate the GSSP described in the preceding paragraph."
+          },
+          {
+            "id": "r_q27",
+            "num": 27,
+            "type": "select",
+            "stem": "Paragraph Gap 27",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "C",
+            "skill": "Reaction to Novel Thesis (C1)",
+            "trap": "[C] captures the scientific controversy sparked by Crutzen's Anthropocene proposal."
+          },
+          {
+            "id": "r_q28",
+            "num": 28,
+            "type": "select",
+            "stem": "Paragraph Gap 28",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "E",
+            "skill": "Additive Geological Evidence (C1)",
+            "trap": "[E] complements the radioactive fallout with plastics and fly ash, completing the 'Great Acceleration' evidence."
+          },
+          {
+            "id": "r_q29",
+            "num": 29,
+            "type": "select",
+            "stem": "Paragraph Gap 29",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              },
+              {
+                "val": "E",
+                "label": "[E]"
+              },
+              {
+                "val": "F",
+                "label": "[F]"
+              }
+            ],
+            "key": "F",
+            "skill": "Counter-Argument Clarification (C1)",
+            "trap": "[F] explains the traditionalists' reasoning ('geological event' rather than formal epoch) following the rejected vote."
+          }
+        ]
       }
     ],
     "task_9_multiple_matching": [
@@ -3543,6 +4737,240 @@
             "key": "D",
             "skill": "Fractured Grammar (B2-C1)",
             "trap": "Translator D (Elise): relishes capturing unconventional stream-of-consciousness momentum."
+          }
+        ]
+      },
+      {
+        "task": 9,
+        "tag": "Task 9 • Multiple Matching",
+        "title": "Four Museum Curators on Digital Archiving & Repatriation",
+        "instruction": "Read the statements from four museum curators regarding cultural heritage preservation. For questions 30–33, choose from curators A–D.",
+        "passage": "<div style=\"display:grid; grid-template-columns: 1fr; gap: 14px;\">\n<div style=\"background:#f8fafc; padding:12px; border-radius:8px; border-left:3px solid #003b70;\">\n<strong>[A] Dr. Miriam Thorne — Digital Twin Specialist</strong><br>\n\"High-resolution 3D LiDAR scanning and photogrammetric micro-profiling allow us to construct hyper-accurate digital twins of vulnerable antiquities. While critics contend that digital files lack emotional aura, virtual replicas democratize scholarly access across global borders without exposing fragile originals to transport vibration or ambient moisture shock. Furthermore, if geopolitical conflict or seismic disasters threaten physical collections, digital archives preserve irreplaceable geometric and volumetric records for future conservationists.\"\n</div>\n<div style=\"background:#f8fafc; padding:12px; border-radius:8px; border-left:3px solid #0077b6;\">\n<strong>[B] Julian Vance — Provenance Historian</strong><br>\n\"The true preservation crisis facing metropolitan museums is not physical decay, but moral and historical legitimacy. Decades of colonial acquisition records were intentionally obscured or sanitized in archival ledgers. Rigorous provenance research involves forensic archival tracking—uncovering purchase bills, expedition diaries, and military confiscation logs. Unless institutions confront the coercive circumstances of how objects were appropriated, technical conservation remains an evasion of ethical accountability.\"\n</div>\n<div style=\"background:#f8fafc; padding:12px; border-radius:8px; border-left:3px solid #1b8a5a;\">\n<strong>[C] Dr. Kenji Sato — Community Custodianship Advocate</strong><br>\n\"Western museum models tend to treat sacred cultural artifacts as dead aesthetic specimens to be vacuum-sealed in climate-controlled glass vitrines. In many originating indigenous cultures, however, artifacts are living communal ancestors that require periodic ritual handling, natural weathering, and ceremonial activation. Repatriation cannot merely mean shipping boxes between government bureaucrats; it requires transitioning museum governance toward co-curation with originating descendant communities.\"\n</div>\n<div style=\"background:#f8fafc; padding:12px; border-radius:8px; border-left:3px solid #e63946;\">\n<strong>[D] Aris Thorne-Smith — Physical Materials Conservator</strong><br>\n\"Amid theoretical discourse on digital twins and political repatriation, we must not lose sight of fundamental material degradation. Ancient organic binders, polychrome pigments, and textile dyes undergo irreversible photolytic and chemical breakdown every hour they are exposed to gallery illumination. Without rigorous scientific stabilization, non-invasive consolidate coatings, and micro-climatic nitrogen enclosures, there will simply be nothing left of these physical artifacts for any community to claim or study.\"\n</div>\n</div>",
+        "questions": [
+          {
+            "id": "r_q30",
+            "num": 30,
+            "type": "select",
+            "stem": "30. Which curator emphasizes that cultural artifacts should be engaged through living ritual practice rather than static display?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              }
+            ],
+            "key": "C",
+            "skill": "Cross-Textual Stance (B2-C1)",
+            "trap": "Dr. Sato: 'living communal ancestors that require periodic ritual handling'."
+          },
+          {
+            "id": "r_q31",
+            "num": 31,
+            "type": "select",
+            "stem": "31. Which curator highlights the protective value of 3D replication against unexpected catastrophic destruction?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              }
+            ],
+            "key": "A",
+            "skill": "Specific Claim Identification (B2)",
+            "trap": "Dr. Thorne: 'if geopolitical conflict or seismic disasters threaten physical collections'."
+          },
+          {
+            "id": "r_q32",
+            "num": 32,
+            "type": "select",
+            "stem": "32. Which curator insists that investigating historical acquisition methods is essential to institutional legitimacy?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              }
+            ],
+            "key": "B",
+            "skill": "Attitudinal Recognition (B2-C1)",
+            "trap": "Julian Vance: 'confront the coercive circumstances of how objects were appropriated'."
+          },
+          {
+            "id": "r_q33",
+            "num": 33,
+            "type": "select",
+            "stem": "33. Which curator warns that immediate physical decay threatens artifacts regardless of theoretical debates?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              }
+            ],
+            "key": "D",
+            "skill": "Underlying Urgency & Stance (B2-C1)",
+            "trap": "Aris Thorne-Smith: 'there will simply be nothing left of these physical artifacts for any community to claim'."
+          }
+        ]
+      },
+      {
+        "task": 9,
+        "tag": "Task 9 • Multiple Matching",
+        "title": "Four Urban Planners on Next-Generation Commuter Infrastructure",
+        "instruction": "Read the viewpoints of four urban transportation planners regarding future metropolitan mobility. For questions 30–33, choose from planners A–D.",
+        "passage": "<div style=\"display:grid; grid-template-columns: 1fr; gap: 14px;\">\n<div style=\"background:#f8fafc; padding:12px; border-radius:8px; border-left:3px solid #003b70;\">\n<strong>[A] Nadia Rossi — Autonomous Light Rail Designer</strong><br>\n\"The future of mass transit lies in autonomous, on-demand light rail vehicles running on dedicated, grade-separated tracks. Unlike conventional subways that require billions in subterranean tunneling, modular elevated light rail can be rapidly erected over existing highway medians. By coordinating train frequency dynamically through predictive artificial intelligence, we eliminate timetable delays and slash energy waste during off-peak hours.\"\n</div>\n<div style=\"background:#f8fafc; padding:12px; border-radius:8px; border-left:3px solid #0077b6;\">\n<strong>[B] Marcus Chen — Active Pedestrianization Strategist</strong><br>\n\"Technological fixes like autonomous cars or futuristic pods miss the core urban reality: geometry. Cities simply lack the physical ground space to accommodate personal vehicles, regardless of their propulsion source. The only scalable, health-affirming solution is aggressive street reallocation: stripping away multi-lane thoroughfares in favor of wide pedestrian promenades and physically protected cycle lanes. When walking and cycling become the safest, fastest travel modes, vehicular congestion vanishes naturally.\"\n</div>\n<div style=\"background:#f8fafc; padding:12px; border-radius:8px; border-left:3px solid #1b8a5a;\">\n<strong>[C] Dr. Soren Lindqvist — Dynamic Congestion Pricing Econometrician</strong><br>\n\"Civic planners frequently ignore economic incentives. As long as urban road space is treated as a free public commons, motorists will inevitably overconsume it until gridlock ensues. Installing dynamic electronic toll gantries that adjust road usage charges in real time based on instantaneous traffic density immediately rationalizes demand. Revenues generated from peak congestion pricing can then be ring-fenced to subsidize regional bus transit for low-income commuters.\"\n</div>\n<div style=\"background:#f8fafc; padding:12px; border-radius:8px; border-left:3px solid #e63946;\">\n<strong>[D] Elena Rostova — Intermodal Suburban Hub Architect</strong><br>\n\"Metropolitan planners obsess over downtown city centers while ignoring suburban transit deserts where seventy percent of commuters actually reside. Our priority must be constructing intermodal park-and-ride interchanges at peripheral ring-road junctions. These hubs combine high-speed suburban express buses, electric vehicle charging depots, and micro-mobility rentals under one roof, providing a seamless bridge between sprawling residential neighborhoods and the urban core.\"\n</div>\n</div>",
+        "questions": [
+          {
+            "id": "r_q30",
+            "num": 30,
+            "type": "select",
+            "stem": "30. Which planner argues that economic pricing mechanisms are needed to manage road usage efficiently?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              }
+            ],
+            "key": "C",
+            "skill": "Policy & Economic Stance (B2-C1)",
+            "trap": "Dr. Lindqvist: 'dynamic electronic toll gantries that adjust road usage charges in real time'."
+          },
+          {
+            "id": "r_q31",
+            "num": 31,
+            "type": "select",
+            "stem": "31. Which planner advocates for radical reallocation of street space to non-motorized transport?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              }
+            ],
+            "key": "B",
+            "skill": "Infrastructure Reorientation (B2)",
+            "trap": "Marcus Chen: 'stripping away multi-lane thoroughfares in favor of wide pedestrian promenades'."
+          },
+          {
+            "id": "r_q32",
+            "num": 32,
+            "type": "select",
+            "stem": "32. Which planner focuses on connecting suburban residential peripheries to central transit networks?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              }
+            ],
+            "key": "D",
+            "skill": "Geographic Scope (B2)",
+            "trap": "Elena Rostova: 'constructing intermodal park-and-ride interchanges at peripheral ring-road junctions'."
+          },
+          {
+            "id": "r_q33",
+            "num": 33,
+            "type": "select",
+            "stem": "33. Which planner highlights the construction and energy efficiency of AI-managed elevated rail?",
+            "options": [
+              {
+                "val": "A",
+                "label": "[A]"
+              },
+              {
+                "val": "B",
+                "label": "[B]"
+              },
+              {
+                "val": "C",
+                "label": "[C]"
+              },
+              {
+                "val": "D",
+                "label": "[D]"
+              }
+            ],
+            "key": "A",
+            "skill": "Technological Evaluation (B2-C1)",
+            "trap": "Nadia Rossi: 'coordinating train frequency dynamically through predictive artificial intelligence'."
           }
         ]
       }
@@ -6114,78 +7542,150 @@
   "writing": {
     "task_1_narrative": [
       {
-        "part": 1,
-        "tag": "Writing Part 1 • Narrative Letter",
-        "title": "The Discovery in the Coastal Archive",
-        "instruction": "Write 150–180 words. (Target: 20 minutes)",
-        "prompt": "<strong>Context:</strong> While cataloguing unexamined estate boxes during a research residency at a historic maritime harbour library, you unexpectedly uncovered an unpublished 1880s field journal kept by an amateur coastal botanist, complete with hand-pressed specimens and marginal observations.<br><br><strong>In your letter to your academic mentor, Professor Gallagher:</strong><br>1. Narrate the dramatic moment you stumbled upon the forgotten volume among the archives.<br>2. Describe the physical artifact, detailing one evocative entry or pressed specimen that captured your imagination.<br>3. Propose a collaborative conservation or research plan and request guidance on how to catalogue the find.",
-        "minWords": 150
+        "id": "w_task_1_v1",
+        "variant": 1,
+        "type": "narrative_personal",
+        "title": "Task 1: Formal Workplace Mediation",
+        "timeSuggestedMinutes": 20,
+        "prompt": "You are a team leader in a publishing house. Two senior editors on your team have had a significant professional disagreement regarding the editorial direction of a flagship literary journal, causing delays in publication. Write an email to your department head explaining the root cause of the friction, summarizing the mediation steps you have undertaken, and proposing a compromise schedule to ensure the journal meets its deadline.",
+        "wordCount": "120–150 words"
       },
       {
-        "part": 1,
-        "tag": "Writing Part 1 • Narrative Letter",
-        "title": "The Watermill Printmaker: A Storm Encounter",
-        "instruction": "Write 150–180 words. (Target: 20 minutes)",
-        "prompt": "<strong>Context:</strong> While journeying through the Welsh border country to deliver bookbinding materials for an exhibition, a severe evening gale blocked the roads with fallen timber, forcing you to seek shelter at an isolated stone watermill that houses an eccentric traditional paper-marbler and hand-press printer.<br><br><strong>In your letter to your creative partner, Elena:</strong><br>1. Narrate the dramatic events that led to you seeking refuge at the illuminated watermill during the storm.<br>2. Describe the sensory atmosphere inside the workshop and detail a mesmerizing craft technique you witnessed by the stove.<br>3. Explain how this chance encounter inspired your own creative work and suggest a collaborative return visit.",
-        "minWords": 150
+        "id": "w_task_1_v2",
+        "variant": 2,
+        "type": "narrative_personal",
+        "title": "Task 1: Academic Conference Grant Report",
+        "timeSuggestedMinutes": 20,
+        "prompt": "You recently received a travel grant from your university's academic research board to present a paper at an international linguistics symposium. Write a formal report to the grant committee summarizing your paper's reception, detailing two significant methodological insights gained from peer discussions, and outlining how this experience will enrich your department's upcoming seminar series.",
+        "wordCount": "120–150 words"
       },
       {
-        "part": 1,
-        "tag": "Writing Part 1 • Narrative Field Dispatch",
-        "title": "Night Watch at the Coastal Bird Observatory",
-        "instruction": "Write 150–180 words. (Target: 20 minutes)",
-        "prompt": "<strong>Context:</strong> You are volunteering at an isolated headland bird observatory. During yesterday's nocturnal vigil, dense sea fog and sudden coastal gales brought an unexpected influx of hundreds of exhausted migratory songbirds onto the promontory at 2 AM.<br><br><strong>In your field dispatch to your research supervisor, Dr. Clara Thorne:</strong><br>1. Recount the vivid scene when the nocturnal migrant flock first descended out of the fog onto the lanterns and mist nets.<br>2. Describe how the station team mobilized overnight to shelter, ring, and safely release the vulnerable birds.<br>3. Highlight an exceptional ringing record or anomalous species observed, and request emergency ringing supplies.",
-        "minWords": 150
+        "id": "w_task_1_v3",
+        "variant": 3,
+        "type": "narrative_personal",
+        "title": "Task 1: Facilities Disruption Compensation",
+        "timeSuggestedMinutes": 20,
+        "prompt": "You are the manager of an independent co-working space. Unexpected plumbing and electrical renovations forced the temporary closure of the primary meeting suites for four days, disrupting several client presentations. Write a professional letter to all registered members explaining the structural emergency, offering appropriate commercial compensation, and detailing preventative maintenance upgrades underway.",
+        "wordCount": "120–150 words"
       },
       {
-        "id": "w_t1_v4",
-        "task": 1,
-        "title": "Part 1 • Narrative Dispatch (Workplace Reorganization)",
-        "prompt": "You recently supervised a complex weekend office relocation or systems upgrade that encountered unexpected complications. Write a formal dispatch report (150–180 words) to your department director detailing the unforeseen logistical challenge, how your team improvised to overcome it, and your recommendations to prevent similar occurrences in future operational transitions."
+        "id": "w_task_1_v4",
+        "variant": 4,
+        "type": "narrative_personal",
+        "title": "Task 1: Heritage Site Advisory Proposal",
+        "timeSuggestedMinutes": 20,
+        "prompt": "You are an assistant conservation officer at a regional archaeological site. Recent surges in tourist foot traffic have caused noticeable erosion to ancient sandstone staircases and masonry. Write a formal proposal to the regional heritage director recommending two visitor-flow management solutions and outlining a community volunteer monitoring program.",
+        "wordCount": "120–150 words"
       },
       {
-        "id": "w_t1_v5",
-        "task": 1,
-        "title": "Part 1 • Narrative Letter (Travel Delay & Hospitality)",
-        "prompt": "While traveling on business, severe weather caused your flight to be diverted to an unfamiliar regional city overnight. Write a personal letter (150–180 words) to a friend recounting the initial travel frustration, the unexpected warmth or helpfulness of a local resident or hotel worker, and how the detour gave you a fresh perspective on the region."
+        "id": "w_task_1_v5",
+        "variant": 5,
+        "type": "narrative_personal",
+        "title": "Task 1: Clinical Trial Participant Recalibration",
+        "timeSuggestedMinutes": 20,
+        "prompt": "You are the head coordinator for a clinical trial investigating a new nutritional supplement. Due to updated ethical guidelines from the institutional review board, participant monitoring protocols must be modified. Write a clear, reassuring letter to study participants explaining the updated appointment frequency and addressing potential privacy concerns.",
+        "wordCount": "120–150 words"
+      },
+      {
+        "id": "w_task_1_v6",
+        "variant": 6,
+        "type": "narrative_personal",
+        "title": "Task 1: University Exchange Program Evaluation",
+        "timeSuggestedMinutes": 20,
+        "prompt": "You have recently completed a semester abroad at a partner university under an academic exchange scholarship. Write a formal evaluation letter to the international relations office outlining the academic benefits, identifying logistical challenges encountered with housing, and suggesting improvements for incoming cohorts.",
+        "wordCount": "120–150 words"
+      },
+      {
+        "id": "w_task_1_v7",
+        "variant": 7,
+        "type": "narrative_personal",
+        "title": "Task 1: Municipal Eco-Audit Recommendation",
+        "timeSuggestedMinutes": 20,
+        "prompt": "You are an environmental consultant hired by a district council to audit commercial energy waste in civic administrative complexes. Write an executive summary memorandum to the council president highlighting two major sources of thermal inefficiency and proposing a phased retrofitting strategy.",
+        "wordCount": "120–150 words"
+      },
+      {
+        "id": "w_task_1_v8",
+        "variant": 8,
+        "type": "narrative_personal",
+        "title": "Task 1: Museum Exhibition Loan Negotiation",
+        "timeSuggestedMinutes": 20,
+        "prompt": "You are a curator at a regional historical museum planning a centenary exhibition on industrial maritime history. Write a formal loan request letter to the keeper of collections at a national maritime museum requesting the display loan of three original shipwright blueprints, explaining security measures and climate controls in place.",
+        "wordCount": "120–150 words"
       }
     ],
     "task_2_discursive": [
       {
-        "part": 2,
-        "tag": "Writing Part 2 • Critical Feature Article",
-        "title": "The Lost Art of Browsing: Physical Bookshops in a Digital Age",
-        "instruction": "Write 220–260 words. (Target: 25 minutes)",
-        "prompt": "<strong>Context:</strong> A literary magazine is dedicating an issue to <em>\"In Praise of the Uncurated Shelf: Why Physical Bookshops and Serendipitous Browsing Matter to the Creative Imagination\"</em>.<br><br><strong>In your article:</strong><br>1. Contrast the sensory, tactile journey of roaming independent bookshop aisles with the algorithmic efficiency of online purchasing.<br>2. Explore how unexpected shelf discoveries challenge intellectual complacency and stimulate creative synthesis.<br>3. Evaluate whether brick-and-mortar bookshops are an indispensable cultural ecosystem or an idealized nostalgia.",
-        "minWords": 220
+        "id": "w_task_2_v1",
+        "variant": 1,
+        "type": "discursive_analytical",
+        "title": "Task 2: Algorithmic Authorship & Academic Integrity",
+        "timeSuggestedMinutes": 25,
+        "prompt": "With the rapid proliferation of generative artificial intelligence in academic and literary writing, educational institutions are divided on policy. Some educators advocate for total prohibition to safeguard original critical thinking, while others argue that AI literacy and critical prompt engineering should become foundational curricular requirements. Write an essay evaluating both perspectives and present your reasoned stance on how educational bodies should respond.",
+        "wordCount": "180–220 words"
       },
       {
-        "part": 2,
-        "tag": "Writing Part 2 • Critical Literary Essay",
-        "title": "The Voice and the Page: Audiobooks and the Architecture of Reading",
-        "instruction": "Write 220–260 words. (Target: 25 minutes)",
-        "prompt": "<strong>Context:</strong> A literary review journal has invited contributions for a symposium titled: <em>\"The Spoken Word Renaissance: Does Listening to Literature Enrich or Constrain the Reader's Imagination?\"</em><br><br><strong>In your essay:</strong><br>1. Contrast the cognitive intimacy of silent reading—where the reader crafts internal cadence and voice—with the interpretive performance of a professional narrator.<br>2. Analyse whether audio performance enhances dramatic accessibility or imposes a singular interpretation that restricts the listener's interpretive freedom.<br>3. Evaluate whether the popularity of audiobooks represents a return to ancient communal oral storytelling traditions or a compromise born of modern multi-tasking habits.",
-        "minWords": 220
+        "id": "w_task_2_v2",
+        "variant": 2,
+        "type": "discursive_analytical",
+        "title": "Task 2: Urban Density vs. Suburban Expansion",
+        "timeSuggestedMinutes": 25,
+        "prompt": "Faced with severe housing shortages, municipal authorities must choose between constructing high-density vertical apartment towers within established city limits or approving low-density suburban developments on agricultural greenbelts. Write an analytical essay discussing the environmental, economic, and social consequences of both approaches, and argue which strategy provides a more sustainable future.",
+        "wordCount": "180–220 words"
       },
       {
-        "part": 2,
-        "tag": "Writing Part 2 • Discursive Essay",
-        "title": "The Reclamation of Darkness: Artificial Light, Ecology, and the Lost Night Sky",
-        "instruction": "Write 220–260 words. (Target: 25 minutes)",
-        "prompt": "<strong>Context:</strong> An environmental and philosophical journal has invited essays on <em>\"The End of True Night: How Light Pollution Disconnects Humanity from the Cosmos and Imperils the Living World\"</em>.<br><br><strong>In your essay:</strong><br>1. Examine how pervasive artificial light disrupts wildlife navigation, circadian cycles, and nocturnal predator-prey dynamics.<br>2. Reflect on the psychological and philosophical impact on humans of losing our ancient connection to unpolluted starlight.<br>3. Propose practical civic design measures (such as shielded lighting and dark sky sanctuaries), weighing public safety against ecological restoration.",
-        "minWords": 220
+        "id": "w_task_2_v3",
+        "variant": 3,
+        "type": "discursive_analytical",
+        "title": "Task 2: Mandatory Civic Service for School Leavers",
+        "timeSuggestedMinutes": 25,
+        "prompt": "Several nations are actively considering legislation requiring all secondary school graduates to complete one year of mandatory civic service—such as ecological conservation, elderly social care, or disaster relief infrastructure. Proponents assert this fosters social cohesion, while critics view it as an infringement on personal liberty and career progression. Write an essay exploring both sides and state your own view.",
+        "wordCount": "180–220 words"
       },
       {
-        "id": "w_t2_v4",
-        "task": 2,
-        "title": "Part 2 • Discursive Article (Cashless Commerce & Digital Equity)",
-        "prompt": "Many modern businesses and transit networks are transitioning to entirely cashless payments. Write a critical feature article (220–260 words) evaluating whether the convenience and accounting efficiency of a cashless society outweigh the risks of financial exclusion for vulnerable demographics and dependence on digital banking infrastructure."
+        "id": "w_task_2_v4",
+        "variant": 4,
+        "type": "discursive_analytical",
+        "title": "Task 2: Corporate Sponsorship of Scientific Research",
+        "timeSuggestedMinutes": 25,
+        "prompt": "As state funding for university scientific research declines, corporate entities are increasingly financing high-stakes biomedical and technological inquiries. Some argue this drives vital rapid innovation, while others contend it inevitably introduces commercial bias and compromises research integrity. Write an essay analyzing both perspectives and provide your own reasoned conclusion.",
+        "wordCount": "180–220 words"
       },
       {
-        "id": "w_t2_v5",
-        "task": 2,
-        "title": "Part 2 • Feature Essay (The 15-Minute City & Urban Mobility)",
-        "prompt": "Urban planners are increasingly advocating for '15-minute cities,' where residents can access all essential amenities—work, retail, healthcare, and education—within a short walk or bicycle ride. Write an evaluative essay (220–260 words) examining the benefits for environmental sustainability and civic community versus the practical challenges of retrofitting existing suburban sprawl."
+        "id": "w_task_2_v5",
+        "variant": 5,
+        "type": "discursive_analytical",
+        "title": "Task 2: Cultural Preservation vs. Global Modernity",
+        "timeSuggestedMinutes": 25,
+        "prompt": "Globalization and rapid digital connectivity are accelerating the homogenization of indigenous dialects, traditional rituals, and regional customs. Some cultural theorists argue that preserving endangered languages and customs through state subsidies is essential, while others maintain that cultural evolution and integration are natural and beneficial. Write an essay evaluating both perspectives.",
+        "wordCount": "180–220 words"
+      },
+      {
+        "id": "w_task_2_v6",
+        "variant": 6,
+        "type": "discursive_analytical",
+        "title": "Task 2: Remote Work and Civic Disengagement",
+        "timeSuggestedMinutes": 25,
+        "prompt": "The normalization of remote and home-based employment has drastically reduced commuting times and allowed greater personal flexibility. However, sociologists warn that eliminating physical workplace communities weakens broader civic participation, public transit viability, and downtown commerce. Write an essay discussing the broader societal trade-offs of the remote work revolution.",
+        "wordCount": "180–220 words"
+      },
+      {
+        "id": "w_task_2_v7",
+        "variant": 7,
+        "type": "discursive_analytical",
+        "title": "Task 2: The Monetization of Digital Privacy",
+        "timeSuggestedMinutes": 25,
+        "prompt": "Tech corporations defend targeted advertising models by noting that personalized advertising allows vital digital services, search engines, and communication tools to remain completely free for consumers. Critics counter that pervasive biometric and behavioral data harvesting poses existential risks to personal autonomy and democratic discourse. Write an essay evaluating both arguments.",
+        "wordCount": "180–220 words"
+      },
+      {
+        "id": "w_task_2_v8",
+        "variant": 8,
+        "type": "discursive_analytical",
+        "title": "Task 2: Tourism Taxation and Heritage Protection",
+        "timeSuggestedMinutes": 25,
+        "prompt": "To combat over-tourism, several historic cities have implemented steep daily entry levies and hotel surcharges on international visitors. Advocates assert this curbs environmental wear and funds conservation, whereas tourism operators argue it penalizes ethical travelers and harms local businesses. Write an essay analyzing both sides and present your recommendation.",
+        "wordCount": "180–220 words"
       }
     ]
   }

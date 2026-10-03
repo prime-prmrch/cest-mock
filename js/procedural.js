@@ -44,6 +44,99 @@
     return JSON.parse(JSON.stringify(arr[idx]));
   }
 
+  // Deterministic in-place Fisher-Yates array shuffle
+  function shuffleArray(arr, rng) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(rng() * (i + 1));
+      const temp = a[i];
+      a[i] = a[j];
+      a[j] = temp;
+    }
+    return a;
+  }
+
+  // Universal Multiple-Choice Option Shuffling & Dynamic Key Remapping
+  function shuffleMultipleChoiceQuestion(q, rng) {
+    if (!q || !q.options || q.options.length <= 1) return q;
+    const originalKey = q.key ? String(q.key).trim().toUpperCase() : "";
+    const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+
+    const originalOptions = q.options.map(opt => {
+      const clean = opt.label.replace(/^\[[A-Z]\]\s*/i, '').replace(/^[A-Z]\s*-\s*/i, '').trim();
+      return {
+        origVal: opt.val,
+        cleanLabel: clean,
+        isCorrect: (opt.val && opt.val.toUpperCase() === originalKey)
+      };
+    });
+
+    const shuffled = shuffleArray(originalOptions, rng);
+    const letterMap = {};
+    let newKey = originalKey;
+
+    q.options = shuffled.map((item, idx) => {
+      const newLetter = letters[idx];
+      letterMap[item.origVal] = newLetter;
+      if (item.isCorrect) {
+        newKey = newLetter;
+      }
+      return {
+        val: newLetter,
+        label: '[' + newLetter + '] ' + item.cleanLabel
+      };
+    });
+
+    q.key = newKey;
+    if (q.trap) {
+      q.trap = q.trap.replace(/\[([A-H])\]/g, (match, p1) => {
+        return letterMap[p1] ? '[' + letterMap[p1] + ']' : match;
+      });
+    }
+    return q;
+  }
+
+  // Reference Options Shuffling (Gapped Sentences/Paragraphs & Multiple Matching)
+  function shuffleReferenceOptions(task, rng) {
+    if (!task || !task.optionsReference || !task.questions) return task;
+    const rawLines = task.optionsReference.split(/<br\s*\/?>/).filter(Boolean);
+    const items = [];
+    rawLines.forEach(line => {
+      const m = line.match(/<strong>\[([A-Z])\]<\/strong>\s*(.*)/i);
+      if (m) items.push({ orig: m[1].toUpperCase(), text: m[2].trim() });
+    });
+    if (items.length <= 1) return task;
+
+    const shuffled = shuffleArray(items, rng);
+    const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
+    const letterMap = {};
+
+    shuffled.forEach((item, idx) => {
+      const newL = letters[idx];
+      letterMap[item.orig] = newL;
+      item.newL = newL;
+    });
+
+    task.optionsReference = shuffled.map(it => '<strong>[' + it.newL + ']</strong> ' + it.text).join('<br>');
+
+    task.questions.forEach(q => {
+      if (q.key && letterMap[q.key.toUpperCase()]) {
+        q.key = letterMap[q.key.toUpperCase()];
+      }
+      q.options = shuffled.map(it => ({
+        val: it.newL,
+        label: '[' + it.newL + ']'
+      }));
+      if (q.trap) {
+        q.trap = q.trap.replace(/\[([A-H])\]/g, (match, p1) => {
+          return letterMap[p1] ? '[' + letterMap[p1] + ']' : match;
+        });
+      }
+    });
+
+    return task;
+  }
+
   /**
    * Procedurally assemble a 52-item exam + 2 writing tasks from bank data
    */
@@ -75,6 +168,7 @@
       q.num = 1;
       q.id = "r_q1";
       q.stem = `1. ${q.stem.replace(/^\d+\.\s*/, '')}`;
+      shuffleMultipleChoiceQuestion(q, rng);
       test.reading.push({
         task: 1,
         tag: "Task 1 • Notices & Messages",
@@ -92,6 +186,7 @@
       q.num = 2;
       q.id = "r_q2";
       q.stem = `2. ${q.stem.replace(/^\d+\.\s*/, '')}`;
+      shuffleMultipleChoiceQuestion(q, rng);
       test.reading.push({
         task: 2,
         tag: "Task 2 • Sentence Gap-Fill",
@@ -121,6 +216,7 @@
         q.num = qNum;
         q.id = `r_q${qNum}`;
         q.stem = `${qNum}. Choose the best word:`;
+        shuffleMultipleChoiceQuestion(q, rng);
       });
       test.reading.push(t4);
     }
@@ -133,6 +229,7 @@
         q.num = qNum;
         q.id = `r_q${qNum}`;
         q.stem = `${qNum}. ${q.stem.replace(/^\d+\.\s*/, '')}`;
+        shuffleMultipleChoiceQuestion(q, rng);
       });
       test.reading.push(t5);
     }
@@ -145,6 +242,7 @@
         q.num = qNum;
         q.id = `r_q${qNum}`;
         q.stem = `${qNum}. ${q.stem.replace(/^\d+\.\s*/, '')}`;
+        shuffleMultipleChoiceQuestion(q, rng);
       });
       test.reading.push(t6);
     }
@@ -158,6 +256,7 @@
         q.id = `r_q${qNum}`;
         q.stem = `Gap ${qNum}`;
       });
+      shuffleReferenceOptions(t7, rng);
       test.reading.push(t7);
     }
 
@@ -170,12 +269,14 @@
         q.id = `r_q${qNum}`;
         q.stem = `Paragraph Gap ${qNum}`;
       });
+      shuffleReferenceOptions(t8, rng);
       test.reading.push(t8);
     }
 
     // 9. Reading Task 9: Multiple Matching (4 Questions, Q30 to Q33)
     const t9 = sampleOne(bank.reading.task_9_multiple_matching, rng);
     if (t9) {
+      t9.questions = shuffleArray(t9.questions, rng);
       t9.questions.forEach((q, idx) => {
         const qNum = idx + 30;
         q.num = qNum;
@@ -196,6 +297,7 @@
       q.num = 1;
       q.id = "l_q1";
       q.stem = `1. ${q.stem.replace(/^\d+\.\s*/, '')}`;
+      shuffleMultipleChoiceQuestion(q, rng);
       test.listening.push({
         task: 1,
         tag: "Task 1 • Picture Multiple Choice",
@@ -213,6 +315,7 @@
       q.num = 2;
       q.id = "l_q2";
       q.stem = `2. ${q.stem.replace(/^\d+\.\s*/, '')}`;
+      shuffleMultipleChoiceQuestion(q, rng);
       test.listening.push({
         task: 2,
         tag: "Task 2 • Short Dialogue Multiple Choice",
@@ -231,6 +334,7 @@
         q.num = qNum;
         q.id = `l_q${qNum}`;
         q.stem = `${qNum}. ${q.stem.replace(/^\d+\.\s*/, '')}`;
+        shuffleMultipleChoiceQuestion(q, rng);
       });
       test.listening.push(l3);
     }
@@ -243,6 +347,7 @@
         q.num = qNum;
         q.id = `l_q${qNum}`;
         q.stem = `${qNum}. ${q.stem.replace(/^\d+\.\s*/, '')}`;
+        shuffleMultipleChoiceQuestion(q, rng);
       });
       test.listening.push(l4);
     }
@@ -256,6 +361,7 @@
         q.id = `l_q${qNum}`;
         q.stem = `${qNum}. ${q.stem.replace(/^\d+\.\s*/, '')}`;
       });
+      shuffleReferenceOptions(l5, rng);
       test.listening.push(l5);
     }
 

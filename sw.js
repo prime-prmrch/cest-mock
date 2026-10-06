@@ -3,7 +3,7 @@
  * Provides progressive offline caching for core application assets and background audio pre-caching.
  */
 
-const STATIC_CACHE = 'cest-mock-static-v6';
+const STATIC_CACHE = 'cest-mock-static-v7';
 const AUDIO_CACHE = 'cest-mock-audio-v2';
 
 const STATIC_ASSETS = [
@@ -11,8 +11,6 @@ const STATIC_ASSETS = [
   './index.html',
   './test.html',
   './css/style.css',
-  './js/scoring.js',
-  './js/procedural.js',
   './js/engine.js',
   './manifest.json',
   './icons/icon.svg',

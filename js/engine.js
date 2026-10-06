@@ -924,14 +924,58 @@ ${w2 || "(No text)"}
 
   function renderReadingTask(task) {
     let innerBody = "";
-    if (task.passage) {
-      innerBody += `<div class="passage-box">${task.passage}</div>`;
+    let passageHtml = task.passage || "";
+    const remainingQuestions = [];
+
+    // Support inline gap fields directly in the text for Tasks 3 & 4
+    if (passageHtml && task.questions && (task.task === 3 || task.task === 4)) {
+      const inlineIds = new Set();
+      task.questions.forEach(q => {
+        let widget = "";
+        if (q.type === "text") {
+          widget = `<span class="inline-gap-wrap"><span class="inline-gap-badge">(${q.num})</span><input type="text" class="gap-text-input inline-gap-text" id="${q.id}" placeholder="..." autocomplete="off" spellcheck="false"></span>`;
+        } else if (q.type === "select") {
+          const opts = (q.options || []).map(opt => `
+            <option value="${opt.val}">${escapeHtml(opt.label)}</option>
+          `).join('');
+          widget = `<span class="inline-gap-wrap"><span class="inline-gap-badge">(${q.num})</span><select class="select-input inline-gap-select" id="${q.id}"><option value="">-- Choose ${q.num} --</option>${opts}</select></span>`;
+        }
+
+        if (widget) {
+          // 1. Try matching explicit gap number pattern: <strong>(N)</strong> _____ or (N) _____ or <strong>(N)</strong> [ ___ ]
+          const numRegex = new RegExp(`(?:<strong[^>]*>\\s*\\(?${q.num}\\)?\\s*<\\/strong>|\\(?${q.num}\\)?)\\s*(?:\\[\\s*[_\\s-]*\\]|[_]{2,})`, 'i');
+          if (numRegex.test(passageHtml)) {
+            passageHtml = passageHtml.replace(numRegex, widget);
+            inlineIds.add(q.id);
+          } else {
+            // 2. Try unnumbered gap placeholder: [ &nbsp;... ] or [ ___ ] or series of underscores
+            const unnumberedRegex = /\[\s*(?:&nbsp;|\s|_|-)+\s*\]|[_]{4,}/i;
+            if (unnumberedRegex.test(passageHtml)) {
+              passageHtml = passageHtml.replace(unnumberedRegex, widget);
+              inlineIds.add(q.id);
+            }
+          }
+        }
+      });
+
+      // Any questions that could not be matched inline will still render below
+      task.questions.forEach(q => {
+        if (!inlineIds.has(q.id)) {
+          remainingQuestions.push(q);
+        }
+      });
+    } else if (task.questions) {
+      remainingQuestions.push(...task.questions);
+    }
+
+    if (passageHtml) {
+      innerBody += `<div class="passage-box">${passageHtml}</div>`;
     }
     if (task.optionsReference) {
       innerBody += `<div style="background:#e8f1fa; padding:12px; border-radius:8px; margin-bottom:14px; font-size:13px; line-height:1.5;">${task.optionsReference}</div>`;
     }
-    if (task.questions) {
-      innerBody += task.questions.map(q => renderQuestion(q)).join('');
+    if (remainingQuestions.length > 0) {
+      innerBody += remainingQuestions.map(q => renderQuestion(q)).join('');
     }
     return `
       <div class="task-card" id="task_r_${task.task}">

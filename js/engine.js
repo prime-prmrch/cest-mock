@@ -927,8 +927,8 @@ ${w2 || "(No text)"}
     let passageHtml = task.passage || "";
     const remainingQuestions = [];
 
-    // Support inline gap fields directly in the text for Tasks 3 & 4
-    if (passageHtml && task.questions && (task.task === 3 || task.task === 4)) {
+    // Support inline gap fields directly in the text for Tasks 3, 4, 7, and 8
+    if (passageHtml && task.questions && (task.task === 3 || task.task === 4 || task.task === 7 || task.task === 8)) {
       const inlineIds = new Set();
       task.questions.forEach(q => {
         let widget = "";
@@ -938,12 +938,16 @@ ${w2 || "(No text)"}
           const opts = (q.options || []).map(opt => `
             <option value="${opt.val}">${escapeHtml(opt.label)}</option>
           `).join('');
-          widget = `<span class="inline-gap-wrap"><span class="inline-gap-badge">(${q.num})</span><select class="select-input inline-gap-select" id="${q.id}"><option value="">-- Choose ${q.num} --</option>${opts}</select></span>`;
+          if (task.task === 8) {
+            widget = `<span class="inline-gap-wrap inline-paragraph-gap" style="display:flex; align-items:center; gap:8px; background:#e2e8f0; padding:8px 12px; border-radius:8px; margin:12px 0;"><span class="inline-gap-badge" style="font-weight:700; color:var(--primary-dark);">Paragraph Gap [${q.num}]:</span><select class="select-input inline-gap-select" id="${q.id}" style="max-width:200px;"><option value="">-- Choose ${q.num} --</option>${opts}</select></span>`;
+          } else {
+            widget = `<span class="inline-gap-wrap"><span class="inline-gap-badge">(${q.num})</span><select class="select-input inline-gap-select" id="${q.id}"><option value="">-- Choose ${q.num} --</option>${opts}</select></span>`;
+          }
         }
 
         if (widget) {
-          // 1. Try matching explicit gap number pattern: <strong>(N)</strong> _____ or (N) _____ or <strong>(N)</strong> [ ___ ]
-          const numRegex = new RegExp(`(?:<strong[^>]*>\\s*\\(?${q.num}\\)?\\s*<\\/strong>|\\(?${q.num}\\)?)\\s*(?:\\[\\s*[_\\s-]*\\]|[_]{2,})`, 'i');
+          // 1. Try matching explicit gap number pattern: <strong>(N)</strong> _____ or [ Paragraph Gap N ] or (N) _____ or <strong>(N)</strong> [ ___ ]
+          const numRegex = new RegExp(`(?:<strong[^>]*>\\s*\\[?\\s*(?:Paragraph\\s+Gap\\s+)?\\(?${q.num}\\)?\\s*\\]?\\s*<\\/strong>|\\(?${q.num}\\)?)\\s*(?:\\[\\s*[\\s_-]*\\]|[_]{2,})?`, 'i');
           if (numRegex.test(passageHtml)) {
             passageHtml = passageHtml.replace(numRegex, widget);
             inlineIds.add(q.id);
@@ -968,10 +972,13 @@ ${w2 || "(No text)"}
       remainingQuestions.push(...task.questions);
     }
 
+    if (task.optionsReference && (task.task === 7 || task.task === 8)) {
+      innerBody += `<div class="options-reference-box" style="background:#e8f1fa; border:1px solid #bfdbfe; padding:12px 14px; border-radius:8px; margin-bottom:14px; font-size:13.5px; line-height:1.55;">${task.optionsReference}</div>`;
+    }
     if (passageHtml) {
       innerBody += `<div class="passage-box">${passageHtml}</div>`;
     }
-    if (task.optionsReference) {
+    if (task.optionsReference && task.task !== 7 && task.task !== 8) {
       innerBody += `<div style="background:#e8f1fa; padding:12px; border-radius:8px; margin-bottom:14px; font-size:13px; line-height:1.5;">${task.optionsReference}</div>`;
     }
     if (remainingQuestions.length > 0) {

@@ -225,7 +225,7 @@
 
 ### Task 1: Dialogue Multiple Choice (Question 1)
 *Listen to the conversation at the botanical conservatory visitor desk. You will hear the recording twice.*  
-*(Audio Track: `q1_dialogue.mp3`)*  
+*(Audio Track: `audio/task1_v3.mp3`)*  
 
 **1. Which lost item was recovered in the Victorian Fernery?**  
 [A] A silk umbrella  
@@ -236,7 +236,7 @@
 
 ### Task 2: Short Dialogue Multiple Choice (Question 2)
 *Listen to two architects discussing a four-day working week pilot. You will hear the recording twice.*  
-*(Audio Track: `q2_dialogue.mp3`)*  
+*(Audio Track: `audio/task2_v3.mp3`)*  
 
 **2. What do both architects agree was the greatest advantage of the four-day schedule?**  
 [A] Having longer uninterrupted weekend leisure trips  
@@ -247,7 +247,7 @@
 
 ### Task 3: Extended Audio Multiple Choice (Questions 3–7)
 *Listen to an interview with acoustic ecologist Naomi Chen. You will hear the recording twice.*  
-*(Audio Track: `q3_q7_interview.mp3`)*  
+*(Audio Track: `audio/task3_v3.mp3`)*  
 
 **3. What inspired Naomi to transition from classical percussion to soundscape ecology?**  
 [A] A childhood fascination with deep-sea whale acoustics  
@@ -278,7 +278,7 @@
 
 ### Task 4: Extended Audio Discussion (Questions 8–9)
 *Listen to two urban planners, Hannah and her colleague, discussing modern civic spaces. You will hear the recording twice.*  
-*(Audio Track: `q8_q9_discussion.mp3`)*  
+*(Audio Track: `audio/task4_v3.mp3`)*  
 
 **8. Why do the speakers criticize privately managed public plazas?**  
 [A] The architectural construction materials are cheap and flimsy  
@@ -294,7 +294,7 @@
 
 ### Task 5: Multiple Matching (Questions 10–14)
 *Listen to five individuals describing serendipitous encounters that transformed their careers. Choose from the list (A–H) what catalytic encounter redirected each speaker. You will hear the recording twice.*  
-*(Audio Track: `q10_q14_speakers.mp3`)*  
+*(Audio Track: `audio/task5_v3.mp3`)*  
 
 **Serendipitous Encounters & Catalysts**:  
 * **[A]** A stray injured animal followed the speaker during a remote mountain hike.  
@@ -317,7 +317,7 @@
 
 ### Task 6: Monologue Note Completion (Questions 15–19)
 *Listen to a lecture by lichenologist Dr. Alistair MacIntyre on Britain’s temperate oceanic rainforests. Complete the notes below using NO MORE THAN THREE WORDS for each gap. You will hear the recording twice.*  
-*(Audio Track: `q15_q19_monologue.mp3`)*  
+*(Audio Track: `audio/task6_v3.mp3`)*  
 
 > **CELTIC RAINFOREST CONSERVATION REPORT**  
 > * **Climatic Habitat**: Temperate rainforests depend on hyper-humid conditions and mild temperatures fostered by the **(15)** ____________________________________.  

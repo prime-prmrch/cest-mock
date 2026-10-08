@@ -225,7 +225,7 @@
 
 ### Task 1: Dialogue Multiple Choice (Question 1)
 *Listen to the conversation at the railway customer services counter. You will hear the recording twice.*  
-*(Audio Track: `q1_dialogue.mp3`)*  
+*(Audio Track: `audio/task1_v2.mp3`)*  
 
 **1. Which personal belonging had the woman left on the 8:15 Edinburgh express?**  
 [A] An artist's woollen scarf  
@@ -236,7 +236,7 @@
 
 ### Task 2: Short Dialogue Multiple Choice (Question 2)
 *Listen to two apprentice chefs discussing an emergency dinner service. You will hear the recording twice.*  
-*(Audio Track: `q2_dialogue.mp3`)*  
+*(Audio Track: `audio/task2_v2.mp3`)*  
 
 **2. How did both speakers feel about the sudden power outage in the kitchen?**  
 [A] Annoyed by having to apologize to disappointed diners  
@@ -247,7 +247,7 @@
 
 ### Task 3: Extended Audio Multiple Choice (Questions 3–7)
 *Listen to an interview with subterranean speleologist Dr. Julian Croft. You will hear the recording twice.*  
-*(Audio Track: `q3_q7_interview.mp3`)*  
+*(Audio Track: `audio/task3_v2.mp3`)*  
 
 **3. What originally drew Julian from mountaineering to submerged cave diving?**  
 [A] The chance to test experimental diving suits in deep waters  
@@ -278,7 +278,7 @@
 
 ### Task 4: Extended Audio Discussion (Questions 8–9)
 *Listen to two video game designers, Marcus and Elena, discussing narrative design. You will hear the recording twice.*  
-*(Audio Track: `q8_q9_discussion.mp3`)*  
+*(Audio Track: `audio/task4_v2.mp3`)*  
 
 **8. Why do Marcus and Elena prefer emergent storytelling to pre-scripted cinematic scenes?**  
 [A] It allows studios to cut back on expensive voice-actor casting  
@@ -294,7 +294,7 @@
 
 ### Task 5: Multiple Matching (Questions 10–14)
 *Listen to five individuals describing why they made dramatic mid-life career transitions. Choose from the list (A–H) what motivated each speaker. You will hear the recording twice.*  
-*(Audio Track: `q10_q14_speakers.mp3`)*  
+*(Audio Track: `audio/task5_v2.mp3`)*  
 
 **Motivations & Triggers**:  
 * **[A]** A severe medical wake-up call forced a lifestyle overhaul.  
@@ -317,7 +317,7 @@
 
 ### Task 6: Monologue Note Completion (Questions 15–19)
 *Listen to a talk by marine archaeologist Dr. Maya Lin on the excavation of the 17th-century Baltic shipwreck 'Kronan-Nord'. Complete the notes below using NO MORE THAN THREE WORDS for each gap. You will hear the recording twice.*  
-*(Audio Track: `q15_q19_monologue.mp3`)*  
+*(Audio Track: `audio/task6_v2.mp3`)*  
 
 > **EXCAVATION REPORT: THE KRONAN-NORD**  
 > * **Preservation Factors**: Ship timbers survived intact due to low water salinity and completely **(15)** ____________________________________, which stopped destructive shipworm activity.  

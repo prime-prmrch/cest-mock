@@ -3,7 +3,7 @@
  * Provides progressive offline caching for core application assets and background audio pre-caching.
  */
 
-const STATIC_CACHE = 'cest-mock-static-v10';
+const STATIC_CACHE = 'cest-mock-static-v11';
 const AUDIO_CACHE = 'cest-mock-audio-v2';
 
 const STATIC_ASSETS = [
@@ -16,7 +16,10 @@ const STATIC_ASSETS = [
   './icons/icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './data/bank.json'
+  './data/bank.json',
+  './data/test_1.json',
+  './data/test_2.json',
+  './data/test_3.json'
 ];
 
 const ALL_AUDIO_TRACKS = [
@@ -113,7 +116,7 @@ self.addEventListener('fetch', (event) => {
       }
       return networkResponse;
     }).catch(() => {
-      return caches.match(request, { ignoreSearch: false });
+      return caches.match(request, { ignoreSearch: true });
     })
   );
 });

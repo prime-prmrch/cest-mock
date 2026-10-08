@@ -279,28 +279,28 @@ async def run_all_generation(force: bool = False, test_id: int = 0):
 
     tasks = [
         # Mock Test 1
-        ("Mock Test 1: Task 1 (Cafe Lost Keys)", 1, MOCK_1_Q1, MOCK_DIR / "mock_test_1/audio/q1_dialogue.mp3"),
-        ("Mock Test 1: Task 2 (Workshop Software Demo)", 1, MOCK_1_Q2, MOCK_DIR / "mock_test_1/audio/q2_dialogue.mp3"),
-        ("Mock Test 1: Task 3 (Marcus Thorne Interview)", 1, MOCK_1_Q3_Q7, MOCK_DIR / "mock_test_1/audio/q3_q7_interview.mp3"),
-        ("Mock Test 1: Task 4 (Fashion Rental Discussion)", 1, MOCK_1_Q8_Q9, MOCK_DIR / "mock_test_1/audio/q8_q9_discussion.mp3"),
-        ("Mock Test 1: Task 5 (Running Perspectives)", 1, MOCK_1_Q10_Q14, MOCK_DIR / "mock_test_1/audio/q10_q14_speakers.mp3"),
-        ("Mock Test 1: Task 6 (Coral Reef Restoration)", 1, MOCK_1_Q15_Q19, MOCK_DIR / "mock_test_1/audio/q15_q19_monologue.mp3"),
+        ("Mock Test 1: Task 1 (Cafe Lost Keys)", 1, MOCK_1_Q1, MOCK_DIR / "audio/task1_v1.mp3"),
+        ("Mock Test 1: Task 2 (Workshop Software Demo)", 1, MOCK_1_Q2, MOCK_DIR / "audio/task2_v1.mp3"),
+        ("Mock Test 1: Task 3 (Marcus Thorne Interview)", 1, MOCK_1_Q3_Q7, MOCK_DIR / "audio/task3_v1.mp3"),
+        ("Mock Test 1: Task 4 (Fashion Rental Discussion)", 1, MOCK_1_Q8_Q9, MOCK_DIR / "audio/task4_v1.mp3"),
+        ("Mock Test 1: Task 5 (Running Perspectives)", 1, MOCK_1_Q10_Q14, MOCK_DIR / "audio/task5_v1.mp3"),
+        ("Mock Test 1: Task 6 (Coral Reef Restoration)", 1, MOCK_1_Q15_Q19, MOCK_DIR / "audio/task6_v1.mp3"),
 
         # Mock Test 2
-        ("Mock Test 2: Task 1 (Edinburgh Express Sketchbook)", 2, MOCK_2_Q1, MOCK_DIR / "mock_test_2/audio/q1_dialogue.mp3"),
-        ("Mock Test 2: Task 2 (Apprentice Chefs Fire Kitchen)", 2, MOCK_2_Q2, MOCK_DIR / "mock_test_2/audio/q2_dialogue.mp3"),
-        ("Mock Test 2: Task 3 (Julian Croft Speleology Interview)", 2, MOCK_2_Q3_Q7, MOCK_DIR / "mock_test_2/audio/q3_q7_interview.mp3"),
-        ("Mock Test 2: Task 4 (Game Storytelling Discussion)", 2, MOCK_2_Q8_Q9, MOCK_DIR / "mock_test_2/audio/q8_q9_discussion.mp3"),
-        ("Mock Test 2: Task 5 (Mid-Life Career Transitions)", 2, MOCK_2_Q10_Q14, MOCK_DIR / "mock_test_2/audio/q10_q14_speakers.mp3"),
-        ("Mock Test 2: Task 6 (Kronan-Nord Baltic Shipwreck)", 2, MOCK_2_Q15_Q19, MOCK_DIR / "mock_test_2/audio/q15_q19_monologue.mp3"),
+        ("Mock Test 2: Task 1 (Edinburgh Express Sketchbook)", 2, MOCK_2_Q1, MOCK_DIR / "audio/task1_v2.mp3"),
+        ("Mock Test 2: Task 2 (Apprentice Chefs Fire Kitchen)", 2, MOCK_2_Q2, MOCK_DIR / "audio/task2_v2.mp3"),
+        ("Mock Test 2: Task 3 (Julian Croft Speleology Interview)", 2, MOCK_2_Q3_Q7, MOCK_DIR / "audio/task3_v2.mp3"),
+        ("Mock Test 2: Task 4 (Game Storytelling Discussion)", 2, MOCK_2_Q8_Q9, MOCK_DIR / "audio/task4_v2.mp3"),
+        ("Mock Test 2: Task 5 (Mid-Life Career Transitions)", 2, MOCK_2_Q10_Q14, MOCK_DIR / "audio/task5_v2.mp3"),
+        ("Mock Test 2: Task 6 (Kronan-Nord Baltic Shipwreck)", 2, MOCK_2_Q15_Q19, MOCK_DIR / "audio/task6_v2.mp3"),
 
         # Mock Test 3
-        ("Mock Test 3: Task 1 (Fernery Brass Compass)", 3, MOCK_3_Q1, MOCK_DIR / "mock_test_3/audio/q1_dialogue.mp3"),
-        ("Mock Test 3: Task 2 (4-Day Week Architects)", 3, MOCK_3_Q2, MOCK_DIR / "mock_test_3/audio/q2_dialogue.mp3"),
-        ("Mock Test 3: Task 3 (Naomi Chen Acoustic Ecology)", 3, MOCK_3_Q3_Q7, MOCK_DIR / "mock_test_3/audio/q3_q7_interview.mp3"),
-        ("Mock Test 3: Task 4 (Privatized Plazas Discussion)", 3, MOCK_3_Q8_Q9, MOCK_DIR / "mock_test_3/audio/q8_q9_discussion.mp3"),
-        ("Mock Test 3: Task 5 (Serendipitous Life Pivots)", 3, MOCK_3_Q10_Q14, MOCK_DIR / "mock_test_3/audio/q10_q14_speakers.mp3"),
-        ("Mock Test 3: Task 6 (Celtic Rainforest Lichens)", 3, MOCK_3_Q15_Q19, MOCK_DIR / "mock_test_3/audio/q15_q19_monologue.mp3"),
+        ("Mock Test 3: Task 1 (Fernery Brass Compass)", 3, MOCK_3_Q1, MOCK_DIR / "audio/task1_v3.mp3"),
+        ("Mock Test 3: Task 2 (4-Day Week Architects)", 3, MOCK_3_Q2, MOCK_DIR / "audio/task2_v3.mp3"),
+        ("Mock Test 3: Task 3 (Naomi Chen Acoustic Ecology)", 3, MOCK_3_Q3_Q7, MOCK_DIR / "audio/task3_v3.mp3"),
+        ("Mock Test 3: Task 4 (Privatized Plazas Discussion)", 3, MOCK_3_Q8_Q9, MOCK_DIR / "audio/task4_v3.mp3"),
+        ("Mock Test 3: Task 5 (Serendipitous Life Pivots)", 3, MOCK_3_Q10_Q14, MOCK_DIR / "audio/task5_v3.mp3"),
+        ("Mock Test 3: Task 6 (Celtic Rainforest Lichens)", 3, MOCK_3_Q15_Q19, MOCK_DIR / "audio/task6_v3.mp3"),
     ]
 
     filtered_tasks = [t for t in tasks if (test_id == 0 or t[1] == test_id)]

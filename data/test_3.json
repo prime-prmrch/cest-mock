@@ -3,7 +3,7 @@
   "title": "Mock Test 3: Natural Sciences & Ecological Fieldwork",
   "subtitle": "Ecological Fieldwork, Ethology & Natural World Narratives",
   "durationMinutes": 90,
-  "audioDir": "mock_test_3/audio/",
+  "audioDir": "audio/",
   "reading": [
     {
       "task": 1,
@@ -1011,7 +1011,7 @@
       "tag": "Task 1 • Short Dialogue Multiple Choice",
       "title": "Botanical Conservatory Lost Property",
       "instruction": "Listen to the conversation. (2 plays maximum)",
-      "audioTrack": "q1_dialogue.mp3",
+      "audioTrack": "audio/task1_v3.mp3",
       "questions": [
         {
           "id": "l_q1",
@@ -1043,7 +1043,7 @@
       "tag": "Task 2 • Dialogue Multiple Choice",
       "title": "Architectural Studio Schedule Pilot",
       "instruction": "Listen to two architects. (2 plays maximum)",
-      "audioTrack": "q2_dialogue.mp3",
+      "audioTrack": "audio/task2_v3.mp3",
       "questions": [
         {
           "id": "l_q2",
@@ -1075,7 +1075,7 @@
       "tag": "Task 3 • Extended Interview",
       "title": "Naomi Chen: Glacial Acoustic Ecology",
       "instruction": "Listen to the interview and answer questions 3–7. (2 plays maximum)",
-      "audioTrack": "q3_q7_interview.mp3",
+      "audioTrack": "audio/task3_v3.mp3",
       "questions": [
         {
           "id": "l_q3",
@@ -1199,7 +1199,7 @@
       "tag": "Task 4 • Extended Discussion",
       "title": "Privatized Public Plazas",
       "instruction": "Listen to Hannah and her colleague and answer questions 8–9. (2 plays maximum)",
-      "audioTrack": "q8_q9_discussion.mp3",
+      "audioTrack": "audio/task4_v3.mp3",
       "questions": [
         {
           "id": "l_q8",
@@ -1254,7 +1254,7 @@
       "tag": "Task 5 • Multiple Matching",
       "title": "Serendipitous Life Pivots",
       "instruction": "Match speakers 1–5 with catalysts A–H. (2 plays maximum)",
-      "audioTrack": "q10_q14_speakers.mp3",
+      "audioTrack": "audio/task5_v3.mp3",
       "optionsReference": "<strong>Catalysts &amp; Encounters:</strong><br/>\n<strong>[A]</strong> A stray injured animal followed the speaker during a remote mountain hike.<br/>\n<strong>[B]</strong> Overhearing elderly locals speaking an archaic oral dialect at a harbor dock.<br/>\n<strong>[C]</strong> Inheriting a collection of rare Japanese woodblock prints from an uncle.<br/>\n<strong>[D]</strong> An accidentally misdelivered historic letter inspired an interest in alpine seed banks.<br/>\n<strong>[E]</strong> Being stranded in a Tuscan village led to visiting an open master cello workshop.<br/>\n<strong>[F]</strong> Discovering an uncataloged medieval charter during a renovation project.<br/>\n<strong>[G]</strong> Sheltering from a ferocious hailstorm inside a traditional letterpress print shop.<br/>\n<strong>[H]</strong> A flight delay caused a chance meeting with an international diplomat.",
       "questions": [
         {
@@ -1479,7 +1479,7 @@
       "tag": "Task 6 • Sentence Completion",
       "title": "Temperate Celtic Rainforests",
       "instruction": "Write NO MORE THAN THREE WORDS for each gap.",
-      "audioTrack": "q15_q19_monologue.mp3",
+      "audioTrack": "audio/task6_v3.mp3",
       "questions": [
         {
           "id": "l_q15",

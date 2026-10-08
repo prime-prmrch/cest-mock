@@ -225,7 +225,7 @@
 
 ### Task 1: Picture Multiple Choice (Question 1)
 *Listen to the conversation between a customer and a cafe employee. You will hear the recording twice.*  
-*(Audio Track: `q1_dialogue.mp3`)*  
+*(Audio Track: `audio/task1_v1.mp3`)*  
 
 **1. Which item did the woman leave behind at the cafe?**  
 [A] An umbrella  
@@ -236,7 +236,7 @@
 
 ### Task 2: Short Dialogue Multiple Choice (Question 2)
 *Listen to two colleagues discussing a professional training workshop. You will hear the recording twice.*  
-*(Audio Track: `q2_dialogue.mp3`)*  
+*(Audio Track: `audio/task2_v1.mp3`)*  
 
 **2. What did both speakers agree was the most valuable part of the morning?**  
 [A] The energetic delivery style of the main presenter  
@@ -247,7 +247,7 @@
 
 ### Task 3: Extended Audio Multiple Choice (Questions 3–7)
 *Listen to an interview with acoustic engineer Marcus Thorne. You will hear the recording twice.*  
-*(Audio Track: `q3_q7_interview.mp3`)*  
+*(Audio Track: `audio/task3_v1.mp3`)*  
 
 **3. What originally motivated Marcus to specialize in outdoor acoustic engineering?**  
 [A] Frustration with the acoustic limitations of classical concert halls  
@@ -278,7 +278,7 @@
 
 ### Task 4: Two-Question Multiple Choice (Questions 8–9)
 *Listen to two friends, David and Sarah, talking about fashion rental platforms. You will hear the recording twice.*  
-*(Audio Track: `q8_q9_discussion.mp3`)*  
+*(Audio Track: `audio/task4_v1.mp3`)*  
 
 **8. Why did Sarah decide to use a clothing rental service?**  
 [A] To keep up with rapidly changing seasonal trends  
@@ -294,7 +294,7 @@
 
 ### Task 5: Multiple Matching (Questions 10–14)
 *Listen to five individuals explaining why they took up long-distance running. Choose from the list (A–H) what each speaker values most about running. You will hear the recording twice.*  
-*(Audio Track: `q10_q14_speakers.mp3`)*  
+*(Audio Track: `audio/task5_v1.mp3`)*  
 
 **List of Reasons**:  
 * **[A]** The social camaraderie of training with a supportive group  
@@ -317,7 +317,7 @@
 
 ### Task 6: Sentence Completion (Questions 15–19)
 *Listen to marine biologist Dr. Clara Hughes talking about coral reef restoration. Complete the sentences with **no more than THREE words** in each gap. You will hear the recording twice.*  
-*(Audio Track: `q15_q19_monologue.mp3`)*  
+*(Audio Track: `audio/task6_v1.mp3`)*  
 
 * **15**. Before launching the project, the research team searched for coral colonies with natural _______________________________.  
 * **16**. The cutting technique known as micro-fragmentation triggered the corals' _______________________________, accelerating growth rates.  

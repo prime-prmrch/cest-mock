@@ -3,7 +3,7 @@
   "title": "Mock Test 2: Literary & Cultural Expressive Suite",
   "subtitle": "Humanities, Historic Craftsmanship & Expressive Narratives",
   "durationMinutes": 90,
-  "audioDir": "mock_test_2/audio/",
+  "audioDir": "audio/",
   "reading": [
     {
       "task": 1,
@@ -1015,7 +1015,7 @@
       "tag": "Task 1 • Short Dialogue Multiple Choice",
       "title": "Edinburgh Express Lost Property",
       "instruction": "Listen to the conversation. (2 plays maximum)",
-      "audioTrack": "q1_dialogue.mp3",
+      "audioTrack": "audio/task1_v2.mp3",
       "questions": [
         {
           "id": "l_q1",
@@ -1047,7 +1047,7 @@
       "tag": "Task 2 • Dialogue Multiple Choice",
       "title": "Kitchen Power Outage",
       "instruction": "Listen to two apprentice chefs. (2 plays maximum)",
-      "audioTrack": "q2_dialogue.mp3",
+      "audioTrack": "audio/task2_v2.mp3",
       "questions": [
         {
           "id": "l_q2",
@@ -1079,7 +1079,7 @@
       "tag": "Task 3 • Extended Interview",
       "title": "Dr. Julian Croft: Subterranean Speleology",
       "instruction": "Listen to the interview and answer questions 3–7. (2 plays maximum)",
-      "audioTrack": "q3_q7_interview.mp3",
+      "audioTrack": "audio/task3_v2.mp3",
       "questions": [
         {
           "id": "l_q3",
@@ -1203,7 +1203,7 @@
       "tag": "Task 4 • Extended Discussion",
       "title": "Emergent Storytelling in Game Design",
       "instruction": "Listen to Marcus and Elena and answer questions 8–9. (2 plays maximum)",
-      "audioTrack": "q8_q9_discussion.mp3",
+      "audioTrack": "audio/task4_v2.mp3",
       "questions": [
         {
           "id": "l_q8",
@@ -1258,7 +1258,7 @@
       "tag": "Task 5 • Multiple Matching",
       "title": "Mid-Life Career Transitions",
       "instruction": "Match speakers 1–5 with reasons A–H. (2 plays maximum)",
-      "audioTrack": "q10_q14_speakers.mp3",
+      "audioTrack": "audio/task5_v2.mp3",
       "optionsReference": "<strong>Triggers &amp; Motivations:</strong><br/>\n<strong>[A]</strong> A severe medical wake-up call forced a lifestyle overhaul.<br/>\n<strong>[B]</strong> Inheriting a rural family property inspired an agricultural venture.<br/>\n<strong>[C]</strong> Paralyzing bureaucratic red tape suffocated creative fulfillment.<br/>\n<strong>[D]</strong> A deep longing to build tangible things and reconnect with natural elements.<br/>\n<strong>[E]</strong> Relocating internationally to support a partner's diplomatic assignment.<br/>\n<strong>[F]</strong> Profound moral discomfort with the societal impact of corporate technology.<br/>\n<strong>[G]</strong> Turning an obsessive archival leisure hobby into a professional vocation.<br/>\n<strong>[H]</strong> Unexpected commercial success from a viral craft tutorial.",
       "questions": [
         {
@@ -1483,7 +1483,7 @@
       "tag": "Task 6 • Sentence Completion",
       "title": "The Kronan-Nord Baltic Shipwreck",
       "instruction": "Write NO MORE THAN THREE WORDS for each gap.",
-      "audioTrack": "q15_q19_monologue.mp3",
+      "audioTrack": "audio/task6_v2.mp3",
       "questions": [
         {
           "id": "l_q15",

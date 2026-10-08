@@ -3,7 +3,7 @@
   "title": "Mock Test 1: General Adaptive Baseline",
   "subtitle": "Standard General Adaptive Benchmark",
   "durationMinutes": 90,
-  "audioDir": "mock_test_1/audio/",
+  "audioDir": "audio/",
   "reading": [
     {
       "task": 1,
@@ -1007,7 +1007,7 @@
       "tag": "Task 1 • Picture Multiple Choice",
       "title": "Cafe Lost Property",
       "instruction": "Listen to the conversation between a customer and a cafe employee. (2 plays maximum)",
-      "audioTrack": "q1_dialogue.mp3",
+      "audioTrack": "audio/task1_v1.mp3",
       "questions": [
         {
           "id": "l_q1",
@@ -1039,7 +1039,7 @@
       "tag": "Task 2 • Short Dialogue Multiple Choice",
       "title": "Professional Training Workshop",
       "instruction": "Listen to two colleagues discussing a training workshop. (2 plays maximum)",
-      "audioTrack": "q2_dialogue.mp3",
+      "audioTrack": "audio/task2_v1.mp3",
       "questions": [
         {
           "id": "l_q2",
@@ -1071,7 +1071,7 @@
       "tag": "Task 3 • Extended Audio Multiple Choice",
       "title": "Marcus Thorne: Acoustic Engineering",
       "instruction": "Listen to an interview with acoustic engineer Marcus Thorne. (2 plays maximum)",
-      "audioTrack": "q3_q7_interview.mp3",
+      "audioTrack": "audio/task3_v1.mp3",
       "questions": [
         {
           "id": "l_q3",
@@ -1195,7 +1195,7 @@
       "tag": "Task 4 • Extended Audio Discussion",
       "title": "Sustainable Fashion Rental",
       "instruction": "Listen to two colleagues discussing sustainable fashion rental services. (2 plays maximum)",
-      "audioTrack": "q8_q9_discussion.mp3",
+      "audioTrack": "audio/task4_v1.mp3",
       "questions": [
         {
           "id": "l_q8",
@@ -1250,7 +1250,7 @@
       "tag": "Task 5 • Multiple Matching",
       "title": "Why People Run: Five Perspectives",
       "instruction": "Match speakers 1–5 with reasons A–H. (2 plays maximum)",
-      "audioTrack": "q10_q14_speakers.mp3",
+      "audioTrack": "audio/task5_v1.mp3",
       "optionsReference": "<strong>[A]</strong> The social camaraderie of training with a supportive group<br><strong>[B]</strong> Lowering personal medical risk factors following clinical advice<br><strong>[C]</strong> The opportunity to explore unfamiliar cities from a unique vantage point<br><strong>[D]</strong> Releasing stress and achieving mental clarity away from work<br><strong>[E]</strong> Recovering physical mobility following an orthopedic injury<br><strong>[F]</strong> The satisfaction of measuring progress against clear objective benchmarks<br><strong>[G]</strong> Participating in fundraising events for charitable organizations<br><strong>[H]</strong> Enjoying peaceful nature trails in mountainous wilderness",
       "questions": [
         {
@@ -1475,7 +1475,7 @@
       "tag": "Task 6 • Sentence Completion",
       "title": "Coral Reef Restoration",
       "instruction": "Write NO MORE THAN THREE WORDS for each gap.",
-      "audioTrack": "q15_q19_monologue.mp3",
+      "audioTrack": "audio/task6_v1.mp3",
       "questions": [
         {
           "id": "l_q15",

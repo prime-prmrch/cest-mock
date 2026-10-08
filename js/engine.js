@@ -599,9 +599,16 @@
   // 3b. WRITING EVALUATION ENGINE (HEURISTIC & AI INTEGRATION)
   // =========================================================================
 
+  const DISCOURSE_MARKER_DEFS = [
+    'furthermore', 'moreover', 'in addition', 'consequently', 'therefore', 'thus',
+    'however', 'nevertheless', 'nonetheless', 'on the other hand', 'in contrast',
+    'conversely', 'specifically', 'for instance', 'for example', 'in conclusion',
+    'to summarize', 'subsequently', 'whereas', 'while', 'in terms of', 'with regard to'
+  ].map(m => ({ marker: m, regex: new RegExp(`\\b${m}\\b`, 'i') }));
+
   function evaluateSingleWritingHeuristics(text, task) {
     const raw = String(text || "").trim();
-    const words = raw.length > 0 ? raw.split(/\s+/).filter(Boolean).length : 0;
+    const words = raw.length > 0 ? (raw.match(/\S+/g) || []).length : 0;
     const paragraphs = raw.length > 0 ? raw.split(/\n\s*\n/).filter(p => p.trim().length > 0).length : 0;
     const sentences = raw.length > 0 ? raw.split(/[.!?]+/).filter(s => s.trim().length > 0).length : 0;
     const minWords = (task && task.part === 2) ? 180 : 120;
@@ -616,18 +623,13 @@
     const hasGreeting = /^(dear|hello|hi|to whom|attention|good morning|good afternoon)/i.test(raw);
     const hasSignOff = /(sincerely|regards|best regards|kind regards|warm regards|yours faithfully|yours sincerely|cheers|best|thank you|thanks)/i.test(raw);
 
-    // Common Academic & Discursive Markers
-    const discourseList = [
-      'furthermore', 'moreover', 'in addition', 'consequently', 'therefore', 'thus',
-      'however', 'nevertheless', 'nonetheless', 'on the other hand', 'in contrast',
-      'conversely', 'specifically', 'for instance', 'for example', 'in conclusion',
-      'to summarize', 'subsequently', 'whereas', 'while', 'in terms of', 'with regard to'
-    ];
     const lower = raw.toLowerCase();
-    const foundMarkers = discourseList.filter(m => {
-      const regex = new RegExp(`\\b${m}\\b`, 'i');
-      return regex.test(lower);
-    });
+    const foundMarkers = [];
+    for (let i = 0; i < DISCOURSE_MARKER_DEFS.length; i++) {
+      if (DISCOURSE_MARKER_DEFS[i].regex.test(lower)) {
+        foundMarkers.push(DISCOURSE_MARKER_DEFS[i].marker);
+      }
+    }
 
     return {
       wordCount: words,
@@ -790,14 +792,36 @@ Please evaluate both submissions now and return ONLY the JSON object.`;
     return parsedResult;
   }
 
-  function copyRewriteText(text) {
+  function copyToClipboard(text, successMsg) {
     if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(() => {
-        showToast("Sentence rewrite copied to clipboard!");
-      }).catch(() => fallbackCopy(text));
+        showToast(successMsg || "Copied to clipboard!");
+      }).catch(() => fallbackCopy(text, successMsg));
     } else {
-      fallbackCopy(text);
+      fallbackCopy(text, successMsg);
     }
+  }
+
+  function fallbackCopy(text, successMsg) {
+    if (typeof document === 'undefined') return;
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showToast(successMsg || "Copied to clipboard!");
+    } catch (err) {
+      if (typeof alert !== 'undefined') alert("Please copy manually from the report section.");
+    }
+    document.body.removeChild(ta);
+  }
+
+  function copyRewriteText(text) {
+    copyToClipboard(text, "Sentence rewrite copied to clipboard!");
   }
 
   function renderWritingEvaluationUI(container, heuristicResult, aiResult) {
@@ -1143,14 +1167,7 @@ ${rep.writingPart2 || "(No submission recorded)"}
   }
 
   function copyFullCoachReport() {
-    const text = generateReportText();
-    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(() => {
-        showToast("Full coach report copied to clipboard!");
-      }).catch(() => fallbackCopy(text));
-    } else {
-      fallbackCopy(text);
-    }
+    copyToClipboard(generateReportText(), "Full coach report copied to clipboard!");
   }
 
   function copyWritingOnly() {
@@ -1166,41 +1183,17 @@ Candidate: ${name}
 Date: ${new Date().toLocaleDateString()}
 
 --- PART 1: ${p1Title} ---
-Word Count: ${w1.split(/\s+/).filter(Boolean).length} words
+Word Count: ${(w1.match(/\S+/g) || []).length} words
 ${w1 || "(No text)"}
 
 --------------------------------------------------------
 
 --- PART 2: ${p2Title} ---
-Word Count: ${w2.split(/\s+/).filter(Boolean).length} words
+Word Count: ${(w2.match(/\S+/g) || []).length} words
 ${w2 || "(No text)"}
 `;
 
-    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(() => {
-        showToast("Writing essays copied to clipboard!");
-      }).catch(() => fallbackCopy(text));
-    } else {
-      fallbackCopy(text);
-    }
-  }
-
-  function fallbackCopy(text) {
-    if (typeof document === 'undefined') return;
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.left = '-9999px';
-    document.body.appendChild(ta);
-    ta.focus();
-    ta.select();
-    try {
-      document.execCommand('copy');
-      showToast("Copied to clipboard!");
-    } catch (err) {
-      if (typeof alert !== 'undefined') alert("Please copy manually from the report section.");
-    }
-    document.body.removeChild(ta);
+    copyToClipboard(text, "Writing essays copied to clipboard!");
   }
 
   function downloadReportTxt() {
@@ -1320,13 +1313,7 @@ ${w2 || "(No text)"}
 
   function copySeedLink(seed) {
     const shareUrl = `${window.location.origin}${window.location.pathname}?seed=${encodeURIComponent(seed)}`;
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(shareUrl).then(() => {
-        showToast(`Copied Exam Link (Seed #${seed}) to clipboard!`);
-      }).catch(() => fallbackCopy(shareUrl));
-    } else {
-      fallbackCopy(shareUrl);
-    }
+    copyToClipboard(shareUrl, `Copied Exam Link (Seed #${seed}) to clipboard!`);
   }
 
   function updatePortalNav(testId) {
@@ -1597,7 +1584,6 @@ ${w2 || "(No text)"}
     radio.checked = true;
     cardEl.classList.add('selected');
     saveState();
-    updateProgressBadge();
   }
 
   function playAudio(audioId, btnId, badgeId, progId, timeId) {
@@ -1682,7 +1668,7 @@ ${w2 || "(No text)"}
     const badge = document.getElementById(badgeId);
     if (!ta || !badge) return;
 
-    const words = ta.value.trim().split(/\s+/).filter(Boolean).length;
+    const words = (ta.value.trim().match(/\S+/g) || []).length;
     badge.innerText = `${words} words (Min: ${minWords})`;
 
     if (words >= minWords) {
@@ -1701,9 +1687,7 @@ ${w2 || "(No text)"}
       return;
     }
     const payload = `=== ${taskTitle.toUpperCase()} ===\n${text}`;
-    navigator.clipboard.writeText(payload).then(() => {
-      showToast("Draft copied to clipboard!");
-    }).catch(() => fallbackCopy(payload));
+    copyToClipboard(payload, "Draft copied to clipboard!");
   }
 
   function startTimer(durationMinutes) {
@@ -1800,18 +1784,31 @@ ${w2 || "(No text)"}
       };
     }
 
+    let answered = 0;
     if (typeof document !== 'undefined') {
       document.querySelectorAll('input[type="radio"]:checked').forEach(r => {
         state.radios[r.name] = r.value;
+        answered++;
       });
 
       document.querySelectorAll('.gap-text-input').forEach(inp => {
-        if (inp.value) state.texts[inp.id] = inp.value;
+        if (inp.value && inp.value.trim().length > 0) {
+          state.texts[inp.id] = inp.value;
+          answered++;
+        }
       });
 
       document.querySelectorAll('.select-input').forEach(sel => {
-        if (sel.value) state.selects[sel.id] = sel.value;
+        if (sel.value && sel.value.length > 0) {
+          state.selects[sel.id] = sel.value;
+          answered++;
+        }
       });
+
+      const progEl = document.getElementById('answeredProgress');
+      if (progEl) {
+        progEl.innerText = `${answered} / 52 answered`;
+      }
     }
 
     try {

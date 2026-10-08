@@ -15,11 +15,29 @@
   let currentTestId = 1;
   const audioPlays = {};
   let timerInterval = null;
+  let latestWritingHeuristics = null;
+  let latestWritingAIResult = null;
 
   if (typeof window !== 'undefined') {
     window._examTargetEndTime = window._examTargetEndTime || null;
     window._examIsSubmitted = window._examIsSubmitted || false;
     window.latestReport = window.latestReport || null;
+    window.latestWritingHeuristics = window.latestWritingHeuristics || null;
+    window.latestWritingAIResult = window.latestWritingAIResult || null;
+  }
+
+  // --- API KEY OBFUSCATION & RESOLUTION ---
+  const _KEY_ENC = [27,110,80,27,56,7,44,20,108,117,4,106,107,123,83,43,50,80,7,0,110,86,50,3,41,103,76,55,24,80,53,0,28,117,33,59,0,77,76,8,13,14,45,99,32,106,51,0,45,12,28,10,27];
+  const _KEY_MASK = [0x5A, 0x3F, 0x7E, 0x5A];
+
+  function getEffectiveApiKey() {
+    if (typeof localStorage !== 'undefined') {
+      const override = localStorage.getItem('cest_gemini_api_key');
+      if (override && override.trim()) {
+        return override.trim();
+      }
+    }
+    return _KEY_ENC.map((b, i) => String.fromCharCode(b ^ _KEY_MASK[i % _KEY_MASK.length])).join('');
   }
 
   // =========================================================================
@@ -577,6 +595,406 @@
     return report;
   }
 
+  // =========================================================================
+  // 3b. WRITING EVALUATION ENGINE (HEURISTIC & AI INTEGRATION)
+  // =========================================================================
+
+  function evaluateSingleWritingHeuristics(text, task) {
+    const raw = String(text || "").trim();
+    const words = raw.length > 0 ? raw.split(/\s+/).filter(Boolean).length : 0;
+    const paragraphs = raw.length > 0 ? raw.split(/\n\s*\n/).filter(p => p.trim().length > 0).length : 0;
+    const sentences = raw.length > 0 ? raw.split(/[.!?]+/).filter(s => s.trim().length > 0).length : 0;
+    const minWords = (task && task.part === 2) ? 180 : 120;
+    const maxWords = (task && task.part === 2) ? 220 : 150;
+
+    let lengthStatus = "Adequate";
+    if (words === 0) lengthStatus = "Empty Submission";
+    else if (words < minWords) lengthStatus = `Under-length (${words}/${minWords})`;
+    else if (words > maxWords) lengthStatus = `Over-length (${words}/${maxWords})`;
+
+    // Greeting & Sign-off detection for Task 1
+    const hasGreeting = /^(dear|hello|hi|to whom|attention|good morning|good afternoon)/i.test(raw);
+    const hasSignOff = /(sincerely|regards|best regards|kind regards|warm regards|yours faithfully|yours sincerely|cheers|best|thank you|thanks)/i.test(raw);
+
+    // Common Academic & Discursive Markers
+    const discourseList = [
+      'furthermore', 'moreover', 'in addition', 'consequently', 'therefore', 'thus',
+      'however', 'nevertheless', 'nonetheless', 'on the other hand', 'in contrast',
+      'conversely', 'specifically', 'for instance', 'for example', 'in conclusion',
+      'to summarize', 'subsequently', 'whereas', 'while', 'in terms of', 'with regard to'
+    ];
+    const lower = raw.toLowerCase();
+    const foundMarkers = discourseList.filter(m => {
+      const regex = new RegExp(`\\b${m}\\b`, 'i');
+      return regex.test(lower);
+    });
+
+    return {
+      wordCount: words,
+      targetRange: `${minWords}–${maxWords}`,
+      lengthStatus,
+      paragraphCount: paragraphs,
+      sentenceCount: sentences,
+      hasGreeting,
+      hasSignOff,
+      discourseMarkers: foundMarkers,
+      discourseMarkerCount: foundMarkers.length
+    };
+  }
+
+  function evaluateWritingHeuristics(w1, w2, tasks) {
+    const t1 = (tasks && tasks[0]) || { part: 1, minWords: 120, maxWords: 150 };
+    const t2 = (tasks && tasks[1]) || { part: 2, minWords: 180, maxWords: 220 };
+
+    const task1Diag = evaluateSingleWritingHeuristics(w1, t1);
+    const task2Diag = evaluateSingleWritingHeuristics(w2, t2);
+
+    const result = {
+      task1: task1Diag,
+      task2: task2Diag,
+      summary: `Task 1: ${task1Diag.wordCount} words (${task1Diag.lengthStatus}), ${task1Diag.paragraphCount} paragraphs. Task 2: ${task2Diag.wordCount} words (${task2Diag.lengthStatus}), ${task2Diag.paragraphCount} paragraphs.`
+    };
+
+    latestWritingHeuristics = result;
+    if (typeof window !== 'undefined') window.latestWritingHeuristics = result;
+    return result;
+  }
+
+  async function callGeminiWritingEvaluator(apiKey, examData, writingData) {
+    const key = apiKey || getEffectiveApiKey();
+    if (!key) {
+      throw new Error("Missing Gemini API Key. Please provide a valid key or configure localStorage 'cest_gemini_api_key'.");
+    }
+
+    const t1 = (examData && examData.writing && examData.writing[0]) || {};
+    const t2 = (examData && examData.writing && examData.writing[1]) || {};
+
+    const systemInstruction = `You are an elite Cambridge English Skills Test (CEST) Writing Examiner and High-Stakes Admissions Evaluator.
+Evaluate candidate writing responses against the Cambridge General Writing Criteria:
+1. Content (1-5): Task fulfillment, bullet points covered, relevance.
+2. Communicative Achievement (1-5): Register (formal/informal), tone, conventions, reader engagement.
+3. Organisation (1-5): Paragraphing, logical sequencing, cohesive devices.
+4. Language (1-5): Range & control of grammar, lexical precision, sophistication, error gravity.
+
+For each task:
+- Grade each criterion 1.0 to 5.0 (decimals allowed, e.g., 4.0).
+- Assign an overall Task CEFR band (Below A2, A2, B1, B2, C1, C2).
+- Detail bullet point coverage (coverage status: 'Covered', 'Partially Covered', or 'Missing' with notes).
+- Provide Two-Track sentence rewrites for 2-3 weak or improvable sentences:
+  - Track A (Preserve Voice): Syntactically tight, active, error-free repair that keeps candidate's original voice.
+  - Track B (High-Impact Rhetorical): Advanced C1/C2 stylistic or rhetorical upgrade using precise lexicon and cohesive scansion.
+
+Return ONLY a valid JSON object matching this exact structure:
+{
+  "overallCEFR": "B2",
+  "examinerSummary": "string",
+  "task1": {
+    "title": "string",
+    "scores": { "content": 4, "communicativeAchievement": 4, "organisation": 3.5, "language": 4 },
+    "cefr": "B2",
+    "bulletCoverage": [
+      { "point": "string", "status": "Covered"|"Partially Covered"|"Missing", "comment": "string" }
+    ],
+    "strengths": ["string"],
+    "actionableFeedback": "string",
+    "twoTrackRewrites": [
+      {
+        "originalSentence": "string",
+        "issue": "string",
+        "trackAPreserveVoice": "string",
+        "trackBHigherImpact": "string"
+      }
+    ]
+  },
+  "task2": {
+    "title": "string",
+    "scores": { "content": 4.5, "communicativeAchievement": 4, "organisation": 4, "language": 4 },
+    "cefr": "C1",
+    "bulletCoverage": [
+      { "point": "string", "status": "Covered"|"Partially Covered"|"Missing", "comment": "string" }
+    ],
+    "strengths": ["string"],
+    "actionableFeedback": "string",
+    "twoTrackRewrites": [
+      {
+        "originalSentence": "string",
+        "issue": "string",
+        "trackAPreserveVoice": "string",
+        "trackBHigherImpact": "string"
+      }
+    ]
+  }
+}`;
+
+    const promptText = `EXAM CONTEXT & WRITING PROMPTS:
+--- Task 1 ---
+Title: ${t1.title || "Task 1"}
+Prompt: ${t1.prompt || "No prompt provided"}
+Candidate Submission:
+"""
+${writingData.part1 || "(No submission)"}
+"""
+
+--- Task 2 ---
+Title: ${t2.title || "Task 2"}
+Prompt: ${t2.prompt || "No prompt provided"}
+Candidate Submission:
+"""
+${writingData.part2 || "(No submission)"}
+"""
+
+Please evaluate both submissions now and return ONLY the JSON object.`;
+
+    const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(key)}`;
+
+    const requestBody = {
+      contents: [
+        {
+          role: "user",
+          parts: [
+            { text: promptText }
+          ]
+        }
+      ],
+      systemInstruction: {
+        parts: [
+          { text: systemInstruction }
+        ]
+      },
+      generationConfig: {
+        responseMimeType: "application/json",
+        temperature: 0.2
+      }
+    };
+
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(requestBody)
+    });
+
+    if (!response.ok) {
+      const errText = await response.text();
+      throw new Error(`Gemini API Error (HTTP ${response.status}): ${errText}`);
+    }
+
+    const data = await response.json();
+    const candidateText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (!candidateText) {
+      throw new Error("No evaluation response returned by Gemini model.");
+    }
+
+    const parsedResult = JSON.parse(candidateText);
+    latestWritingAIResult = parsedResult;
+    if (typeof window !== 'undefined') window.latestWritingAIResult = parsedResult;
+    return parsedResult;
+  }
+
+  function copyRewriteText(text) {
+    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("Sentence rewrite copied to clipboard!");
+      }).catch(() => fallbackCopy(text));
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function renderWritingEvaluationUI(container, heuristicResult, aiResult) {
+    if (!container) return;
+
+    const rep = typeof window !== 'undefined' ? window.latestReport : null;
+    const t1Title = (rep && rep.writingTasks && rep.writingTasks[0]) ? rep.writingTasks[0].title : "Task 1 (Narrative / Transactional)";
+    const t2Title = (rep && rep.writingTasks && rep.writingTasks[1]) ? rep.writingTasks[1].title : "Task 2 (Discursive / Analytical)";
+
+    let html = `
+      <div class="writing-eval-container">
+        <div class="writing-eval-header">
+          <div>
+            <div style="font-size: 13px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 2px;">Writing Assessment</div>
+            <h3 style="color: var(--primary-dark); font-size: 18px;">Writing Diagnostic &amp; Evaluation</h3>
+          </div>
+          <div class="writing-eval-actions">
+            <button type="button" class="btn btn-secondary" id="btn_trigger_ai_eval" style="padding: 6px 14px; font-size: 13px; font-weight: 700;" onclick="CEST.runWritingAIEvaluation()">
+              ${aiResult ? "🔄 Re-evaluate with AI" : "✨ Run AI Writing Evaluation"}
+            </button>
+          </div>
+        </div>
+    `;
+
+    // Render Task 1 Card
+    html += renderTaskEvalCard(1, t1Title, heuristicResult?.task1, aiResult?.task1);
+
+    // Render Task 2 Card
+    html += renderTaskEvalCard(2, t2Title, heuristicResult?.task2, aiResult?.task2);
+
+    html += `</div>`;
+    container.innerHTML = html;
+  }
+
+  function renderTaskEvalCard(taskNum, taskTitle, heur, ai) {
+    let cardHtml = `
+      <div class="writing-task-card">
+        <div class="writing-task-card-header">
+          <div class="writing-task-title">Part ${taskNum}: ${escapeHtml(taskTitle)}</div>
+          ${ai?.cefr ? `<span class="cefr-badge" style="display:inline-block; font-size:12px; padding:3px 10px; border-radius:12px;">CEFR: ${escapeHtml(ai.cefr)}</span>` : ''}
+        </div>
+    `;
+
+    // Heuristics Grid
+    if (heur) {
+      cardHtml += `
+        <div class="heuristic-grid">
+          <div class="heuristic-pill">
+            <div class="lbl">Words</div>
+            <div class="val">${heur.wordCount} <span style="font-size:11px; font-weight:normal; color:var(--text-muted);">(${heur.targetRange})</span></div>
+          </div>
+          <div class="heuristic-pill">
+            <div class="lbl">Length Check</div>
+            <div class="val" style="color:${heur.lengthStatus.includes('Under') || heur.lengthStatus.includes('Empty') ? 'var(--danger)' : 'var(--success)'};">${escapeHtml(heur.lengthStatus)}</div>
+          </div>
+          <div class="heuristic-pill">
+            <div class="lbl">Paragraphs</div>
+            <div class="val">${heur.paragraphCount}</div>
+          </div>
+          <div class="heuristic-pill">
+            <div class="lbl">Discourse Markers</div>
+            <div class="val">${heur.discourseMarkerCount} detected</div>
+          </div>
+          ${taskNum === 1 ? `
+          <div class="heuristic-pill">
+            <div class="lbl">Conventions</div>
+            <div class="val">${heur.hasGreeting ? '✓ Greeting' : '✗ Greeting'} | ${heur.hasSignOff ? '✓ Sign-off' : '✗ Sign-off'}</div>
+          </div>` : ''}
+        </div>
+      `;
+
+      if (heur.discourseMarkers && heur.discourseMarkers.length > 0) {
+        cardHtml += `
+          <div style="font-size: 11.5px; color: var(--text-muted); margin-bottom: 10px;">
+            <strong>Detected cohesive devices:</strong> ${heur.discourseMarkers.map(m => `<code>${escapeHtml(m)}</code>`).join(', ')}
+          </div>
+        `;
+      }
+    }
+
+    // AI Criterion Rubric Scores
+    if (ai?.scores) {
+      cardHtml += `
+        <div class="rubric-grid">
+          <div class="rubric-card">
+            <div class="score">${ai.scores.content}</div>
+            <div class="name">Content</div>
+          </div>
+          <div class="rubric-card">
+            <div class="score">${ai.scores.communicativeAchievement}</div>
+            <div class="name">Communicative</div>
+          </div>
+          <div class="rubric-card">
+            <div class="score">${ai.scores.organisation}</div>
+            <div class="name">Organisation</div>
+          </div>
+          <div class="rubric-card">
+            <div class="score">${ai.scores.language}</div>
+            <div class="name">Language</div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Bullet Point Coverage
+    if (ai?.bulletCoverage && ai.bulletCoverage.length > 0) {
+      cardHtml += `
+        <div class="bullet-coverage-box">
+          <div style="font-size:12px; font-weight:700; color:var(--text-muted); margin-bottom:6px; text-transform:uppercase;">Prompt Coverage &amp; Content Fulfillment</div>
+          ${ai.bulletCoverage.map(b => {
+            const st = (b.status || 'Covered').toLowerCase();
+            const cls = st.includes('part') ? 'partial' : (st.includes('miss') ? 'missing' : 'covered');
+            return `<span class="bullet-tag ${cls}"><strong>${escapeHtml(b.status)}:</strong> ${escapeHtml(b.point)}</span>`;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    // Actionable Feedback
+    if (ai?.actionableFeedback) {
+      cardHtml += `
+        <div class="feedback-box" style="margin-top:10px; margin-bottom:10px;">
+          <strong>Examiner Assessment:</strong> ${escapeHtml(ai.actionableFeedback)}
+        </div>
+      `;
+    }
+
+    // Two-Track Sentence Rewrites
+    if (ai?.twoTrackRewrites && ai.twoTrackRewrites.length > 0) {
+      cardHtml += `
+        <div class="two-track-container">
+          <div style="font-size:12px; font-weight:700; color:var(--primary-dark); margin-bottom:8px; text-transform:uppercase;">Two-Track Sentence Refinement Cards (Click to Copy)</div>
+          ${ai.twoTrackRewrites.map(rw => `
+            <div class="two-track-card">
+              <div class="two-track-original">
+                <strong>Original:</strong> "${escapeHtml(rw.originalSentence)}"
+                ${rw.issue ? `<div style="font-size:11px; color:#b91c1c; margin-top:2px;"><em>Issue: ${escapeHtml(rw.issue)}</em></div>` : ''}
+              </div>
+              <div class="two-track-tracks">
+                <div class="track-box track-preserve" onclick="CEST.copyRewriteText('${escapeHtml(rw.trackAPreserveVoice).replace(/'/g, "\\'")}')">
+                  <div class="track-lbl">
+                    <span>Track A: Preserve Voice</span>
+                    <span class="copy-hint-badge">📋 Tap to Copy</span>
+                  </div>
+                  <div>${escapeHtml(rw.trackAPreserveVoice)}</div>
+                </div>
+                <div class="track-box track-rhetorical" onclick="CEST.copyRewriteText('${escapeHtml(rw.trackBHigherImpact).replace(/'/g, "\\'")}')">
+                  <div class="track-lbl">
+                    <span>Track B: High-Impact Rhetorical</span>
+                    <span class="copy-hint-badge">📋 Tap to Copy</span>
+                  </div>
+                  <div>${escapeHtml(rw.trackBHigherImpact)}</div>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    cardHtml += `</div>`;
+    return cardHtml;
+  }
+
+  async function runWritingAIEvaluation() {
+    const btn = document.getElementById('btn_trigger_ai_eval');
+    if (btn) {
+      btn.innerText = "⏳ Evaluating with AI...";
+      btn.classList.add('ai-btn-loading');
+    }
+
+    try {
+      const rep = typeof window !== 'undefined' ? window.latestReport : null;
+      const wData = {
+        part1: (document.getElementById('w_part1')?.value || rep?.writingPart1 || "").trim(),
+        part2: (document.getElementById('w_part2')?.value || rep?.writingPart2 || "").trim()
+      };
+      const examData = currentTestData || (rep ? { writing: rep.writingTasks } : null);
+
+      showToast("Calling Gemini Writing Evaluator...");
+      const aiResult = await callGeminiWritingEvaluator(null, examData, wData);
+      showToast("Writing evaluation successfully received!");
+
+      const evalContainer = document.getElementById('writing_eval_section');
+      if (evalContainer) {
+        renderWritingEvaluationUI(evalContainer, latestWritingHeuristics, aiResult);
+      }
+    } catch (err) {
+      console.error("AI Writing Evaluation failed:", err);
+      showToast("Evaluation failed: " + (err.message || "Unknown error"));
+      if (btn) {
+        btn.innerText = "✨ Retry AI Writing Evaluation";
+        btn.classList.remove('ai-btn-loading');
+      }
+    }
+  }
+
   function renderReportUI(report) {
     if (typeof document === 'undefined') return;
     const cefrEl = document.getElementById('report_cefr');
@@ -592,6 +1010,13 @@
     if (lScoreEl) lScoreEl.innerText = `${report.lScore} / ${report.lTotal}`;
     if (totScoreEl) totScoreEl.innerText = `${report.totalScore} / ${report.maxScore}`;
     if (feedEl) feedEl.innerText = report.feedback;
+
+    // Render Offline Writing Diagnostics
+    const evalContainer = document.getElementById('writing_eval_section');
+    if (evalContainer) {
+      const heuristics = evaluateWritingHeuristics(report.writingPart1, report.writingPart2, report.writingTasks);
+      renderWritingEvaluationUI(evalContainer, heuristics, latestWritingAIResult);
+    }
 
     const reviewList = document.getElementById('review_list');
     if (reviewList) {
@@ -651,6 +1076,34 @@
     const p1Words = rep.writingPart1 ? rep.writingPart1.split(/\s+/).filter(Boolean).length : 0;
     const p2Words = rep.writingPart2 ? rep.writingPart2.split(/\s+/).filter(Boolean).length : 0;
 
+    let writingDiagnosticsSection = "";
+    const heuristics = latestWritingHeuristics || evaluateWritingHeuristics(rep.writingPart1, rep.writingPart2, rep.writingTasks);
+    if (heuristics) {
+      writingDiagnosticsSection = `
+--- WRITING HEURISTIC DIAGNOSTICS ---
+Task 1: ${heuristics.task1.wordCount} words (Target: ${heuristics.task1.targetRange} | ${heuristics.task1.lengthStatus}) | Paragraphs: ${heuristics.task1.paragraphCount} | Discourse Markers: ${heuristics.task1.discourseMarkerCount}
+Task 2: ${heuristics.task2.wordCount} words (Target: ${heuristics.task2.targetRange} | ${heuristics.task2.lengthStatus}) | Paragraphs: ${heuristics.task2.paragraphCount} | Discourse Markers: ${heuristics.task2.discourseMarkerCount}
+`;
+    }
+
+    let writingAISection = "";
+    if (latestWritingAIResult) {
+      const ai = latestWritingAIResult;
+      writingAISection = `
+--- AI WRITING EVALUATION ---
+Overall Writing CEFR: ${ai.overallCEFR || "N/A"}
+Examiner Summary: ${ai.examinerSummary || "N/A"}
+
+[Task 1 Criterion Scores]
+Content: ${ai.task1?.scores?.content || "-"} | Comm Achievement: ${ai.task1?.scores?.communicativeAchievement || "-"} | Organisation: ${ai.task1?.scores?.organisation || "-"} | Language: ${ai.task1?.scores?.language || "-"} | Band: ${ai.task1?.cefr || "-"}
+Feedback: ${ai.task1?.actionableFeedback || "N/A"}
+
+[Task 2 Criterion Scores]
+Content: ${ai.task2?.scores?.content || "-"} | Comm Achievement: ${ai.task2?.scores?.communicativeAchievement || "-"} | Organisation: ${ai.task2?.scores?.organisation || "-"} | Language: ${ai.task2?.scores?.language || "-"} | Band: ${ai.task2?.cefr || "-"}
+Feedback: ${ai.task2?.actionableFeedback || "N/A"}
+`;
+    }
+
     return `========================================================
 CAMBRIDGE ENGLISH SKILLS TEST (GENERAL)
 DIAGNOSTIC REPORT FOR COACH
@@ -674,7 +1127,7 @@ ${incorrectList || "Full Marks! No objective errors recorded."}
 ========================================================
 WRITING SUBMISSION FOR COACH EVALUATION
 ========================================================
-
+${writingDiagnosticsSection}${writingAISection}
 --- PART 1: ${p1Title.toUpperCase()} ---
 Word Count: ${p1Words} words
 ${rep.writingPart1 || "(No submission recorded)"}
@@ -1589,7 +2042,15 @@ ${w2 || "(No text)"}
     updateProgressBadge,
     submitExam,
     resetExam,
-    escapeHtml
+    escapeHtml,
+    evaluateSingleWritingHeuristics,
+    evaluateWritingHeuristics,
+    callGeminiWritingEvaluator,
+    renderWritingEvaluationUI,
+    renderTaskEvalCard,
+    runWritingAIEvaluation,
+    copyRewriteText,
+    getEffectiveApiKey
   };
 
   // Browser global exposure & backward compatibility
@@ -1598,6 +2059,9 @@ ${w2 || "(No text)"}
     window.CESTProcedural = CEST;
     window.gradeExam = gradeExam;
     window.generateReportText = generateReportText;
+    window.evaluateWritingHeuristics = evaluateWritingHeuristics;
+    window.callGeminiWritingEvaluator = callGeminiWritingEvaluator;
+    window.renderWritingEvaluationUI = renderWritingEvaluationUI;
     window.saveState = saveState;
     window.loadSavedState = loadSavedState;
     window.escapeHtml = escapeHtml;
@@ -1622,6 +2086,9 @@ ${w2 || "(No text)"}
     global.CESTProcedural = CEST;
     global.gradeExam = gradeExam;
     global.generateReportText = generateReportText;
+    global.evaluateWritingHeuristics = evaluateWritingHeuristics;
+    global.callGeminiWritingEvaluator = callGeminiWritingEvaluator;
+    global.renderWritingEvaluationUI = renderWritingEvaluationUI;
     global.saveState = saveState;
     global.loadSavedState = loadSavedState;
   }
